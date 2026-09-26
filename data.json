@@ -1,0 +1,345 @@
+{
+  "voyage": {
+    "titre": "Mission Chine 2026",
+    "sousTitre": "Retail Belgium — Gaming1",
+    "debut": "2026-10-19",
+    "fin": "2026-10-25",
+    "note": "Dates d'exemple [À COMPLÉTER]. Toutes les heures du programme sont en heure de Pékin."
+  },
+
+  "taux": {
+    "eurCny": 8.00,
+    "date": "[À COMPLÉTER] date du taux"
+  },
+
+  "jours": [
+    {
+      "date": "2026-10-19",
+      "titre": "Départ et arrivée [À COMPLÉTER]",
+      "ville": "Pékin",
+      "tenue": "Tenue de voyage",
+      "hotel": "hotel-1",
+      "creneaux": [
+        { "heure": "07:30", "titre": "Atterrissage à l'aéroport [À COMPLÉTER]", "lieu": "aeroport-pek", "transport": "Vol [À COMPLÉTER] numéro de vol", "note": "Heure locale de Pékin" },
+        { "heure": "09:30", "fin": "10:30", "titre": "Transfert vers l'hôtel", "lieu": "hotel-1", "transport": "Minibus [À COMPLÉTER]" },
+        { "heure": "13:00", "fin": "14:30", "titre": "Déjeuner d'équipe", "lieu": "resto-1", "transport": "À pied" },
+        { "heure": "19:00", "titre": "Briefing de la semaine", "lieu": "hotel-1", "note": "Salle [À COMPLÉTER]" }
+      ]
+    },
+    {
+      "date": "2026-10-20",
+      "titre": "Salon n° 1 — jour 1",
+      "ville": "Pékin",
+      "tenue": "Business (costume, badge)",
+      "hotel": "hotel-1",
+      "creneaux": [
+        { "heure": "08:15", "titre": "Départ de l'hôtel", "lieu": "hotel-1", "transport": "Didi / minibus [À COMPLÉTER]" },
+        { "heure": "09:00", "fin": "12:30", "titre": "Visite du salon — halls prioritaires", "lieu": "salon-1-lieu" },
+        { "heure": "12:30", "fin": "13:30", "titre": "Déjeuner sur place" },
+        { "heure": "14:00", "fin": "17:30", "titre": "Rendez-vous exposants [À COMPLÉTER]", "lieu": "salon-1-lieu" },
+        { "heure": "19:30", "titre": "Dîner", "lieu": "resto-1" }
+      ]
+    },
+    {
+      "date": "2026-10-21",
+      "titre": "Salon n° 1 — jour 2",
+      "ville": "Pékin",
+      "tenue": "Business",
+      "hotel": "hotel-1",
+      "creneaux": [
+        { "heure": "09:00", "fin": "16:00", "titre": "Salon — suite des visites", "lieu": "salon-1-lieu" },
+        { "heure": "18:00", "titre": "Débriefing d'équipe", "lieu": "hotel-1" }
+      ]
+    },
+    {
+      "date": "2026-10-22",
+      "titre": "Transfert [À COMPLÉTER]",
+      "ville": "[À COMPLÉTER] ville",
+      "tenue": "Smart casual",
+      "hotel": "hotel-2",
+      "creneaux": [
+        { "heure": "08:00", "titre": "Check-out", "lieu": "hotel-1" },
+        { "heure": "10:00", "fin": "15:00", "titre": "Train / vol [À COMPLÉTER]", "transport": "[À COMPLÉTER] train à grande vitesse ou vol intérieur", "note": "Passeport obligatoire pour le billet" },
+        { "heure": "16:00", "titre": "Check-in", "lieu": "hotel-2" }
+      ]
+    },
+    {
+      "date": "2026-10-23",
+      "titre": "Salon n° 2",
+      "ville": "[À COMPLÉTER] ville",
+      "tenue": "Business",
+      "hotel": "hotel-2",
+      "creneaux": [
+        { "heure": "09:00", "fin": "17:00", "titre": "Salon n° 2", "lieu": "salon-2-lieu" },
+        { "heure": "19:30", "titre": "Dîner avec partenaires [À COMPLÉTER]", "lieu": "resto-2" }
+      ]
+    },
+    {
+      "date": "2026-10-24",
+      "titre": "Visites [À COMPLÉTER]",
+      "ville": "[À COMPLÉTER] ville",
+      "tenue": "Smart casual",
+      "hotel": "hotel-2",
+      "creneaux": [
+        { "heure": "10:00", "fin": "12:00", "titre": "Visite [À COMPLÉTER]" },
+        { "heure": "14:00", "fin": "17:00", "titre": "Temps libre" }
+      ]
+    },
+    {
+      "date": "2026-10-25",
+      "titre": "Retour [À COMPLÉTER]",
+      "ville": "[À COMPLÉTER] ville",
+      "tenue": "Tenue de voyage",
+      "creneaux": [
+        { "heure": "07:00", "titre": "Check-out", "lieu": "hotel-2" },
+        { "heure": "08:00", "titre": "Départ vers l'aéroport", "transport": "Minibus [À COMPLÉTER]" },
+        { "heure": "11:00", "titre": "Vol retour [À COMPLÉTER]", "note": "Attention : ce jour-là, la Belgique passe à l'heure d'hiver (+7 h)" }
+      ]
+    }
+  ],
+
+  "salons": [
+    {
+      "id": "salon-1",
+      "nom": "Salon n° 1 [À COMPLÉTER] nom du salon",
+      "dates": "20 – 22 octobre 2026 [À COMPLÉTER]",
+      "horaires": "9 h – 17 h [À COMPLÉTER]",
+      "lieu": "salon-1-lieu",
+      "halls": "Halls [À COMPLÉTER] — stand de rendez-vous [À COMPLÉTER]",
+      "objectifs": [
+        "Repérer les nouvelles bornes et terminaux de jeu [À COMPLÉTER]",
+        "Rencontrer les fournisseurs de solutions de paiement [À COMPLÉTER]"
+      ],
+      "exposants": [
+        { "nom": "Exposant A [À COMPLÉTER]", "stand": "Hall 1 — stand [À COMPLÉTER]", "pourquoi": "Raison de la visite [À COMPLÉTER]" },
+        { "nom": "Exposant B [À COMPLÉTER]", "stand": "Hall 2 — stand [À COMPLÉTER]", "pourquoi": "[À COMPLÉTER]" }
+      ]
+    },
+    {
+      "id": "salon-2",
+      "nom": "Salon n° 2 [À COMPLÉTER] nom du salon",
+      "dates": "23 octobre 2026 [À COMPLÉTER]",
+      "horaires": "[À COMPLÉTER]",
+      "lieu": "salon-2-lieu",
+      "halls": "[À COMPLÉTER]",
+      "objectifs": [
+        "[À COMPLÉTER]"
+      ],
+      "exposants": [
+        { "nom": "Exposant C [À COMPLÉTER]", "stand": "[À COMPLÉTER]", "pourquoi": "[À COMPLÉTER]" }
+      ]
+    }
+  ],
+
+  "adresses": [
+    {
+      "id": "hotel-1",
+      "categorie": "Hôtel",
+      "nom": "Hôtel n° 1 [À COMPLÉTER]",
+      "nomEn": "Hotel name [À COMPLÉTER]",
+      "nomZh": "酒店名称（待补充）",
+      "adresse": "Adresse en français [À COMPLÉTER]",
+      "adresseEn": "Address in English [À COMPLÉTER]",
+      "adresseZh": "中文地址（待补充）",
+      "telephone": "+86 [À COMPLÉTER]",
+      "note": "Réservation au nom de [À COMPLÉTER]"
+    },
+    {
+      "id": "hotel-2",
+      "categorie": "Hôtel",
+      "nom": "Hôtel n° 2 [À COMPLÉTER]",
+      "nomEn": "[À COMPLÉTER]",
+      "nomZh": "酒店名称（待补充）",
+      "adresse": "[À COMPLÉTER]",
+      "adresseEn": "[À COMPLÉTER]",
+      "adresseZh": "中文地址（待补充）",
+      "telephone": ""
+    },
+    {
+      "id": "salon-1-lieu",
+      "categorie": "Salon",
+      "nom": "Parc des expositions du salon n° 1 [À COMPLÉTER]",
+      "nomEn": "[À COMPLÉTER]",
+      "nomZh": "展览中心（待补充）",
+      "adresse": "[À COMPLÉTER]",
+      "adresseEn": "[À COMPLÉTER]",
+      "adresseZh": "中文地址（待补充）",
+      "note": "Entrée visiteurs : porte [À COMPLÉTER]"
+    },
+    {
+      "id": "salon-2-lieu",
+      "categorie": "Salon",
+      "nom": "Lieu du salon n° 2 [À COMPLÉTER]",
+      "nomEn": "[À COMPLÉTER]",
+      "nomZh": "展览中心（待补充）",
+      "adresse": "[À COMPLÉTER]",
+      "adresseEn": "[À COMPLÉTER]",
+      "adresseZh": "中文地址（待补充）"
+    },
+    {
+      "id": "resto-1",
+      "categorie": "Restaurant",
+      "nom": "Restaurant n° 1 [À COMPLÉTER]",
+      "nomEn": "[À COMPLÉTER]",
+      "nomZh": "餐厅名称（待补充）",
+      "adresse": "[À COMPLÉTER]",
+      "adresseEn": "[À COMPLÉTER]",
+      "adresseZh": "中文地址（待补充）",
+      "telephone": ""
+    },
+    {
+      "id": "resto-2",
+      "categorie": "Restaurant",
+      "nom": "Restaurant n° 2 [À COMPLÉTER]",
+      "nomEn": "[À COMPLÉTER]",
+      "nomZh": "餐厅名称（待补充）",
+      "adresse": "[À COMPLÉTER]",
+      "adresseEn": "[À COMPLÉTER]",
+      "adresseZh": "中文地址（待补充）"
+    },
+    {
+      "id": "aeroport-pek",
+      "categorie": "Transport",
+      "nom": "Aéroport international de Pékin-Capitale",
+      "nomEn": "Beijing Capital International Airport",
+      "nomZh": "北京首都国际机场",
+      "adresse": "Shunyi, Pékin — terminal [À COMPLÉTER]",
+      "adresseEn": "Shunyi District, Beijing",
+      "adresseZh": "北京市顺义区首都国际机场",
+      "note": "Pékin a deux aéroports (Capitale et Daxing) : vérifier lequel [à vérifier]"
+    },
+    {
+      "id": "ambassade",
+      "categorie": "Ambassade",
+      "nom": "Ambassade de Belgique à Pékin",
+      "nomEn": "Embassy of Belgium in Beijing",
+      "nomZh": "比利时王国驻华大使馆",
+      "adresse": "6 San Li Tun Lu, Chaoyang, Pékin [à vérifier]",
+      "adresseEn": "6 San Li Tun Lu, Chaoyang District, Beijing [à vérifier]",
+      "adresseZh": "北京市朝阳区三里屯路6号",
+      "telephone": "+86 10 6532 1736",
+      "note": "Coordonnées à vérifier sur diplomatie.belgium.be avant le départ [à vérifier]"
+    }
+  ],
+
+  "contacts": [
+    { "groupe": "Urgences en Chine", "nom": "Police", "role": "Police", "telephone": "110" },
+    { "groupe": "Urgences en Chine", "nom": "Ambulance", "role": "Urgences médicales", "telephone": "120" },
+    { "groupe": "Urgences en Chine", "nom": "Pompiers", "role": "Incendie", "telephone": "119" },
+    { "groupe": "Urgences en Chine", "nom": "Accident de la route", "role": "Police de la circulation", "telephone": "122" },
+
+    { "groupe": "Ambassade", "nom": "Ambassade de Belgique à Pékin", "role": "Standard [à vérifier]", "telephone": "+86 10 6532 1736" },
+    { "groupe": "Ambassade", "nom": "SPF Affaires étrangères", "role": "Centre de crise, Bruxelles [à vérifier]", "telephone": "+32 2 501 81 11" },
+
+    { "groupe": "Équipe", "nom": "Prénom Nom [À COMPLÉTER]", "role": "Fonction [À COMPLÉTER]", "telephone": "+32 [À COMPLÉTER]" },
+    { "groupe": "Équipe", "nom": "Prénom Nom [À COMPLÉTER]", "role": "Fonction [À COMPLÉTER]", "telephone": "+32 [À COMPLÉTER]" },
+    { "groupe": "Équipe", "nom": "Prénom Nom [À COMPLÉTER]", "role": "Fonction [À COMPLÉTER]", "telephone": "+32 [À COMPLÉTER]" },
+
+    { "groupe": "Guides et hôtes", "nom": "Guide [À COMPLÉTER]", "role": "Guide / interprète", "telephone": "+86 [À COMPLÉTER]", "note": "WeChat : [À COMPLÉTER]" },
+    { "groupe": "Guides et hôtes", "nom": "Chauffeur [À COMPLÉTER]", "role": "Minibus", "telephone": "+86 [À COMPLÉTER]" },
+
+    { "groupe": "Assistance", "nom": "Assurance voyage [À COMPLÉTER]", "role": "Assistance 24 h/24 — contrat n° [À COMPLÉTER]", "telephone": "+32 [À COMPLÉTER]" },
+    { "groupe": "Assistance", "nom": "Agence de voyage [À COMPLÉTER]", "role": "Billets et hôtels", "telephone": "+32 [À COMPLÉTER]" }
+  ],
+
+  "pratique": [
+    {
+      "titre": "Applis à installer avant le départ",
+      "points": [
+        "Alipay (支付宝) : lier une carte Visa ou Mastercard et valider l'identité avec le passeport. C'est le moyen de paiement n° 1.",
+        "WeChat (微信) : messagerie utilisée par tous les contacts chinois, avec WeChat Pay. L'inscription peut exiger la validation par un utilisateur existant : s'y prendre tôt.",
+        "Didi (滴滴) : l'équivalent d'Uber. Accessible aussi depuis Alipay, sans appli séparée.",
+        "Amap (高德地图) : cartes et navigation, en chinois. Apple Plans fonctionne aussi en Chine.",
+        "Traducteur : Google Traduction est bloqué. Prendre Microsoft Translator, Apple Traduire ou Baidu Translate, et télécharger le chinois pour l'usage hors ligne.",
+        "VPN : Google, Gmail, WhatsApp, Instagram, etc. sont bloqués en Chine. L'installer et le tester avant le départ : les sites de VPN sont inaccessibles une fois sur place. Vérifier la politique du service informatique [à vérifier]."
+      ]
+    },
+    {
+      "titre": "Paiement",
+      "points": [
+        "Presque tout se paie par QR code (Alipay ou WeChat Pay).",
+        "Les cartes bancaires étrangères sont acceptées dans les grands hôtels, mais souvent refusées ailleurs.",
+        "Garder un peu d'espèces pour dépanner (quelques centaines de CNY) [À COMPLÉTER] montant conseillé.",
+        "Des frais peuvent s'appliquer aux paiements par carte étrangère via Alipay sur les gros montants."
+      ]
+    },
+    {
+      "titre": "Internet et téléphone",
+      "points": [
+        "Une eSIM de voyage ou l'itinérance de l'opérateur belge donne en général accès à WhatsApp, Gmail, etc. sans VPN, car le trafic passe par l'étranger [à vérifier] selon l'offre.",
+        "Le Wi-Fi des hôtels et des salons est soumis au filtrage chinois.",
+        "Ce site fonctionne sans réseau une fois ouvert une première fois."
+      ]
+    },
+    {
+      "titre": "Prises électriques",
+      "points": [
+        "220 V, 50 Hz : les chargeurs de téléphone et d'ordinateur conviennent.",
+        "Prises de types A, C et I. Une fiche belge entre parfois dans les prises murales combinées, mais pas toujours : prendre un adaptateur universel.",
+        "Batterie externe : sur les vols intérieurs chinois, seules celles qui portent le marquage 3C (CCC) sont autorisées [à vérifier]."
+      ]
+    },
+    {
+      "titre": "Pourboires",
+      "points": [
+        "Pas d'usage en Chine : ni au restaurant, ni en taxi.",
+        "Les hôtels et restaurants haut de gamme ajoutent souvent 10 à 15 % de service sur la note.",
+        "Exception possible : guide ou chauffeur privé sur plusieurs jours [À COMPLÉTER] usage retenu par l'équipe."
+      ]
+    },
+    {
+      "titre": "Formalités",
+      "points": [
+        "Passeport valable au moins 6 mois après le retour.",
+        "Visa ou exemption de visa pour les Belges : vérifier les conditions en vigueur en octobre 2026 [à vérifier].",
+        "Avoir le nom et l'adresse de l'hôtel en chinois pour la fiche d'arrivée (voir l'onglet Adresses)."
+      ]
+    }
+  ],
+
+  "checklist": [
+    "Passeport (validité 6 mois) + photo du passeport dans le téléphone",
+    "Visa ou exemption vérifiée",
+    "Alipay installé, carte liée, identité validée",
+    "WeChat installé et compte actif",
+    "VPN installé et testé",
+    "eSIM ou forfait d'itinérance Chine activé",
+    "Traducteur avec le chinois téléchargé hors ligne",
+    "Adaptateur universel + batterie externe marquée 3C",
+    "Cartes de visite bilingues [À COMPLÉTER]",
+    "Un peu d'espèces en CNY",
+    "Assurance voyage : numéro d'assistance noté",
+    "Ce site ouvert une fois avec réseau, puis installé sur l'écran d'accueil"
+  ],
+
+  "phrases": [
+    { "categorie": "Politesse", "fr": "Bonjour", "zh": "你好", "pinyin": "nǐ hǎo" },
+    { "categorie": "Politesse", "fr": "Merci", "zh": "谢谢", "pinyin": "xièxie" },
+    { "categorie": "Politesse", "fr": "Au revoir", "zh": "再见", "pinyin": "zàijiàn" },
+    { "categorie": "Politesse", "fr": "Enchanté", "zh": "很高兴认识你", "pinyin": "hěn gāoxìng rènshi nǐ" },
+    { "categorie": "Politesse", "fr": "Nous venons de Belgique", "zh": "我们来自比利时", "pinyin": "wǒmen láizì Bǐlìshí" },
+    { "categorie": "Politesse", "fr": "Voici ma carte de visite", "zh": "这是我的名片", "pinyin": "zhè shì wǒ de míngpiàn" },
+    { "categorie": "Politesse", "fr": "Un instant, s'il vous plaît", "zh": "请稍等", "pinyin": "qǐng shāo děng" },
+
+    { "categorie": "Taxi", "fr": "Emmenez-moi à cette adresse, s'il vous plaît", "zh": "请带我去这个地址", "pinyin": "qǐng dài wǒ qù zhège dìzhǐ" },
+    { "categorie": "Taxi", "fr": "Ramenez-moi à mon hôtel", "zh": "请带我回酒店", "pinyin": "qǐng dài wǒ huí jiǔdiàn" },
+    { "categorie": "Taxi", "fr": "À l'aéroport, s'il vous plaît", "zh": "请去机场", "pinyin": "qǐng qù jīchǎng" },
+    { "categorie": "Taxi", "fr": "Arrêtez-vous ici, s'il vous plaît", "zh": "请在这里停车", "pinyin": "qǐng zài zhèlǐ tíngchē" },
+
+    { "categorie": "Restaurant", "fr": "L'addition, s'il vous plaît", "zh": "买单", "pinyin": "mǎidān" },
+    { "categorie": "Restaurant", "fr": "Pas épicé, s'il vous plaît", "zh": "请不要辣", "pinyin": "qǐng bú yào là" },
+    { "categorie": "Restaurant", "fr": "Je suis végétarien", "zh": "我吃素", "pinyin": "wǒ chī sù" },
+    { "categorie": "Restaurant", "fr": "Une bouteille d'eau, s'il vous plaît", "zh": "请给我一瓶水", "pinyin": "qǐng gěi wǒ yì píng shuǐ" },
+    { "categorie": "Restaurant", "fr": "Je voudrais une facture officielle (fapiao)", "zh": "请给我发票", "pinyin": "qǐng gěi wǒ fāpiào" },
+
+    { "categorie": "Achats", "fr": "Combien ça coûte ?", "zh": "多少钱？", "pinyin": "duōshao qián?" },
+    { "categorie": "Achats", "fr": "Peut-on payer par carte ?", "zh": "可以刷卡吗？", "pinyin": "kěyǐ shuākǎ ma?" },
+
+    { "categorie": "Aide", "fr": "Je ne comprends pas", "zh": "我听不懂", "pinyin": "wǒ tīng bù dǒng" },
+    { "categorie": "Aide", "fr": "Pouvez-vous m'aider ?", "zh": "你能帮我吗？", "pinyin": "nǐ néng bāng wǒ ma?" },
+    { "categorie": "Aide", "fr": "Où sont les toilettes ?", "zh": "洗手间在哪里？", "pinyin": "xǐshǒujiān zài nǎlǐ?" },
+    { "categorie": "Aide", "fr": "Je suis perdu", "zh": "我迷路了", "pinyin": "wǒ mílù le" },
+    { "categorie": "Aide", "fr": "Appelez un médecin, s'il vous plaît", "zh": "请叫医生", "pinyin": "qǐng jiào yīshēng" },
+    { "categorie": "Aide", "fr": "Pas de problème", "zh": "没问题", "pinyin": "méi wèntí" }
+  ]
+}

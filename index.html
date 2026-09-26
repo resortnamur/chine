@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- Interdit toute requête vers un autre domaine que le site lui-même -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; connect-src 'self'; manifest-src 'self'; worker-src 'self'">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#a11212">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Chine 2026">
+<title>Mission Chine 2026</title>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="entete">
+  <div class="entete-titre" id="titre">Mission Chine 2026</div>
+  <div class="etat" id="etat">…</div>
+</header>
+
+<button class="bandeau-maj" id="maj" hidden>Nouvelle version disponible — toucher pour mettre à jour</button>
+
+<main id="vue" class="vue">
+  <p class="chargement">Chargement…</p>
+</main>
+
+<nav class="onglets" id="onglets">
+  <a href="#aujourdhui" data-onglet="aujourdhui"><span class="ico">☀</span>Aujourd'hui</a>
+  <a href="#programme" data-onglet="programme"><span class="ico">▦</span>Programme</a>
+  <a href="#salons" data-onglet="salons"><span class="ico">◈</span>Salons</a>
+  <a href="#adresses" data-onglet="adresses"><span class="ico">⌖</span>Adresses</a>
+  <a href="#plus" data-onglet="plus"><span class="ico">☰</span>Plus</a>
+</nav>
+
+<div class="plein" id="plein" hidden>
+  <button class="plein-fermer" id="plein-fermer" aria-label="Fermer">✕ Fermer</button>
+  <div class="plein-contenu">
+    <div class="plein-zh" id="plein-zh"></div>
+    <div class="plein-sous" id="plein-sous"></div>
+    <div class="plein-petit" id="plein-petit"></div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
