@@ -1,6 +1,6 @@
 /* Service worker : met tout le site en cache pour un usage hors ligne.
    Changer VERSION à chaque modification du code (pas nécessaire pour data.json). */
-const VERSION = 'v5';
+const VERSION = 'v6';
 const CACHE = 'chine-' + VERSION;
 const FICHIERS = [
   './',
@@ -29,7 +29,20 @@ self.addEventListener('activate', (e) => {
 // La page demande l'activation de la nouvelle version (bouton « mettre à jour »)
 self.addEventListener('message', (e) => {
   if (e.data === 'activer') self.skipWaiting();
+  if (e.data === 'completer') e.waitUntil(completer());
 });
+
+// Auto-réparation : remet en cache les fichiers qui en auraient disparu
+async function completer() {
+  const cache = await caches.open(CACHE);
+  for (const f of FICHIERS) {
+    if (await cache.match(f)) continue;
+    try {
+      const rep = await fetch(new Request(f, { cache: 'reload' }));
+      if (rep.ok) await cache.put(f, rep);
+    } catch (err) { /* hors ligne : on réessaiera à la prochaine ouverture */ }
+  }
+}
 
 self.addEventListener('fetch', (e) => {
   const req = e.request;

@@ -1009,6 +1009,7 @@ document.addEventListener('visibilitychange', () => {
 /* ---------- Service worker : hors ligne + mises à jour ---------- */
 if ('serviceWorker' in navigator) {
   let majDemandee = false;
+  navigator.serviceWorker.ready.then((reg) => { if (reg.active) reg.active.postMessage('completer'); }).catch(() => {});
   navigator.serviceWorker.register('sw.js').then((reg) => {
     const proposer = () => {
       const b = $('#maj');
