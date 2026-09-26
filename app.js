@@ -30,7 +30,7 @@ function t(s) {
   return esc(s).replace(/\[(À COMPLÉTER|à vérifier)\]/gi, (m) => '<mark>' + m + '</mark>');
 }
 function nettoyer(s) {
-  return String(s || '').replace(/\[(À COMPLÉTER|à vérifier)\]/gi, '').trim();
+  return String(s || '').replace(/\[(À COMPLÉTER|à vérifier)\]/gi, '').replace(/\s{2,}/g, ' ').trim();
 }
 
 /* ---------- Heures ----------
@@ -92,6 +92,7 @@ async function charger() {
   }
   try {
     D = JSON.parse(texte);
+    migrerAnciennesNotes();
   } catch (e) {
     afficherErreur('Le fichier data.json contient une erreur de syntaxe.',
       e.message + '\n\nCauses fréquentes : virgule manquante ou en trop, guillemet non fermé.');
@@ -210,7 +211,8 @@ function vueAujourdhui() {
   const hotel = jour && jour.hotel ? adresse(jour.hotel) : null;
   h += '<div class="section-titre">Accès rapide</div><div class="grille-boutons">';
   if (hotel) h += '<button class="btn principal" data-chauffeur="' + esc(hotel.id) + '"><span class="ico">🛏</span>Hôtel de ce soir au chauffeur</button>';
-  h += '<a class="btn urgence" href="#contacts"><span class="ico">☎</span>Urgences</a>' +
+  h += '<a class="btn" href="#notes"><span class="ico">✎</span>Prendre une note</a>' +
+    '<a class="btn urgence" href="#contacts"><span class="ico">☎</span>Urgences</a>' +
     '<a class="btn" href="#phrases"><span class="ico">文</span>Phrases utiles</a>' +
     '<a class="btn" href="#convertisseur"><span class="ico">¥</span>€ ↔ ¥</a>' +
     '<a class="btn" href="#programme"><span class="ico">▦</span>Toute la semaine</a>' +
@@ -252,12 +254,208 @@ function vueSalons() {
         '<li><strong>' + t(x.nom) + '</strong>' + (x.stand ? ' — ' + t(x.stand) : '') +
         (x.pourquoi ? '<div class="meta">' + t(x.pourquoi) + '</div>' : '') + '</li>').join('') + '</ul>';
     }
-    const cle = 'notes:' + (s.id || s.nom);
-    h += '<div class="section-titre">Mes notes (sur ce téléphone uniquement)</div>' +
-      '<textarea data-notes="' + esc(cle) + '" placeholder="Notes de visite…">' + esc(lire(cle, '')) + '</textarea>' +
-      '<div class="boutons"><button class="btn" data-copier="' + esc(cle) + '">Copier mes notes</button></div>';
+    const n = lireNotes().filter((x) => x.salon === s.id).length;
+    h += '<div class="boutons"><a class="btn" href="#notes/' + esc(s.id) + '">✎ Mes notes sur ce salon (' + n + ')</a></div>';
     return h + '</div>';
   }).join('');
+}
+
+/* ---------- Notes à la volée ----------
+   Toutes les notes dans une seule liste, sur ce téléphone uniquement (clé « notes-v1 »).
+   Chaque note : { id, t (horodatage), txt, salon (id du salon ou "") }. */
+const CLE_NOTES = 'notes-v1';
+let filtreNotes = 'toutes';
+let rechercheNotes = '';
+let noteEnEdition = null;
+let salonChoisi = null; // { salon, jour } : choix manuel, valable pour la journée
+
+function lireNotes() {
+  try { const n = JSON.parse(lire(CLE_NOTES, '[]')); return Array.isArray(n) ? n : []; } catch (e) { return []; }
+}
+function ecrireNotes(notes) {
+  try { localStorage.setItem(CLE_NOTES, JSON.stringify(notes)); return true; } catch (e) {
+    avertir('Enregistrement impossible (mémoire pleine ou navigation privée). Exportez vos notes.');
+    return false;
+  }
+}
+function nouvelId() { return Date.now().toString(36) + Math.random().toString(36).slice(2, 6); }
+function nomSalon(id) {
+  const s = (D.salons || []).find((x) => x.id === id);
+  return s ? (nettoyer(s.nom) || s.id) : 'Sans salon';
+}
+
+// Reprend les notes de l'ancienne version (un champ par salon)
+function migrerAnciennesNotes() {
+  const notes = lireNotes();
+  let change = false;
+  (D.salons || []).forEach((s) => {
+    const cle = 'notes:' + (s.id || s.nom);
+    const txt = lire(cle, '').trim();
+    if (txt) { notes.push({ id: nouvelId(), t: Date.now(), txt: txt, salon: s.id || '' }); change = true; }
+    if (txt || lire(cle, null) !== null) { try { localStorage.removeItem(cle); } catch (e) { /* ignoré */ } }
+  });
+  if (change) ecrireNotes(notes);
+}
+
+// Salon du moment d'après le programme du jour (créneau en cours, sinon premier créneau au salon)
+function salonDuMoment() {
+  const now = maintenant();
+  const jour = (D.jours || []).find((j) => j.date === ymd(now, TZ_CN));
+  if (!jour) return '';
+  const parLieu = {};
+  (D.salons || []).forEach((s) => { if (s.lieu) parLieu[s.lieu] = s.id; });
+  const cr = (jour.creneaux || []).filter((c) => parLieu[c.lieu]);
+  if (!cr.length) return '';
+  const m = minutes(now, TZ_CN);
+  const enCours = cr.find((c) => {
+    const d = enMinutes(c.heure), f = enMinutes(c.fin);
+    return d != null && m >= d && (f == null || m < f);
+  });
+  return parLieu[(enCours || cr[0]).lieu];
+}
+function salonParDefaut() {
+  if (salonChoisi && salonChoisi.jour === ymd(maintenant(), TZ_CN)) return salonChoisi.salon;
+  return salonDuMoment();
+}
+
+function optionsSalons(choisi) {
+  return '<option value="">Sans salon</option>' + (D.salons || []).map((s) =>
+    '<option value="' + esc(s.id) + '"' + (s.id === choisi ? ' selected' : '') + '>' + esc(nomSalon(s.id)) + '</option>').join('');
+}
+function heureNote(ts) {
+  const d = new Date(ts);
+  return hm(d, TZ_CN);
+}
+
+function vueNotes() {
+  const notes = lireNotes();
+  let h = '<h2>Mes notes</h2>' +
+    '<div class="carte accent saisie-note">' +
+    '<textarea id="note-saisie" placeholder="Tapez ou dictez avec le 🎤 du clavier…">' + esc(lire('note-brouillon', '')) + '</textarea>' +
+    '<label class="note-salon-label">Salon : <select id="note-salon">' + optionsSalons(salonParDefaut()) + '</select></label>' +
+    '<div class="boutons"><button class="btn principal" data-note-ajouter>＋ Ajouter la note</button></div></div>';
+
+  // Filtres
+  const compte = (f) => notes.filter((n) => f === 'toutes' || (n.salon || 'aucun') === f).length;
+  const filtres = [['toutes', 'Toutes']].concat((D.salons || []).map((s) => [s.id, nomSalon(s.id)]), [['aucun', 'Sans salon']]);
+  if (!filtres.some((f) => f[0] === filtreNotes)) filtreNotes = 'toutes';
+  h += '<div class="filtres">' + filtres.map(([id, nom]) =>
+    '<button class="filtre' + (id === filtreNotes ? ' actif' : '') + '" data-notes-filtre="' + esc(id) + '">' +
+    esc(nom) + ' (' + compte(id) + ')</button>').join('') + '</div>';
+  h += '<input id="notes-recherche" class="recherche" type="search" placeholder="Rechercher dans mes notes" value="' + esc(rechercheNotes) + '">';
+  h += '<div id="notes-liste">' + listeNotesHtml(notes) + '</div>';
+
+  h += '<div class="section-titre">Exporter toutes les notes (' + notes.length + ')</div>' +
+    '<div class="boutons"><button class="btn" data-notes-partager>Partager (mail, WhatsApp…)</button>' +
+    '<button class="btn" data-notes-telecharger>Télécharger (.txt)</button></div>' +
+    '<p class="meta">Les notes restent sur ce téléphone uniquement : exportez-les chaque soir.</p>';
+  return h;
+}
+
+function listeNotesHtml(notes) {
+  const q = rechercheNotes.trim().toLowerCase();
+  const visibles = notes.slice().reverse() // à heure égale, la plus récente en premier
+    .filter((n) => filtreNotes === 'toutes' || (n.salon || 'aucun') === filtreNotes)
+    .filter((n) => !q || n.txt.toLowerCase().includes(q))
+    .sort((a, b) => b.t - a.t);
+  if (!visibles.length) return '<p class="vide">' + (notes.length ? 'Aucune note ne correspond.' : 'Aucune note pour l\'instant.') + '</p>';
+  let h = '', jourCourant = '';
+  visibles.forEach((n) => {
+    const jour = ymd(new Date(n.t), TZ_CN);
+    if (jour !== jourCourant) {
+      if (jourCourant) h += '</div>';
+      h += '<div class="section-titre">' + esc(dateLongue(new Date(n.t), TZ_CN)) + '</div><div class="carte">';
+      jourCourant = jour;
+    }
+    if (n.id === noteEnEdition) {
+      h += '<div class="note edition"><textarea id="note-edition">' + esc(n.txt) + '</textarea>' +
+        '<label class="note-salon-label">Salon : <select id="note-edition-salon">' + optionsSalons(n.salon) + '</select></label>' +
+        '<div class="boutons"><button class="btn principal" data-note-enregistrer="' + esc(n.id) + '">Enregistrer</button>' +
+        '<button class="btn" data-note-annuler>Annuler</button>' +
+        '<button class="btn danger" data-note-supprimer="' + esc(n.id) + '">Supprimer</button></div></div>';
+    } else {
+      h += '<button class="note" data-note-modifier="' + esc(n.id) + '">' +
+        '<div class="note-meta">' + heureNote(n.t) + (n.salon ? ' · ' + esc(nomSalon(n.salon)) : '') + '</div>' +
+        '<div class="note-txt">' + esc(n.txt) + '</div></button>';
+    }
+  });
+  return h + '</div>';
+}
+function majListeNotes() {
+  const el = $('#notes-liste');
+  if (el) el.innerHTML = listeNotesHtml(lireNotes());
+}
+
+function texteExport() {
+  const notes = lireNotes().slice().sort((a, b) => a.t - b.t);
+  const titre = (D.voyage && D.voyage.titre) || 'Voyage';
+  let txt = titre + ' — mes notes (' + notes.length + '), exportées le ' +
+    dateLongue(maintenant(), TZ_CN) + ' à ' + hm(maintenant(), TZ_CN) + ' (heure de Pékin)\n';
+  const groupes = [];
+  (D.salons || []).forEach((s) => groupes.push([s.id, nomSalon(s.id)]));
+  groupes.push(['', 'Sans salon']);
+  groupes.forEach(([id, nom]) => {
+    const lot = notes.filter((n) => (n.salon || '') === id || (id === '' && n.salon && !(D.salons || []).some((s) => s.id === n.salon)));
+    if (!lot.length) return;
+    txt += '\n=== ' + nom + ' ===\n';
+    lot.forEach((n) => { txt += '\n[' + dateCourte(new Date(n.t), TZ_CN) + ' ' + heureNote(n.t) + ']\n' + n.txt + '\n'; });
+  });
+  return txt;
+}
+
+function clicNotes(e) {
+  const el = (sel) => e.target.closest(sel);
+  let b;
+  if ((b = el('[data-note-ajouter]'))) {
+    const champ = $('#note-saisie');
+    const txt = champ.value.trim();
+    if (!txt) { champ.focus(); return true; }
+    const notes = lireNotes();
+    notes.push({ id: nouvelId(), t: maintenant().getTime(), txt: txt, salon: $('#note-salon').value });
+    if (ecrireNotes(notes)) {
+      ecrire('note-brouillon', '');
+      if (navigator.storage && navigator.storage.persist) navigator.storage.persist().catch(() => {});
+      salonChoisi = { salon: $('#note-salon').value, jour: ymd(maintenant(), TZ_CN) };
+      route(true);
+      avertir('Note enregistrée ✓');
+      $('#note-saisie').focus();
+    }
+    return true;
+  }
+  if ((b = el('[data-notes-filtre]'))) { filtreNotes = b.dataset.notesFiltre; route(true); return true; }
+  if ((b = el('[data-note-modifier]'))) { noteEnEdition = b.dataset.noteModifier; majListeNotes(); const t = $('#note-edition'); if (t) t.focus(); return true; }
+  if ((b = el('[data-note-annuler]'))) { noteEnEdition = null; majListeNotes(); return true; }
+  if ((b = el('[data-note-enregistrer]'))) {
+    const notes = lireNotes();
+    const n = notes.find((x) => x.id === b.dataset.noteEnregistrer);
+    const txt = $('#note-edition').value.trim();
+    if (n && txt) { n.txt = txt; n.salon = $('#note-edition-salon').value; }
+    if (ecrireNotes(notes)) { noteEnEdition = null; route(true); }
+    return true;
+  }
+  if ((b = el('[data-note-supprimer]'))) {
+    if (!confirm('Supprimer définitivement cette note ?')) return true;
+    if (ecrireNotes(lireNotes().filter((x) => x.id !== b.dataset.noteSupprimer))) { noteEnEdition = null; route(true); }
+    return true;
+  }
+  if ((b = el('[data-notes-partager]'))) {
+    const txt = texteExport();
+    if (navigator.share) navigator.share({ title: 'Mes notes — Chine 2026', text: txt }).catch(() => {});
+    else if (navigator.clipboard) navigator.clipboard.writeText(txt).then(() => avertir('Notes copiées : collez-les dans un mail ou une note.')).catch(() => {});
+    return true;
+  }
+  if ((b = el('[data-notes-telecharger]'))) {
+    const url = URL.createObjectURL(new Blob([texteExport()], { type: 'text/plain;charset=utf-8' }));
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'notes-chine-' + ymd(maintenant(), TZ_CN) + '.txt';
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 5000);
+    return true;
+  }
+  return false;
 }
 
 /* ---------- Vue : Adresses ---------- */
@@ -380,7 +578,7 @@ function nombre(s) { const n = parseFloat(String(s).replace(/\s/g, '').replace('
 /* ---------- Navigation par onglets ---------- */
 const VUES = {
   aujourdhui: vueAujourdhui, programme: vueProgramme, salons: vueSalons, adresses: vueAdresses,
-  plus: vuePlus, contacts: vueContacts, pratique: vuePratique, phrases: vuePhrases, convertisseur: vueConvertisseur
+  notes: vueNotes, plus: vuePlus, contacts: vueContacts, pratique: vuePratique, phrases: vuePhrases, convertisseur: vueConvertisseur
 };
 const SOUS_PLUS = ['contacts', 'pratique', 'phrases', 'convertisseur'];
 
@@ -389,6 +587,7 @@ function route(garderDefilement) {
   const [nom, cible] = (location.hash.replace('#', '') || 'aujourdhui').split('/');
   const vue = VUES[nom] ? nom : 'aujourdhui';
   if (vue === 'adresses' && cible) filtreAdresse = 'Tout';
+  if (vue === 'notes' && cible) { filtreNotes = cible; salonChoisi = { salon: cible, jour: ymd(maintenant(), TZ_CN) }; }
   const y = window.scrollY;
   $('#vue').innerHTML = VUES[vue]();
   const actif = SOUS_PLUS.includes(vue) ? 'plus' : vue;
@@ -486,16 +685,11 @@ document.addEventListener('click', (e) => {
   }
   const f = e.target.closest('[data-filtre]');
   if (f) { filtreAdresse = f.dataset.filtre; route(true); return; }
-  const cp = e.target.closest('[data-copier]');
-  if (cp) {
-    const txt = lire(cp.dataset.copier, '');
-    const ok = () => { cp.textContent = 'Copié ✓'; setTimeout(() => { cp.textContent = 'Copier mes notes'; }, 1500); };
-    if (navigator.clipboard) navigator.clipboard.writeText(txt).then(ok).catch(() => {});
-    return;
-  }
+  if (clicNotes(e)) return;
 });
 document.addEventListener('input', (e) => {
-  if (e.target.dataset.notes) ecrire(e.target.dataset.notes, e.target.value);
+  if (e.target.id === 'note-saisie') ecrire('note-brouillon', e.target.value);
+  if (e.target.id === 'notes-recherche') { rechercheNotes = e.target.value; majListeNotes(); }
   if (e.target.id === 'eur' || e.target.id === 'cny') {
     const taux = +D.taux.eurCny;
     const n = nombre(e.target.value);
@@ -505,6 +699,7 @@ document.addEventListener('input', (e) => {
 });
 document.addEventListener('change', (e) => {
   if (e.target.dataset.check) ecrire(e.target.dataset.check, e.target.checked ? '1' : '');
+  if (e.target.id === 'note-salon') salonChoisi = { salon: e.target.value, jour: ymd(maintenant(), TZ_CN) };
 });
 $('#plein-fermer').addEventListener('click', fermerPlein);
 window.addEventListener('hashchange', () => { fermerPlein(); route(false); });

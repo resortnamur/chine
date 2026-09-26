@@ -41,6 +41,14 @@ La pastille verte **À jour** signifie que le contenu vient d'être récupéré 
 
 À faire **avant le départ**, avec du réseau.
 
+## Notes
+
+Onglet **Notes** : une note à la fois, tapée ou dictée (🎤 du clavier), enregistrée avec l'heure de Pékin et le salon du moment, que l'on peut changer.
+Toutes les notes sont réunies dans une seule liste, avec un filtre par salon et une recherche. Toucher une note pour la modifier ou la supprimer.
+Elles restent **sur le téléphone uniquement** : les exporter chaque soir avec **Partager** ou **Télécharger (.txt)**.
+Le texte exporté peut être collé dans Claude pour en faire un compte rendu.
+Ne pas changer l'`"id"` d'un salon dans `data.json`, sinon ses notes passent en « Sans salon » à l'export.
+
 ## Bouton 🔊
 
 Prononce les phrases et les adresses en chinois avec la voix du téléphone, sans Internet.
