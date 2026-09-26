@@ -255,6 +255,15 @@
       ]
     },
     {
+      "titre": "Voix chinoise (bouton 🔊)",
+      "points": [
+        "Le bouton 🔊 fait prononcer les phrases et les adresses en chinois par le téléphone, sans Internet.",
+        "iPhone : rien à faire, la voix chinoise est installée d'origine. En cas de silence : vérifier que le téléphone n'est pas en mode silencieux et monter le volume.",
+        "Android : AVANT le départ, Paramètres › Synthèse vocale (ou Accessibilité › Synthèse vocale) › moteur Google › Installer les données vocales › Chinois (Chine continentale / 普通话). Sinon la voix passe par Internet et ne marche pas en Chine.",
+        "Tester en mode avion avant le départ."
+      ]
+    },
+    {
       "titre": "Paiement",
       "points": [
         "Presque tout se paie par QR code (Alipay ou WeChat Pay).",
@@ -309,6 +318,7 @@
     "Cartes de visite bilingues [À COMPLÉTER]",
     "Un peu d'espèces en CNY",
     "Assurance voyage : numéro d'assistance noté",
+    "Voix chinoise installée (Android) et bouton 🔊 testé en mode avion",
     "Ce site ouvert une fois avec réseau, puis installé sur l'écran d'accueil"
   ],
 

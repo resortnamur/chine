@@ -26,6 +26,8 @@
 
 <button class="bandeau-maj" id="maj" hidden>Nouvelle version disponible — toucher pour mettre à jour</button>
 
+<div class="avis" id="avis" role="status" hidden></div>
+
 <main id="vue" class="vue">
   <p class="chargement">Chargement…</p>
 </main>
@@ -39,7 +41,10 @@
 </nav>
 
 <div class="plein" id="plein" hidden>
-  <button class="plein-fermer" id="plein-fermer" aria-label="Fermer">✕ Fermer</button>
+  <div class="plein-haut">
+    <button class="btn parler" id="plein-parler" aria-label="Écouter en chinois">🔊 Écouter</button>
+    <button class="plein-fermer" id="plein-fermer" aria-label="Fermer">✕ Fermer</button>
+  </div>
   <div class="plein-contenu">
     <div class="plein-zh" id="plein-zh"></div>
     <div class="plein-sous" id="plein-sous"></div>

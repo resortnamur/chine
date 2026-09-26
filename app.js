@@ -292,7 +292,8 @@ function vueAdresses() {
     if (a.note) c += '<p class="meta">ℹ️ ' + t(a.note) + '</p>';
     c += '<div class="boutons"><button class="btn principal" data-chauffeur="' + esc(a.id) + '">Montrer au chauffeur</button>' +
       '<a class="btn" href="' + esc(lienAmap(a)) + '" target="_blank" rel="noopener">Amap</a>' +
-      '<a class="btn" href="' + esc(lienApple(a)) + '" target="_blank" rel="noopener">Apple Plans</a>';
+      '<a class="btn" href="' + esc(lienApple(a)) + '" target="_blank" rel="noopener">Apple Plans</a>' +
+      (a.nomZh || a.adresseZh ? boutonParler([a.nomZh, a.adresseZh].filter(Boolean).join('，'), '🔊 Écouter') : '');
     if (telValide(a.telephone)) c += '<a class="btn tel" href="tel:' + esc(numeroTel(a.telephone)) + '">☎ Appeler</a>';
     return c + '</div></div>';
   }).join('');
@@ -350,11 +351,12 @@ function vuePratique() {
 function vuePhrases() {
   const groupes = {};
   (D.phrases || []).forEach((p, i) => { (groupes[p.categorie || 'Divers'] = groupes[p.categorie || 'Divers'] || []).push([p, i]); });
-  let h = '<h2>Phrases utiles</h2><p class="meta">Touchez une phrase pour l\'afficher en grand.</p>';
+  let h = '<h2>Phrases utiles</h2><p class="meta">Touchez une phrase pour l\'afficher en grand' + (voixPossible() ? ', ou 🔊 pour l\'entendre' : '') + '.</p>';
   Object.keys(groupes).forEach((g) => {
     h += '<div class="section-titre">' + esc(g) + '</div><div class="carte">' + groupes[g].map(([p, i]) =>
-      '<button class="phrase" data-phrase="' + i + '"><div class="fr">' + t(p.fr) + '</div>' +
-      '<div class="zh" lang="zh-CN">' + esc(p.zh) + '</div><div class="py">' + esc(p.pinyin) + '</div></button>').join('') + '</div>';
+      '<div class="phrase-ligne"><button class="phrase" data-phrase="' + i + '"><div class="fr">' + t(p.fr) + '</div>' +
+      '<div class="zh" lang="zh-CN">' + esc(p.zh) + '</div><div class="py">' + esc(p.pinyin) + '</div></button>' +
+      boutonParler(p.zh) + '</div>').join('') + '</div>';
   });
   return h;
 }
@@ -398,6 +400,42 @@ function route(garderDefilement) {
   } else window.scrollTo(0, 0);
 }
 
+/* ---------- Voix chinoise 🔊 ----------
+   Utilise la synthèse vocale du téléphone (aucune requête réseau depuis la page).
+   iPhone : voix chinoise installée d'origine. Android : installer la voix chinoise
+   hors ligne dans les réglages de synthèse vocale avant le départ. */
+function voixPossible() { return 'speechSynthesis' in window && 'SpeechSynthesisUtterance' in window; }
+function voixChinoises() {
+  return speechSynthesis.getVoices().filter((v) => /^(zh|cmn)([-_](CN|Hans))?/i.test(v.lang) && !/(TW|HK)$/i.test(v.lang));
+}
+function boutonParler(texte, libelle) {
+  if (!voixPossible() || !texte) return '';
+  return '<button class="btn parler" data-parler="' + esc(texte) + '" aria-label="Écouter en chinois">' + (libelle || '🔊') + '</button>';
+}
+function parler(texte) {
+  if (!voixPossible() || !texte) return;
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(texte);
+  u.lang = 'zh-CN';
+  u.rate = 0.85;
+  const voix = voixChinoises();
+  const locale = voix.find((v) => v.localService);
+  if (locale || voix[0]) u.voice = locale || voix[0];
+  if (!voix.length) avertir('Aucune voix chinoise trouvée sur ce téléphone : voir Pratique › Voix chinoise.');
+  else if (!locale && !navigator.onLine) avertir('La voix chinoise de ce téléphone exige Internet : installer la voix hors ligne (voir Pratique).');
+  u.onerror = (ev) => { if (ev.error !== 'canceled' && ev.error !== 'interrupted') avertir('Lecture impossible : voir Pratique › Voix chinoise.'); };
+  speechSynthesis.speak(u);
+}
+let minuterieAvis = null;
+function avertir(msg) {
+  const el = $('#avis');
+  el.textContent = msg;
+  el.hidden = false;
+  clearTimeout(minuterieAvis);
+  minuterieAvis = setTimeout(() => { el.hidden = true; }, 5000);
+}
+if (voixPossible()) speechSynthesis.getVoices(); // lance le chargement de la liste des voix
+
 /* ---------- Plein écran : chauffeur et phrases ---------- */
 let verrouEcran = null;
 function taillePolice(texte) {
@@ -409,6 +447,8 @@ function taillePolice(texte) {
   return '8vw';
 }
 function ouvrirPlein(zh, sous, petitHtml) {
+  $('#plein-parler').dataset.parler = zh;
+  $('#plein-parler').hidden = !voixPossible();
   $('#plein-zh').textContent = zh;
   $('#plein-zh').style.fontSize = taillePolice(zh);
   $('#plein-sous').textContent = sous || '';
@@ -418,6 +458,7 @@ function ouvrirPlein(zh, sous, petitHtml) {
   if (navigator.wakeLock) navigator.wakeLock.request('screen').then((v) => { verrouEcran = v; }).catch(() => {});
 }
 function fermerPlein() {
+  if (voixPossible()) speechSynthesis.cancel();
   $('#plein').hidden = true;
   document.body.style.overflow = '';
   if (verrouEcran) { verrouEcran.release().catch(() => {}); verrouEcran = null; }
@@ -425,6 +466,8 @@ function fermerPlein() {
 
 /* ---------- Événements ---------- */
 document.addEventListener('click', (e) => {
+  const pa = e.target.closest('[data-parler]');
+  if (pa) { parler(pa.dataset.parler); return; }
   const ch = e.target.closest('[data-chauffeur]');
   if (ch) {
     const a = adresse(ch.dataset.chauffeur);
