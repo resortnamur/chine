@@ -41,9 +41,12 @@ La pastille verte **À jour** signifie que le contenu vient d'être récupéré 
 
 À faire **avant le départ**, avec du réseau.
 
-## Mises à jour du code
+## Bouton 🔊
 
-Bouton 🔊 : prononce les phrases et adresses en chinois avec la voix du téléphone. Sur Android, installer la voix chinoise hors ligne avant le départ (voir l'onglet Pratique du site).
+Prononce les phrases et les adresses en chinois avec la voix du téléphone, sans Internet.
+Sur Android, installer la voix chinoise hors ligne avant le départ (détail dans l'onglet Pratique du site).
+
+## Mises à jour du code
 
 Si le code change (pas le contenu), un bandeau jaune « Nouvelle version disponible » apparaît : le toucher.
 Pour la personne qui modifie le code : augmenter `VERSION` dans `sw.js` à chaque modification.
