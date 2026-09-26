@@ -9,6 +9,7 @@ const TZ_CN = 'Asia/Shanghai';
 const TZ_BE = 'Europe/Brussels';
 let D = null;          // contenu de data.json
 let filtreAdresse = 'Tout';
+let cibleRoute;           // partie après « / » dans l'adresse (#phrases/3, #notes/salon-1…)
 let depuisCache = false; // true si data.json vient du cache (réseau indisponible)
 
 const $ = (s) => document.querySelector(s);
@@ -327,11 +328,129 @@ function heureNote(ts) {
   return hm(d, TZ_CN);
 }
 
+/* ---------- Photos des notes ----------
+   Stockées sur le téléphone (IndexedDB « chine-photos »), réduites à 1600 px.
+   Une note garde la liste de ses photos : note.photos = [id, …]. */
+let dbPromesse = null;
+const urlsPhotos = {};
+let photoCible = null; // 'nouvelle' ou id de la note en cours de modification
+
+function basePhotos() {
+  if (!dbPromesse) {
+    dbPromesse = new Promise((ok, ko) => {
+      const r = indexedDB.open('chine-photos', 1);
+      r.onupgradeneeded = () => r.result.createObjectStore('photos', { keyPath: 'id' });
+      r.onsuccess = () => ok(r.result);
+      r.onerror = () => ko(r.error);
+    });
+  }
+  return dbPromesse;
+}
+async function transaction(mode, action) {
+  const base = await basePhotos();
+  return new Promise((ok, ko) => {
+    const tx = base.transaction('photos', mode);
+    const req = action(tx.objectStore('photos'));
+    tx.oncomplete = () => ok(req && req.result);
+    tx.onerror = () => ko(tx.error);
+    tx.onabort = () => ko(tx.error);
+  });
+}
+function photoEnregistrer(obj) { return transaction('readwrite', (s) => s.put(obj)); }
+function photoLire(id) { return transaction('readonly', (s) => s.get(id)); }
+function photosSupprimer(ids) {
+  (ids || []).forEach((id) => { if (urlsPhotos[id]) { URL.revokeObjectURL(urlsPhotos[id]); delete urlsPhotos[id]; } });
+  return transaction('readwrite', (s) => { (ids || []).forEach((id) => s.delete(id)); return null; }).catch(() => {});
+}
+
+async function reduirePhoto(fichier) {
+  const MAX = 1600;
+  try {
+    const img = await createImageBitmap(fichier, { imageOrientation: 'from-image' });
+    const r = Math.min(1, MAX / Math.max(img.width, img.height));
+    const c = document.createElement('canvas');
+    c.width = Math.round(img.width * r);
+    c.height = Math.round(img.height * r);
+    c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
+    if (img.close) img.close();
+    return await new Promise((ok) => c.toBlob((b) => ok(b || fichier), 'image/jpeg', 0.82));
+  } catch (e) {
+    return fichier;
+  }
+}
+
+function photosEnAttente() {
+  try { const l = JSON.parse(lire('photos-attente', '[]')); return Array.isArray(l) ? l : []; } catch (e) { return []; }
+}
+
+// Ajoute des photos à la note en cours de saisie (« nouvelle ») ou à une note existante
+async function ajouterPhotos(fichiers, cible) {
+  const ids = [];
+  for (const f of fichiers) {
+    try {
+      const blob = await reduirePhoto(f);
+      const id = nouvelId();
+      await photoEnregistrer({ id: id, blob: blob, t: Date.now() });
+      ids.push(id);
+    } catch (e) {
+      avertir('Photo non enregistrée (mémoire du téléphone pleine ?).');
+    }
+  }
+  if (!ids.length) return;
+  if (navigator.storage && navigator.storage.persist) navigator.storage.persist().catch(() => {});
+  if (cible === 'nouvelle') {
+    ecrire('photos-attente', JSON.stringify(photosEnAttente().concat(ids)));
+    route(true);
+  } else {
+    const notes = lireNotes();
+    const n = notes.find((x) => x.id === cible);
+    if (n) { n.photos = (n.photos || []).concat(ids); ecrireNotes(notes); }
+    majListeNotes();
+  }
+  avertir(ids.length > 1 ? ids.length + ' photos ajoutées ✓' : 'Photo ajoutée ✓');
+}
+
+function vignettesHtml(ids, retirable, cible) {
+  if (!ids || !ids.length) return '';
+  return '<div class="vignettes">' + ids.map((id) =>
+    '<span class="vignette"><img data-photo-id="' + esc(id) + '" data-voir-photo="' + esc(id) + '" alt="Photo">' +
+    (retirable ? '<button class="vignette-retirer" data-photo-retirer="' + esc(id) + '" data-photo-de="' + esc(cible) + '" aria-label="Retirer la photo">✕</button>' : '') +
+    '</span>').join('') + '</div>';
+}
+function boutonsPhoto(cible) {
+  return '<div class="boutons boutons-photo">' +
+    '<button class="btn" data-photo-prendre="camera" data-photo-pour="' + esc(cible) + '">📷 Photo</button>' +
+    '<button class="btn" data-photo-prendre="galerie" data-photo-pour="' + esc(cible) + '">🖼 Galerie</button></div>';
+}
+
+// Charge les images affichées depuis la mémoire du téléphone
+function hydraterPhotos() {
+  document.querySelectorAll('img[data-photo-id]:not([src])').forEach((img) => {
+    const id = img.dataset.photoId;
+    if (urlsPhotos[id]) { img.src = urlsPhotos[id]; return; }
+    photoLire(id).then((p) => {
+      if (!p) { img.alt = 'Photo introuvable'; img.classList.add('absente'); return; }
+      urlsPhotos[id] = URL.createObjectURL(p.blob);
+      img.src = urlsPhotos[id];
+    }).catch(() => {});
+  });
+}
+
+function voirPhoto(id) {
+  const url = urlsPhotos[id];
+  if (!url) return;
+  $('#visionneuse-img').src = url;
+  $('#visionneuse').hidden = false;
+}
+
+/* ---------- Écran Notes ---------- */
 function vueNotes() {
   const notes = lireNotes();
+  const attente = photosEnAttente();
   let h = '<h2>Mes notes</h2>' +
     '<div class="carte accent saisie-note">' +
     '<textarea id="note-saisie" placeholder="Tapez ou dictez avec le 🎤 du clavier…">' + esc(lire('note-brouillon', '')) + '</textarea>' +
+    vignettesHtml(attente, true, 'nouvelle') + boutonsPhoto('nouvelle') +
     '<label class="note-salon-label">Salon : <select id="note-salon">' + optionsSalons(salonParDefaut()) + '</select></label>' +
     '<div class="boutons"><button class="btn principal" data-note-ajouter>＋ Ajouter la note</button></div></div>';
 
@@ -345,10 +464,12 @@ function vueNotes() {
   h += '<input id="notes-recherche" class="recherche" type="search" placeholder="Rechercher dans mes notes" value="' + esc(rechercheNotes) + '">';
   h += '<div id="notes-liste">' + listeNotesHtml(notes) + '</div>';
 
-  h += '<div class="section-titre">Exporter toutes les notes (' + notes.length + ')</div>' +
-    '<div class="boutons"><button class="btn" data-notes-partager>Partager (mail, WhatsApp…)</button>' +
-    '<button class="btn" data-notes-telecharger>Télécharger (.txt)</button></div>' +
-    '<p class="meta">Les notes restent sur ce téléphone uniquement : exportez-les chaque soir.</p>';
+  const nbPhotos = notes.reduce((s, n) => s + (n.photos || []).length, 0);
+  h += '<div class="section-titre">Exporter : ' + notes.length + ' note' + (notes.length > 1 ? 's' : '') +
+    ', ' + nbPhotos + ' photo' + (nbPhotos > 1 ? 's' : '') + '</div>' +
+    '<div class="boutons"><button class="btn principal" data-notes-zip>⬇ Tout télécharger (.zip : texte + photos)</button>' +
+    '<button class="btn" data-notes-partager>Partager le texte (mail, WhatsApp…)</button></div>' +
+    '<p class="meta">Les notes et les photos restent sur ce téléphone uniquement : exportez-les chaque soir.</p>';
   return h;
 }
 
@@ -369,14 +490,16 @@ function listeNotesHtml(notes) {
     }
     if (n.id === noteEnEdition) {
       h += '<div class="note edition"><textarea id="note-edition">' + esc(n.txt) + '</textarea>' +
+        vignettesHtml(n.photos, true, n.id) + boutonsPhoto(n.id) +
         '<label class="note-salon-label">Salon : <select id="note-edition-salon">' + optionsSalons(n.salon) + '</select></label>' +
         '<div class="boutons"><button class="btn principal" data-note-enregistrer="' + esc(n.id) + '">Enregistrer</button>' +
-        '<button class="btn" data-note-annuler>Annuler</button>' +
-        '<button class="btn danger" data-note-supprimer="' + esc(n.id) + '">Supprimer</button></div></div>';
+        '<button class="btn" data-note-annuler>Fermer</button>' +
+        '<button class="btn danger" data-note-supprimer="' + esc(n.id) + '">Supprimer la note</button></div></div>';
     } else {
-      h += '<button class="note" data-note-modifier="' + esc(n.id) + '">' +
+      h += '<div class="note"><button class="note-corps" data-note-modifier="' + esc(n.id) + '">' +
         '<div class="note-meta">' + heureNote(n.t) + (n.salon ? ' · ' + esc(nomSalon(n.salon)) : '') + '</div>' +
-        '<div class="note-txt">' + esc(n.txt) + '</div></button>';
+        (n.txt ? '<div class="note-txt">' + esc(n.txt) + '</div>' : '') + '</button>' +
+        vignettesHtml(n.photos, false) + '</div>';
     }
   });
   return h + '</div>';
@@ -384,8 +507,16 @@ function listeNotesHtml(notes) {
 function majListeNotes() {
   const el = $('#notes-liste');
   if (el) el.innerHTML = listeNotesHtml(lireNotes());
+  hydraterPhotos();
 }
 
+/* ---------- Export ---------- */
+function deux(n) { return String(n).padStart(2, '0'); }
+function nomFichierPhoto(note, k) {
+  const p = parts(new Date(note.t), TZ_CN);
+  return 'photos/' + p.year + '-' + p.month + '-' + p.day + '_' + p.hour + 'h' + p.minute + '_' +
+    (note.salon || 'sans-salon') + '_' + note.id.slice(-4) + '-' + (k + 1) + '.jpg';
+}
 function texteExport() {
   const notes = lireNotes().slice().sort((a, b) => a.t - b.t);
   const titre = (D.voyage && D.voyage.titre) || 'Voyage';
@@ -398,22 +529,113 @@ function texteExport() {
     const lot = notes.filter((n) => (n.salon || '') === id || (id === '' && n.salon && !(D.salons || []).some((s) => s.id === n.salon)));
     if (!lot.length) return;
     txt += '\n=== ' + nom + ' ===\n';
-    lot.forEach((n) => { txt += '\n[' + dateCourte(new Date(n.t), TZ_CN) + ' ' + heureNote(n.t) + ']\n' + n.txt + '\n'; });
+    lot.forEach((n) => {
+      txt += '\n[' + dateCourte(new Date(n.t), TZ_CN) + ' ' + heureNote(n.t) + ']\n' + (n.txt || '(photo seule)') + '\n';
+      (n.photos || []).forEach((pid, k) => { txt += '  📷 ' + nomFichierPhoto(n, k) + '\n'; });
+    });
   });
   return txt;
 }
 
+// Archive .zip sans compression (les JPEG sont déjà compressés)
+const TABLE_CRC = (() => {
+  const tb = new Uint32Array(256);
+  for (let n = 0; n < 256; n++) { let c = n; for (let k = 0; k < 8; k++) c = c & 1 ? 0xEDB88320 ^ (c >>> 1) : c >>> 1; tb[n] = c >>> 0; }
+  return tb;
+})();
+function crc32(u8) {
+  let c = 0xFFFFFFFF;
+  for (let i = 0; i < u8.length; i++) c = TABLE_CRC[(c ^ u8[i]) & 0xFF] ^ (c >>> 8);
+  return (c ^ 0xFFFFFFFF) >>> 0;
+}
+function creerZip(fichiers) {
+  const enc = new TextEncoder();
+  const morceaux = [], central = [];
+  let decalage = 0, tailleCentral = 0;
+  const d = new Date();
+  const heure = (d.getHours() << 11) | (d.getMinutes() << 5) | (d.getSeconds() >> 1);
+  const date = ((d.getFullYear() - 1980) << 9) | ((d.getMonth() + 1) << 5) | d.getDate();
+  fichiers.forEach((f) => {
+    const nom = enc.encode(f.nom), data = f.donnees, crc = crc32(data);
+    const l = new DataView(new ArrayBuffer(30));
+    l.setUint32(0, 0x04034b50, true); l.setUint16(4, 20, true); l.setUint16(6, 0x0800, true);
+    l.setUint16(10, heure, true); l.setUint16(12, date, true); l.setUint32(14, crc, true);
+    l.setUint32(18, data.length, true); l.setUint32(22, data.length, true); l.setUint16(26, nom.length, true);
+    morceaux.push(l.buffer, nom, data);
+    const c = new DataView(new ArrayBuffer(46));
+    c.setUint32(0, 0x02014b50, true); c.setUint16(4, 20, true); c.setUint16(6, 20, true); c.setUint16(8, 0x0800, true);
+    c.setUint16(12, heure, true); c.setUint16(14, date, true); c.setUint32(16, crc, true);
+    c.setUint32(20, data.length, true); c.setUint32(24, data.length, true); c.setUint16(28, nom.length, true);
+    c.setUint32(42, decalage, true);
+    central.push(c.buffer, nom);
+    tailleCentral += 46 + nom.length;
+    decalage += 30 + nom.length + data.length;
+  });
+  const fin = new DataView(new ArrayBuffer(22));
+  fin.setUint32(0, 0x06054b50, true); fin.setUint16(8, fichiers.length, true); fin.setUint16(10, fichiers.length, true);
+  fin.setUint32(12, tailleCentral, true); fin.setUint32(16, decalage, true);
+  return new Blob(morceaux.concat(central, [fin.buffer]), { type: 'application/zip' });
+}
+async function zipExport() {
+  const notes = lireNotes();
+  const fichiers = [{ nom: 'notes.txt', donnees: new TextEncoder().encode(texteExport()) }];
+  let manquantes = 0;
+  for (const n of notes) {
+    for (let k = 0; k < (n.photos || []).length; k++) {
+      const p = await photoLire(n.photos[k]).catch(() => null);
+      if (p) fichiers.push({ nom: nomFichierPhoto(n, k), donnees: new Uint8Array(await p.blob.arrayBuffer()) });
+      else manquantes++;
+    }
+  }
+  return { zip: creerZip(fichiers), nb: fichiers.length - 1, manquantes: manquantes };
+}
+function telecharger(blob, nom) {
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = nom;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 10000);
+}
+
+/* ---------- Actions de l'écran Notes ---------- */
 function clicNotes(e) {
   const el = (sel) => e.target.closest(sel);
   let b;
+  if ((b = el('[data-voir-photo]'))) { voirPhoto(b.dataset.voirPhoto); return true; }
+  if ((b = el('[data-photo-prendre]'))) {
+    photoCible = b.dataset.photoPour;
+    $(b.dataset.photoPrendre === 'camera' ? '#photo-camera' : '#photo-galerie').click();
+    return true;
+  }
+  if ((b = el('[data-photo-retirer]'))) {
+    if (!confirm('Retirer cette photo ?')) return true;
+    const id = b.dataset.photoRetirer, de = b.dataset.photoDe;
+    if (de === 'nouvelle') {
+      ecrire('photos-attente', JSON.stringify(photosEnAttente().filter((x) => x !== id)));
+      photosSupprimer([id]);
+      route(true);
+    } else {
+      const notes = lireNotes();
+      const n = notes.find((x) => x.id === de);
+      if (n) { n.photos = (n.photos || []).filter((x) => x !== id); ecrireNotes(notes); }
+      photosSupprimer([id]);
+      majListeNotes();
+    }
+    return true;
+  }
   if ((b = el('[data-note-ajouter]'))) {
     const champ = $('#note-saisie');
     const txt = champ.value.trim();
-    if (!txt) { champ.focus(); return true; }
+    const attente = photosEnAttente();
+    if (!txt && !attente.length) { champ.focus(); return true; }
     const notes = lireNotes();
-    notes.push({ id: nouvelId(), t: maintenant().getTime(), txt: txt, salon: $('#note-salon').value });
+    notes.push({ id: nouvelId(), t: maintenant().getTime(), txt: txt, salon: $('#note-salon').value, photos: attente });
     if (ecrireNotes(notes)) {
       ecrire('note-brouillon', '');
+      ecrire('photos-attente', '[]');
       if (navigator.storage && navigator.storage.persist) navigator.storage.persist().catch(() => {});
       salonChoisi = { salon: $('#note-salon').value, jour: ymd(maintenant(), TZ_CN) };
       route(true);
@@ -423,19 +645,25 @@ function clicNotes(e) {
     return true;
   }
   if ((b = el('[data-notes-filtre]'))) { filtreNotes = b.dataset.notesFiltre; route(true); return true; }
-  if ((b = el('[data-note-modifier]'))) { noteEnEdition = b.dataset.noteModifier; majListeNotes(); const t = $('#note-edition'); if (t) t.focus(); return true; }
+  if ((b = el('[data-note-modifier]'))) { noteEnEdition = b.dataset.noteModifier; majListeNotes(); const z = $('#note-edition'); if (z) z.focus(); return true; }
   if ((b = el('[data-note-annuler]'))) { noteEnEdition = null; majListeNotes(); return true; }
   if ((b = el('[data-note-enregistrer]'))) {
     const notes = lireNotes();
     const n = notes.find((x) => x.id === b.dataset.noteEnregistrer);
     const txt = $('#note-edition').value.trim();
-    if (n && txt) { n.txt = txt; n.salon = $('#note-edition-salon').value; }
+    if (n && (txt || (n.photos || []).length)) { n.txt = txt; n.salon = $('#note-edition-salon').value; }
     if (ecrireNotes(notes)) { noteEnEdition = null; route(true); }
     return true;
   }
   if ((b = el('[data-note-supprimer]'))) {
-    if (!confirm('Supprimer définitivement cette note ?')) return true;
-    if (ecrireNotes(lireNotes().filter((x) => x.id !== b.dataset.noteSupprimer))) { noteEnEdition = null; route(true); }
+    if (!confirm('Supprimer définitivement cette note et ses photos ?')) return true;
+    const notes = lireNotes();
+    const n = notes.find((x) => x.id === b.dataset.noteSupprimer);
+    if (ecrireNotes(notes.filter((x) => x.id !== b.dataset.noteSupprimer))) {
+      if (n) photosSupprimer(n.photos);
+      noteEnEdition = null;
+      route(true);
+    }
     return true;
   }
   if ((b = el('[data-notes-partager]'))) {
@@ -444,19 +672,27 @@ function clicNotes(e) {
     else if (navigator.clipboard) navigator.clipboard.writeText(txt).then(() => avertir('Notes copiées : collez-les dans un mail ou une note.')).catch(() => {});
     return true;
   }
-  if ((b = el('[data-notes-telecharger]'))) {
-    const url = URL.createObjectURL(new Blob([texteExport()], { type: 'text/plain;charset=utf-8' }));
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'notes-chine-' + ymd(maintenant(), TZ_CN) + '.txt';
-    document.body.appendChild(a);
-    a.click();
-    a.remove();
-    setTimeout(() => URL.revokeObjectURL(url), 5000);
+  if ((b = el('[data-notes-zip]'))) {
+    b.disabled = true;
+    avertir('Préparation de l\'archive…');
+    zipExport().then((r) => {
+      telecharger(r.zip, 'notes-chine-' + ymd(maintenant(), TZ_CN) + '.zip');
+      avertir('Archive téléchargée : ' + r.nb + ' photo' + (r.nb > 1 ? 's' : '') + (r.manquantes ? ' (' + r.manquantes + ' introuvable)' : '') + ' ✓');
+    }).catch(() => avertir('Échec de l\'export. Réessayez.')).finally(() => { b.disabled = false; });
     return true;
   }
   return false;
 }
+
+// Choix d'une photo (appareil photo ou galerie)
+['#photo-camera', '#photo-galerie'].forEach((sel) => {
+  $(sel).addEventListener('change', (e) => {
+    const fichiers = [...e.target.files];
+    e.target.value = '';
+    if (fichiers.length && photoCible) ajouterPhotos(fichiers, photoCible);
+  });
+});
+$('#visionneuse').addEventListener('click', () => { $('#visionneuse').hidden = true; $('#visionneuse-img').removeAttribute('src'); });
 
 /* ---------- Vue : Adresses ---------- */
 function lienAmap(a) {
@@ -546,17 +782,64 @@ function vuePratique() {
 }
 
 /* ---------- Vue : Phrases ---------- */
-function vuePhrases() {
-  const groupes = {};
-  (D.phrases || []).forEach((p, i) => { (groupes[p.categorie || 'Divers'] = groupes[p.categorie || 'Divers'] || []).push([p, i]); });
-  let h = '<h2>Phrases utiles</h2><p class="meta">Touchez une phrase pour l\'afficher en grand' + (voixPossible() ? ', ou 🔊 pour l\'entendre' : '') + '.</p>';
-  Object.keys(groupes).forEach((g) => {
-    h += '<div class="section-titre">' + esc(g) + '</div><div class="carte">' + groupes[g].map(([p, i]) =>
-      '<div class="phrase-ligne"><button class="phrase" data-phrase="' + i + '"><div class="fr">' + t(p.fr) + '</div>' +
-      '<div class="zh" lang="zh-CN">' + esc(p.zh) + '</div><div class="py">' + esc(p.pinyin) + '</div></button>' +
-      boutonParler(p.zh) + '</div>').join('') + '</div>';
+let recherchePhrases = '';
+
+// Catégories dans l'ordre de data.json (« categoriesPhrases »), puis celles qui n'y figurent pas
+function categoriesPhrases() {
+  const liste = (D.categoriesPhrases || []).map((c) => ({ nom: c.nom, icone: c.icone || '💬' }));
+  (D.phrases || []).forEach((p) => {
+    const nom = p.categorie || 'Divers';
+    if (!liste.some((c) => c.nom === nom)) liste.push({ nom: nom, icone: '💬' });
   });
-  return h;
+  return liste;
+}
+function sansAccents(s) {
+  return String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+}
+function lignePhrase(p, i, avecCategorie) {
+  return '<div class="phrase-ligne"><button class="phrase" data-phrase="' + i + '">' +
+    (avecCategorie ? '<div class="note-meta">' + esc(p.categorie || 'Divers') + '</div>' : '') +
+    '<div class="fr">' + t(p.fr) + '</div>' +
+    '<div class="zh" lang="zh-CN">' + esc(p.zh) + '</div><div class="py">' + esc(p.pinyin) + '</div></button>' +
+    boutonParler(p.zh) + '</div>';
+}
+function resultatsPhrasesHtml() {
+  const q = sansAccents(recherchePhrases.trim());
+  const trouvees = [];
+  (D.phrases || []).forEach((p, i) => {
+    if (sansAccents(p.fr + ' ' + p.pinyin).includes(q) || (p.zh || '').includes(recherchePhrases.trim())) trouvees.push([p, i]);
+  });
+  if (!trouvees.length) return '<p class="vide">Aucune phrase trouvée.</p>';
+  return '<div class="carte">' + trouvees.map(([p, i]) => lignePhrase(p, i, true)).join('') + '</div>';
+}
+function majResultatsPhrases() {
+  const el = $('#phrases-contenu');
+  if (el) el.innerHTML = recherchePhrases.trim() ? resultatsPhrasesHtml() : sommairePhrasesHtml();
+}
+function sommairePhrasesHtml() {
+  const phrases = D.phrases || [];
+  return '<div class="grille-boutons">' + categoriesPhrases().map((c, k) => {
+    const n = phrases.filter((p) => (p.categorie || 'Divers') === c.nom).length;
+    return n ? '<a class="btn tuile" href="#phrases/' + k + '"><span class="ico">' + esc(c.icone) + '</span>' +
+      esc(c.nom) + '<small>' + n + ' phrases</small></a>' : '';
+  }).join('') + '</div>';
+}
+
+function vuePhrases() {
+  const cats = categoriesPhrases();
+  const k = cibleRoute !== undefined && cibleRoute !== '' ? +cibleRoute : -1;
+  const aide = '<p class="meta">Touchez une phrase pour l\'afficher en grand' + (voixPossible() ? ', ou 🔊 pour l\'entendre' : '') + '.</p>';
+  if (k >= 0 && cats[k]) {
+    const c = cats[k];
+    const lot = [];
+    (D.phrases || []).forEach((p, i) => { if ((p.categorie || 'Divers') === c.nom) lot.push([p, i]); });
+    return '<a class="btn retour" href="#phrases">← Toutes les catégories</a>' +
+      '<h2>' + esc(c.icone) + ' ' + esc(c.nom) + '</h2>' + aide +
+      '<div class="carte">' + lot.map(([p, i]) => lignePhrase(p, i, false)).join('') + '</div>';
+  }
+  return '<h2>Phrases utiles</h2>' +
+    '<input id="phrases-recherche" class="recherche" type="search" placeholder="Chercher (français ou pinyin)" value="' + esc(recherchePhrases) + '">' +
+    aide + '<div id="phrases-contenu">' + (recherchePhrases.trim() ? resultatsPhrasesHtml() : sommairePhrasesHtml()) + '</div>';
 }
 
 /* ---------- Vue : Convertisseur ---------- */
@@ -586,6 +869,7 @@ function route(garderDefilement) {
   if (!D) return;
   const [nom, cible] = (location.hash.replace('#', '') || 'aujourdhui').split('/');
   const vue = VUES[nom] ? nom : 'aujourdhui';
+  cibleRoute = cible;
   if (vue === 'adresses' && cible) filtreAdresse = 'Tout';
   if (vue === 'notes' && cible) { filtreNotes = cible; salonChoisi = { salon: cible, jour: ymd(maintenant(), TZ_CN) }; }
   const y = window.scrollY;
@@ -596,7 +880,9 @@ function route(garderDefilement) {
   else if (cible) {
     const el = document.getElementById('a-' + cible);
     if (el) { el.scrollIntoView({ block: 'start' }); window.scrollBy(0, -70); el.classList.add('flash'); }
+    else window.scrollTo(0, 0);
   } else window.scrollTo(0, 0);
+  hydraterPhotos();
 }
 
 /* ---------- Voix chinoise 🔊 ----------
@@ -689,6 +975,7 @@ document.addEventListener('click', (e) => {
 });
 document.addEventListener('input', (e) => {
   if (e.target.id === 'note-saisie') ecrire('note-brouillon', e.target.value);
+  if (e.target.id === 'phrases-recherche') { recherchePhrases = e.target.value; majResultatsPhrases(); }
   if (e.target.id === 'notes-recherche') { rechercheNotes = e.target.value; majListeNotes(); }
   if (e.target.id === 'eur' || e.target.id === 'cny') {
     const taux = +D.taux.eurCny;
@@ -702,7 +989,7 @@ document.addEventListener('change', (e) => {
   if (e.target.id === 'note-salon') salonChoisi = { salon: e.target.value, jour: ymd(maintenant(), TZ_CN) };
 });
 $('#plein-fermer').addEventListener('click', fermerPlein);
-window.addEventListener('hashchange', () => { fermerPlein(); route(false); });
+window.addEventListener('hashchange', () => { fermerPlein(); $('#visionneuse').hidden = true; route(false); });
 window.addEventListener('online', majEtat);
 window.addEventListener('offline', majEtat);
 

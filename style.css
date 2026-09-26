@@ -232,12 +232,37 @@ table.repere td:last-child { text-align: right; font-weight: 700; }
   width: 100%; min-height: 48px; font: inherit; padding: 10px 14px; margin-bottom: 4px;
   border: 2px solid var(--bord); border-radius: 12px; background: var(--fond); color: var(--texte);
 }
-.note {
-  display: block; width: 100%; text-align: left; font: inherit; color: var(--texte); cursor: pointer;
-  background: var(--fond); border: 0; border-top: 1px solid var(--bord); padding: 12px 0;
-}
+.note { border-top: 1px solid var(--bord); padding: 12px 0; }
 .note:first-child { border-top: 0; }
+.note-corps {
+  display: block; width: 100%; text-align: left; font: inherit; color: var(--texte); cursor: pointer;
+  background: none; border: 0; padding: 0;
+}
 .note-meta { font-size: 14px; font-weight: 800; color: var(--rouge); }
 .note-txt { white-space: pre-wrap; word-break: break-word; margin-top: 2px; }
-.note.edition { padding: 12px 0; border-top: 1px solid var(--bord); }
 .btn.danger { border-color: var(--rouge); color: var(--rouge); }
+
+/* Photos */
+.vignettes { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.vignette { position: relative; }
+.vignette img {
+  display: block; width: 84px; height: 84px; object-fit: cover; border-radius: 10px;
+  border: 2px solid var(--bord); background: var(--fond-2); cursor: zoom-in;
+}
+.vignette img.absente { opacity: .3; }
+.vignette-retirer {
+  position: absolute; top: -8px; right: -8px; width: 32px; height: 32px; border-radius: 50%;
+  border: 2px solid #fff; background: var(--rouge); color: #fff; font: inherit; font-weight: 800; line-height: 1;
+}
+.boutons-photo .btn { min-height: 48px; }
+.visionneuse {
+  position: fixed; inset: 0; z-index: 200; background: #000;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+}
+.visionneuse img { max-width: 100%; max-height: calc(100% - 50px); object-fit: contain; }
+.visionneuse-aide { color: #fff; font-weight: 700; padding: 12px; }
+
+/* Phrases : sommaire et retour */
+.btn.tuile { text-align: center; line-height: 1.2; }
+.btn.tuile small { font-weight: 400; font-size: 14px; color: var(--texte-2); }
+.btn.retour { flex: none; margin-bottom: 12px; min-height: 48px; }

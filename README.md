@@ -45,9 +45,16 @@ La pastille verte **À jour** signifie que le contenu vient d'être récupéré 
 
 Onglet **Notes** : une note à la fois, tapée ou dictée (🎤 du clavier), enregistrée avec l'heure de Pékin et le salon du moment, que l'on peut changer.
 Toutes les notes sont réunies dans une seule liste, avec un filtre par salon et une recherche. Toucher une note pour la modifier ou la supprimer.
-Elles restent **sur le téléphone uniquement** : les exporter chaque soir avec **Partager** ou **Télécharger (.txt)**.
+Boutons **📷 Photo** et **🖼 Galerie** pour joindre des photos à une note (réduites pour économiser la place). Toucher une vignette pour l'agrandir.
+Elles restent **sur le téléphone uniquement** : les exporter chaque soir avec **Tout télécharger (.zip)**, qui contient le texte et toutes les photos, ou **Partager le texte**.
 Le texte exporté peut être collé dans Claude pour en faire un compte rendu.
 Ne pas changer l'`"id"` d'un salon dans `data.json`, sinon ses notes passent en « Sans salon » à l'export.
+
+## Phrases utiles
+
+Environ 150 phrases, classées par catégories dans `data.json` (`categoriesPhrases` fixe l'ordre et l'icône des catégories, `phrases` la liste).
+L'écran s'ouvre sur un sommaire de catégories et propose une recherche en français ou en pinyin (sans les accents).
+Pour ajouter une phrase : copier une ligne existante dans `phrases` et changer `categorie`, `fr`, `zh` et `pinyin`.
 
 ## Bouton 🔊
 

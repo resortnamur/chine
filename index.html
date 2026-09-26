@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <!-- Interdit toute requête vers un autre domaine que le site lui-même -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; connect-src 'self'; manifest-src 'self'; worker-src 'self'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: blob:; style-src 'self'; script-src 'self'; connect-src 'self'; manifest-src 'self'; worker-src 'self'">
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#a11212">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -52,6 +52,14 @@
     <div class="plein-petit" id="plein-petit"></div>
   </div>
 </div>
+
+<div class="visionneuse" id="visionneuse" hidden>
+  <img id="visionneuse-img" alt="Photo">
+  <div class="visionneuse-aide">Toucher pour fermer</div>
+</div>
+
+<input type="file" id="photo-camera" accept="image/*" capture="environment" hidden>
+<input type="file" id="photo-galerie" accept="image/*" multiple hidden>
 
 <script src="app.js"></script>
 </body>
