@@ -266,3 +266,13 @@ table.repere td:last-child { text-align: right; font-weight: 700; }
 .btn.tuile { text-align: center; line-height: 1.2; }
 .btn.tuile small { font-weight: 400; font-size: 14px; color: var(--texte-2); }
 .btn.retour { flex: none; margin-bottom: 12px; min-height: 48px; }
+
+/* Présentation */
+.tuile-presentation { flex-direction: column; width: 100%; margin-bottom: 12px; min-height: 76px; }
+.tuile-presentation small { font-weight: 400; font-size: 14px; opacity: .9; }
+a.filtre { display: inline-flex; align-items: center; text-decoration: none; }
+.texte-long { white-space: pre-line; font-size: 17px; line-height: 1.5; }
+.zh-long { font-size: 19px; }
+.plein-zh.latin { word-break: normal; overflow-wrap: break-word; }
+.plein.long .plein-contenu { justify-content: flex-start; }
+.plein.long .plein-zh { font-weight: 600; line-height: 1.45; }

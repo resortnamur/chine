@@ -322,6 +322,24 @@
     "Ce site ouvert une fois avec réseau, puis installé sur l'écran d'accueil"
   ],
 
+  "presentation": {
+    "titre": "Nous présenter",
+    "versions": [
+      {
+        "nom": "Courte",
+        "fr": "Bonjour ! Nous sommes une délégation de dirigeants de Gaming1, groupe belge du divertissement. Nous sommes venus en Chine, là où se construit l'avenir des technologies, pour découvrir vos innovations, en particulier l'intelligence artificielle, l'automatisation et l'expérience client. Merci de votre accueil !",
+        "en": "Hello! We are a delegation of executives from Gaming1, a Belgian entertainment group. We have come to China, where the future of technology is being built, to discover your innovations, especially artificial intelligence, automation and customer experience. Thank you for your warm welcome!",
+        "zh": "您好！我们是比利时娱乐集团Gaming1的管理层代表团。中国正在引领科技的未来，因此我们专程来到这里，了解贵方的创新成果，尤其是人工智能、自动化和客户体验方面的技术。感谢您的热情接待！"
+      },
+      {
+        "nom": "Complète",
+        "fr": "Bonjour ! Nous sommes une délégation de dirigeants de Gaming1 Retail, la branche « lieux de divertissement » de Gaming1, un groupe belge né à Liège qui compte aujourd'hui plusieurs milliers de collaborateurs. Gaming1 fait partie d'Ardent Group, un groupe liégeois actif notamment dans l'immobilier et à l'international.\n\nEn Belgique, nous exploitons le Casino de Spa, l'un des plus anciens casinos du monde, le Casino-Resort de Namur, 30 salles de jeux et les bars Odd's. En France, nous gérons 7 casinos et un cercle de jeu à Paris ; en Suisse, 2 casinos.\n\nSi nous avons fait ce long voyage, c'est parce que nous en sommes convaincus : c'est en Chine que se construit aujourd'hui l'avenir des technologies. Votre capacité d'innovation, la qualité de votre industrie et la vitesse à laquelle vous transformez une idée en produit sont pour nous une référence.\n\nNous nous intéressons particulièrement à l'intelligence artificielle et à l'automatisation, à l'expérience client, mais aussi aux écrans et à l'affichage, à l'hôtellerie et à la sécurité. Nous venons pour apprendre et découvrir vos dernières innovations, et nous serons heureux de rester en contact, dans un esprit de coopération gagnant-gagnant.\n\nMerci de votre accueil !",
+        "en": "Hello! We are a delegation of executives from Gaming1 Retail, the entertainment venues division of Gaming1, a Belgian group from Liège that now employs several thousand people. Gaming1 is part of Ardent Group, a Liège-based group active in real estate and on the international stage.\n\nIn Belgium, we operate the Casino de Spa, one of the oldest casinos in the world, the Namur Casino Resort, 30 gaming halls and the Odd's bars. In France, we run 7 casinos and a gaming club in Paris; in Switzerland, 2 casinos.\n\nWe have made this long journey because we are convinced that the future of technology is being built in China today. Your capacity for innovation, the strength of your industry and the speed at which you turn ideas into products are a benchmark for us.\n\nWe are particularly interested in artificial intelligence and automation, customer experience, as well as displays, hospitality and security. We have come to learn and to discover your latest innovations, and we would be glad to stay in touch, in a spirit of mutually beneficial cooperation.\n\nThank you for your warm welcome!",
+        "zh": "您好！我们是Gaming1 Retail的管理层代表团。Gaming1 Retail是比利时Gaming1集团旗下负责娱乐场所的业务板块。Gaming1诞生于比利时列日，如今拥有数千名员工，隶属于同样来自列日的Ardent集团，该集团业务涵盖房地产等领域，并积极拓展国际市场。\n\n在比利时，我们经营着世界上历史最悠久的娱乐场之一——斯帕娱乐场（Casino de Spa），以及那慕尔娱乐度假村、30家游戏厅和Odd's连锁酒吧。在法国，我们经营7家娱乐场和巴黎的一家游戏俱乐部；在瑞士，我们经营2家娱乐场。\n\n我们之所以远道而来，是因为我们深信：今天，科技的未来正在中国书写。中国的创新能力、产业实力，以及将创意迅速转化为产品的速度，都是我们学习的榜样。\n\n我们尤其关注人工智能与自动化、客户体验，以及显示屏、酒店科技和安防等领域。我们此行的目的是学习和了解贵方的最新创新成果，也非常希望与各位保持联系，本着合作共赢的精神携手前行。\n\n感谢您的热情接待！"
+      }
+    ]
+  },
+
   "categoriesPhrases": [
     { "nom": "Politesse et présentations", "icone": "🤝" },
     { "nom": "Au stand", "icone": "🏢" },

@@ -56,6 +56,12 @@ Environ 150 phrases, classées par catégories dans `data.json` (`categoriesPhra
 L'écran s'ouvre sur un sommaire de catégories et propose une recherche en français ou en pinyin (sans les accents).
 Pour ajouter une phrase : copier une ligne existante dans `phrases` et changer `categorie`, `fr`, `zh` et `pinyin`.
 
+## Nous présenter
+
+Texte de présentation de la délégation, en version courte et complète, en français, anglais et chinois : rubrique `presentation` de `data.json`.
+Accès : tuile en tête des Phrases utiles et bouton sur l'écran Aujourd'hui. « Montrer en chinois » ou « Show in English » l'affiche en plein écran ; 🔊 le lit en chinois.
+Si le texte français change, faire refaire la traduction chinoise et anglaise, puis la faire relire par un locuteur chinois.
+
 ## Bouton 🔊
 
 Prononce les phrases et les adresses en chinois avec la voix du téléphone, sans Internet.

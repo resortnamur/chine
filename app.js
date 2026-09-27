@@ -212,6 +212,7 @@ function vueAujourdhui() {
   const hotel = jour && jour.hotel ? adresse(jour.hotel) : null;
   h += '<div class="section-titre">Accès rapide</div><div class="grille-boutons">';
   if (hotel) h += '<button class="btn principal" data-chauffeur="' + esc(hotel.id) + '"><span class="ico">🛏</span>Hôtel de ce soir au chauffeur</button>';
+  if (D.presentation && (D.presentation.versions || []).length) h += '<a class="btn principal" href="#presentation"><span class="ico">🤝</span>' + esc(D.presentation.titre || 'Nous présenter') + '</a>';
   h += '<a class="btn" href="#notes"><span class="ico">✎</span>Prendre une note</a>' +
     '<a class="btn urgence" href="#contacts"><span class="ico">☎</span>Urgences</a>' +
     '<a class="btn" href="#phrases"><span class="ico">文</span>Phrases utiles</a>' +
@@ -818,7 +819,10 @@ function majResultatsPhrases() {
 }
 function sommairePhrasesHtml() {
   const phrases = D.phrases || [];
-  return '<div class="grille-boutons">' + categoriesPhrases().map((c, k) => {
+  const pres = D.presentation && (D.presentation.versions || []).length
+    ? '<a class="btn principal tuile-presentation" href="#presentation">🤝 ' + esc(D.presentation.titre || 'Nous présenter') + '<small>texte de présentation en chinois et en anglais</small></a>'
+    : '';
+  return pres + '<div class="grille-boutons">' + categoriesPhrases().map((c, k) => {
     const n = phrases.filter((p) => (p.categorie || 'Divers') === c.nom).length;
     return n ? '<a class="btn tuile" href="#phrases/' + k + '"><span class="ico">' + esc(c.icone) + '</span>' +
       esc(c.nom) + '<small>' + n + ' phrases</small></a>' : '';
@@ -842,6 +846,29 @@ function vuePhrases() {
     aide + '<div id="phrases-contenu">' + (recherchePhrases.trim() ? resultatsPhrasesHtml() : sommairePhrasesHtml()) + '</div>';
 }
 
+/* ---------- Vue : Nous présenter ---------- */
+function vuePresentation() {
+  const P = D.presentation || {};
+  const versions = P.versions || [];
+  if (!versions.length) return '<p class="vide">Aucun texte de présentation dans data.json (rubrique "presentation").</p>';
+  let k = cibleRoute !== undefined && cibleRoute !== '' ? +cibleRoute : 0;
+  if (!versions[k]) k = 0;
+  const v = versions[k];
+  let h = '<a class="btn retour" href="#phrases">← Phrases utiles</a><h2>🤝 ' + esc(P.titre || 'Nous présenter') + '</h2>';
+  if (versions.length > 1) {
+    h += '<div class="filtres">' + versions.map((x, i) =>
+      '<a class="filtre' + (i === k ? ' actif' : '') + '" href="#presentation/' + i + '">' + esc(x.nom || 'Version ' + (i + 1)) + '</a>').join('') + '</div>';
+  }
+  h += '<div class="boutons">' +
+    (v.zh ? '<button class="btn principal" data-presentation="' + k + '" data-langue="zh">Montrer en chinois</button>' : '') +
+    (v.en ? '<button class="btn" data-presentation="' + k + '" data-langue="en">Show in English</button>' : '') +
+    (v.zh ? boutonParler(v.zh, '🔊 Lire en chinois') : '') + '</div>';
+  if (v.fr) h += '<div class="section-titre">Français (pour vous)</div><div class="carte texte-long">' + t(v.fr) + '</div>';
+  if (v.zh) h += '<div class="section-titre">中文</div><div class="carte texte-long zh-long" lang="zh-CN">' + esc(v.zh) + '</div>';
+  if (v.en) h += '<div class="section-titre">English</div><div class="carte texte-long" lang="en">' + esc(v.en) + '</div>';
+  return h;
+}
+
 /* ---------- Vue : Convertisseur ---------- */
 function vueConvertisseur() {
   const taux = D.taux && +D.taux.eurCny;
@@ -861,9 +888,9 @@ function nombre(s) { const n = parseFloat(String(s).replace(/\s/g, '').replace('
 /* ---------- Navigation par onglets ---------- */
 const VUES = {
   aujourdhui: vueAujourdhui, programme: vueProgramme, salons: vueSalons, adresses: vueAdresses,
-  notes: vueNotes, plus: vuePlus, contacts: vueContacts, pratique: vuePratique, phrases: vuePhrases, convertisseur: vueConvertisseur
+  notes: vueNotes, presentation: vuePresentation, plus: vuePlus, contacts: vueContacts, pratique: vuePratique, phrases: vuePhrases, convertisseur: vueConvertisseur
 };
-const SOUS_PLUS = ['contacts', 'pratique', 'phrases', 'convertisseur'];
+const SOUS_PLUS = ['contacts', 'pratique', 'phrases', 'convertisseur', 'presentation'];
 
 function route(garderDefilement) {
   if (!D) return;
@@ -893,16 +920,18 @@ function voixPossible() { return 'speechSynthesis' in window && 'SpeechSynthesis
 function voixChinoises() {
   return speechSynthesis.getVoices().filter((v) => /^(zh|cmn)([-_](CN|Hans))?/i.test(v.lang) && !/(TW|HK)$/i.test(v.lang));
 }
-function boutonParler(texte, libelle) {
+function boutonParler(texte, libelle, langue) {
   if (!voixPossible() || !texte) return '';
-  return '<button class="btn parler" data-parler="' + esc(texte) + '" aria-label="Écouter en chinois">' + (libelle || '🔊') + '</button>';
+  return '<button class="btn parler" data-parler="' + esc(texte) + '"' + (langue ? ' data-parler-langue="' + esc(langue) + '"' : '') +
+    ' aria-label="Écouter">' + (libelle || '🔊') + '</button>';
 }
-function parler(texte) {
+function parler(texte, langue) {
   if (!voixPossible() || !texte) return;
   speechSynthesis.cancel();
   const u = new SpeechSynthesisUtterance(texte);
-  u.lang = 'zh-CN';
+  u.lang = langue || 'zh-CN';
   u.rate = 0.85;
+  if (!/^zh/i.test(u.lang)) { speechSynthesis.speak(u); return; }
   const voix = voixChinoises();
   const locale = voix.find((v) => v.localService);
   if (locale || voix[0]) u.voice = locale || voix[0];
@@ -923,19 +952,30 @@ if (voixPossible()) speechSynthesis.getVoices(); // lance le chargement de la li
 
 /* ---------- Plein écran : chauffeur et phrases ---------- */
 let verrouEcran = null;
-function taillePolice(texte) {
+function taillePolice(texte, latin) {
+  if (latin) {
+    const m = (texte || '').length;
+    return m <= 60 ? '9vw' : m <= 300 ? '6.5vw' : '5vw';
+  }
   const n = [...(texte || '')].length;
+  if (n > 150) return '6vw';
+  if (n > 60) return '7vw';
   if (n <= 4) return '22vw';
   if (n <= 10) return '16vw';
   if (n <= 24) return '12vw';
   if (n <= 40) return '10vw';
   return '8vw';
 }
-function ouvrirPlein(zh, sous, petitHtml) {
+// options : { latin: texte en alphabet latin, langue: langue de lecture 🔊 }
+function ouvrirPlein(zh, sous, petitHtml, options) {
+  const o = options || {};
   $('#plein-parler').dataset.parler = zh;
+  $('#plein-parler').dataset.parlerLangue = o.langue || 'zh-CN';
   $('#plein-parler').hidden = !voixPossible();
   $('#plein-zh').textContent = zh;
-  $('#plein-zh').style.fontSize = taillePolice(zh);
+  $('#plein-zh').style.fontSize = taillePolice(zh, o.latin);
+  $('#plein-zh').classList.toggle('latin', !!o.latin);
+  $('#plein').classList.toggle('long', [...(zh || '')].length > 60);
   $('#plein-sous').textContent = sous || '';
   $('#plein-petit').innerHTML = petitHtml || '';
   $('#plein').hidden = false;
@@ -952,7 +992,7 @@ function fermerPlein() {
 /* ---------- Événements ---------- */
 document.addEventListener('click', (e) => {
   const pa = e.target.closest('[data-parler]');
-  if (pa) { parler(pa.dataset.parler); return; }
+  if (pa) { parler(pa.dataset.parler, pa.dataset.parlerLangue); return; }
   const ch = e.target.closest('[data-chauffeur]');
   if (ch) {
     const a = adresse(ch.dataset.chauffeur);
@@ -961,6 +1001,14 @@ document.addEventListener('click', (e) => {
     let petit = t(a.nom);
     if (telValide(a.telephone)) petit += '<br>☎ <a href="tel:' + esc(numeroTel(a.telephone)) + '">' + esc(a.telephone) + '</a>';
     ouvrirPlein(zh || a.nom, '请带我去这个地址', petit);
+    return;
+  }
+  const pr = e.target.closest('[data-presentation]');
+  if (pr) {
+    const v = ((D.presentation || {}).versions || [])[+pr.dataset.presentation];
+    if (!v) return;
+    if (pr.dataset.langue === 'en') ouvrirPlein(v.en, '', '', { latin: true, langue: 'en-GB' });
+    else ouvrirPlein(v.zh, '', '');
     return;
   }
   const ph = e.target.closest('[data-phrase]');
