@@ -327,22 +327,31 @@
     },
     {"groupe": "Organisation du voyage", "nom": "Nikkel Kebsi", "role": "Organisateur du voyage (NK Consulting)", "telephone": "+32 [À COMPLÉTER]"},
     {"groupe": "Équipe", "nom": "Christophe Van Kerrebroeck", "role": "Fonction [À COMPLÉTER]", "telephone": "+32 [À COMPLÉTER]"},
-    {"groupe": "Équipe", "nom": "Arnaud Roufosse", "role": "Fonction [À COMPLÉTER]", "telephone": "+32 [À COMPLÉTER]"},
+    {"groupe": "Équipe", "nom": "Arnaud Roufosse", "role": "Fonction [À COMPLÉTER]", "telephone": "+32 470 44 27 22"},
+    {"groupe": "Équipe", "nom": "François Collienne", "role": "Fonction [À COMPLÉTER]", "telephone": "+32 [À COMPLÉTER]"},
     {"groupe": "Équipe", "nom": "Karim Tekaya", "role": "Fonction [À COMPLÉTER]", "telephone": "+32 [À COMPLÉTER]"},
     {"groupe": "Équipe", "nom": "Toufan Aslan", "role": "Fonction [À COMPLÉTER]", "telephone": "+32 [À COMPLÉTER]"},
-    {"groupe": "Équipe", "nom": "Hakim Nabil", "role": "Fonction [À COMPLÉTER]", "telephone": "+32 [À COMPLÉTER]"},
+    {
+      "groupe": "Équipe",
+      "nom": "Hakim Nabil",
+      "role": "Fonction [À COMPLÉTER] — numéro peut-être parmi les numéros sans nom",
+      "telephone": "+32 [À COMPLÉTER]"
+    },
     {
       "groupe": "Équipe",
       "nom": "Corentin [À COMPLÉTER]",
-      "role": "IT — annoncé dans le groupe le 21/09, absent de l'invitation Outlook [à vérifier]",
+      "role": "IT — numéro peut-être parmi les numéros sans nom",
       "telephone": "+32 [À COMPLÉTER]"
     },
-    {
-      "groupe": "Équipe",
-      "nom": "Lucien [À COMPLÉTER]",
-      "role": "IT — annoncé dans le groupe le 21/09, absent de l'invitation Outlook [à vérifier]",
-      "telephone": "+32 [À COMPLÉTER]"
-    },
+    {"groupe": "Équipe", "nom": "Lucien [À COMPLÉTER]", "role": "IT — numéro peut-être parmi les numéros sans nom", "telephone": "+32 [À COMPLÉTER]"},
+    {"groupe": "Équipe", "nom": "Nom [À COMPLÉTER]", "role": "Membre de la délégation", "telephone": "+32 499 80 42 99"},
+    {"groupe": "Équipe", "nom": "Nom [À COMPLÉTER]", "role": "Membre de la délégation", "telephone": "+32 485 85 53 87"},
+    {"groupe": "Équipe", "nom": "Nom [À COMPLÉTER]", "role": "Membre de la délégation", "telephone": "+32 477 77 92 91"},
+    {"groupe": "Équipe", "nom": "Nom [À COMPLÉTER]", "role": "Membre de la délégation", "telephone": "+32 497 86 81 56"},
+    {"groupe": "Équipe", "nom": "Nom [À COMPLÉTER]", "role": "Membre de la délégation", "telephone": "+32 479 97 57 45"},
+    {"groupe": "Équipe", "nom": "Nom [À COMPLÉTER]", "role": "Membre de la délégation", "telephone": "+32 495 58 96 68"},
+    {"groupe": "Équipe", "nom": "Nom [À COMPLÉTER]", "role": "Membre de la délégation", "telephone": "+32 499 14 12 61"},
+    {"groupe": "Équipe", "nom": "Nom [À COMPLÉTER]", "role": "Membre de la délégation", "telephone": "+32 478 66 32 39"},
     {
       "groupe": "Guides et hôtes",
       "nom": "Guide [À COMPLÉTER]",
