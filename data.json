@@ -4,7 +4,7 @@
     "sousTitre": "Shanghai – Macao – Guangzhou",
     "debut": "2026-10-10",
     "fin": "2026-10-17",
-    "note": "Programme repris du calendrier du voyage (organisation : Nikkel Kebsi). Heures en heure de Chine, sauf le jour du départ (heure belge). Horaires indicatifs, à confirmer."
+    "note": "Programme repris du calendrier Outlook du 28/09 (organisation : Nikkel Kebsi), complété par le groupe WhatsApp. Heures en heure de Chine, sauf le jour du départ (heure belge). Horaires indicatifs, à confirmer."
   },
   "taux": {"eurCny": 8.0, "date": "[À COMPLÉTER] date du taux"},
   "jours": [
@@ -19,7 +19,7 @@
           "titre": "Décollage de Bruxelles vers Shanghai",
           "lieu": "aeroport-bru",
           "transport": "Vol [À COMPLÉTER] compagnie et numéro de vol",
-          "note": "Valise cabine + sac à dos. Alipay installé. Arrivée à Shanghai le 11/10 vers 22 h (heure locale)."
+          "note": "Valise cabine + sac à dos. Alipay installé. eSIM activée. Arrivée à Shanghai le 11/10 vers 22 h (heure locale). Escale à Dubaï annoncée dans le groupe le 09/09, absente du calendrier [à vérifier]."
         }
       ]
     },
@@ -124,8 +124,13 @@
       "titre": "Retour en Belgique",
       "ville": "Guangzhou → Bruxelles",
       "creneaux": [
-        {"heure": "", "titre": "Vol retour Guangzhou → Bruxelles", "transport": "Vol [À COMPLÉTER] heure de départ et numéro de vol"},
-        {"heure": "19:30", "titre": "Atterrissage à Bruxelles (13 h 30 heure belge)", "lieu": "aeroport-bru"}
+        {
+          "heure": "",
+          "titre": "Vol retour vers Bruxelles",
+          "transport": "Vol [À COMPLÉTER] heure de départ de Chine et numéro de vol",
+          "note": "Retour via Dubaï annoncé dans le groupe le 09/09 (départ de Dubaï à 7 h 50), absent du calendrier [à vérifier]."
+        },
+        {"heure": "19:30", "titre": "Atterrissage à Bruxelles (13 h 30, heure belge)", "lieu": "aeroport-bru"}
       ]
     }
   ],
@@ -327,6 +332,18 @@
     {"groupe": "Équipe", "nom": "Toufan Aslan", "role": "Fonction [À COMPLÉTER]", "telephone": "+32 [À COMPLÉTER]"},
     {"groupe": "Équipe", "nom": "Hakim Nabil", "role": "Fonction [À COMPLÉTER]", "telephone": "+32 [À COMPLÉTER]"},
     {
+      "groupe": "Équipe",
+      "nom": "Corentin [À COMPLÉTER]",
+      "role": "IT — annoncé dans le groupe le 21/09, absent de l'invitation Outlook [à vérifier]",
+      "telephone": "+32 [À COMPLÉTER]"
+    },
+    {
+      "groupe": "Équipe",
+      "nom": "Lucien [À COMPLÉTER]",
+      "role": "IT — annoncé dans le groupe le 21/09, absent de l'invitation Outlook [à vérifier]",
+      "telephone": "+32 [À COMPLÉTER]"
+    },
+    {
       "groupe": "Guides et hôtes",
       "nom": "Guide [À COMPLÉTER]",
       "role": "Guide / interprète",
@@ -374,6 +391,7 @@
     {
       "titre": "Internet et téléphone",
       "points": [
+        "Conseil du groupe : activer l'eSIM AVANT le départ, avec des données illimitées (Holafly a été suggéré, environ 7 jours).",
         "Une eSIM de voyage ou l'itinérance de l'opérateur belge donne en général accès à WhatsApp, Gmail, etc. sans VPN, car le trafic passe par l'étranger [à vérifier] selon l'offre.",
         "Le Wi-Fi des hôtels et des salons est soumis au filtrage chinois.",
         "Ce site fonctionne sans réseau une fois ouvert une première fois."
@@ -423,7 +441,7 @@
     "Alipay installé, carte liée, identité validée",
     "WeChat installé et compte actif",
     "VPN installé et testé",
-    "eSIM ou forfait d'itinérance Chine activé",
+    "eSIM Chine achetée ET activée avant le départ (données illimitées)",
     "Traducteur avec le chinois téléchargé hors ligne",
     "Adaptateur universel + batterie externe marquée 3C",
     "Cartes de visite bilingues [À COMPLÉTER]",
