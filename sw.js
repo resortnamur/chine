@@ -1,6 +1,6 @@
 /* Service worker : met tout le site en cache pour un usage hors ligne.
    Changer VERSION à chaque modification du code (pas nécessaire pour data.json). */
-const VERSION = 'v7';
+const VERSION = 'v8';
 const CACHE = 'chine-' + VERSION;
 const FICHIERS = [
   './',

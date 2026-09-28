@@ -1,212 +1,286 @@
 {
   "voyage": {
     "titre": "Mission Chine 2026",
-    "sousTitre": "Retail Belgium — Gaming1",
-    "debut": "2026-10-19",
-    "fin": "2026-10-25",
-    "note": "Dates d'exemple [À COMPLÉTER]. Toutes les heures du programme sont en heure de Pékin."
+    "sousTitre": "Shanghai – Macao – Guangzhou",
+    "debut": "2026-10-10",
+    "fin": "2026-10-17",
+    "note": "Programme repris du calendrier du voyage (organisation : Nikkel Kebsi). Heures en heure de Chine, sauf le jour du départ (heure belge). Horaires indicatifs, à confirmer."
   },
-
-  "taux": {
-    "eurCny": 8.00,
-    "date": "[À COMPLÉTER] date du taux"
-  },
-
+  "taux": {"eurCny": 8.0, "date": "[À COMPLÉTER] date du taux"},
   "jours": [
     {
-      "date": "2026-10-19",
-      "titre": "Départ et arrivée [À COMPLÉTER]",
-      "ville": "Pékin",
-      "tenue": "Tenue de voyage",
-      "hotel": "hotel-1",
+      "date": "2026-10-10",
+      "fuseau": "Europe/Brussels",
+      "titre": "Départ de Bruxelles",
+      "ville": "Bruxelles",
       "creneaux": [
-        { "heure": "07:30", "titre": "Atterrissage à l'aéroport [À COMPLÉTER]", "lieu": "aeroport-pek", "transport": "Vol [À COMPLÉTER] numéro de vol", "note": "Heure locale de Pékin" },
-        { "heure": "09:30", "fin": "10:30", "titre": "Transfert vers l'hôtel", "lieu": "hotel-1", "transport": "Minibus [À COMPLÉTER]" },
-        { "heure": "13:00", "fin": "14:30", "titre": "Déjeuner d'équipe", "lieu": "resto-1", "transport": "À pied" },
-        { "heure": "19:00", "titre": "Briefing de la semaine", "lieu": "hotel-1", "note": "Salle [À COMPLÉTER]" }
+        {
+          "heure": "21:40",
+          "titre": "Décollage de Bruxelles vers Shanghai",
+          "lieu": "aeroport-bru",
+          "transport": "Vol [À COMPLÉTER] compagnie et numéro de vol",
+          "note": "Valise cabine + sac à dos. Alipay installé. Arrivée à Shanghai le 11/10 vers 22 h (heure locale)."
+        }
       ]
     },
     {
-      "date": "2026-10-20",
-      "titre": "Salon n° 1 — jour 1",
-      "ville": "Pékin",
-      "tenue": "Business (costume, badge)",
-      "hotel": "hotel-1",
+      "date": "2026-10-11",
+      "titre": "Arrivée à Shanghai",
+      "ville": "Shanghai",
+      "hotel": "hotel-shanghai",
       "creneaux": [
-        { "heure": "08:15", "titre": "Départ de l'hôtel", "lieu": "hotel-1", "transport": "Didi / minibus [À COMPLÉTER]" },
-        { "heure": "09:00", "fin": "12:30", "titre": "Visite du salon — halls prioritaires", "lieu": "salon-1-lieu" },
-        { "heure": "12:30", "fin": "13:30", "titre": "Déjeuner sur place" },
-        { "heure": "14:00", "fin": "17:30", "titre": "Rendez-vous exposants [À COMPLÉTER]", "lieu": "salon-1-lieu" },
-        { "heure": "19:30", "titre": "Dîner", "lieu": "resto-1" }
+        {
+          "heure": "22:00",
+          "fin": "23:30",
+          "titre": "Arrivée à Shanghai Pudong, transfert vers l'hôtel",
+          "lieu": "aeroport-pvg",
+          "note": "Chambres doubles : binômes à former pendant le vol."
+        }
       ]
     },
     {
-      "date": "2026-10-21",
-      "titre": "Salon n° 1 — jour 2",
-      "ville": "Pékin",
-      "tenue": "Business",
-      "hotel": "hotel-1",
+      "date": "2026-10-12",
+      "titre": "Salon à Shanghai — jour 1",
+      "ville": "Shanghai",
+      "hotel": "hotel-shanghai",
       "creneaux": [
-        { "heure": "09:00", "fin": "16:00", "titre": "Salon — suite des visites", "lieu": "salon-1-lieu" },
-        { "heure": "18:00", "titre": "Débriefing d'équipe", "lieu": "hotel-1" }
+        {
+          "heure": "09:00",
+          "fin": "18:00",
+          "titre": "Salon à Shanghai — 1er jour",
+          "lieu": "salon-shanghai",
+          "salon": "salon-1",
+          "note": "Horaires indicatifs, à confirmer."
+        }
       ]
     },
     {
-      "date": "2026-10-22",
-      "titre": "Transfert [À COMPLÉTER]",
-      "ville": "[À COMPLÉTER] ville",
-      "tenue": "Smart casual",
-      "hotel": "hotel-2",
+      "date": "2026-10-13",
+      "titre": "Salon, Agibot, puis Macao",
+      "ville": "Shanghai → Macao",
+      "hotel": "hotel-macao",
       "creneaux": [
-        { "heure": "08:00", "titre": "Check-out", "lieu": "hotel-1" },
-        { "heure": "10:00", "fin": "15:00", "titre": "Train / vol [À COMPLÉTER]", "transport": "[À COMPLÉTER] train à grande vitesse ou vol intérieur", "note": "Passeport obligatoire pour le billet" },
-        { "heure": "16:00", "titre": "Check-in", "lieu": "hotel-2" }
+        {"heure": "09:00", "fin": "12:30", "titre": "Salon à Shanghai — 2e jour (matinée)", "lieu": "salon-shanghai", "salon": "salon-1"},
+        {
+          "heure": "14:00",
+          "fin": "17:00",
+          "titre": "Visite d'Agibot (usine de robots humanoïdes)",
+          "lieu": "agibot",
+          "salon": "salon-3",
+          "note": "Horaire à confirmer."
+        },
+        {
+          "heure": "18:30",
+          "fin": "21:30",
+          "titre": "Vol Shanghai → Macao",
+          "lieu": "aeroport-mfm",
+          "transport": "Vol [À COMPLÉTER] (environ 2 h 40)",
+          "note": "Passeport : contrôle à l'entrée à Macao."
+        },
+        {"heure": "22:00", "fin": "01:00", "titre": "Soirée casino à Macao", "lieu": "cotai"}
       ]
     },
     {
-      "date": "2026-10-23",
-      "titre": "Salon n° 2",
-      "ville": "[À COMPLÉTER] ville",
-      "tenue": "Business",
-      "hotel": "hotel-2",
+      "date": "2026-10-14",
+      "titre": "Macao, puis Guangzhou",
+      "ville": "Macao → Guangzhou",
+      "hotel": "hotel-guangzhou",
       "creneaux": [
-        { "heure": "09:00", "fin": "17:00", "titre": "Salon n° 2", "lieu": "salon-2-lieu" },
-        { "heure": "19:30", "titre": "Dîner avec partenaires [À COMPLÉTER]", "lieu": "resto-2" }
+        {"heure": "10:00", "fin": "17:00", "titre": "Journée libre / visites à Macao"},
+        {
+          "heure": "18:00",
+          "fin": "21:00",
+          "titre": "Trajet Macao → Guangzhou",
+          "transport": "Train Zhuhai–Guangzhou ou transfert par la route (2 à 3 h), à confirmer",
+          "note": "Passeport : contrôle au retour en Chine continentale."
+        }
       ]
     },
     {
-      "date": "2026-10-24",
-      "titre": "Visites [À COMPLÉTER]",
-      "ville": "[À COMPLÉTER] ville",
-      "tenue": "Smart casual",
-      "hotel": "hotel-2",
+      "date": "2026-10-15",
+      "titre": "Foire de Canton",
+      "ville": "Guangzhou",
+      "hotel": "hotel-guangzhou",
       "creneaux": [
-        { "heure": "10:00", "fin": "12:00", "titre": "Visite [À COMPLÉTER]" },
-        { "heure": "14:00", "fin": "17:00", "titre": "Temps libre" }
+        {
+          "heure": "09:30",
+          "fin": "18:00",
+          "titre": "Foire de Canton (140e édition, phase 1)",
+          "lieu": "canton-fair",
+          "salon": "salon-2",
+          "note": "Badge acheteur à enregistrer en ligne avant le voyage."
+        }
       ]
     },
     {
-      "date": "2026-10-25",
-      "titre": "Retour [À COMPLÉTER]",
-      "ville": "[À COMPLÉTER] ville",
-      "tenue": "Tenue de voyage",
+      "date": "2026-10-16",
+      "titre": "Visites d'usines",
+      "ville": "Guangzhou (région)",
+      "hotel": "hotel-guangzhou",
+      "creneaux": [{"heure": "09:00", "fin": "18:00", "titre": "Visites d'usines", "salon": "salon-4", "note": "Programme à confirmer."}]
+    },
+    {
+      "date": "2026-10-17",
+      "titre": "Retour en Belgique",
+      "ville": "Guangzhou → Bruxelles",
       "creneaux": [
-        { "heure": "07:00", "titre": "Check-out", "lieu": "hotel-2" },
-        { "heure": "08:00", "titre": "Départ vers l'aéroport", "transport": "Minibus [À COMPLÉTER]" },
-        { "heure": "11:00", "titre": "Vol retour [À COMPLÉTER]", "note": "Attention : ce jour-là, la Belgique passe à l'heure d'hiver (+7 h)" }
+        {"heure": "", "titre": "Vol retour Guangzhou → Bruxelles", "transport": "Vol [À COMPLÉTER] heure de départ et numéro de vol"},
+        {"heure": "19:30", "titre": "Atterrissage à Bruxelles (13 h 30 heure belge)", "lieu": "aeroport-bru"}
       ]
     }
   ],
-
   "salons": [
     {
       "id": "salon-1",
-      "nom": "Salon n° 1 [À COMPLÉTER] nom du salon",
-      "dates": "20 – 22 octobre 2026 [À COMPLÉTER]",
-      "horaires": "9 h – 17 h [À COMPLÉTER]",
-      "lieu": "salon-1-lieu",
-      "halls": "Halls [À COMPLÉTER] — stand de rendez-vous [À COMPLÉTER]",
-      "objectifs": [
-        "Repérer les nouvelles bornes et terminaux de jeu [À COMPLÉTER]",
-        "Rencontrer les fournisseurs de solutions de paiement [À COMPLÉTER]"
-      ],
-      "exposants": [
-        { "nom": "Exposant A [À COMPLÉTER]", "stand": "Hall 1 — stand [À COMPLÉTER]", "pourquoi": "Raison de la visite [À COMPLÉTER]" },
-        { "nom": "Exposant B [À COMPLÉTER]", "stand": "Hall 2 — stand [À COMPLÉTER]", "pourquoi": "[À COMPLÉTER]" }
-      ]
+      "nom": "Salon à Shanghai [À COMPLÉTER] nom du salon",
+      "dates": "12 octobre (journée) et 13 octobre 2026 (matinée)",
+      "horaires": "9 h – 18 h le 12/10, 9 h – 12 h 30 le 13/10 (indicatif)",
+      "lieu": "salon-shanghai",
+      "halls": "[À COMPLÉTER]",
+      "objectifs": ["Outils d'automatisation et intégration de l'IA", "Expérience client", "Écrans et affichage, hôtellerie, sécurité"],
+      "exposants": [{"nom": "Exposant [À COMPLÉTER]", "stand": "[À COMPLÉTER]", "pourquoi": "[À COMPLÉTER]"}]
     },
     {
       "id": "salon-2",
-      "nom": "Salon n° 2 [À COMPLÉTER] nom du salon",
-      "dates": "23 octobre 2026 [À COMPLÉTER]",
-      "horaires": "[À COMPLÉTER]",
-      "lieu": "salon-2-lieu",
-      "halls": "[À COMPLÉTER]",
+      "nom": "Foire de Canton (Canton Fair) — 140e édition, phase 1",
+      "dates": "Phase 1 du 15 au 19 octobre 2026 — visite le 15 octobre",
+      "horaires": "9 h 30 – 18 h (indicatif)",
+      "lieu": "canton-fair",
+      "halls": "Phase 1 : électronique, électroménager, machines, outillage, énergie",
       "objectifs": [
-        "[À COMPLÉTER]"
+        "Outils d'automatisation et intégration de l'IA",
+        "Écrans et affichage, électronique grand public",
+        "Badge acheteur à enregistrer en ligne avant le voyage"
       ],
-      "exposants": [
-        { "nom": "Exposant C [À COMPLÉTER]", "stand": "[À COMPLÉTER]", "pourquoi": "[À COMPLÉTER]" }
-      ]
+      "exposants": [{"nom": "Exposant [À COMPLÉTER]", "stand": "[À COMPLÉTER]", "pourquoi": "[À COMPLÉTER]"}]
+    },
+    {
+      "id": "salon-3",
+      "nom": "Visite d'Agibot (智元机器人) — robots humanoïdes",
+      "dates": "13 octobre 2026, après-midi",
+      "horaires": "14 h – 17 h (à confirmer)",
+      "lieu": "agibot",
+      "objectifs": ["Découvrir l'état de l'art des robots humanoïdes", "Imaginer des usages en accueil et en service client"],
+      "exposants": []
+    },
+    {
+      "id": "salon-4",
+      "nom": "Visites d'usines — région de Guangzhou",
+      "dates": "16 octobre 2026",
+      "horaires": "Programme à confirmer",
+      "objectifs": ["[À COMPLÉTER]"],
+      "exposants": []
     }
   ],
-
   "adresses": [
     {
-      "id": "hotel-1",
+      "id": "hotel-shanghai",
       "categorie": "Hôtel",
-      "nom": "Hôtel n° 1 [À COMPLÉTER]",
-      "nomEn": "Hotel name [À COMPLÉTER]",
-      "nomZh": "酒店名称（待补充）",
-      "adresse": "Adresse en français [À COMPLÉTER]",
-      "adresseEn": "Address in English [À COMPLÉTER]",
-      "adresseZh": "中文地址（待补充）",
-      "telephone": "+86 [À COMPLÉTER]",
-      "note": "Réservation au nom de [À COMPLÉTER]"
+      "nom": "Hôtel à Shanghai [À COMPLÉTER]",
+      "nomEn": "[À COMPLÉTER]",
+      "nomZh": "上海酒店（待补充）",
+      "adresse": "[À COMPLÉTER]",
+      "adresseEn": "[À COMPLÉTER]",
+      "adresseZh": "",
+      "telephone": "",
+      "note": "Nuits du 11 et du 12 octobre."
     },
     {
-      "id": "hotel-2",
+      "id": "hotel-macao",
       "categorie": "Hôtel",
-      "nom": "Hôtel n° 2 [À COMPLÉTER]",
+      "nom": "Hôtel à Macao [À COMPLÉTER]",
       "nomEn": "[À COMPLÉTER]",
-      "nomZh": "酒店名称（待补充）",
+      "nomZh": "澳門酒店（待補充）",
       "adresse": "[À COMPLÉTER]",
       "adresseEn": "[À COMPLÉTER]",
-      "adresseZh": "中文地址（待补充）",
-      "telephone": ""
+      "adresseZh": "",
+      "telephone": "",
+      "note": "Nuit du 13 octobre. À Macao, les caractères traditionnels sont d'usage."
     },
     {
-      "id": "salon-1-lieu",
+      "id": "hotel-guangzhou",
+      "categorie": "Hôtel",
+      "nom": "Hôtel à Guangzhou [À COMPLÉTER]",
+      "nomEn": "[À COMPLÉTER]",
+      "nomZh": "广州酒店（待补充）",
+      "adresse": "[À COMPLÉTER]",
+      "adresseEn": "[À COMPLÉTER]",
+      "adresseZh": "",
+      "telephone": "",
+      "note": "Nuits du 14, 15 et 16 octobre [à vérifier]."
+    },
+    {
+      "id": "salon-shanghai",
       "categorie": "Salon",
-      "nom": "Parc des expositions du salon n° 1 [À COMPLÉTER]",
+      "nom": "Lieu du salon de Shanghai [À COMPLÉTER]",
       "nomEn": "[À COMPLÉTER]",
-      "nomZh": "展览中心（待补充）",
+      "nomZh": "上海展馆（待补充）",
       "adresse": "[À COMPLÉTER]",
       "adresseEn": "[À COMPLÉTER]",
-      "adresseZh": "中文地址（待补充）",
-      "note": "Entrée visiteurs : porte [À COMPLÉTER]"
+      "adresseZh": ""
     },
     {
-      "id": "salon-2-lieu",
+      "id": "canton-fair",
       "categorie": "Salon",
-      "nom": "Lieu du salon n° 2 [À COMPLÉTER]",
-      "nomEn": "[À COMPLÉTER]",
-      "nomZh": "展览中心（待补充）",
-      "adresse": "[À COMPLÉTER]",
-      "adresseEn": "[À COMPLÉTER]",
-      "adresseZh": "中文地址（待补充）"
+      "nom": "Parc des expositions de la Foire de Canton",
+      "nomEn": "Canton Fair Complex",
+      "nomZh": "中国进出口商品交易会展馆",
+      "adresse": "382, Yuejiang Zhong Road, Haizhu, Guangzhou",
+      "adresseEn": "382 Yuejiang Zhong Road, Haizhu District, Guangzhou",
+      "adresseZh": "广州市海珠区阅江中路382号",
+      "note": "Complexe de Pazhou (琶洲). Entrée acheteurs : [À COMPLÉTER]"
     },
     {
-      "id": "resto-1",
-      "categorie": "Restaurant",
-      "nom": "Restaurant n° 1 [À COMPLÉTER]",
-      "nomEn": "[À COMPLÉTER]",
-      "nomZh": "餐厅名称（待补充）",
-      "adresse": "[À COMPLÉTER]",
-      "adresseEn": "[À COMPLÉTER]",
-      "adresseZh": "中文地址（待补充）",
-      "telephone": ""
+      "id": "agibot",
+      "categorie": "Visite",
+      "nom": "Agibot — usine de robots humanoïdes",
+      "nomEn": "Agibot (Zhiyuan Robotics)",
+      "nomZh": "智元机器人",
+      "adresse": "Shanghai — adresse [À COMPLÉTER]",
+      "adresseEn": "Shanghai — address [À COMPLÉTER]",
+      "adresseZh": "",
+      "note": "Sans adresse précise, « Amap » cherche « 智元机器人 » : vérifier le site proposé."
     },
     {
-      "id": "resto-2",
-      "categorie": "Restaurant",
-      "nom": "Restaurant n° 2 [À COMPLÉTER]",
-      "nomEn": "[À COMPLÉTER]",
-      "nomZh": "餐厅名称（待补充）",
-      "adresse": "[À COMPLÉTER]",
-      "adresseEn": "[À COMPLÉTER]",
-      "adresseZh": "中文地址（待补充）"
+      "id": "cotai",
+      "categorie": "Visite",
+      "nom": "Cotai Strip (Macao)",
+      "nomEn": "Cotai Strip, Macau",
+      "nomZh": "路氹金光大道",
+      "adresse": "Cotai, Macao",
+      "adresseEn": "Cotai, Macau",
+      "adresseZh": "澳門路氹金光大道"
     },
     {
-      "id": "aeroport-pek",
+      "id": "aeroport-pvg",
       "categorie": "Transport",
-      "nom": "Aéroport international de Pékin-Capitale",
-      "nomEn": "Beijing Capital International Airport",
-      "nomZh": "北京首都国际机场",
-      "adresse": "Shunyi, Pékin — terminal [À COMPLÉTER]",
-      "adresseEn": "Shunyi District, Beijing",
-      "adresseZh": "北京市顺义区首都国际机场",
-      "note": "Pékin a deux aéroports (Capitale et Daxing) : vérifier lequel [à vérifier]"
+      "nom": "Aéroport international de Shanghai Pudong (PVG)",
+      "nomEn": "Shanghai Pudong International Airport",
+      "nomZh": "上海浦东国际机场",
+      "adresse": "Pudong, Shanghai",
+      "adresseEn": "Pudong New Area, Shanghai",
+      "adresseZh": "上海市浦东新区浦东国际机场",
+      "note": "Terminal [À COMPLÉTER]"
+    },
+    {
+      "id": "aeroport-mfm",
+      "categorie": "Transport",
+      "nom": "Aéroport international de Macao (MFM)",
+      "nomEn": "Macau International Airport",
+      "nomZh": "澳門國際機場",
+      "adresse": "Taipa, Macao",
+      "adresseEn": "Taipa, Macau",
+      "adresseZh": "澳門氹仔澳門國際機場"
+    },
+    {
+      "id": "aeroport-bru",
+      "categorie": "Transport",
+      "nom": "Brussels Airport (BRU)",
+      "nomEn": "Brussels Airport",
+      "nomZh": "布鲁塞尔机场",
+      "adresse": "Zaventem, Belgique",
+      "adresseEn": "Zaventem, Belgium",
+      "adresseZh": "比利时布鲁塞尔机场"
     },
     {
       "id": "ambassade",
@@ -221,27 +295,52 @@
       "note": "Coordonnées à vérifier sur diplomatie.belgium.be avant le départ [à vérifier]"
     }
   ],
-
   "contacts": [
-    { "groupe": "Urgences en Chine", "nom": "Police", "role": "Police", "telephone": "110" },
-    { "groupe": "Urgences en Chine", "nom": "Ambulance", "role": "Urgences médicales", "telephone": "120" },
-    { "groupe": "Urgences en Chine", "nom": "Pompiers", "role": "Incendie", "telephone": "119" },
-    { "groupe": "Urgences en Chine", "nom": "Accident de la route", "role": "Police de la circulation", "telephone": "122" },
-
-    { "groupe": "Ambassade", "nom": "Ambassade de Belgique à Pékin", "role": "Standard [à vérifier]", "telephone": "+86 10 6532 1736" },
-    { "groupe": "Ambassade", "nom": "SPF Affaires étrangères", "role": "Centre de crise, Bruxelles [à vérifier]", "telephone": "+32 2 501 81 11" },
-
-    { "groupe": "Équipe", "nom": "Prénom Nom [À COMPLÉTER]", "role": "Fonction [À COMPLÉTER]", "telephone": "+32 [À COMPLÉTER]" },
-    { "groupe": "Équipe", "nom": "Prénom Nom [À COMPLÉTER]", "role": "Fonction [À COMPLÉTER]", "telephone": "+32 [À COMPLÉTER]" },
-    { "groupe": "Équipe", "nom": "Prénom Nom [À COMPLÉTER]", "role": "Fonction [À COMPLÉTER]", "telephone": "+32 [À COMPLÉTER]" },
-
-    { "groupe": "Guides et hôtes", "nom": "Guide [À COMPLÉTER]", "role": "Guide / interprète", "telephone": "+86 [À COMPLÉTER]", "note": "WeChat : [À COMPLÉTER]" },
-    { "groupe": "Guides et hôtes", "nom": "Chauffeur [À COMPLÉTER]", "role": "Minibus", "telephone": "+86 [À COMPLÉTER]" },
-
-    { "groupe": "Assistance", "nom": "Assurance voyage [À COMPLÉTER]", "role": "Assistance 24 h/24 — contrat n° [À COMPLÉTER]", "telephone": "+32 [À COMPLÉTER]" },
-    { "groupe": "Assistance", "nom": "Agence de voyage [À COMPLÉTER]", "role": "Billets et hôtels", "telephone": "+32 [À COMPLÉTER]" }
+    {"groupe": "Urgences en Chine", "nom": "Police", "role": "Police", "telephone": "110"},
+    {"groupe": "Urgences en Chine", "nom": "Ambulance", "role": "Urgences médicales", "telephone": "120"},
+    {"groupe": "Urgences en Chine", "nom": "Pompiers", "role": "Incendie", "telephone": "119"},
+    {"groupe": "Urgences en Chine", "nom": "Accident de la route", "role": "Police de la circulation", "telephone": "122"},
+    {"groupe": "Ambassade", "nom": "Ambassade de Belgique à Pékin", "role": "Standard [à vérifier]", "telephone": "+86 10 6532 1736"},
+    {"groupe": "Ambassade", "nom": "SPF Affaires étrangères", "role": "Centre de crise, Bruxelles [à vérifier]", "telephone": "+32 2 501 81 11"},
+    {
+      "groupe": "Ambassade",
+      "nom": "Consulat général de Belgique à Shanghai",
+      "role": "Standard [À COMPLÉTER] — voir diplomatie.belgium.be",
+      "telephone": "+86 [À COMPLÉTER]"
+    },
+    {
+      "groupe": "Ambassade",
+      "nom": "Consulat général de Belgique à Guangzhou",
+      "role": "Standard [À COMPLÉTER] — voir diplomatie.belgium.be",
+      "telephone": "+86 [À COMPLÉTER]"
+    },
+    {
+      "groupe": "Ambassade",
+      "nom": "Consulat général de Belgique à Hong Kong (compétent pour Macao)",
+      "role": "Standard [À COMPLÉTER] [à vérifier]",
+      "telephone": "+852 [À COMPLÉTER]"
+    },
+    {"groupe": "Organisation du voyage", "nom": "Nikkel Kebsi", "role": "Organisateur du voyage (NK Consulting)", "telephone": "+32 [À COMPLÉTER]"},
+    {"groupe": "Équipe", "nom": "Christophe Van Kerrebroeck", "role": "Fonction [À COMPLÉTER]", "telephone": "+32 [À COMPLÉTER]"},
+    {"groupe": "Équipe", "nom": "Arnaud Roufosse", "role": "Fonction [À COMPLÉTER]", "telephone": "+32 [À COMPLÉTER]"},
+    {"groupe": "Équipe", "nom": "Karim Tekaya", "role": "Fonction [À COMPLÉTER]", "telephone": "+32 [À COMPLÉTER]"},
+    {"groupe": "Équipe", "nom": "Toufan Aslan", "role": "Fonction [À COMPLÉTER]", "telephone": "+32 [À COMPLÉTER]"},
+    {"groupe": "Équipe", "nom": "Hakim Nabil", "role": "Fonction [À COMPLÉTER]", "telephone": "+32 [À COMPLÉTER]"},
+    {
+      "groupe": "Guides et hôtes",
+      "nom": "Guide [À COMPLÉTER]",
+      "role": "Guide / interprète",
+      "telephone": "+86 [À COMPLÉTER]",
+      "note": "WeChat : [À COMPLÉTER]"
+    },
+    {
+      "groupe": "Assistance",
+      "nom": "Assurance voyage [À COMPLÉTER]",
+      "role": "Assistance 24 h/24 — contrat n° [À COMPLÉTER]",
+      "telephone": "+32 [À COMPLÉTER]"
+    },
+    {"groupe": "Assistance", "nom": "Agence de voyage [À COMPLÉTER]", "role": "Billets et hôtels", "telephone": "+32 [À COMPLÉTER]"}
   ],
-
   "pratique": [
     {
       "titre": "Applis à installer avant le départ",
@@ -297,6 +396,18 @@
       ]
     },
     {
+      "titre": "Étape Macao (13-14 octobre)",
+      "points": [
+        "Macao est une région administrative spéciale : contrôle des passeports à l'arrivée, puis à nouveau au retour en Chine continentale. Garder le passeport sur soi.",
+        "Retour en Chine continentale : l'exemption de visa s'applique à chaque entrée [à vérifier].",
+        "Monnaie : la pataca (MOP). Les dollars de Hong Kong sont largement acceptés, le yuan parfois. Le convertisseur du site ne gère que le yuan.",
+        "Alipay fonctionne dans de nombreux commerces [à vérifier]. Garder un peu d'espèces.",
+        "Langues : cantonais et portugais, caractères traditionnels. Le mandarin est souvent compris.",
+        "Internet : pas de filtrage à Macao, Google et WhatsApp fonctionnent sans VPN.",
+        "À Guangzhou aussi, on parle cantonais ; le mandarin est compris partout."
+      ]
+    },
+    {
       "titre": "Formalités",
       "points": [
         "Passeport valable au moins 6 mois après le retour.",
@@ -305,10 +416,10 @@
       ]
     }
   ],
-
   "checklist": [
     "Passeport (validité 6 mois) + photo du passeport dans le téléphone",
     "Visa ou exemption vérifiée",
+    "Badge acheteur de la Foire de Canton enregistré en ligne",
     "Alipay installé, carte liée, identité validée",
     "WeChat installé et compte actif",
     "VPN installé et testé",
@@ -321,7 +432,6 @@
     "Voix chinoise installée (Android) et bouton 🔊 testé en mode avion",
     "Ce site ouvert une fois avec réseau, puis installé sur l'écran d'accueil"
   ],
-
   "presentation": {
     "titre": "Nous présenter",
     "versions": [
@@ -339,180 +449,246 @@
       }
     ]
   },
-
   "categoriesPhrases": [
-    { "nom": "Politesse et présentations", "icone": "🤝" },
-    { "nom": "Au stand", "icone": "🏢" },
-    { "nom": "Questions produit", "icone": "🔎" },
-    { "nom": "Prix et commande", "icone": "💰" },
-    { "nom": "Contacts et suite", "icone": "📇" },
-    { "nom": "Taxi et transports", "icone": "🚕" },
-    { "nom": "Hôtel", "icone": "🏨" },
-    { "nom": "Restaurant", "icone": "🍜" },
-    { "nom": "Allergies et régimes", "icone": "⚠️" },
-    { "nom": "Achats et paiement", "icone": "🛍" },
-    { "nom": "Téléphone et internet", "icone": "📶" },
-    { "nom": "Santé et urgences", "icone": "🏥" },
-    { "nom": "Se faire comprendre", "icone": "❓" }
+    {"nom": "Politesse et présentations", "icone": "🤝"},
+    {"nom": "Au stand", "icone": "🏢"},
+    {"nom": "Questions produit", "icone": "🔎"},
+    {"nom": "Prix et commande", "icone": "💰"},
+    {"nom": "Contacts et suite", "icone": "📇"},
+    {"nom": "Taxi et transports", "icone": "🚕"},
+    {"nom": "Hôtel", "icone": "🏨"},
+    {"nom": "Restaurant", "icone": "🍜"},
+    {"nom": "Allergies et régimes", "icone": "⚠️"},
+    {"nom": "Achats et paiement", "icone": "🛍"},
+    {"nom": "Téléphone et internet", "icone": "📶"},
+    {"nom": "Santé et urgences", "icone": "🏥"},
+    {"nom": "Se faire comprendre", "icone": "❓"}
   ],
-
   "phrases": [
-    { "categorie": "Politesse et présentations", "fr": "Bonjour", "zh": "你好", "pinyin": "nǐ hǎo" },
-    { "categorie": "Politesse et présentations", "fr": "Bonjour (formel, à un aîné ou un client)", "zh": "您好", "pinyin": "nín hǎo" },
-    { "categorie": "Politesse et présentations", "fr": "Merci", "zh": "谢谢", "pinyin": "xièxie" },
-    { "categorie": "Politesse et présentations", "fr": "Merci beaucoup", "zh": "非常感谢", "pinyin": "fēicháng gǎnxiè" },
-    { "categorie": "Politesse et présentations", "fr": "De rien", "zh": "不客气", "pinyin": "bú kèqi" },
-    { "categorie": "Politesse et présentations", "fr": "Excusez-moi… (pour interpeller)", "zh": "请问", "pinyin": "qǐngwèn" },
-    { "categorie": "Politesse et présentations", "fr": "Pardon, désolé", "zh": "对不起", "pinyin": "duìbuqǐ" },
-    { "categorie": "Politesse et présentations", "fr": "Au revoir", "zh": "再见", "pinyin": "zàijiàn" },
-    { "categorie": "Politesse et présentations", "fr": "Enchanté", "zh": "很高兴认识您", "pinyin": "hěn gāoxìng rènshi nín" },
-    { "categorie": "Politesse et présentations", "fr": "Je m'appelle…", "zh": "我叫……", "pinyin": "wǒ jiào…" },
-    { "categorie": "Politesse et présentations", "fr": "Nous venons de Belgique", "zh": "我们来自比利时", "pinyin": "wǒmen láizì Bǐlìshí" },
-    { "categorie": "Politesse et présentations", "fr": "Nous travaillons pour Gaming1", "zh": "我们在Gaming1工作", "pinyin": "wǒmen zài Gaming1 gōngzuò" },
-    { "categorie": "Politesse et présentations", "fr": "Nous travaillons dans le divertissement, en Belgique", "zh": "我们在比利时从事娱乐行业", "pinyin": "wǒmen zài Bǐlìshí cóngshì yúlè hángyè" },
-    { "categorie": "Politesse et présentations", "fr": "Voici ma carte de visite", "zh": "这是我的名片", "pinyin": "zhè shì wǒ de míngpiàn" },
-    { "categorie": "Politesse et présentations", "fr": "Puis-je avoir votre carte de visite ?", "zh": "可以给我您的名片吗？", "pinyin": "kěyǐ gěi wǒ nín de míngpiàn ma?" },
-    { "categorie": "Politesse et présentations", "fr": "Pas de problème", "zh": "没问题", "pinyin": "méi wèntí" },
-    { "categorie": "Politesse et présentations", "fr": "Un instant, s'il vous plaît", "zh": "请稍等", "pinyin": "qǐng shāo děng" },
-    { "categorie": "Politesse et présentations", "fr": "Santé ! (pour trinquer)", "zh": "干杯！", "pinyin": "gānbēi!" },
-
-    { "categorie": "Au stand", "fr": "Nous visitons le salon", "zh": "我们来参观展会", "pinyin": "wǒmen lái cānguān zhǎnhuì" },
-    { "categorie": "Au stand", "fr": "Pouvez-vous nous présenter vos produits ?", "zh": "能给我们介绍一下你们的产品吗？", "pinyin": "néng gěi wǒmen jièshào yíxià nǐmen de chǎnpǐn ma?" },
-    { "categorie": "Au stand", "fr": "Quelqu'un parle-t-il anglais ici ?", "zh": "这里有人会说英语吗？", "pinyin": "zhèlǐ yǒu rén huì shuō Yīngyǔ ma?" },
-    { "categorie": "Au stand", "fr": "Avez-vous une documentation en anglais ?", "zh": "有英文的资料吗？", "pinyin": "yǒu Yīngwén de zīliào ma?" },
-    { "categorie": "Au stand", "fr": "Pouvez-vous nous faire une démonstration ?", "zh": "可以演示一下吗？", "pinyin": "kěyǐ yǎnshì yíxià ma?" },
-    { "categorie": "Au stand", "fr": "Puis-je prendre une photo ?", "zh": "可以拍照吗？", "pinyin": "kěyǐ pāizhào ma?" },
-    { "categorie": "Au stand", "fr": "Qui est le responsable commercial ?", "zh": "销售负责人是哪位？", "pinyin": "xiāoshòu fùzérén shì nǎ wèi?" },
-    { "categorie": "Au stand", "fr": "Nous avons rendez-vous avec…", "zh": "我们和……有约", "pinyin": "wǒmen hé… yǒu yuē" },
-    { "categorie": "Au stand", "fr": "Où est le stand de… ?", "zh": "……的展位在哪里？", "pinyin": "…de zhǎnwèi zài nǎlǐ?" },
-    { "categorie": "Au stand", "fr": "Où est le hall numéro… ?", "zh": "……号馆在哪里？", "pinyin": "…hào guǎn zài nǎlǐ?" },
-    { "categorie": "Au stand", "fr": "C'est très intéressant", "zh": "非常有意思", "pinyin": "fēicháng yǒu yìsi" },
-    { "categorie": "Au stand", "fr": "Nous repasserons plus tard", "zh": "我们等一下再来", "pinyin": "wǒmen děng yíxià zài lái" },
-
-    { "categorie": "Questions produit", "fr": "Comment cela fonctionne-t-il ?", "zh": "这个怎么用？", "pinyin": "zhège zěnme yòng?" },
-    { "categorie": "Questions produit", "fr": "Quelles sont les nouveautés cette année ?", "zh": "今年有什么新产品？", "pinyin": "jīnnián yǒu shénme xīn chǎnpǐn?" },
-    { "categorie": "Questions produit", "fr": "Qui sont vos principaux clients ?", "zh": "你们的主要客户有哪些？", "pinyin": "nǐmen de zhǔyào kèhù yǒu nǎxiē?" },
-    { "categorie": "Questions produit", "fr": "Est-ce déjà vendu en Europe ?", "zh": "这个产品在欧洲有销售吗？", "pinyin": "zhège chǎnpǐn zài Ōuzhōu yǒu xiāoshòu ma?" },
-    { "categorie": "Questions produit", "fr": "Est-ce certifié CE ?", "zh": "有CE认证吗？", "pinyin": "yǒu CE rènzhèng ma?" },
-    { "categorie": "Questions produit", "fr": "Le logiciel existe-t-il en français ?", "zh": "软件有法语版吗？", "pinyin": "ruǎnjiàn yǒu Fǎyǔ bǎn ma?" },
-    { "categorie": "Questions produit", "fr": "Peut-on le personnaliser ?", "zh": "可以定制吗？", "pinyin": "kěyǐ dìngzhì ma?" },
-    { "categorie": "Questions produit", "fr": "Accepte-t-il le paiement sans contact ?", "zh": "支持非接触式支付吗？", "pinyin": "zhīchí fēi jiēchù shì zhīfù ma?" },
-    { "categorie": "Questions produit", "fr": "Quelles sont les dimensions ?", "zh": "尺寸是多少？", "pinyin": "chǐcùn shì duōshao?" },
-    { "categorie": "Questions produit", "fr": "Quelle est la consommation électrique ?", "zh": "功耗是多少？", "pinyin": "gōnghào shì duōshao?" },
-    { "categorie": "Questions produit", "fr": "Quelle est la durée de la garantie ?", "zh": "保修期多长？", "pinyin": "bǎoxiū qī duō cháng?" },
-    { "categorie": "Questions produit", "fr": "Y a-t-il un service après-vente en Europe ?", "zh": "在欧洲有售后服务吗？", "pinyin": "zài Ōuzhōu yǒu shòuhòu fúwù ma?" },
-
-    { "categorie": "Prix et commande", "fr": "Quel est le prix ?", "zh": "价格是多少？", "pinyin": "jiàgé shì duōshao?" },
-    { "categorie": "Prix et commande", "fr": "Quel est le prix pour 100 unités ?", "zh": "一百台的价格是多少？", "pinyin": "yìbǎi tái de jiàgé shì duōshao?" },
-    { "categorie": "Prix et commande", "fr": "Quelle est la quantité minimum de commande ?", "zh": "最小起订量是多少？", "pinyin": "zuìxiǎo qǐdìng liàng shì duōshao?" },
-    { "categorie": "Prix et commande", "fr": "Quel est le délai de livraison ?", "zh": "交货期多长？", "pinyin": "jiāohuò qī duō cháng?" },
-    { "categorie": "Prix et commande", "fr": "Livrez-vous en Belgique ?", "zh": "可以发货到比利时吗？", "pinyin": "kěyǐ fāhuò dào Bǐlìshí ma?" },
-    { "categorie": "Prix et commande", "fr": "Le transport est-il compris dans le prix ?", "zh": "价格包括运费吗？", "pinyin": "jiàgé bāokuò yùnfèi ma?" },
-    { "categorie": "Prix et commande", "fr": "Pouvez-vous m'envoyer une offre par e-mail ?", "zh": "可以把报价发到我的邮箱吗？", "pinyin": "kěyǐ bǎ bàojià fā dào wǒ de yóuxiāng ma?" },
-    { "categorie": "Prix et commande", "fr": "Peut-on obtenir un échantillon ?", "zh": "可以提供样品吗？", "pinyin": "kěyǐ tígōng yàngpǐn ma?" },
-    { "categorie": "Prix et commande", "fr": "C'est un peu cher", "zh": "有点儿贵", "pinyin": "yǒudiǎnr guì" },
-    { "categorie": "Prix et commande", "fr": "Nous devons en discuter en interne", "zh": "我们需要内部讨论一下", "pinyin": "wǒmen xūyào nèibù tǎolùn yíxià" },
-    { "categorie": "Prix et commande", "fr": "Nous ne prenons aucune décision aujourd'hui", "zh": "我们今天不做决定", "pinyin": "wǒmen jīntiān bú zuò juédìng" },
-
-    { "categorie": "Contacts et suite", "fr": "Pouvons-nous nous ajouter sur WeChat ?", "zh": "我们可以加个微信吗？", "pinyin": "wǒmen kěyǐ jiā gè Wēixìn ma?" },
-    { "categorie": "Contacts et suite", "fr": "Je scanne votre QR code", "zh": "我扫您的二维码", "pinyin": "wǒ sǎo nín de èrwéimǎ" },
-    { "categorie": "Contacts et suite", "fr": "Quelle est votre adresse e-mail ?", "zh": "您的邮箱是什么？", "pinyin": "nín de yóuxiāng shì shénme?" },
-    { "categorie": "Contacts et suite", "fr": "Pouvez-vous l'écrire ici ?", "zh": "可以写在这里吗？", "pinyin": "kěyǐ xiě zài zhèlǐ ma?" },
-    { "categorie": "Contacts et suite", "fr": "Nous vous recontacterons", "zh": "我们会再联系您", "pinyin": "wǒmen huì zài liánxì nín" },
-    { "categorie": "Contacts et suite", "fr": "Merci pour votre temps", "zh": "谢谢您抽出时间", "pinyin": "xièxie nín chōuchū shíjiān" },
-    { "categorie": "Contacts et suite", "fr": "Au plaisir de travailler ensemble", "zh": "期待与您合作", "pinyin": "qīdài yǔ nín hézuò" },
-
-    { "categorie": "Taxi et transports", "fr": "Emmenez-moi à cette adresse, s'il vous plaît", "zh": "请带我去这个地址", "pinyin": "qǐng dài wǒ qù zhège dìzhǐ" },
-    { "categorie": "Taxi et transports", "fr": "Ramenez-moi à mon hôtel", "zh": "请带我回酒店", "pinyin": "qǐng dài wǒ huí jiǔdiàn" },
-    { "categorie": "Taxi et transports", "fr": "À l'aéroport, s'il vous plaît", "zh": "请去机场", "pinyin": "qǐng qù jīchǎng" },
-    { "categorie": "Taxi et transports", "fr": "À la gare, s'il vous plaît", "zh": "请去火车站", "pinyin": "qǐng qù huǒchēzhàn" },
-    { "categorie": "Taxi et transports", "fr": "Au centre des expositions, s'il vous plaît", "zh": "请去会展中心", "pinyin": "qǐng qù huìzhǎn zhōngxīn" },
-    { "categorie": "Taxi et transports", "fr": "Arrêtez-vous ici, s'il vous plaît", "zh": "请在这里停车", "pinyin": "qǐng zài zhèlǐ tíngchē" },
-    { "categorie": "Taxi et transports", "fr": "Combien de temps faut-il ?", "zh": "需要多长时间？", "pinyin": "xūyào duō cháng shíjiān?" },
-    { "categorie": "Taxi et transports", "fr": "Nous sommes pressés", "zh": "我们很急", "pinyin": "wǒmen hěn jí" },
-    { "categorie": "Taxi et transports", "fr": "Moins vite, s'il vous plaît", "zh": "请开慢一点", "pinyin": "qǐng kāi màn yìdiǎn" },
-    { "categorie": "Taxi et transports", "fr": "Pouvez-vous m'attendre ici ?", "zh": "可以在这里等我吗？", "pinyin": "kěyǐ zài zhèlǐ děng wǒ ma?" },
-    { "categorie": "Taxi et transports", "fr": "Où est la station de métro ?", "zh": "地铁站在哪里？", "pinyin": "dìtiězhàn zài nǎlǐ?" },
-    { "categorie": "Taxi et transports", "fr": "Un reçu, s'il vous plaît", "zh": "请给我发票", "pinyin": "qǐng gěi wǒ fāpiào" },
-
-    { "categorie": "Hôtel", "fr": "J'ai une réservation", "zh": "我有预订", "pinyin": "wǒ yǒu yùdìng" },
-    { "categorie": "Hôtel", "fr": "Au nom de…", "zh": "名字是……", "pinyin": "míngzi shì…" },
-    { "categorie": "Hôtel", "fr": "Chambre numéro…", "zh": "……号房间", "pinyin": "…hào fángjiān" },
-    { "categorie": "Hôtel", "fr": "À quelle heure est le petit-déjeuner ?", "zh": "早餐几点？", "pinyin": "zǎocān jǐ diǎn?" },
-    { "categorie": "Hôtel", "fr": "Quel est le mot de passe du Wi-Fi ?", "zh": "Wi-Fi密码是多少？", "pinyin": "Wi-Fi mìmǎ shì duōshao?" },
-    { "categorie": "Hôtel", "fr": "La climatisation ne fonctionne pas", "zh": "空调坏了", "pinyin": "kōngtiáo huài le" },
-    { "categorie": "Hôtel", "fr": "Pouvez-vous garder nos bagages ?", "zh": "可以寄存行李吗？", "pinyin": "kěyǐ jìcún xíngli ma?" },
-    { "categorie": "Hôtel", "fr": "Pouvez-vous m'appeler un taxi ?", "zh": "可以帮我叫出租车吗？", "pinyin": "kěyǐ bāng wǒ jiào chūzūchē ma?" },
-    { "categorie": "Hôtel", "fr": "Réveillez-moi demain à 6 h, s'il vous plaît", "zh": "请明天早上六点叫醒我", "pinyin": "qǐng míngtiān zǎoshang liù diǎn jiàoxǐng wǒ" },
-    { "categorie": "Hôtel", "fr": "Je voudrais régler et libérer la chambre", "zh": "我要退房", "pinyin": "wǒ yào tuìfáng" },
-
-    { "categorie": "Restaurant", "fr": "Nous sommes… personnes", "zh": "我们有……个人", "pinyin": "wǒmen yǒu… gè rén" },
-    { "categorie": "Restaurant", "fr": "La carte, s'il vous plaît", "zh": "请给我菜单", "pinyin": "qǐng gěi wǒ càidān" },
-    { "categorie": "Restaurant", "fr": "Avez-vous une carte en anglais ?", "zh": "有英文菜单吗？", "pinyin": "yǒu Yīngwén càidān ma?" },
-    { "categorie": "Restaurant", "fr": "Que nous recommandez-vous ?", "zh": "你们有什么推荐的？", "pinyin": "nǐmen yǒu shénme tuījiàn de?" },
-    { "categorie": "Restaurant", "fr": "Je prends ceci", "zh": "我要这个", "pinyin": "wǒ yào zhège" },
-    { "categorie": "Restaurant", "fr": "Pas épicé, s'il vous plaît", "zh": "请不要辣", "pinyin": "qǐng bú yào là" },
-    { "categorie": "Restaurant", "fr": "Juste un peu épicé", "zh": "微辣", "pinyin": "wēi là" },
-    { "categorie": "Restaurant", "fr": "Une bouteille d'eau, s'il vous plaît", "zh": "请给我一瓶水", "pinyin": "qǐng gěi wǒ yì píng shuǐ" },
-    { "categorie": "Restaurant", "fr": "Une bière, s'il vous plaît", "zh": "请给我一瓶啤酒", "pinyin": "qǐng gěi wǒ yì píng píjiǔ" },
-    { "categorie": "Restaurant", "fr": "Un thé, s'il vous plaît", "zh": "请给我一杯茶", "pinyin": "qǐng gěi wǒ yì bēi chá" },
-    { "categorie": "Restaurant", "fr": "Avez-vous des fourchettes ?", "zh": "有叉子吗？", "pinyin": "yǒu chāzi ma?" },
-    { "categorie": "Restaurant", "fr": "C'est délicieux", "zh": "很好吃", "pinyin": "hěn hǎochī" },
-    { "categorie": "Restaurant", "fr": "L'addition, s'il vous plaît", "zh": "买单", "pinyin": "mǎidān" },
-    { "categorie": "Restaurant", "fr": "Je voudrais une facture officielle (fapiao)", "zh": "请给我发票", "pinyin": "qǐng gěi wǒ fāpiào" },
-
-    { "categorie": "Allergies et régimes", "fr": "Je suis allergique aux arachides", "zh": "我对花生过敏", "pinyin": "wǒ duì huāshēng guòmǐn" },
-    { "categorie": "Allergies et régimes", "fr": "Je suis allergique aux fruits de mer", "zh": "我对海鲜过敏", "pinyin": "wǒ duì hǎixiān guòmǐn" },
-    { "categorie": "Allergies et régimes", "fr": "Je suis allergique au gluten", "zh": "我对麸质过敏", "pinyin": "wǒ duì fūzhì guòmǐn" },
-    { "categorie": "Allergies et régimes", "fr": "Y a-t-il des arachides dans ce plat ?", "zh": "这里面有花生吗？", "pinyin": "zhè lǐmiàn yǒu huāshēng ma?" },
-    { "categorie": "Allergies et régimes", "fr": "Je suis végétarien", "zh": "我吃素", "pinyin": "wǒ chī sù" },
-    { "categorie": "Allergies et régimes", "fr": "Sans viande, s'il vous plaît", "zh": "请不要放肉", "pinyin": "qǐng bú yào fàng ròu" },
-    { "categorie": "Allergies et régimes", "fr": "Je ne mange pas de porc", "zh": "我不吃猪肉", "pinyin": "wǒ bù chī zhūròu" },
-    { "categorie": "Allergies et régimes", "fr": "Sans glutamate, s'il vous plaît", "zh": "请不要放味精", "pinyin": "qǐng bú yào fàng wèijīng" },
-    { "categorie": "Allergies et régimes", "fr": "Je ne bois pas d'alcool", "zh": "我不喝酒", "pinyin": "wǒ bù hē jiǔ" },
-
-    { "categorie": "Achats et paiement", "fr": "Combien ça coûte ?", "zh": "多少钱？", "pinyin": "duōshao qián?" },
-    { "categorie": "Achats et paiement", "fr": "Peut-on payer par carte ?", "zh": "可以刷卡吗？", "pinyin": "kěyǐ shuākǎ ma?" },
-    { "categorie": "Achats et paiement", "fr": "Je paie avec Alipay", "zh": "我用支付宝付款", "pinyin": "wǒ yòng Zhīfùbǎo fùkuǎn" },
-    { "categorie": "Achats et paiement", "fr": "Je scanne votre code, ou vous scannez le mien ?", "zh": "我扫你还是你扫我？", "pinyin": "wǒ sǎo nǐ háishi nǐ sǎo wǒ?" },
-    { "categorie": "Achats et paiement", "fr": "Pouvez-vous faire un prix ?", "zh": "可以便宜一点吗？", "pinyin": "kěyǐ piányi yìdiǎn ma?" },
-    { "categorie": "Achats et paiement", "fr": "Je regarde seulement", "zh": "我只是看看", "pinyin": "wǒ zhǐshì kànkan" },
-    { "categorie": "Achats et paiement", "fr": "Un sac, s'il vous plaît", "zh": "请给我一个袋子", "pinyin": "qǐng gěi wǒ yí gè dàizi" },
-    { "categorie": "Achats et paiement", "fr": "Y a-t-il un distributeur de billets près d'ici ?", "zh": "附近有取款机吗？", "pinyin": "fùjìn yǒu qǔkuǎnjī ma?" },
-
-    { "categorie": "Téléphone et internet", "fr": "Où puis-je recharger mon téléphone ?", "zh": "哪里可以给手机充电？", "pinyin": "nǎlǐ kěyǐ gěi shǒujī chōngdiàn?" },
-    { "categorie": "Téléphone et internet", "fr": "Avez-vous un chargeur ?", "zh": "有充电器吗？", "pinyin": "yǒu chōngdiànqì ma?" },
-    { "categorie": "Téléphone et internet", "fr": "Peut-on louer une batterie externe ?", "zh": "有充电宝吗？", "pinyin": "yǒu chōngdiànbǎo ma?" },
-    { "categorie": "Téléphone et internet", "fr": "Y a-t-il du Wi-Fi ?", "zh": "有Wi-Fi吗？", "pinyin": "yǒu Wi-Fi ma?" },
-    { "categorie": "Téléphone et internet", "fr": "Mon téléphone n'a pas de réseau", "zh": "我的手机没有信号", "pinyin": "wǒ de shǒujī méiyǒu xìnhào" },
-    { "categorie": "Téléphone et internet", "fr": "Pouvez-vous appeler ce numéro pour moi ?", "zh": "可以帮我打这个电话吗？", "pinyin": "kěyǐ bāng wǒ dǎ zhège diànhuà ma?" },
-
-    { "categorie": "Santé et urgences", "fr": "Au secours !", "zh": "救命！", "pinyin": "jiùmìng!" },
-    { "categorie": "Santé et urgences", "fr": "Appelez une ambulance", "zh": "请叫救护车", "pinyin": "qǐng jiào jiùhùchē" },
-    { "categorie": "Santé et urgences", "fr": "Appelez la police", "zh": "请报警", "pinyin": "qǐng bàojǐng" },
-    { "categorie": "Santé et urgences", "fr": "Appelez un médecin, s'il vous plaît", "zh": "请叫医生", "pinyin": "qǐng jiào yīshēng" },
-    { "categorie": "Santé et urgences", "fr": "Où est l'hôpital le plus proche ?", "zh": "最近的医院在哪里？", "pinyin": "zuìjìn de yīyuàn zài nǎlǐ?" },
-    { "categorie": "Santé et urgences", "fr": "Où y a-t-il une pharmacie ?", "zh": "药店在哪里？", "pinyin": "yàodiàn zài nǎlǐ?" },
-    { "categorie": "Santé et urgences", "fr": "J'ai mal ici", "zh": "我这里疼", "pinyin": "wǒ zhèlǐ téng" },
-    { "categorie": "Santé et urgences", "fr": "J'ai de la fièvre", "zh": "我发烧了", "pinyin": "wǒ fāshāo le" },
-    { "categorie": "Santé et urgences", "fr": "J'ai mal au ventre", "zh": "我肚子疼", "pinyin": "wǒ dùzi téng" },
-    { "categorie": "Santé et urgences", "fr": "Je suis diabétique", "zh": "我有糖尿病", "pinyin": "wǒ yǒu tángniàobìng" },
-    { "categorie": "Santé et urgences", "fr": "J'ai perdu mon passeport", "zh": "我的护照丢了", "pinyin": "wǒ de hùzhào diū le" },
-    { "categorie": "Santé et urgences", "fr": "On m'a volé mon téléphone", "zh": "我的手机被偷了", "pinyin": "wǒ de shǒujī bèi tōu le" },
-    { "categorie": "Santé et urgences", "fr": "Contactez l'ambassade de Belgique, s'il vous plaît", "zh": "请联系比利时大使馆", "pinyin": "qǐng liánxì Bǐlìshí dàshǐguǎn" },
-
-    { "categorie": "Se faire comprendre", "fr": "Je ne comprends pas", "zh": "我听不懂", "pinyin": "wǒ tīng bù dǒng" },
-    { "categorie": "Se faire comprendre", "fr": "Je ne parle pas chinois", "zh": "我不会说中文", "pinyin": "wǒ bú huì shuō Zhōngwén" },
-    { "categorie": "Se faire comprendre", "fr": "Parlez-vous anglais ?", "zh": "您会说英语吗？", "pinyin": "nín huì shuō Yīngyǔ ma?" },
-    { "categorie": "Se faire comprendre", "fr": "Pouvez-vous répéter ?", "zh": "请再说一遍", "pinyin": "qǐng zài shuō yí biàn" },
-    { "categorie": "Se faire comprendre", "fr": "Plus lentement, s'il vous plaît", "zh": "请说慢一点", "pinyin": "qǐng shuō màn yìdiǎn" },
-    { "categorie": "Se faire comprendre", "fr": "Pouvez-vous l'écrire ?", "zh": "可以写下来吗？", "pinyin": "kěyǐ xiě xiàlái ma?" },
-    { "categorie": "Se faire comprendre", "fr": "Parlez dans mon téléphone (traducteur)", "zh": "请对着我的手机说", "pinyin": "qǐng duìzhe wǒ de shǒujī shuō" },
-    { "categorie": "Se faire comprendre", "fr": "Pouvez-vous m'aider ?", "zh": "您能帮我吗？", "pinyin": "nín néng bāng wǒ ma?" },
-    { "categorie": "Se faire comprendre", "fr": "Où sont les toilettes ?", "zh": "洗手间在哪里？", "pinyin": "xǐshǒujiān zài nǎlǐ?" },
-    { "categorie": "Se faire comprendre", "fr": "Je suis perdu", "zh": "我迷路了", "pinyin": "wǒ mílù le" },
-    { "categorie": "Se faire comprendre", "fr": "C'est ça, exact", "zh": "对", "pinyin": "duì" },
-    { "categorie": "Se faire comprendre", "fr": "Non, ce n'est pas ça", "zh": "不对", "pinyin": "bú duì" },
-    { "categorie": "Se faire comprendre", "fr": "D'accord", "zh": "好的", "pinyin": "hǎo de" }
+    {"categorie": "Politesse et présentations", "fr": "Bonjour", "zh": "你好", "pinyin": "nǐ hǎo"},
+    {"categorie": "Politesse et présentations", "fr": "Bonjour (formel, à un aîné ou un client)", "zh": "您好", "pinyin": "nín hǎo"},
+    {"categorie": "Politesse et présentations", "fr": "Merci", "zh": "谢谢", "pinyin": "xièxie"},
+    {"categorie": "Politesse et présentations", "fr": "Merci beaucoup", "zh": "非常感谢", "pinyin": "fēicháng gǎnxiè"},
+    {"categorie": "Politesse et présentations", "fr": "De rien", "zh": "不客气", "pinyin": "bú kèqi"},
+    {"categorie": "Politesse et présentations", "fr": "Excusez-moi… (pour interpeller)", "zh": "请问", "pinyin": "qǐngwèn"},
+    {"categorie": "Politesse et présentations", "fr": "Pardon, désolé", "zh": "对不起", "pinyin": "duìbuqǐ"},
+    {"categorie": "Politesse et présentations", "fr": "Au revoir", "zh": "再见", "pinyin": "zàijiàn"},
+    {"categorie": "Politesse et présentations", "fr": "Enchanté", "zh": "很高兴认识您", "pinyin": "hěn gāoxìng rènshi nín"},
+    {"categorie": "Politesse et présentations", "fr": "Je m'appelle…", "zh": "我叫……", "pinyin": "wǒ jiào…"},
+    {"categorie": "Politesse et présentations", "fr": "Nous venons de Belgique", "zh": "我们来自比利时", "pinyin": "wǒmen láizì Bǐlìshí"},
+    {"categorie": "Politesse et présentations", "fr": "Nous travaillons pour Gaming1", "zh": "我们在Gaming1工作", "pinyin": "wǒmen zài Gaming1 gōngzuò"},
+    {
+      "categorie": "Politesse et présentations",
+      "fr": "Nous travaillons dans le divertissement, en Belgique",
+      "zh": "我们在比利时从事娱乐行业",
+      "pinyin": "wǒmen zài Bǐlìshí cóngshì yúlè hángyè"
+    },
+    {"categorie": "Politesse et présentations", "fr": "Voici ma carte de visite", "zh": "这是我的名片", "pinyin": "zhè shì wǒ de míngpiàn"},
+    {
+      "categorie": "Politesse et présentations",
+      "fr": "Puis-je avoir votre carte de visite ?",
+      "zh": "可以给我您的名片吗？",
+      "pinyin": "kěyǐ gěi wǒ nín de míngpiàn ma?"
+    },
+    {"categorie": "Politesse et présentations", "fr": "Pas de problème", "zh": "没问题", "pinyin": "méi wèntí"},
+    {"categorie": "Politesse et présentations", "fr": "Un instant, s'il vous plaît", "zh": "请稍等", "pinyin": "qǐng shāo děng"},
+    {"categorie": "Politesse et présentations", "fr": "Santé ! (pour trinquer)", "zh": "干杯！", "pinyin": "gānbēi!"},
+    {"categorie": "Au stand", "fr": "Nous visitons le salon", "zh": "我们来参观展会", "pinyin": "wǒmen lái cānguān zhǎnhuì"},
+    {
+      "categorie": "Au stand",
+      "fr": "Pouvez-vous nous présenter vos produits ?",
+      "zh": "能给我们介绍一下你们的产品吗？",
+      "pinyin": "néng gěi wǒmen jièshào yíxià nǐmen de chǎnpǐn ma?"
+    },
+    {"categorie": "Au stand", "fr": "Quelqu'un parle-t-il anglais ici ?", "zh": "这里有人会说英语吗？", "pinyin": "zhèlǐ yǒu rén huì shuō Yīngyǔ ma?"},
+    {"categorie": "Au stand", "fr": "Avez-vous une documentation en anglais ?", "zh": "有英文的资料吗？", "pinyin": "yǒu Yīngwén de zīliào ma?"},
+    {"categorie": "Au stand", "fr": "Pouvez-vous nous faire une démonstration ?", "zh": "可以演示一下吗？", "pinyin": "kěyǐ yǎnshì yíxià ma?"},
+    {"categorie": "Au stand", "fr": "Puis-je prendre une photo ?", "zh": "可以拍照吗？", "pinyin": "kěyǐ pāizhào ma?"},
+    {"categorie": "Au stand", "fr": "Qui est le responsable commercial ?", "zh": "销售负责人是哪位？", "pinyin": "xiāoshòu fùzérén shì nǎ wèi?"},
+    {"categorie": "Au stand", "fr": "Nous avons rendez-vous avec…", "zh": "我们和……有约", "pinyin": "wǒmen hé… yǒu yuē"},
+    {"categorie": "Au stand", "fr": "Où est le stand de… ?", "zh": "……的展位在哪里？", "pinyin": "…de zhǎnwèi zài nǎlǐ?"},
+    {"categorie": "Au stand", "fr": "Où est le hall numéro… ?", "zh": "……号馆在哪里？", "pinyin": "…hào guǎn zài nǎlǐ?"},
+    {"categorie": "Au stand", "fr": "C'est très intéressant", "zh": "非常有意思", "pinyin": "fēicháng yǒu yìsi"},
+    {"categorie": "Au stand", "fr": "Nous repasserons plus tard", "zh": "我们等一下再来", "pinyin": "wǒmen děng yíxià zài lái"},
+    {"categorie": "Questions produit", "fr": "Comment cela fonctionne-t-il ?", "zh": "这个怎么用？", "pinyin": "zhège zěnme yòng?"},
+    {
+      "categorie": "Questions produit",
+      "fr": "Quelles sont les nouveautés cette année ?",
+      "zh": "今年有什么新产品？",
+      "pinyin": "jīnnián yǒu shénme xīn chǎnpǐn?"
+    },
+    {"categorie": "Questions produit", "fr": "Qui sont vos principaux clients ?", "zh": "你们的主要客户有哪些？", "pinyin": "nǐmen de zhǔyào kèhù yǒu nǎxiē?"},
+    {
+      "categorie": "Questions produit",
+      "fr": "Est-ce déjà vendu en Europe ?",
+      "zh": "这个产品在欧洲有销售吗？",
+      "pinyin": "zhège chǎnpǐn zài Ōuzhōu yǒu xiāoshòu ma?"
+    },
+    {"categorie": "Questions produit", "fr": "Est-ce certifié CE ?", "zh": "有CE认证吗？", "pinyin": "yǒu CE rènzhèng ma?"},
+    {"categorie": "Questions produit", "fr": "Le logiciel existe-t-il en français ?", "zh": "软件有法语版吗？", "pinyin": "ruǎnjiàn yǒu Fǎyǔ bǎn ma?"},
+    {"categorie": "Questions produit", "fr": "Peut-on le personnaliser ?", "zh": "可以定制吗？", "pinyin": "kěyǐ dìngzhì ma?"},
+    {
+      "categorie": "Questions produit",
+      "fr": "Accepte-t-il le paiement sans contact ?",
+      "zh": "支持非接触式支付吗？",
+      "pinyin": "zhīchí fēi jiēchù shì zhīfù ma?"
+    },
+    {"categorie": "Questions produit", "fr": "Quelles sont les dimensions ?", "zh": "尺寸是多少？", "pinyin": "chǐcùn shì duōshao?"},
+    {"categorie": "Questions produit", "fr": "Quelle est la consommation électrique ?", "zh": "功耗是多少？", "pinyin": "gōnghào shì duōshao?"},
+    {"categorie": "Questions produit", "fr": "Quelle est la durée de la garantie ?", "zh": "保修期多长？", "pinyin": "bǎoxiū qī duō cháng?"},
+    {
+      "categorie": "Questions produit",
+      "fr": "Y a-t-il un service après-vente en Europe ?",
+      "zh": "在欧洲有售后服务吗？",
+      "pinyin": "zài Ōuzhōu yǒu shòuhòu fúwù ma?"
+    },
+    {"categorie": "Prix et commande", "fr": "Quel est le prix ?", "zh": "价格是多少？", "pinyin": "jiàgé shì duōshao?"},
+    {"categorie": "Prix et commande", "fr": "Quel est le prix pour 100 unités ?", "zh": "一百台的价格是多少？", "pinyin": "yìbǎi tái de jiàgé shì duōshao?"},
+    {
+      "categorie": "Prix et commande",
+      "fr": "Quelle est la quantité minimum de commande ?",
+      "zh": "最小起订量是多少？",
+      "pinyin": "zuìxiǎo qǐdìng liàng shì duōshao?"
+    },
+    {"categorie": "Prix et commande", "fr": "Quel est le délai de livraison ?", "zh": "交货期多长？", "pinyin": "jiāohuò qī duō cháng?"},
+    {"categorie": "Prix et commande", "fr": "Livrez-vous en Belgique ?", "zh": "可以发货到比利时吗？", "pinyin": "kěyǐ fāhuò dào Bǐlìshí ma?"},
+    {"categorie": "Prix et commande", "fr": "Le transport est-il compris dans le prix ?", "zh": "价格包括运费吗？", "pinyin": "jiàgé bāokuò yùnfèi ma?"},
+    {
+      "categorie": "Prix et commande",
+      "fr": "Pouvez-vous m'envoyer une offre par e-mail ?",
+      "zh": "可以把报价发到我的邮箱吗？",
+      "pinyin": "kěyǐ bǎ bàojià fā dào wǒ de yóuxiāng ma?"
+    },
+    {"categorie": "Prix et commande", "fr": "Peut-on obtenir un échantillon ?", "zh": "可以提供样品吗？", "pinyin": "kěyǐ tígōng yàngpǐn ma?"},
+    {"categorie": "Prix et commande", "fr": "C'est un peu cher", "zh": "有点儿贵", "pinyin": "yǒudiǎnr guì"},
+    {"categorie": "Prix et commande", "fr": "Nous devons en discuter en interne", "zh": "我们需要内部讨论一下", "pinyin": "wǒmen xūyào nèibù tǎolùn yíxià"},
+    {"categorie": "Prix et commande", "fr": "Nous ne prenons aucune décision aujourd'hui", "zh": "我们今天不做决定", "pinyin": "wǒmen jīntiān bú zuò juédìng"},
+    {"categorie": "Contacts et suite", "fr": "Pouvons-nous nous ajouter sur WeChat ?", "zh": "我们可以加个微信吗？", "pinyin": "wǒmen kěyǐ jiā gè Wēixìn ma?"},
+    {"categorie": "Contacts et suite", "fr": "Je scanne votre QR code", "zh": "我扫您的二维码", "pinyin": "wǒ sǎo nín de èrwéimǎ"},
+    {"categorie": "Contacts et suite", "fr": "Quelle est votre adresse e-mail ?", "zh": "您的邮箱是什么？", "pinyin": "nín de yóuxiāng shì shénme?"},
+    {"categorie": "Contacts et suite", "fr": "Pouvez-vous l'écrire ici ?", "zh": "可以写在这里吗？", "pinyin": "kěyǐ xiě zài zhèlǐ ma?"},
+    {"categorie": "Contacts et suite", "fr": "Nous vous recontacterons", "zh": "我们会再联系您", "pinyin": "wǒmen huì zài liánxì nín"},
+    {"categorie": "Contacts et suite", "fr": "Merci pour votre temps", "zh": "谢谢您抽出时间", "pinyin": "xièxie nín chōuchū shíjiān"},
+    {"categorie": "Contacts et suite", "fr": "Au plaisir de travailler ensemble", "zh": "期待与您合作", "pinyin": "qīdài yǔ nín hézuò"},
+    {
+      "categorie": "Taxi et transports",
+      "fr": "Emmenez-moi à cette adresse, s'il vous plaît",
+      "zh": "请带我去这个地址",
+      "pinyin": "qǐng dài wǒ qù zhège dìzhǐ"
+    },
+    {"categorie": "Taxi et transports", "fr": "Ramenez-moi à mon hôtel", "zh": "请带我回酒店", "pinyin": "qǐng dài wǒ huí jiǔdiàn"},
+    {"categorie": "Taxi et transports", "fr": "À l'aéroport, s'il vous plaît", "zh": "请去机场", "pinyin": "qǐng qù jīchǎng"},
+    {"categorie": "Taxi et transports", "fr": "À la gare, s'il vous plaît", "zh": "请去火车站", "pinyin": "qǐng qù huǒchēzhàn"},
+    {"categorie": "Taxi et transports", "fr": "Au centre des expositions, s'il vous plaît", "zh": "请去会展中心", "pinyin": "qǐng qù huìzhǎn zhōngxīn"},
+    {"categorie": "Taxi et transports", "fr": "Arrêtez-vous ici, s'il vous plaît", "zh": "请在这里停车", "pinyin": "qǐng zài zhèlǐ tíngchē"},
+    {"categorie": "Taxi et transports", "fr": "Combien de temps faut-il ?", "zh": "需要多长时间？", "pinyin": "xūyào duō cháng shíjiān?"},
+    {"categorie": "Taxi et transports", "fr": "Nous sommes pressés", "zh": "我们很急", "pinyin": "wǒmen hěn jí"},
+    {"categorie": "Taxi et transports", "fr": "Moins vite, s'il vous plaît", "zh": "请开慢一点", "pinyin": "qǐng kāi màn yìdiǎn"},
+    {"categorie": "Taxi et transports", "fr": "Pouvez-vous m'attendre ici ?", "zh": "可以在这里等我吗？", "pinyin": "kěyǐ zài zhèlǐ děng wǒ ma?"},
+    {"categorie": "Taxi et transports", "fr": "Où est la station de métro ?", "zh": "地铁站在哪里？", "pinyin": "dìtiězhàn zài nǎlǐ?"},
+    {"categorie": "Taxi et transports", "fr": "Un reçu, s'il vous plaît", "zh": "请给我发票", "pinyin": "qǐng gěi wǒ fāpiào"},
+    {"categorie": "Hôtel", "fr": "J'ai une réservation", "zh": "我有预订", "pinyin": "wǒ yǒu yùdìng"},
+    {"categorie": "Hôtel", "fr": "Au nom de…", "zh": "名字是……", "pinyin": "míngzi shì…"},
+    {"categorie": "Hôtel", "fr": "Chambre numéro…", "zh": "……号房间", "pinyin": "…hào fángjiān"},
+    {"categorie": "Hôtel", "fr": "À quelle heure est le petit-déjeuner ?", "zh": "早餐几点？", "pinyin": "zǎocān jǐ diǎn?"},
+    {"categorie": "Hôtel", "fr": "Quel est le mot de passe du Wi-Fi ?", "zh": "Wi-Fi密码是多少？", "pinyin": "Wi-Fi mìmǎ shì duōshao?"},
+    {"categorie": "Hôtel", "fr": "La climatisation ne fonctionne pas", "zh": "空调坏了", "pinyin": "kōngtiáo huài le"},
+    {"categorie": "Hôtel", "fr": "Pouvez-vous garder nos bagages ?", "zh": "可以寄存行李吗？", "pinyin": "kěyǐ jìcún xíngli ma?"},
+    {"categorie": "Hôtel", "fr": "Pouvez-vous m'appeler un taxi ?", "zh": "可以帮我叫出租车吗？", "pinyin": "kěyǐ bāng wǒ jiào chūzūchē ma?"},
+    {
+      "categorie": "Hôtel",
+      "fr": "Réveillez-moi demain à 6 h, s'il vous plaît",
+      "zh": "请明天早上六点叫醒我",
+      "pinyin": "qǐng míngtiān zǎoshang liù diǎn jiàoxǐng wǒ"
+    },
+    {"categorie": "Hôtel", "fr": "Je voudrais régler et libérer la chambre", "zh": "我要退房", "pinyin": "wǒ yào tuìfáng"},
+    {"categorie": "Restaurant", "fr": "Nous sommes… personnes", "zh": "我们有……个人", "pinyin": "wǒmen yǒu… gè rén"},
+    {"categorie": "Restaurant", "fr": "La carte, s'il vous plaît", "zh": "请给我菜单", "pinyin": "qǐng gěi wǒ càidān"},
+    {"categorie": "Restaurant", "fr": "Avez-vous une carte en anglais ?", "zh": "有英文菜单吗？", "pinyin": "yǒu Yīngwén càidān ma?"},
+    {"categorie": "Restaurant", "fr": "Que nous recommandez-vous ?", "zh": "你们有什么推荐的？", "pinyin": "nǐmen yǒu shénme tuījiàn de?"},
+    {"categorie": "Restaurant", "fr": "Je prends ceci", "zh": "我要这个", "pinyin": "wǒ yào zhège"},
+    {"categorie": "Restaurant", "fr": "Pas épicé, s'il vous plaît", "zh": "请不要辣", "pinyin": "qǐng bú yào là"},
+    {"categorie": "Restaurant", "fr": "Juste un peu épicé", "zh": "微辣", "pinyin": "wēi là"},
+    {"categorie": "Restaurant", "fr": "Une bouteille d'eau, s'il vous plaît", "zh": "请给我一瓶水", "pinyin": "qǐng gěi wǒ yì píng shuǐ"},
+    {"categorie": "Restaurant", "fr": "Une bière, s'il vous plaît", "zh": "请给我一瓶啤酒", "pinyin": "qǐng gěi wǒ yì píng píjiǔ"},
+    {"categorie": "Restaurant", "fr": "Un thé, s'il vous plaît", "zh": "请给我一杯茶", "pinyin": "qǐng gěi wǒ yì bēi chá"},
+    {"categorie": "Restaurant", "fr": "Avez-vous des fourchettes ?", "zh": "有叉子吗？", "pinyin": "yǒu chāzi ma?"},
+    {"categorie": "Restaurant", "fr": "C'est délicieux", "zh": "很好吃", "pinyin": "hěn hǎochī"},
+    {"categorie": "Restaurant", "fr": "L'addition, s'il vous plaît", "zh": "买单", "pinyin": "mǎidān"},
+    {"categorie": "Restaurant", "fr": "Je voudrais une facture officielle (fapiao)", "zh": "请给我发票", "pinyin": "qǐng gěi wǒ fāpiào"},
+    {"categorie": "Allergies et régimes", "fr": "Je suis allergique aux arachides", "zh": "我对花生过敏", "pinyin": "wǒ duì huāshēng guòmǐn"},
+    {"categorie": "Allergies et régimes", "fr": "Je suis allergique aux fruits de mer", "zh": "我对海鲜过敏", "pinyin": "wǒ duì hǎixiān guòmǐn"},
+    {"categorie": "Allergies et régimes", "fr": "Je suis allergique au gluten", "zh": "我对麸质过敏", "pinyin": "wǒ duì fūzhì guòmǐn"},
+    {"categorie": "Allergies et régimes", "fr": "Y a-t-il des arachides dans ce plat ?", "zh": "这里面有花生吗？", "pinyin": "zhè lǐmiàn yǒu huāshēng ma?"},
+    {"categorie": "Allergies et régimes", "fr": "Je suis végétarien", "zh": "我吃素", "pinyin": "wǒ chī sù"},
+    {"categorie": "Allergies et régimes", "fr": "Sans viande, s'il vous plaît", "zh": "请不要放肉", "pinyin": "qǐng bú yào fàng ròu"},
+    {"categorie": "Allergies et régimes", "fr": "Je ne mange pas de porc", "zh": "我不吃猪肉", "pinyin": "wǒ bù chī zhūròu"},
+    {"categorie": "Allergies et régimes", "fr": "Sans glutamate, s'il vous plaît", "zh": "请不要放味精", "pinyin": "qǐng bú yào fàng wèijīng"},
+    {"categorie": "Allergies et régimes", "fr": "Je ne bois pas d'alcool", "zh": "我不喝酒", "pinyin": "wǒ bù hē jiǔ"},
+    {"categorie": "Achats et paiement", "fr": "Combien ça coûte ?", "zh": "多少钱？", "pinyin": "duōshao qián?"},
+    {"categorie": "Achats et paiement", "fr": "Peut-on payer par carte ?", "zh": "可以刷卡吗？", "pinyin": "kěyǐ shuākǎ ma?"},
+    {"categorie": "Achats et paiement", "fr": "Je paie avec Alipay", "zh": "我用支付宝付款", "pinyin": "wǒ yòng Zhīfùbǎo fùkuǎn"},
+    {
+      "categorie": "Achats et paiement",
+      "fr": "Je scanne votre code, ou vous scannez le mien ?",
+      "zh": "我扫你还是你扫我？",
+      "pinyin": "wǒ sǎo nǐ háishi nǐ sǎo wǒ?"
+    },
+    {"categorie": "Achats et paiement", "fr": "Pouvez-vous faire un prix ?", "zh": "可以便宜一点吗？", "pinyin": "kěyǐ piányi yìdiǎn ma?"},
+    {"categorie": "Achats et paiement", "fr": "Je regarde seulement", "zh": "我只是看看", "pinyin": "wǒ zhǐshì kànkan"},
+    {"categorie": "Achats et paiement", "fr": "Un sac, s'il vous plaît", "zh": "请给我一个袋子", "pinyin": "qǐng gěi wǒ yí gè dàizi"},
+    {
+      "categorie": "Achats et paiement",
+      "fr": "Y a-t-il un distributeur de billets près d'ici ?",
+      "zh": "附近有取款机吗？",
+      "pinyin": "fùjìn yǒu qǔkuǎnjī ma?"
+    },
+    {
+      "categorie": "Téléphone et internet",
+      "fr": "Où puis-je recharger mon téléphone ?",
+      "zh": "哪里可以给手机充电？",
+      "pinyin": "nǎlǐ kěyǐ gěi shǒujī chōngdiàn?"
+    },
+    {"categorie": "Téléphone et internet", "fr": "Avez-vous un chargeur ?", "zh": "有充电器吗？", "pinyin": "yǒu chōngdiànqì ma?"},
+    {"categorie": "Téléphone et internet", "fr": "Peut-on louer une batterie externe ?", "zh": "有充电宝吗？", "pinyin": "yǒu chōngdiànbǎo ma?"},
+    {"categorie": "Téléphone et internet", "fr": "Y a-t-il du Wi-Fi ?", "zh": "有Wi-Fi吗？", "pinyin": "yǒu Wi-Fi ma?"},
+    {"categorie": "Téléphone et internet", "fr": "Mon téléphone n'a pas de réseau", "zh": "我的手机没有信号", "pinyin": "wǒ de shǒujī méiyǒu xìnhào"},
+    {
+      "categorie": "Téléphone et internet",
+      "fr": "Pouvez-vous appeler ce numéro pour moi ?",
+      "zh": "可以帮我打这个电话吗？",
+      "pinyin": "kěyǐ bāng wǒ dǎ zhège diànhuà ma?"
+    },
+    {"categorie": "Santé et urgences", "fr": "Au secours !", "zh": "救命！", "pinyin": "jiùmìng!"},
+    {"categorie": "Santé et urgences", "fr": "Appelez une ambulance", "zh": "请叫救护车", "pinyin": "qǐng jiào jiùhùchē"},
+    {"categorie": "Santé et urgences", "fr": "Appelez la police", "zh": "请报警", "pinyin": "qǐng bàojǐng"},
+    {"categorie": "Santé et urgences", "fr": "Appelez un médecin, s'il vous plaît", "zh": "请叫医生", "pinyin": "qǐng jiào yīshēng"},
+    {"categorie": "Santé et urgences", "fr": "Où est l'hôpital le plus proche ?", "zh": "最近的医院在哪里？", "pinyin": "zuìjìn de yīyuàn zài nǎlǐ?"},
+    {"categorie": "Santé et urgences", "fr": "Où y a-t-il une pharmacie ?", "zh": "药店在哪里？", "pinyin": "yàodiàn zài nǎlǐ?"},
+    {"categorie": "Santé et urgences", "fr": "J'ai mal ici", "zh": "我这里疼", "pinyin": "wǒ zhèlǐ téng"},
+    {"categorie": "Santé et urgences", "fr": "J'ai de la fièvre", "zh": "我发烧了", "pinyin": "wǒ fāshāo le"},
+    {"categorie": "Santé et urgences", "fr": "J'ai mal au ventre", "zh": "我肚子疼", "pinyin": "wǒ dùzi téng"},
+    {"categorie": "Santé et urgences", "fr": "Je suis diabétique", "zh": "我有糖尿病", "pinyin": "wǒ yǒu tángniàobìng"},
+    {"categorie": "Santé et urgences", "fr": "J'ai perdu mon passeport", "zh": "我的护照丢了", "pinyin": "wǒ de hùzhào diū le"},
+    {"categorie": "Santé et urgences", "fr": "On m'a volé mon téléphone", "zh": "我的手机被偷了", "pinyin": "wǒ de shǒujī bèi tōu le"},
+    {
+      "categorie": "Santé et urgences",
+      "fr": "Contactez l'ambassade de Belgique, s'il vous plaît",
+      "zh": "请联系比利时大使馆",
+      "pinyin": "qǐng liánxì Bǐlìshí dàshǐguǎn"
+    },
+    {"categorie": "Se faire comprendre", "fr": "Je ne comprends pas", "zh": "我听不懂", "pinyin": "wǒ tīng bù dǒng"},
+    {"categorie": "Se faire comprendre", "fr": "Je ne parle pas chinois", "zh": "我不会说中文", "pinyin": "wǒ bú huì shuō Zhōngwén"},
+    {"categorie": "Se faire comprendre", "fr": "Parlez-vous anglais ?", "zh": "您会说英语吗？", "pinyin": "nín huì shuō Yīngyǔ ma?"},
+    {"categorie": "Se faire comprendre", "fr": "Pouvez-vous répéter ?", "zh": "请再说一遍", "pinyin": "qǐng zài shuō yí biàn"},
+    {"categorie": "Se faire comprendre", "fr": "Plus lentement, s'il vous plaît", "zh": "请说慢一点", "pinyin": "qǐng shuō màn yìdiǎn"},
+    {"categorie": "Se faire comprendre", "fr": "Pouvez-vous l'écrire ?", "zh": "可以写下来吗？", "pinyin": "kěyǐ xiě xiàlái ma?"},
+    {"categorie": "Se faire comprendre", "fr": "Parlez dans mon téléphone (traducteur)", "zh": "请对着我的手机说", "pinyin": "qǐng duìzhe wǒ de shǒujī shuō"},
+    {"categorie": "Se faire comprendre", "fr": "Pouvez-vous m'aider ?", "zh": "您能帮我吗？", "pinyin": "nín néng bāng wǒ ma?"},
+    {"categorie": "Se faire comprendre", "fr": "Où sont les toilettes ?", "zh": "洗手间在哪里？", "pinyin": "xǐshǒujiān zài nǎlǐ?"},
+    {"categorie": "Se faire comprendre", "fr": "Je suis perdu", "zh": "我迷路了", "pinyin": "wǒ mílù le"},
+    {"categorie": "Se faire comprendre", "fr": "C'est ça, exact", "zh": "对", "pinyin": "duì"},
+    {"categorie": "Se faire comprendre", "fr": "Non, ce n'est pas ça", "zh": "不对", "pinyin": "bú duì"},
+    {"categorie": "Se faire comprendre", "fr": "D'accord", "zh": "好的", "pinyin": "hǎo de"}
   ]
 }

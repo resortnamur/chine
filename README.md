@@ -16,6 +16,8 @@ Les téléphones récupèrent le nouveau contenu à la prochaine ouverture avec 
 Repères :
 - Les passages `[À COMPLÉTER]` et `[à vérifier]` sont surlignés en jaune sur le site. Il suffit de les supprimer une fois le champ rempli.
 - **Heures** : toutes les heures du programme sont en heure de Pékin, au format `"09:30"`. `"fin"` est facultatif.
+  Exception : un jour qui porte `"fuseau": "Europe/Brussels"` (le départ) a ses heures en heure belge.
+- **Rattacher un créneau à un salon ou une visite** : `"salon": "salon-3"` (l'`id` du salon). Les notes prises pendant ce créneau y sont rangées automatiquement.
 - **Dates** : au format `"2026-10-20"`. L'écran Aujourd'hui s'appuie sur ces dates.
 - **Lieux** : dans le programme et les salons, `"lieu"` reprend l'`"id"` d'une adresse (ex. `"hotel-1"`). `"hotel"` sur un jour indique l'hôtel du soir.
 - **Coordonnées** (facultatif) : ajouter `"lat"` et `"lng"` à une adresse, relevées dans Amap, pour un repérage plus précis.

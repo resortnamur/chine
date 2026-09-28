@@ -127,12 +127,13 @@ function blocCreneaux(jour, estAujourdhui) {
   const cr = jour.creneaux || [];
   let passe = -1, enCours = -1, suivant = -1;
   if (estAujourdhui) {
-    const m = minutes(maintenant(), TZ_CN);
+    const m = minutes(maintenant(), jour.fuseau || TZ_CN);
     cr.forEach((c, i) => {
       const deb = enMinutes(c.heure);
       const next = cr[i + 1] ? enMinutes(cr[i + 1].heure) : null;
-      const fin = enMinutes(c.fin) != null ? enMinutes(c.fin) : (next != null ? next : deb + 60);
+      let fin = enMinutes(c.fin) != null ? enMinutes(c.fin) : (next != null ? next : deb + 60);
       if (deb == null) return;
+      if (fin < deb) fin += 24 * 60; // se termine après minuit
       if (m >= fin) passe = i;
       else if (m >= deb && enCours < 0) enCours = i;
       else if (m < deb && suivant < 0) suivant = i;
@@ -155,10 +156,14 @@ function blocCreneaux(jour, estAujourdhui) {
   }).join('') + '</ul>';
 }
 
+// Un jour peut avoir son propre fuseau (« fuseau »: "Europe/Brussels" pour le départ) : ses heures et sa date sont alors locales
+function estJourCourant(jour, now) { return jour.date === ymd(now, jour.fuseau || TZ_CN); }
+
 function enteteJour(jour, index) {
   const d = midiPekin(jour.date);
   let h = '<div class="jour-date">Jour ' + (index + 1) + ' · ' + esc(dateLongue(d, TZ_CN)) + '</div>';
   h += '<div class="meta">' + t(jour.titre || '') + (jour.ville ? ' — ' + t(jour.ville) : '') + '</div>';
+  if (jour.fuseau === TZ_BE) h += '<div class="meta">Heures de Belgique</div>';
   return h;
 }
 
@@ -178,10 +183,10 @@ function vueAujourdhui() {
   const e = ecartHeures(now);
   const jourCN = ymd(now, TZ_CN);
   const jours = D.jours || [];
-  const index = jours.findIndex((j) => j.date === jourCN);
+  const index = jours.findIndex((j) => estJourCourant(j, now));
 
   let h = '<div class="horloges">' +
-    '<div class="horloge"><div class="lieu">🇨🇳 Pékin</div><div class="heure">' + hm(now, TZ_CN) + '</div><div class="date">' + esc(dateCourte(now, TZ_CN)) + '</div></div>' +
+    '<div class="horloge"><div class="lieu">🇨🇳 Chine</div><div class="heure">' + hm(now, TZ_CN) + '</div><div class="date">' + esc(dateCourte(now, TZ_CN)) + '</div></div>' +
     '<div class="horloge"><div class="lieu">🇧🇪 Belgique</div><div class="heure">' + hm(now, TZ_BE) + '</div><div class="date">' + esc(dateCourte(now, TZ_BE)) + '</div></div>' +
     '</div>';
 
@@ -196,8 +201,8 @@ function vueAujourdhui() {
   if (index >= 0) {
     jour = jours[index];
     h += '<div class="carte accent">' + enteteJour(jour, index) + etiquettesJour(jour) + blocCreneaux(jour, true) + '</div>';
-  } else if (v.debut && jourCN < v.debut) {
-    const n = joursEntre(jourCN, v.debut);
+  } else if (v.debut && ymd(now, (jours[0] && jours[0].fuseau) || TZ_CN) < v.debut) {
+    const n = joursEntre(ymd(now, (jours[0] && jours[0].fuseau) || TZ_CN), v.debut);
     h += '<div class="carte accent"><h2>Départ dans ' + n + ' jour' + (n > 1 ? 's' : '') + '</h2><div class="meta">' +
       esc(dateLongue(midiPekin(v.debut), TZ_CN)) + ' → ' + esc(dateLongue(midiPekin(v.fin || v.debut), TZ_CN)) + '</div></div>';
     if (jours[0]) {
@@ -225,11 +230,11 @@ function vueAujourdhui() {
 
 /* ---------- Vue : Programme ---------- */
 function vueProgramme() {
-  const jourCN = ymd(maintenant(), TZ_CN);
+  const now = maintenant();
   const jours = D.jours || [];
   if (!jours.length) return '<p class="vide">Aucun jour dans data.json.</p>';
   return '<h2>Programme</h2>' + jours.map((j, i) => {
-    const auj = j.date === jourCN;
+    const auj = estJourCourant(j, now);
     return '<details class="jour' + (auj ? ' aujourdhui' : '') + '"' + (auj ? ' open' : '') + '>' +
       '<summary>' + (auj ? '<span class="etiquette rouge">Aujourd\'hui</span>' : '') + enteteJour(j, i) + '</summary>' +
       '<div class="jour-corps">' + etiquettesJour(j) + blocCreneaux(j, auj) + '</div></details>';
@@ -302,18 +307,27 @@ function migrerAnciennesNotes() {
 // Salon du moment d'après le programme du jour (créneau en cours, sinon premier créneau au salon)
 function salonDuMoment() {
   const now = maintenant();
-  const jour = (D.jours || []).find((j) => j.date === ymd(now, TZ_CN));
+  const jour = (D.jours || []).find((j) => estJourCourant(j, now));
   if (!jour) return '';
   const parLieu = {};
   (D.salons || []).forEach((s) => { if (s.lieu) parLieu[s.lieu] = s.id; });
-  const cr = (jour.creneaux || []).filter((c) => parLieu[c.lieu]);
+  // Un créneau est rattaché à un salon par « salon » (son id) ou par son lieu
+  const salonDe = (c) => c.salon || parLieu[c.lieu];
+  const tous = (jour.creneaux || []).filter((c) => enMinutes(c.heure) != null);
+  const cr = tous.filter(salonDe);
   if (!cr.length) return '';
-  const m = minutes(now, TZ_CN);
-  const enCours = cr.find((c) => {
-    const d = enMinutes(c.heure), f = enMinutes(c.fin);
-    return d != null && m >= d && (f == null || m < f);
+  const m = minutes(now, jour.fuseau || TZ_CN);
+  // Créneau en cours (quel qu'il soit) : on suit son rattachement, « Sans salon » s'il n'en a pas
+  const enCours = tous.find((c) => {
+    const d = enMinutes(c.heure);
+    let f = enMinutes(c.fin);
+    if (f != null && f < d) f += 24 * 60;
+    return m >= d && (f == null ? m < d + 60 : m < f);
   });
-  return parLieu[(enCours || cr[0]).lieu];
+  if (enCours) return salonDe(enCours) || '';
+  // Sinon : le dernier salon commencé, ou à défaut le premier de la journée
+  const commences = cr.filter((c) => enMinutes(c.heure) <= m);
+  return salonDe(commences.length ? commences[commences.length - 1] : cr[0]);
 }
 function salonParDefaut() {
   if (salonChoisi && salonChoisi.jour === ymd(maintenant(), TZ_CN)) return salonChoisi.salon;
