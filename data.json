@@ -380,6 +380,26 @@
       ]
     },
     {
+      "titre": "eSIM pour la Chine — avant le départ (en Belgique, avec du Wi-Fi)",
+      "etapes": true,
+      "points": [
+        "Téléchargez Airalo et créez un compte.",
+        "Régionales → Asie → 7 jours (ou davantage).",
+        "Achetez, puis installez depuis l'app (« Mes eSIM » → Installer). Nommez la ligne « Asie » (optionnel mais recommandé).",
+        "Paramètres → Connexions → Gestionnaire de cartes SIM : désactivez la ligne « Asie ». Ne la supprimez jamais."
+      ]
+    },
+    {
+      "titre": "eSIM pour la Chine — une fois en Chine",
+      "etapes": true,
+      "points": [
+        "Gestionnaire de cartes SIM : activez la ligne « Asie ».",
+        "Données mobiles : choisissez « Asie ».",
+        "Réseaux mobiles : activez « Itinérance des données ».",
+        "Testez avec WhatsApp et Google."
+      ]
+    },
+    {
       "titre": "Voix chinoise (bouton 🔊)",
       "points": [
         "Le bouton 🔊 fait prononcer les phrases et les adresses en chinois par le téléphone, sans Internet.",
@@ -400,7 +420,7 @@
     {
       "titre": "Internet et téléphone",
       "points": [
-        "Conseil du groupe : activer l'eSIM AVANT le départ, avec des données illimitées (Holafly a été suggéré, environ 7 jours).",
+        "eSIM : suivre la procédure « eSIM pour la Chine » ci-dessus (Airalo, forfait Asie), à préparer AVANT le départ.",
         "Une eSIM de voyage ou l'itinérance de l'opérateur belge donne en général accès à WhatsApp, Gmail, etc. sans VPN, car le trafic passe par l'étranger [à vérifier] selon l'offre.",
         "Le Wi-Fi des hôtels et des salons est soumis au filtrage chinois.",
         "Ce site fonctionne sans réseau une fois ouvert une première fois."
@@ -450,7 +470,7 @@
     "Alipay installé, carte liée, identité validée",
     "WeChat installé et compte actif",
     "VPN installé et testé",
-    "eSIM Chine achetée ET activée avant le départ (données illimitées)",
+    "eSIM Airalo « Asie » achetée, installée et désactivée avant le départ (voir Pratique)",
     "Traducteur avec le chinois téléchargé hors ligne",
     "Adaptateur universel + batterie externe marquée 3C",
     "Cartes de visite bilingues [À COMPLÉTER]",

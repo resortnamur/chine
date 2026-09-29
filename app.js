@@ -784,7 +784,9 @@ function vueContacts() {
 function vuePratique() {
   let h = '<h2>Pratique</h2>';
   (D.pratique || []).forEach((r) => {
-    h += '<div class="carte"><h3>' + t(r.titre) + '</h3><ul class="liste">' + (r.points || []).map((p) => '<li>' + t(p) + '</li>').join('') + '</ul></div>';
+    const balise = r.etapes ? 'ol' : 'ul'; // « etapes »: true → liste numérotée (procédures)
+    h += '<div class="carte"><h3>' + t(r.titre) + '</h3><' + balise + ' class="liste">' +
+      (r.points || []).map((p) => '<li>' + t(p) + '</li>').join('') + '</' + balise + '></div>';
   });
   if ((D.checklist || []).length) {
     h += '<div class="section-titre">Check-list avant le départ (cochée sur ce téléphone)</div><div class="carte">' +
