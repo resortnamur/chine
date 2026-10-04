@@ -15,6 +15,12 @@
       "ville": "Bruxelles",
       "creneaux": [
         {
+          "heure": "15:30",
+          "titre": "Parking P3 Holiday — Brussels Airport (réservation de Christophe)",
+          "transport": "Interparking, produit « P3 Holiday Booking » : du sam. 10/10 15:30 au sam. 17/10 15:30, 143,00 € payés",
+          "note": "Référence et confirmation : dans l'e-mail d'Interparking (adresse professionnelle de Christophe)."
+        },
+        {
           "heure": "21:40",
           "titre": "Décollage de Bruxelles vers Shanghai",
           "lieu": "aeroport-bru",
@@ -137,7 +143,12 @@
           "transport": "Vol [À COMPLÉTER] heure de départ de Chine et numéro de vol",
           "note": "Retour via Dubaï annoncé dans le groupe le 09/09 (départ de Dubaï à 7 h 50), absent du calendrier [à vérifier]."
         },
-        {"heure": "19:30", "titre": "Atterrissage à Bruxelles (13 h 30, heure belge)", "lieu": "aeroport-bru"}
+        {
+          "heure": "19:30",
+          "titre": "Atterrissage à Bruxelles (13 h 30, heure belge)",
+          "lieu": "aeroport-bru",
+          "note": "Parking P3 Holiday réservé jusqu'à 15:30 (heure belge) : 2 h de marge après l'atterrissage."
+        }
       ],
       "dossier": ["guangzhou"]
     }
