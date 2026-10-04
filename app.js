@@ -768,27 +768,44 @@ function lienDossier(id) {
   const f = id ? ficheDossier(id) : null;
   return f ? '<a class="btn" href="#dossier/' + esc(f.id) + '">📖 ' + esc(f.titre) + ' : la fiche</a>' : '';
 }
+function motsFiche(f) {
+  const txt = [f.resume || ''].concat(...(f.sections || []).map((x) => (x.paragraphes || []).concat(x.points || []))).join(' ');
+  return txt.split(/\s+/).filter(Boolean).length;
+}
 function vueDossier() {
   const fiches = D.dossier || [];
   if (!fiches.length) return '<p class="vide">Aucune fiche dans data.json (rubrique "dossier").</p>';
   const f = cibleRoute ? ficheDossier(cibleRoute) : null;
   if (!f) {
-    return '<h2>📖 Dossier des lieux</h2><p class="meta">Une fiche par étape et par visite, consultable sans réseau.</p>' +
+    return '<h2>📖 Dossier des lieux</h2><p class="meta">Un chapitre par étape et par thème, consultable sans réseau.</p>' +
       fiches.map((x) => '<a class="carte fiche-lien" href="#dossier/' + esc(x.id) + '"><span class="fiche-ico">' + esc(x.icone || '📄') + '</span>' +
-        '<span><strong>' + esc(x.titre) + '</strong><span class="meta">' + t(x.resume || '') + '</span></span></a>').join('');
+        '<span><strong>' + esc(x.titre) + '</strong><span class="meta">' + Math.max(1, Math.round(motsFiche(x) / 230)) + ' min de lecture</span></span></a>').join('');
   }
-  let h = '<a class="btn retour" href="#dossier">← Toutes les fiches</a><h2>' + esc(f.icone || '') + ' ' + esc(f.titre) + '</h2>';
+  const secs = f.sections || [];
+  let h = '<a class="btn retour" href="#dossier">← Tous les chapitres</a><h2>' + esc(f.icone || '') + ' ' + esc(f.titre) + '</h2>' +
+    '<p class="meta">' + Math.max(1, Math.round(motsFiche(f) / 230)) + ' min de lecture · ' + secs.length + ' parties</p>';
   if (f.resume) h += '<p class="resume">' + t(f.resume) + '</p>';
-  h += (f.sections || []).map((sec, i) =>
-    '<details class="jour"' + (i === 0 ? ' open' : '') + '><summary><span class="jour-date">' + t(sec.titre) + '</span></summary>' +
-    '<div class="jour-corps"><ul class="liste">' + (sec.points || []).map((p) => '<li>' + t(p) + '</li>').join('') + '</ul></div></details>').join('');
+  if (secs.length > 3) {
+    h += '<div class="carte sommaire"><h3>Sommaire</h3><ol class="liste">' +
+      secs.map((sec, i) => '<li><button class="lien-sommaire" data-aller="sec-' + i + '">' + t(sec.titre) + '</button></li>').join('') + '</ol></div>';
+  }
+  h += secs.map((sec, i) => {
+    let c = '';
+    (sec.paragraphes || []).forEach((p) => { c += '<p class="paragraphe">' + t(p) + '</p>'; });
+    if ((sec.chiffres || []).length) {
+      c += '<table class="chiffres">' + sec.chiffres.map((x) => '<tr><td>' + t(x.libelle) + '</td><td>' + t(x.valeur) + '</td></tr>').join('') + '</table>';
+    }
+    if ((sec.points || []).length) c += '<ul class="liste">' + sec.points.map((p) => '<li>' + t(p) + '</li>').join('') + '</ul>';
+    return '<details class="jour chapitre" id="sec-' + i + '"' + (i === 0 ? ' open' : '') + '><summary><span class="jour-date">' + t(sec.titre) + '</span></summary>' +
+      '<div class="jour-corps">' + c + '</div></details>';
+  }).join('');
   if ((f.incertitudes || []).length) {
     h += '<div class="carte a-verifier"><h3>À vérifier</h3><ul class="liste">' + f.incertitudes.map((p) => '<li>' + t(p) + '</li>').join('') + '</ul></div>';
   }
   if ((f.sources || []).length) {
-    h += '<div class="section-titre">Sources (consultées le ' + esc(f.consulte || '') + ')</div><div class="carte sources"><ul class="liste">' +
+    h += '<details class="jour"><summary><span class="jour-date">Sources (' + f.sources.length + ', consultées le ' + esc(f.consulte || '') + ')</span></summary><div class="jour-corps sources"><ul class="liste">' +
       f.sources.map((src) => '<li>' + (/^https?:\/\//.test(src.url || '') ? '<a href="' + esc(src.url) + '" target="_blank" rel="noopener">' + esc(src.titre || src.url) + '</a>' : esc(src.titre || '')) + '</li>').join('') +
-      '</ul></div>';
+      '</ul></div></details>';
   }
   return h;
 }
@@ -1041,6 +1058,12 @@ function fermerPlein() {
 
 /* ---------- Événements ---------- */
 document.addEventListener('click', (e) => {
+  const al = e.target.closest('[data-aller]');
+  if (al) {
+    const cible = document.getElementById(al.dataset.aller);
+    if (cible) { cible.open = true; cible.scrollIntoView({ block: 'start' }); window.scrollBy(0, -64); }
+    return;
+  }
   const pa = e.target.closest('[data-parler]');
   if (pa) { parler(pa.dataset.parler, pa.dataset.parlerLangue); return; }
   const ch = e.target.closest('[data-chauffeur]');

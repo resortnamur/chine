@@ -287,3 +287,13 @@ details.jour .jour-corps ul.liste li { margin-bottom: 10px; }
 .a-verifier { border-color: var(--orange); background: #fff7e6; }
 .sources { font-size: 15px; }
 .sources a { word-break: break-word; }
+
+/* Dossier : textes longs */
+.paragraphe { margin: 0 0 14px; line-height: 1.55; font-size: 17px; }
+table.chiffres { width: 100%; border-collapse: collapse; margin: 6px 0 14px; font-size: 16px; background: var(--fond-2); border-radius: 10px; }
+table.chiffres td { padding: 8px 10px; border-top: 1px solid var(--bord); vertical-align: top; }
+table.chiffres tr:first-child td { border-top: 0; }
+table.chiffres td:last-child { font-weight: 800; text-align: right; width: 42%; }
+.sommaire ol.liste { padding-left: 24px; margin: 6px 0 0; }
+.lien-sommaire { font: inherit; color: var(--rouge); background: none; border: 0; padding: 4px 0; text-align: left; text-decoration: underline; cursor: pointer; }
+details.chapitre summary .jour-date { font-size: 18px; }
