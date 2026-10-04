@@ -36,7 +36,8 @@
           "lieu": "aeroport-pvg",
           "note": "Chambres doubles : binômes à former pendant le vol."
         }
-      ]
+      ],
+      "dossier": ["shanghai"]
     },
     {
       "date": "2026-10-12",
@@ -52,7 +53,8 @@
           "salon": "salon-1",
           "note": "Horaires indicatifs, à confirmer."
         }
-      ]
+      ],
+      "dossier": ["shanghai"]
     },
     {
       "date": "2026-10-13",
@@ -78,7 +80,8 @@
           "note": "Passeport : contrôle à l'entrée à Macao."
         },
         {"heure": "22:00", "fin": "01:00", "titre": "Soirée casino à Macao", "lieu": "cotai"}
-      ]
+      ],
+      "dossier": ["shanghai", "agibot", "macao"]
     },
     {
       "date": "2026-10-14",
@@ -94,7 +97,8 @@
           "transport": "Train Zhuhai–Guangzhou ou transfert par la route (2 à 3 h), à confirmer",
           "note": "Passeport : contrôle au retour en Chine continentale."
         }
-      ]
+      ],
+      "dossier": ["macao", "guangzhou"]
     },
     {
       "date": "2026-10-15",
@@ -110,14 +114,16 @@
           "salon": "salon-2",
           "note": "Badge acheteur à enregistrer en ligne avant le voyage."
         }
-      ]
+      ],
+      "dossier": ["canton-fair"]
     },
     {
       "date": "2026-10-16",
       "titre": "Visites d'usines",
       "ville": "Guangzhou (région)",
       "hotel": "hotel-guangzhou",
-      "creneaux": [{"heure": "09:00", "fin": "18:00", "titre": "Visites d'usines", "salon": "salon-4", "note": "Programme à confirmer."}]
+      "creneaux": [{"heure": "09:00", "fin": "18:00", "titre": "Visites d'usines", "salon": "salon-4", "note": "Programme à confirmer."}],
+      "dossier": ["guangzhou"]
     },
     {
       "date": "2026-10-17",
@@ -131,7 +137,8 @@
           "note": "Retour via Dubaï annoncé dans le groupe le 09/09 (départ de Dubaï à 7 h 50), absent du calendrier [à vérifier]."
         },
         {"heure": "19:30", "titre": "Atterrissage à Bruxelles (13 h 30, heure belge)", "lieu": "aeroport-bru"}
-      ]
+      ],
+      "dossier": ["guangzhou"]
     }
   ],
   "salons": [
@@ -143,7 +150,8 @@
       "lieu": "salon-shanghai",
       "halls": "[À COMPLÉTER]",
       "objectifs": ["Outils d'automatisation et intégration de l'IA", "Expérience client", "Écrans et affichage, hôtellerie, sécurité"],
-      "exposants": [{"nom": "Exposant [À COMPLÉTER]", "stand": "[À COMPLÉTER]", "pourquoi": "[À COMPLÉTER]"}]
+      "exposants": [{"nom": "Exposant [À COMPLÉTER]", "stand": "[À COMPLÉTER]", "pourquoi": "[À COMPLÉTER]"}],
+      "dossier": "shanghai"
     },
     {
       "id": "salon-2",
@@ -157,7 +165,8 @@
         "Écrans et affichage, électronique grand public",
         "Badge acheteur à enregistrer en ligne avant le voyage"
       ],
-      "exposants": [{"nom": "Exposant [À COMPLÉTER]", "stand": "[À COMPLÉTER]", "pourquoi": "[À COMPLÉTER]"}]
+      "exposants": [{"nom": "Exposant [À COMPLÉTER]", "stand": "[À COMPLÉTER]", "pourquoi": "[À COMPLÉTER]"}],
+      "dossier": "canton-fair"
     },
     {
       "id": "salon-3",
@@ -166,7 +175,8 @@
       "horaires": "14 h – 17 h (à confirmer)",
       "lieu": "agibot",
       "objectifs": ["Découvrir l'état de l'art des robots humanoïdes", "Imaginer des usages en accueil et en service client"],
-      "exposants": []
+      "exposants": [],
+      "dossier": "agibot"
     },
     {
       "id": "salon-4",
@@ -174,7 +184,8 @@
       "dates": "16 octobre 2026",
       "horaires": "Programme à confirmer",
       "objectifs": ["[À COMPLÉTER]"],
-      "exposants": []
+      "exposants": [],
+      "dossier": "guangzhou"
     }
   ],
   "adresses": [
@@ -478,6 +489,915 @@
     "Assurance voyage : numéro d'assistance noté",
     "Voix chinoise installée (Android) et bouton 🔊 testé en mode avion",
     "Ce site ouvert une fois avec réseau, puis installé sur l'écran d'accueil"
+  ],
+  "dossier": [
+    {
+      "id": "shanghai",
+      "titre": "Shanghai",
+      "icone": "🏙",
+      "resume": "Le salon le plus probable des 12-13 octobre est le China International Industry Fair (CIIF, 中国国际工业博览会, 12-16/10/2026, NECC). Il comprend un salon de la robotique, un salon de l'automatisation industrielle et un salon de la fabrication intelligente par IA, ce qui colle au premier intérêt de la délégation. Ce n'est pas confirmé par l'organisateur du voyage. Arrivée à Pudong vers 22 h : le Maglev ne circule plus, et le métro ligne 2 est au mieux très juste. Prévoir un autocar réservé ou des taxis.",
+      "sections": [
+        {
+          "titre": "Le salon des 12-13 octobre",
+          "points": [
+            "Candidat principal : 26e China International Industry Fair (CIIF, 中国国际工业博览会, « 工博会 »), du 12 au 16/10/2026 au NECC (国家会展中心(上海)), à Qingpu.",
+            "Le CIIF regroupe 10 salons thématiques, dont le Robotics Show (RS, 机器人展), l'Industrial Automation Show (IAS), le Next-Gen Intelligent Manufacturing Show (AIMS), le salon de l'innovation scientifique et technologique (STIS) et l'IC Ecosystem Show (circuits intégrés).",
+            "Ordre de grandeur annoncé : 300 000 m², plus de 3 000 exposants, plus de 300 événements ; l'édition 2025 a compté 3 011 exposants de 27 pays et 186 290 visiteurs professionnels.",
+            "Le CIIF existe depuis 1999. Il est coorganisé par des ministères et académies nationales (工业和信息化部, 商务部, 中国科学院, 中国工程院) ; le Shanghai World Expo Group assure l'exécution.",
+            "Thème 2026 annoncé : usines et parcs « zéro carbone », numérique, fabrication intelligente.",
+            "Pré-inscription des visiteurs en ligne ouverte ; d'après un site d'agrégation chinois, l'entrée est gratuite (à faire confirmer sur le site officiel).",
+            "Les autres salons des 12-13/10 sont sans rapport avec le divertissement : impression (全印展, SNIEC, 12-16/10), boissons (饮料工业科技展, SNIEC, 12-15/10), dentaire (口腔展, NECC, 13-16/10).",
+            "Aucun salon du jeu, du divertissement, de l'hôtellerie, de l'affichage ou du retail n'a été trouvé à Shanghai sur ces dates ; le salon de l'affichage dynamique (Digital Signage China) s'est tenu du 15 au 17/09.",
+            "Le salon IA dédié (Shanghai International AI Exhibition, AIE) a lieu du 9 au 11/12/2026, et la WAIC (conférence mondiale de l'IA) a eu lieu du 17 au 20/07/2026 : aucun des deux n'est concerné.",
+            "Degré de certitude : élevé que le CIIF soit le seul grand salon tech de ces dates ; non établi qu'il s'agisse du « Salon à Shanghai » du programme."
+          ]
+        },
+        {
+          "titre": "Lieux d'exposition possibles",
+          "points": [
+            "NECC – National Exhibition and Convention Center (Shanghai) (国家会展中心(上海)) : lieu du CIIF ; environ 500 000 m², le plus grand complexe d'exposition de Chine.",
+            "Adresse NECC : 上海市青浦区徐泾镇崧泽大道333号 / 333 Songze Avenue, Xujing, Qingpu District.",
+            "Métro NECC : ligne 2, station Xujing East (徐泾东站, sorties 4/5/6) ; ligne 17 aussi desservie (sortie 8). Le site est à 1,5 km du nœud de Hongqiao (aéroport de Hongqiao et gare TGV).",
+            "Trajet vers le NECC : environ 46 min depuis People's Square (人民广场) en métro ligne 2 ; en taxi, 75 à 95 ¥ selon un calculateur (durée annoncée de 18 min, irréaliste aux heures de pointe : compter plutôt 30 à 45 min, estimation).",
+            "SNIEC – Shanghai New International Expo Centre (上海新国际博览中心) : salons impression et boissons sur ces dates, peu probable pour la délégation.",
+            "Adresse SNIEC : 上海市浦东新区龙阳路2345号 / 2345 Longyang Road, Pudong, 201204.",
+            "Métro SNIEC : ligne 7, station Huamu Road (花木路站, sorties 1/2, près du hall N1) ; le pôle Longyang Road (龙阳路站 : lignes 2/7/16 et Maglev) est à environ 600 m.",
+            "Shanghai World Expo Exhibition & Convention Center (上海世博展览馆) : aucun salon pertinent le 12/10 (salon agrochimie à partir du 14/10), donc écarté."
+          ]
+        },
+        {
+          "titre": "Shanghai en bref",
+          "points": [
+            "Population résidente : 24,85 millions fin 2025, dont 15,1 millions avec hukou local (permis de résidence officiel).",
+            "PIB 2025 : 5 670 milliards ¥ (environ 814 milliards $), en hausse de 5,4 % ; 5e ville mondiale par la taille économique selon Jiemian.",
+            "Économie très tertiaire : 4 496 milliards ¥ pour les services contre 1 165 milliards ¥ pour l'industrie (2025).",
+            "Bund (外滩) : front de fleuve historique sur la rive ouest, face au quartier financier.",
+            "Lujiazui (陆家嘴, Pudong) : quartier financier des tours ; on y trouve le magasin robotisé Galbot (près du Super Brand Mall).",
+            "Jing'an / West Nanjing Road (静安 / 南京西路) : axe commercial haut de gamme, avec le magasin Unitree (voir plus bas).",
+            "Xuhui Riverside / West Bund (徐汇滨江 / 西岸) : pôle des grands modèles d'IA (Model Speed Space, 模速空间) et vitrine Z·Pilot.",
+            "Zhangjiang (张江, Pudong) : parc scientifique, cœur des semi-conducteurs, de la biotech et de l'IA incarnée (robots)."
+          ]
+        },
+        {
+          "titre": "Shanghai, vitrine tech et retail",
+          "points": [
+            "IA : 394 entreprises d'IA de taille significative en 2025, pour une production de plus de 637 milliards ¥ (+39,5 % sur un an).",
+            "La WAIC 2026 (世界人工智能大会, 17-20/07) a réuni plus de 1 100 exposants et plus de 3 000 produits, dont plus de 200 entreprises d'IA incarnée.",
+            "Plan IA incarnée de Shanghai (août 2025), objectifs 2027 : 100 entreprises leaders, 100 scénarios d'application, plus de 50 milliards ¥ de production.",
+            "Zhangjiang compte plus de 130 entreprises de la chaîne de l'IA incarnée, dont près de 80 dans les robots humanoïdes (avril 2026).",
+            "Model Speed Space (模速空间, Xuhui, Longtai Road) : incubateur de grands modèles d'IA ; 255 entreprises de grands modèles y étaient installées (fin 2024).",
+            "Magasin Unitree (宇树) ouvert le 31/05/2026 au Jiuguang Department Store (久光百货), West Nanjing Road : robots humanoïdes G1 et R1, chien-robot Go2, démonstrations publiques.",
+            "Galbot Shop (银河通用) à Lujiazui : capsule de 9 m² entièrement tenue par un robot (plus de 300 articles, 24 h/24, environ 500 commandes par jour annoncées) ; intéressant pour un dirigeant de bar ou de point de vente sans personnel.",
+            "MetAI Hub AI Matrix Store (Zhangjiang) : produits grand public dopés à l'IA, notamment des lunettes IA à essayer.",
+            "Z·Pilot (Xuhui Riverside) : vitrine où les marques lancent leurs nouveaux produits tech auprès du public.",
+            "Paiement : les cartes étrangères sont reliables à Alipay et WeChat Pay ; Shanghai vise un système « mobile d'abord, carte bancaire ensuite, espèces en dernier recours » pour les étrangers."
+          ]
+        },
+        {
+          "titre": "Depuis l'aéroport de Pudong",
+          "points": [
+            "Maglev (磁悬浮) : Pudong → Longyang Road en environ 8 min, 50 ¥ (40 ¥ avec billet d'avion) ; dernier départ de l'aéroport vers 21 h 40, donc inutilisable pour une arrivée à 22 h.",
+            "Des Maglev supplémentaires à 22 h 15 et 22 h 40 circulent parfois, mais seulement certains jours : ne pas compter dessus.",
+            "Métro ligne 2 (地铁2号线) : environ 1 h jusqu'à People's Square, environ 7 ¥ ; dernier train régulier depuis l'aéroport vers 22 h 30 (donnée de 2025), donc très juste après les formalités.",
+            "Taxi : environ 180 ¥ et environ 50 min jusqu'à People's Square ; files à la porte d'arrivée 12 (T1) et 25 (T2).",
+            "Majoration de nuit d'environ 20 % entre 23 h et 5 h, plus 15 à 20 ¥ de péages (source non officielle).",
+            "Bus de nuit de l'aéroport : environ 1 h vers le centre, une trentaine de yuans ; lent avec des bagages.",
+            "Ligne de liaison entre les aéroports (机场联络线) : dernier départ de Pudong vers Hongqiao à 22 h 15 depuis le 1/4/2026, utile seulement pour un hôtel près du NECC ou de Hongqiao.",
+            "Recommandation pour un groupe arrivant à 22 h : autocar réservé à l'avance ou Didi/taxis ; arrivée à l'hôtel vers minuit."
+          ]
+        },
+        {
+          "titre": "Pratique sur place",
+          "points": [
+            "Météo d'octobre : environ 23 °C le jour et 16 °C la nuit, environ 56 mm de pluie sur environ 5 jours ; prévoir une couche légère et un parapluie.",
+            "Paiement : installer Alipay (支付宝) et/ou WeChat Pay (微信支付) avant le départ et y relier une Visa ou une Mastercard ; les espèces restent un dernier recours.",
+            "Didi (滴滴) : application en anglais, inscription avec un numéro étranger, paiement par carte internationale, messagerie traduite avec le chauffeur ; aussi disponible comme mini-programme dans Alipay et WeChat.",
+            "Sécurité (SPF Affaires étrangères, mise à jour du 28/05/2026) : pays jugé très sûr, faible délinquance de rue, forte présence policière et de caméras.",
+            "Avoir le passeport sur soi : les contrôles d'identité sont fréquents dans les zones touristiques.",
+            "Arnaques signalées : faux policiers, inconnus qui entraînent vers des établissements hors de prix, faux QR codes, électronique contrefaite.",
+            "Tolérance zéro sur la drogue ; sanctions bien plus lourdes qu'en Belgique.",
+            "Numérique : sites et applications occidentaux bloqués (Google, WhatsApp, etc.) ; les VPN sont formellement interdits ; éviter le Wi-Fi public pour les données sensibles."
+          ]
+        }
+      ],
+      "incertitudes": [
+        "Le nom du salon n'est pas établi : le CIIF est déduit des dates et du thème, sans confirmation de l'organisateur du voyage. Un événement plus petit (forum, salon privé, hôtel, autre lieu) reste possible.",
+        "Horaires d'ouverture du CIIF et conditions d'entrée des visiteurs étrangers (badge, gratuité, éventuels jours réservés aux professionnels) : non trouvés sur une source officielle ; le site ciif-expo.com n'a pas pu être lu.",
+        "Dernier métro ligne 2 depuis Pudong : environ 22 h 30 selon des sources de 2025 et des sites non officiels, non revérifié pour octobre 2026.",
+        "Les Maglev supplémentaires de 22 h 15 / 22 h 40 et la majoration de nuit des taxis viennent de guides privés, pas de l'opérateur.",
+        "Durée et prix du taxi vers le NECC (rome2rio) : indicatifs, très sensibles au trafic.",
+        "Les plafonds et frais d'Alipay et WeChat Pay pour les cartes étrangères changent souvent : chiffres précis volontairement omis.",
+        "Météo : moyennes climatiques, pas une prévision."
+      ],
+      "sources": [
+        {"titre": "CIIF 2026 – communiqué (AAP/Cision, 03/09/2026)", "url": "https://www.aap.com.au/aapreleases/cision20260903ae39080/"},
+        {
+          "titre": "Liste des salons à Shanghai en octobre 2026 (本地宝, mise à jour du 29/09/2026)",
+          "url": "http://m.sh.bendibao.com/xiuxian/303429.html"
+        },
+        {"titre": "IAS / CIIF 2026 – fiche du salon (聚展网)", "url": "https://www.jufair.com/exhibition/ias-shanghai/expoinfo/"},
+        {"titre": "CIIF 2026 – cntoolbox", "url": "https://cntoolbox.com/expos/5108-ciif-2026-china-international-industry-fair"},
+        {
+          "titre": "AIE 2026 (décembre) – cntoolbox",
+          "url": "https://cntoolbox.com/expos/4734-2026-shanghai-international-artificial-intelligence-exhibition-intelligent-robotics-exhibition"
+        },
+        {"titre": "Digital Signage China 2026 (septembre) – shifair", "url": "https://www.shifair.com/exhibitionDetails/5347.html"},
+        {
+          "titre": "Salons au Shanghai World Expo Exhibition & Convention Center – cntoolbox",
+          "url": "https://cntoolbox.com/fr/venues/134-shanghai-world-expo-exhibition-and-convention-center"
+        },
+        {"titre": "NECC – fiche du lieu (expomap)", "url": "https://expomap.ru/en/places/national-exhibition-and-convention-center-shanghai-necc/"},
+        {"titre": "Accès au NECC (guide CIIE)", "url": "https://www.ciie.org/resource/static/zbh/default/hall/2025/digital/jtdl.pdf"},
+        {
+          "titre": "Accès au NECC en métro (Shanghai gov, CIIE 2025)",
+          "url": "https://english.shanghai.gov.cn/en-CIIE2025Service-Transport/20251030/63618223807348a3b24afd132d26028c.html"
+        },
+        {"titre": "People's Square → NECC (rome2rio)", "url": "https://www.rome2rio.com/s/People-s-Square-Station/Moxy-Shanghai-Hongqiao-NECC"},
+        {"titre": "SNIEC – fiche du lieu (expomap)", "url": "https://expomap.ru/en/places/shanghai-new-international-expo-centre-sniec/"},
+        {
+          "titre": "SNIEC – accès (electronica China)",
+          "url": "https://www.electronicachina.com.cn/en-us/index/Press/TRAVEL_&_STAY-3/Getting_there-7.html"
+        },
+        {
+          "titre": "PIB de Shanghai 2025 (Shanghai gov)",
+          "url": "https://english.shanghai.gov.cn/en-Latest-WhatsNew/20260121/67219589ee06440fabcfcbde30f6749f.html"
+        },
+        {"titre": "Shanghai, 5e ville mondiale par la taille économique (Jiemian)", "url": "https://en.jiemian.com/article/13919650.html"},
+        {
+          "titre": "WAIC 2026 – records de taille (China Daily)",
+          "url": "https://global.chinadaily.com.cn/a/202607/27/WS6a66ac16a310986e2b4675d7.html"
+        },
+        {
+          "titre": "Plan IA incarnée de Shanghai (Shanghai gov)",
+          "url": "https://english.shanghai.gov.cn/en-PolicyInsights/20250806/b21cae94df984faabea7478774f24e69.html"
+        },
+        {"titre": "IA incarnée à Zhangjiang (Pudong gov)", "url": "https://english.pudong.gov.cn/chinashftz/2026-04/24/c_1178569.htm"},
+        {
+          "titre": "Model Speed Space (Shanghai gov)",
+          "url": "https://english.shanghai.gov.cn/en-BusinessEnvironmentXuhui/20250516/6e1c6b8b3ca14bbb92cd419302ddc058.html"
+        },
+        {
+          "titre": "Magasin Unitree à Shanghai (Shanghai gov)",
+          "url": "https://english.shanghai.gov.cn/en-FirstStores/20260602/7a0cf9e70f5c47d3afec197e62cfd887.html"
+        },
+        {
+          "titre": "Quartiers commerçants vitrines tech (Shanghai gov)",
+          "url": "https://english.shanghai.gov.cn/en-TrendyStores/20260526/af3575a80ead4d7e8281cd28f54c7570.html"
+        },
+        {
+          "titre": "Magasin tenu par un robot, Galbot (Shanghai gov)",
+          "url": "https://english.shanghai.gov.cn/en-Latest-WhatsNew/20260123/fd37e5488dd24b928deac020f468effa.html"
+        },
+        {
+          "titre": "Transports depuis les aéroports de Shanghai (Shanghai gov)",
+          "url": "https://english.shanghai.gov.cn/en-Transportation/20231214/649e06ea38f74aaeb573fa2debbe97d3.html"
+        },
+        {
+          "titre": "Trains de nuit de la ligne 2 depuis Pudong (Shanghai gov, 2025)",
+          "url": "https://english.shanghai.gov.cn/en-Latest-WhatsNew/20250709/f794c867c29f48afb791cc62ad171b25.html"
+        },
+        {"titre": "Maglev : horaires et tarifs (WanderInChina)", "url": "https://wanderinchina.com/destinations/shanghai/transport/maglev/"},
+        {
+          "titre": "Ligne de liaison entre aéroports : nouveaux horaires du 1/4/2026 (光明网)",
+          "url": "https://m.gmw.cn/2026-03/31/content_1304398782.htm"
+        },
+        {
+          "titre": "Transfert depuis PVG, nuit et taxi (airporttransferportal)",
+          "url": "https://www.airporttransferportal.com/ar/airport-guides/pvg/late-night"
+        },
+        {"titre": "Météo de Shanghai en octobre (chinatravel)", "url": "https://www.chinatravel.com/shanghai/weather/october"},
+        {"titre": "Didi pour les étrangers (Trip.com)", "url": "https://uk.trip.com/guide/transport/how-to-use-didi-in-china.html"},
+        {"titre": "Paiement pour les visiteurs étrangers (Belt and Road Portal)", "url": "https://eng.yidaiyilu.gov.cn/p/012C021F.html"},
+        {
+          "titre": "Chine – sécurité générale (SPF Affaires étrangères)",
+          "url": "https://diplomatie.belgium.be/fr/pays/chine/voyager-en-chine-conseils-aux-voyageurs/securite-generale-en-chine"
+        }
+      ],
+      "consulte": "04/10/2026"
+    },
+    {
+      "id": "agibot",
+      "titre": "Agibot (智元机器人)",
+      "icone": "🤖",
+      "resume": "Agibot (raison sociale : 智元创新（上海）科技股份有限公司, AgiBot Innovation) est une jeune entreprise de Shanghai fondée en février 2023. D'après le cabinet Omdia et le South China Morning Post, c'était déjà au premier semestre 2026 le premier fabricant mondial de robots humanoïdes en volume : environ 8 400 unités livrées, soit 44 % du marché. L'entreprise a lancé le 24 juillet 2026 sa procédure d'introduction à la Bourse de Hong Kong ; aucune cotation n'était confirmée au 4 octobre 2026. Pour un opérateur de loisirs, le fait le plus parlant est récent : plus de 300 robots Agibot, annoncés le 24 septembre 2026 dans le parc et les hôtels de Chimelong (Zhuhai), et un protocole d'accord signé en avril 2026 avec le groupe de casinos Genting Malaysia.",
+      "sections": [
+        {
+          "titre": "L'entreprise",
+          "points": [
+            "Fondée en février 2023 dans la zone de Lingang (Shanghai) par Deng Taihua (邓泰华, PDG et président) et Peng Zhihui (彭志辉, « 稚晖君 / Zhihui Jun », directeur technique), tous deux anciens de Huawei (Wikipedia, Securities Times/21st Century Business Herald).",
+            "Peng Zhihui est d'abord une figure médiatique : vidéaste technique très suivi en Chine, ancien du programme « jeunes génies » de Huawei qu'il a quitté fin 2022 (The Standard, Wikipedia).",
+            "Le chiffre d'affaires déclaré passe de 0,3 M CNY (2023) à 60 M CNY (2024), puis 1,05 Md CNY en 2025 (~127 M€). Ce sont des chiffres annoncés par l'entreprise : le prospectus détaillé n'est pas encore public.",
+            "L'entreprise vise environ 4 Md CNY de chiffre d'affaires en 2026 et 10 Md CNY en 2027. Il s'agit d'objectifs, pas de résultats.",
+            "Livraisons : plus de 5 100 humanoïdes en 2025, soit environ 39 % du marché mondial selon Omdia ; environ 8 400 au premier semestre 2026, soit 44 % du marché selon Smart Analytics Global, cité par le SCMP.",
+            "Production cumulée annoncée par l'entreprise : 10 000e robot en mars 2026, 15 000e le 28 juin 2026, 20 000e livré à Chimelong le 24 septembre 2026.",
+            "Investisseurs cités par la presse : Tencent (tour de mars 2025), HongShan (ex-Sequoia China), Hillhouse, BYD, JD.com et SAIC (mai 2025), CDH, Sanhua, iSoftStone, BlueRun, LG Electronics.",
+            "Valorisation : plus de 20 Md CNY en mai 2025 (Caixin) ; objectif de 40 à 50 Md HKD (5,1 à 6,4 Md USD) pour l'introduction en bourse. Une autre source parle de 156 Md HKD (~20 Md USD) : l'écart n'est pas tranché.",
+            "Introduction en bourse : processus lancé à Hong Kong le 24 juillet 2026, avec CITIC Securities, CICC et Morgan Stanley comme banques introductrices. La cession envisagée porte sur 15 à 25 % du capital, soit plus d'1 Md USD.",
+            "En juillet 2025, Agibot a pris le contrôle (au moins 63,62 %) de Swancor (上纬新材), une société cotée au STAR Market, pour environ 2,1 Md CNY. Agibot dément toute volonté de s'introduire en bourse par ce biais.",
+            "Effectifs non publiés de façon fiable : les bases de données affichent des chiffres incohérents, de 100 à 500 personnes. Seul fait communiqué : plus de 75 % de chercheurs et ingénieurs (China Daily, juillet 2026).",
+            "Repères d'image : démonstration devant Xi Jinping (avril 2025) ; record Guinness de marche, 106 km en trois jours pour un A2 (novembre 2025) ; 18 médailles d'or aux World Humanoid Robot Games."
+          ]
+        },
+        {
+          "titre": "Où se trouve le site",
+          "points": [
+            "L'adresse du site visité le 13 octobre n'a pas été trouvée dans une source officielle : la faire confirmer par l'organisateur.",
+            "Usine de production : à Lingang, côté Fengxian (临港奉贤). Elle est présentée comme la première usine de Shanghai à produire des humanoïdes en série ; production lancée en octobre 2024 (The Paper, autorités de Lingang). Pas d'adresse de rue publiée.",
+            "Le même site abrite un centre de collecte de données (« data factory », plus de 3 000 m², ouvert en septembre 2024). Une centaine de robots y apprennent des tâches dans des décors reconstitués : chambre, salon, salle de bains, service du thé.",
+            "Siège et salle d'exposition cités par plusieurs annuaires : 漕河泾康桥商务绿洲, 浦东新区秀浦路2555号, soit Caohejing Kangqiao Business Oasis, No. 2555 Xiupu Road, Pudong New Area, Shanghai 201315. Vérification par recoupement d'annuaires seulement.",
+            "Le showroom pudongais reproduit une ligne de contrôle qualité de tablettes tenue par des robots ; c'est probablement ce que verra une délégation (China Daily, juillet 2026). Hypothèse.",
+            "Attention, deux adresses circulent par erreur : « 申港大道200号 » est celle de l'administration de Lingang ; « 环湖西二路888号C楼 » est une adresse de domiciliation administrative. Aucune des deux n'est un lieu de visite.",
+            "Distance : Kangqiao est à environ 30-40 minutes du centre de Shanghai ; Lingang/Fengxian est à environ 1 h 15 - 1 h 30. Estimation non sourcée, à intégrer au planning."
+          ]
+        },
+        {
+          "titre": "Les robots",
+          "points": [
+            "Yuanzheng A2 (远征A2) : humanoïde bipède de taille adulte (~1,75 m, ~55 kg). C'est le modèle phare pour l'accueil, les salons, le guidage et les concessions automobiles.",
+            "A3 Ultra, présenté à la WAIC le 18 juillet 2026 : 1,74 m, 60 kg, 51 articulations motorisées, jusqu'à 8 h d'autonomie annoncées. Il vise explicitement les lieux commerciaux ouverts au public.",
+            "Lingxi X2 (灵犀X2) : humanoïde compact (~1,3 m) pour l'éducation, la recherche et l'interaction ; version X2 Edu sortie en juillet 2026.",
+            "Genie G1/G2 (精灵G1/G2) : robot sur roues avec deux bras, pour l'industrie et la logistique. Un G1/G2 tient une ligne de contrôle qualité chez Longcheer à Nanchang (3 000 pièces par poste, selon l'entreprise).",
+            "G2 Max (juillet 2026) : manutention lourde et palettisation.",
+            "D1 Ultra / D1 Pro : robots quadrupèdes, notamment pour les rondes de sécurité. Également un robot de nettoyage C5 et des mains robotisées OmniHand (dont OmniHand 3 Ultra-M, 20 articulations, retour tactile).",
+            "Prix indicatifs publiés en juin 2026 par le revendeur OpenELAB (prix revendeur, pas tarif officiel) : X2 ~47 900 €, A2 ~120 000 €, G2 ~125 000 €.",
+            "Location via la plateforme Qingtian Rent (lancée en décembre 2025) : A2 ~1 380 USD par jour, quadrupède D1 ~71 USD par jour, livraison et assistance comprises (Yicai, Ukranews).",
+            "Selon l'entreprise, Qingtian Rent couvrait fin 2025 une cinquantaine de villes chinoises avec plus de 1 000 robots ; elle vise plus de 200 villes en 2026."
+          ]
+        },
+        {
+          "titre": "Le cerveau : l'IA",
+          "points": [
+            "GO-1 (Genie Operator-1), lancé en mars 2025 : modèle qui réunit la vision, le langage et l'action (architecture dite « ViLLA »). Le robot comprend une consigne et la traduit en gestes.",
+            "GO-2, présenté en avril 2026 à la conférence partenaires : il cherche à réduire l'écart entre le plan décidé par le robot et son exécution réelle. L'entreprise annonce des travaux acceptés à CVPR et ACL 2026, deux grandes conférences scientifiques.",
+            "Genie Envisioner (août 2025) : modèle génératif qui « imagine » en vidéo les conséquences d'une action avant de l'exécuter.",
+            "Lingqu OS (juillet 2025) : système d'exploitation pour robots. LinkCraft (octobre 2025) : outil sans code qui transforme une vidéo de mouvements humains en chorégraphie de robot, utile pour les spectacles.",
+            "AgiBot World : grand jeu de données d'apprentissage alimenté par la data factory. L'entreprise annonce des « dizaines de milliers » de séquences réelles par jour.",
+            "Calcul embarqué sur puces NVIDIA (Orin, Thor) : dépendance à un fournisseur américain, à garder en tête dans un contexte d'export et de sanctions.",
+            "Les performances des modèles reposent sur les annonces et classements publiés par Agibot ; aucune évaluation indépendante en conditions commerciales n'a été trouvée."
+          ]
+        },
+        {
+          "titre": "Pour un casino ou un hôtel : réalité et prospective",
+          "points": [
+            "Réel, à grande échelle : depuis le 24 septembre 2026, plus de 300 robots Agibot tournent au parc Chimelong Spaceship de Zhuhai et dans ses hôtels. Ils accueillent, guident, renseignent, conseillent en boutique et font des spectacles (arts martiaux, tai-chi, ping-pong avec les visiteurs).",
+            "Chimelong et Agibot ont créé un institut commun et prévoient d'étendre le dispositif à 8 parcs et 9 hôtels. C'est une annonce : le déploiement au-delà du premier site reste à constater.",
+            "Signal direct pour le secteur : Genting Malaysia (Resorts World Genting) a signé en avril 2026 un protocole d'accord avec Agibot pour l'accueil, la conciergerie, le service et les spectacles, et a acquis un humanoïde pour des pilotes (GGRAsia, Business Today, avril 2026). Il s'agit d'un protocole d'accord, pas d'un déploiement.",
+            "Réel : accueil et guidage dans des salons et halls d'exposition. Plus de 60 robots à la WAIC 2026, plus de 30 au Shanghai World Expo Exhibition Center, plus des partenariats tourisme au Sichuan et gare de Guangzhou.",
+            "Réel et peu coûteux à tester : location à l'événement (A2 ~1 380 USD par jour en Chine) pour une soirée, une inauguration ou un salon. Disponibilité en Europe inconnue.",
+            "Sécurité : il existe des quadrupèdes de ronde (D1), mais aucun usage en salle de jeux réglementée n'a été documenté.",
+            "Prospectif : service au bar ou en salle en autonomie (le cocktail robotisé est une démonstration de salon, pas un service opérationnel connu).",
+            "Prospectif : remplacement de croupiers ou de personnel de comptage. Aucune source, et cela poserait de lourdes questions de réglementation des jeux (Belgique, France, Suisse).",
+            "Freins à anticiper en Europe : marquage CE (Agibot déclare des certifications chinoises, américaines et européennes depuis mai 2025, portée exacte à vérifier), RGPD pour la reconnaissance faciale annoncée sur l'A2, maintenance locale, langues (français, néerlandais).",
+            "Ordre de grandeur pour arbitrer : un A2 coûte environ 120 000 € (prix revendeur) pour une autonomie de quelques heures. L'intérêt à court terme est l'effet vitrine et l'animation, pas le remplacement de personnel."
+          ]
+        },
+        {
+          "titre": "La concurrence",
+          "points": [
+            "Unitree (宇树, Hangzhou) : n°2 mondial en volume, ~5 900 humanoïdes au premier semestre 2026 (31 %). Coté au STAR Market depuis le 19 août 2026 (+629 % le premier jour, ~61 Md CNY à l'introduction). Robots moins chers, très présents en spectacle et en location.",
+            "UBTech (优必选, Shenzhen, coté à Hong Kong) : orienté industrie (Walker S2), 1,4 Md CNY de commandes déclarées en 2025, contrat avec Airbus. Historiquement présent aussi sur les robots d'accueil.",
+            "Fourier (傅利叶, Shanghai) : GR-3, humanoïde « de compagnie » montré au CES 2026, positionné sur l'accueil, la santé et les seniors.",
+            "Tesla Optimus : production annoncée à Fremont à partir de l'été 2026, sans objectif de volume. En 2026, beaucoup de promesses et peu d'usage démontré.",
+            "Figure AI (États-Unis) : tests industriels documentés chez BMW (Figure 02), nouvelle génération Figure 03 fin 2025, revenus non confirmés.",
+            "Selon le SCMP, les fabricants chinois ont fourni plus de 97 % des humanoïdes livrés dans le monde au premier semestre 2026."
+          ]
+        },
+        {
+          "titre": "Questions à poser",
+          "points": [
+            "Parmi vos 20 000 robots, combien travaillent en contact avec le public (accueil, hôtel, commerce) et combien en usine ou en recherche ?",
+            "Chez Chimelong et Genting : quels indicateurs suivez-vous (taux de panne, interactions par heure, satisfaction client, personnel libéré) ?",
+            "Combien d'heures un A2 ou un A3 tient-il vraiment dans un lieu bruyant et très fréquenté comme un casino ? Combien de temps de recharge et quel encadrement humain faut-il ?",
+            "Votre conversation fonctionne-t-elle en français et en néerlandais ? Fonctionne-t-elle hors ligne, et où sont traitées les données vocales et les images des clients (conformité RGPD) ?",
+            "Pour l'Europe : quelles certifications CE exactes avez-vous, qui distribue et qui assure la maintenance en Belgique, en France et en Suisse ?",
+            "Quel coût complet sur 3 ans (achat ou location, logiciel, maintenance, assurance) pour un robot d'accueil installé en Europe ?",
+            "Peut-on louer un robot pour un événement en Europe, sur le modèle de Qingtian Rent ?",
+            "Un personnel non technicien peut-il créer une chorégraphie ou un parcours de visite avec LinkCraft, et en combien de temps ?",
+            "Quelle sécurité physique autour d'enfants, de clients ivres ou de foules ? Quels incidents avez-vous déjà rencontrés en exploitation ?",
+            "Quelle feuille de route pour le service en autonomie (bar, room service) : démonstration, pilote ou produit ? Et quel calendrier pour l'introduction en bourse à Hong Kong ?"
+          ]
+        }
+      ],
+      "incertitudes": [
+        "Le lieu exact de la visite n'est pas confirmé : showroom de Pudong (Kangqiao, 2555 Xiupu Road, adresse issue d'annuaires) ou usine de Lingang/Fengxian (adresse de rue non publiée).",
+        "Deux valorisations circulent : 40-50 Md HKD (objectif d'introduction en bourse, juillet 2026) et 156 Md HKD (The Standard, 21 juillet 2026). L'écart n'est pas expliqué.",
+        "La date de cotation à Hong Kong n'était pas confirmée au 4 octobre 2026 : on ne trouve que le lancement du processus le 24 juillet ; aucune audience devant la Bourse n'a été repérée.",
+        "Les chiffres de production (15 000, 20 000) et de chiffre d'affaires (1,05 Md CNY en 2025) sont déclarés par l'entreprise. Les parts de marché viennent de cabinets d'études (Omdia, Smart Analytics Global) et non d'un audit.",
+        "Effectifs inconnus : les bases de données donnent des chiffres incohérents, de 29 à 500 personnes, manifestement périmés.",
+        "Les prix sont des prix revendeur européens (OpenELAB, juin 2026) ou des tarifs de location en Chine (fin 2025) ; il n'existe pas de tarif officiel Europe.",
+        "Genting : les sources de première main (GGRAsia, Business Today, Sigma) ont bloqué la lecture complète. Les détails viennent des extraits indexés par le moteur de recherche.",
+        "La liste des investisseurs combine plusieurs articles ; la participation de LG Electronics et de Mirae Asset ne repose que sur des sources secondaires."
+      ],
+      "sources": [
+        {
+          "titre": "Caixin Global – AgiBot Begins Hong Kong IPO Process (24/07/2026)",
+          "url": "https://www.caixinglobal.com/2026-07-24/agibot-begins-hong-kong-ipo-process-as-chinas-embodied-ai-startups-race-to-list-102467856.html"
+        },
+        {"titre": "21st Century Business Herald – 智元创新启动赴港上市 (27/07/2026)", "url": "https://www.sfccn.com/2026/7-27/0MMDE0MDRfMjE5MDk0MA.html"},
+        {
+          "titre": "The Standard – AgiBot eyes HK IPO at $156b valuation",
+          "url": "https://www.thestandard.com.hk/innovation/article/337821/Embodied-robot-maker-AgiBot-eyes-HK-IPO-at-156b-valuation"
+        },
+        {
+          "titre": "Crypto Briefing – AgiBot kicks off Hong Kong IPO process",
+          "url": "https://cryptobriefing.com/agibot-hong-kong-ipo-humanoid-robotics/"
+        },
+        {
+          "titre": "Humanoid.guide – AgiBot overtakes Unitree in humanoid shipments (S1 2026)",
+          "url": "https://humanoid.guide/agibot-overtakes-unitree-in-humanoid-shipments-before-ipos/"
+        },
+        {"titre": "Xinhua – 第15000台机器人下线 (07/07/2026)", "url": "https://www.news.cn/info/20260707/9ea3d7042dac4aea9a6c626a05ff931b/c.html"},
+        {"titre": "China Daily (CN) – 智元机器人 浦东 (07/2026)", "url": "https://cn.chinadaily.com.cn/a/202607/07/WS6a4cf88ca310d709c2fbc519.html"},
+        {"titre": "The Paper – usine de Lingang Fengxian (12/2024)", "url": "https://m.thepaper.cn/newsDetail_forward_29664316"},
+        {
+          "titre": "Lingang Special Area – AgiBot company profile",
+          "url": "https://en.lingang.gov.cn/html/website/lg/English/Investment/Companies/1903016832071168001.html"
+        },
+        {"titre": "Humanoid Robotics Technology – fiche AgiBot (adresse siège)", "url": "https://humanoidroboticstechnology.com/company/agibot/"},
+        {"titre": "Wikipedia – AgiBot", "url": "https://en.wikipedia.org/wiki/AgiBot"},
+        {"titre": "AGIBOT – Four New Products at WAIC 2026 (18/07/2026)", "url": "https://agibot.com/article/231/detail/85.html"},
+        {"titre": "AGIBOT – Genie Operator-2 (GO-2) (04/2026)", "url": "https://agibot.com/article/231/detail/56.html"},
+        {
+          "titre": "Yicai Global – AgiBot robot leasing platform (Qingtian Rent)",
+          "url": "https://www.yicaiglobal.com/news/chinas-agibot-launches-robot-leasing-platform-with-daily-rates-up-to-usd14227"
+        },
+        {
+          "titre": "Ukranews – humanoid rental platform launched in China",
+          "url": "https://ukranews.com/en/news/1125062-robot-for-rent-for-wedding-or-business-humanoid-rental-platform-launched-in-china"
+        },
+        {
+          "titre": "OpenELAB – How Much Does the AgiBot Cost? (EUR, 2026)",
+          "url": "https://openelab.io/blogs/learn/how-much-does-the-agibot-cost-a-price"
+        },
+        {"titre": "Korea Herald – AGIBOT / Chimelong, 20 000e robot (24/09/2026)", "url": "https://www.koreaherald.com/article/10884238"},
+        {
+          "titre": "Blooloop – Chimelong Spaceship AgiBot 300 robots (25/09/2026)",
+          "url": "https://blooloop.com/news/chimelong-spaceship-agibot-300-robots"
+        },
+        {"titre": "China Daily HK – Chimelong Spaceship robots (28/09/2026)", "url": "https://www.chinadailyhk.com/article/640398"},
+        {
+          "titre": "GGRAsia – Genting Malaysia, AgiBot tie to advance AI robotics in hospitality",
+          "url": "https://www.ggrasia.com/genting-malaysia-agibot-tie-to-advance-ai-robotics-in-hospitality"
+        },
+        {
+          "titre": "Business Today – Genting Malaysia acquires AGIBOT humanoid for pilot programmes (17/04/2026)",
+          "url": "https://www.businesstoday.com.my/2026/04/17/genting-malaysia-acquires-agibot-humanoid-for-pilot-programmes/"
+        },
+        {
+          "titre": "Yicai Global – Swancor / AgiBot takeover (07/2025)",
+          "url": "https://www.yicaiglobal.com/news/chinas-swancor-jumps-by-limit-as-chinese-humanoid-robot-startup-agibot-unveils-takeover-plan"
+        },
+        {
+          "titre": "TechNode – AgiBot denies backdoor listing via Swancor",
+          "url": "https://technode.com/2025/07/10/agibot-denies-backdoor-listing-via-swancor-advanced-materials-acquisition/"
+        },
+        {
+          "titre": "Caixin Global – Unitree soars 629% in Shanghai debut (19/08/2026)",
+          "url": "https://www.caixinglobal.com/2026-08-19/chinese-robot-maker-unitree-soars-629-in-shanghai-debut-102475578.html"
+        },
+        {"titre": "UBTECH – Walker S2 mass production, orders >800M yuan", "url": "https://www.aap.com.au/aapreleases/cision20251117ae25955/"},
+        {
+          "titre": "Gasgoo – Fourier GR-3 at CES 2026",
+          "url": "https://autonews.gasgoo.com/articles/news/ces-2026-fourier-intelligence-unveils-full-size-humanoid-robot-gr-3-2008896810972438528"
+        },
+        {
+          "titre": "TechRepublic – Tesla Optimus launch timeline",
+          "url": "https://www.techrepublic.com/article/news-tesla-optimus-robot-launch-timeline/"
+        },
+        {"titre": "Robotics.press – Figure AI company profile", "url": "https://www.robotics.press/news/figure-ai-company-profile/"}
+      ],
+      "consulte": "04/10/2026"
+    },
+    {
+      "id": "macao",
+      "titre": "Macao",
+      "icone": "🎰",
+      "resume": "Macao (澳門) reste le premier marché du jeu au monde : 247,4 milliards de patacas de revenus bruts des jeux (GGR) en 2025, soit environ 3,5 fois le Strip de Las Vegas. Depuis la loi de 2022 et la fin des junkets, le marché repose sur le mass market, sur six concessions de 10 ans (2023-2032) assorties d'obligations d'investir dans le non-gaming, et il n'y a plus de casinos satellites depuis le 31/12/2025. Le marché ralentit en 2026 : septembre 2026 est en baisse de 1,2 % sur un an, quatrième mois de recul consécutif.",
+      "sections": [
+        {
+          "titre": "Macao en bref",
+          "points": [
+            "Région administrative spéciale de Chine depuis 1999 ; langues officielles : chinois et portugais ; on y parle surtout le cantonais (廣東話) et on écrit en caractères traditionnels.",
+            "Deux zones de jeu : la péninsule historique (Lisboa, Wynn Macau, MGM Macau) et le Cotai (路氹), terre-plein gagné sur la mer entre Taipa et Coloane, où se trouvent les grands complexes intégrés.",
+            "L'aéroport international de Macao (MFM) est sur l'île de Taipa, tout près du Cotai Strip (路氹金光大道).",
+            "Votre passage tombe juste après la Golden Week chinoise (1er-7 octobre), qui est un pic de fréquentation."
+          ]
+        },
+        {
+          "titre": "Le marché du jeu en chiffres",
+          "points": [
+            "2024 : GGR de 226,8 Md MOP (28,3 Md USD), +23,9 % sur un an (source DICJ).",
+            "2025 : GGR de 247,4 Md MOP (30,9 Md USD), +9,1 % ; c'est le plus haut niveau depuis 2019, mais il ne représente encore que 84,6 % des 292,46 Md MOP de 2019.",
+            "2026 : août à 21,9 Md MOP (-1,2 %) ; 169,1 Md MOP sur les 8 premiers mois (+3,7 %).",
+            "Septembre 2026 : 18,06 Md MOP (2,23 Md USD), -1,2 % sur un an, plus bas mensuel de 2026 et quatrième mois de baisse consécutif ; cumul sur 9 mois d'environ 187 Md MOP (notre calcul, environ +3 %).",
+            "Le budget public 2026 table sur 236 Md MOP de GGR ; plusieurs analystes revoient leurs prévisions 2026 à la baisse début octobre 2026.",
+            "Comparaison : le Las Vegas Strip a encaissé 8,8 Md USD de revenus du jeu en 2025, contre 30,9 Md USD à Macao, soit environ 3,5 fois plus.",
+            "Le mass market domine : en 2024, le baccara mass a pesé 61 % du GGR (137,9 Md MOP) et le baccara VIP 24 %, contre 46 % en 2019.",
+            "Le VIP remonte un peu : 30,7 % du GGR au 4e trimestre 2025, 29,7 % au 1er trimestre 2026, puis 26,1 % au 2e trimestre 2026 (15,9 Md MOP).",
+            "Effondrement des junkets (promoteurs VIP, 中介人) : de 235 promoteurs agréés en 2013 à 29 actifs mi-2025, après les arrestations des grands junkets en 2021-2022 ; le plafond reste fixé à 50 licences pour 2026."
+          ]
+        },
+        {
+          "titre": "Le cadre réglementaire",
+          "points": [
+            "La loi n° 16/2022, qui révise la loi sur le jeu, a réduit le nombre de concessions à six, pour 10 ans, du 1er janvier 2023 au 31 décembre 2032 : SJM (澳博), Galaxy (銀河), Sands China (金沙), Wynn (永利), MGM (美高梅) et Melco (新濠).",
+            "Plafonds pour l'ensemble du marché : 6 000 tables et 12 000 machines ; recette brute minimale exigée de 7 M MOP par table et de 300 000 MOP par machine et par an.",
+            "Fiscalité : environ 40 % du GGR, dont un impôt spécial de 35 % ; chaque concessionnaire a un GGR minimal annuel et paie la différence d'impôt s'il ne l'atteint pas.",
+            "Les six concessionnaires se sont engagés à investir 108,7 Md MOP dans le non-gaming sur 10 ans (MICE, spectacles, sport, tourisme, international) ; cet engagement est majoré de 20 % parce que le GGR a dépassé 180 Md MOP dès 2023.",
+            "Fin des casinos satellites (衛星場) : depuis la loi de 2022, ils ne pouvaient plus partager les revenus du jeu avec un concessionnaire ; 11 ont fermé en 2025, Ponte 16 le 29/11/2025 et le Landmark, le dernier, le 30/12/2025 à 23 h 59.",
+            "SJM a racheté le L'Arc pour 1,75 Md HKD et l'exploite en direct depuis le 30/12/2025 ; environ 5 600 salariés des satellites ont été reclassés chez les concessionnaires.",
+            "Régulateur : DICJ (博彩監察協調局), qui publie le GGR mensuel le 1er de chaque mois."
+          ]
+        },
+        {
+          "titre": "Les grands complexes du Cotai",
+          "points": [
+            "Sands China (Venetian, Parisian, Londoner, Sands Macao) : depuis janvier 2025, tables intelligentes Angel sur toutes ses tables de baccara mass, soit plus de 1 100 tables ; la thématique du Londoner a été déclinée avec David Beckham.",
+            "Galaxy Macau (銀河) : deuxième opérateur, après MGM, à avoir équipé tout son baccara mass en tables intelligentes ; la Galaxy Arena (16 000 places) est la plus grande salle couverte de Macao.",
+            "Galaxy Macau : l'hôtel ultra-luxe Capella (95 clés) a ouvert le 11/02/2026 ; la phase 4 (environ 1 500 chambres, théâtre de 5 000 places, jusqu'à 400 tables) est annoncée pour 2027.",
+            "City of Dreams, Melco (新濠天地) : The House of Dancing Water, spectacle aquatique relancé le 7 mai 2025 après 5 ans d'arrêt, pour plus de 40 M USD.",
+            "Studio City, Melco (新濠影滙) : complexe sur le thème du cinéma, avec parc aquatique couvert et extérieur (la partie couverte a ouvert en avril 2023).",
+            "Wynn Palace (永利皇宮) : Performance Lake de 8 acres avec fontaines musicales (environ 1 200 jets) et SkyCab, une télécabine de 34 cabines qui fait le tour du lac.",
+            "MGM Cotai (美高梅) : « The Spectacle », atrium entouré de 25 murs LED (plus de 800 m²), présenté comme la plus grande surface d'écrans LED intérieurs permanents ; MGM a été le premier à équiper tout son baccara mass en tables intelligentes.",
+            "Grand Lisboa Palace, SJM (上葡京), au Cotai : il abrite The Karl Lagerfeld (271 chambres, ouvert en décembre 2021), seul hôtel au monde conçu par Lagerfeld ; le Grand Lisboa (新葡京), sur la péninsule, est l'emblème historique de SJM."
+          ]
+        },
+        {
+          "titre": "Technologies à observer en salle",
+          "points": [
+            "Tables intelligentes : il en existe trois familles, à puces RFID (jetons, float et table), à caméras avec reconnaissance faciale et corporelle, ou hybrides ; à Macao, Angel (Japon) domine.",
+            "Angel déploie des tables où l'IA reconnaît les mises par les gestes des joueurs (« pose recognition ») plutôt que par la RFID ; elles sont déjà installées sur des milliers de tables à Macao (annonce de mai 2026).",
+            "Stadium gaming et ETG (tables électroniques) : un croupier en direct et des dizaines de postes de mise électroniques ; LT Game (Live Multi Game) est leader historique devant Aruze et Interblock.",
+            "La DICJ compte environ 50 à 60 postes d'ETG comme une seule table pour le plafond des 6 000 tables, ce qui permet de servir beaucoup plus de joueurs par employé.",
+            "Reconnaissance faciale : les grands casinos l'utilisent pour repérer en temps réel les personnes interdites, dans le cadre de la loi sur la protection des données ; la vidéosurveillance policière ne va pas dans les salles (espaces privés), mais la police peut réquisitionner les images des casinos.",
+            "Paiement : on joue aux tables en HKD (jetons et achats de jetons) ; Alipay et WeChat Pay sont acceptés pour la restauration, l'hôtel et les boutiques, mais il est interdit de les utiliser pour acheter des jetons ou pour toute dépense de jeu."
+          ]
+        },
+        {
+          "titre": "Règles en salle",
+          "points": [
+            "Âge minimum de 21 ans dans toutes les zones de jeu, machines comprises (loi n° 10/2012) ; contrôle à l'entrée : prévoir le passeport, le permis de conduire n'est en général pas accepté.",
+            "Photographier et filmer est interdit dans les salles de jeu ; la sécurité réagit vite aux téléphones levés et aux perches.",
+            "Tenue « smart casual » : pas de tongs, de shorts ni de débardeurs, surtout dans les zones VIP et high limit.",
+            "Employés du secteur : depuis la révision de la loi n° 10/2012, les salariés des concessionnaires de Macao n'ont pas le droit d'entrer dans aucun casino en dehors de leur service, sauf les 3 premiers jours du Nouvel An lunaire (amende de 1 000 à 10 000 MOP) ; cela ne vise pas, a priori, les professionnels étrangers en visite.",
+            "Visite professionnelle des coulisses (surveillance, cage, back-office) : à organiser à l'avance avec l'opérateur, aucun accès n'est garanti sans invitation."
+          ]
+        },
+        {
+          "titre": "Pratique",
+          "points": [
+            "Entrée à Macao : les Belges en sont dispensés de visa pour 90 jours (source non officielle) ; prévoir un passeport valable 6 mois.",
+            "Le vol Shanghai-Macao fait sortir de Chine continentale : le passage vers Zhuhai le 14/10 est donc une nouvelle entrée en Chine.",
+            "Les Belges bénéficient de l'exemption de visa chinoise de 30 jours, prolongée jusqu'au 31/12/2026 ; il faut un billet de continuation ou de retour.",
+            "Point de vigilance : un membre de la délégation entré en Chine avec un visa à entrée unique ne pourra pas rentrer en Chine le 14/10 sans nouveau visa.",
+            "Monnaie : la pataca (MOP), arrimée au HKD (1 HKD ≈ 1,03 MOP) ; le HKD est accepté à 1 pour 1 partout et sert de monnaie de jeu, le RMB n'a pas cours légal (parfois accepté).",
+            "Paiement mobile : Alipay, WeChat Pay et UnionPay QuickPass sont courants dans les commerces.",
+            "Navettes gratuites des casinos (穿梭巴士) entre le poste-frontière de Gongbei, les terminaux de ferry, le pont HZMB et les complexes ; leur nombre a été réduit et certaines lignes sont communes à plusieurs opérateurs : vérifier sur place.",
+            "Le métro léger (LRT, 輕軌) relie Taipa et le Cotai, et depuis le 02/12/2024 Lótus à Hengqin (2 min, toutes les 6 min).",
+            "Météo mi-octobre : maximales autour de 27 °C, minimales autour de 22 °C, humidité en baisse, environ 7 jours de pluie dans le mois ; la saison des typhons court jusqu'à octobre, donc risque résiduel."
+          ]
+        },
+        {
+          "titre": "Rejoindre Guangzhou",
+          "points": [
+            "Option 1, Hengqin (橫琴口岸) : poste ouvert 24 h/24, contrôle unique « une seule inspection », guichets manuels pour les passeports étrangers ; on y accède par le LRT, ligne de Hengqin.",
+            "De la gare de Hengqin, trains directs vers Guangzhou Sud (广州南) : environ 1 h 30, 8 trains par jour dans chaque sens selon le lancement du service en janvier 2024 (horaires actuels à vérifier).",
+            "Option 2, Gongbei (拱北, côté Macao : Portas do Cerco, 關閘) : ouvert de 6 h à 1 h, puis gare de Zhuhai (珠海站), juste à côté.",
+            "Train interurbain Zhuhai-Guangzhou Sud : de 56 min à 1 h 15 environ selon les arrêts.",
+            "Billets de train au nom de chaque voyageur, sur présentation du passeport ; réserver à l'avance sur 12306 ou Trip.com, d'autant que la Golden Week vient de se terminer.",
+            "Option 3, par la route : le car Gongbei-Guangzhou prend environ 2 h 20, hors attente à la frontière ; un véhicule privé doit avoir une plaque transfrontalière ou changer de véhicule à la frontière (à organiser avec l'agence).",
+            "Recommandation : partir par Hengqin (24 h/24, LRT depuis le Cotai), en prévoyant au moins 2 h 30 à 3 h de porte à porte jusqu'à Guangzhou."
+          ]
+        },
+        {
+          "titre": "Si vous avez une heure",
+          "points": [
+            "Centre historique de Macao, inscrit à l'UNESCO en 2005 (澳門歷史城區) : plus de 20 sites où se mêlent héritages chinois et portugais.",
+            "Ruines de Saint-Paul (大三巴牌坊), façade de l'église jésuite de 1602 détruite par un incendie en 1835, puis à pied jusqu'à la place du Senado (議事亭前地) et son pavage portugais ondulé.",
+            "Village de Taipa (氹仔舊城區), à quelques minutes du Cotai : ruelles, maisons coloniales et pâtisseries portugaises."
+          ]
+        }
+      ],
+      "incertitudes": [
+        "Septembre 2026 : chiffre DICJ repris de la presse spécialisée (Inside Asian Gaming, GGRAsia, casino.org), les pages n'ont pas pu être ouvertes (erreur 403) ; le cumul sur 9 mois (environ 187 Md MOP, environ +3 %) est notre calcul.",
+        "Les causes du ralentissement 2026 évoquées par la presse (fiscalité chinoise, conjoncture) n'ont pas été vérifiées en détail.",
+        "Comparaison avec Las Vegas : seul le Strip (8,8 Md USD en 2025) a été vérifié, pas l'ensemble du Nevada.",
+        "Exemption de visa de 90 jours pour les Belges à Macao : confirmée seulement par des sources secondaires (evisas) ; à vérifier auprès de la police de sécurité publique de Macao (PSP) ou du SPF Affaires étrangères.",
+        "Régime de chaque participant pour rentrer en Chine continentale (exemption de 30 jours ou visa) : à vérifier un par un.",
+        "Horaires et fréquence des trains Hengqin-Guangzhou Sud : données de janvier 2024 ; à vérifier sur 12306 pour le 14/10/2026.",
+        "Lignes de navettes gratuites des casinos : aucune source récente (2025-2026) trouvée.",
+        "Ouverture de la phase 4 de Galaxy : annoncée tantôt pour 2026, tantôt pour 2027 (2027 dans les sources les plus récentes).",
+        "Règles de tenue et d'interdiction des photos : sources de guides de voyage, pas un texte réglementaire.",
+        "Interdiction d'entrée hors service : vise les salariés des concessionnaires de Macao ; elle ne s'applique a priori pas aux professionnels étrangers (non confirmé par écrit)."
+      ],
+      "sources": [
+        {
+          "titre": "CDC Gaming – Macau GGR up 9.1% in 2025 to US$30.9 billion",
+          "url": "https://cdcgaming.com/brief/macau-ggr-up-9-1-in-2025-to-us30-9-billion-following-subdued-december-result/"
+        },
+        {"titre": "SiGMA – Macau GGR 2025 results", "url": "https://sigma.world/news/macau-ggr-2025-results/"},
+        {"titre": "Casino.org – Macau casinos win $28.3B in 2024", "url": "https://www.casino.org/news/macau-casinos-win-28-3b-off-gamblers-in-2024/"},
+        {
+          "titre": "Macau Business – 2024 mass market baccarat surpasses pre-pandemic levels",
+          "url": "https://macaubusiness.com/2024-mass-market-baccarat-revenue-surpasses-pre-pandemic-levels/"
+        },
+        {
+          "titre": "Inside Asian Gaming – Macau GGR down 1.2% to MOP18.1 billion in September (2026)",
+          "url": "https://asgam.com/2026/10/01/macau-ggr-down-1-2-year-on-year-to-mop18-1-billion-in-september/"
+        },
+        {
+          "titre": "GGRAsia – Macau Sept casino GGR down 1.2pct",
+          "url": "https://www.ggrasia.com/macaus-sept-casino-ggr-follows-downward-trend-down-1-2pct-y-o-y-to-us2-2bln"
+        },
+        {
+          "titre": "Casino.org – Macau losing streak hits four months",
+          "url": "https://www.casino.org/news/macau-losing-streak-hits-four-months-september/"
+        },
+        {
+          "titre": "Inside Asian Gaming – 2026 forecasts adjusted down (02/10/2026)",
+          "url": "https://asgam.com/2026/10/02/macaus-2026-gaming-revenue-forecasts-adjusted-down-further-as-china-tax-policy-choppy-macro-conditions-soften-demand/"
+        },
+        {
+          "titre": "CDC Gaming – Macau GGR August 2026",
+          "url": "https://cdcgaming.com/brief/macau-ggr-falls-1-2-year-on-year-to-us2-71-billion-in-august/"
+        },
+        {
+          "titre": "AGBrief – VIP baccarat 30.7% of GGR in 4Q25",
+          "url": "https://agbrief.com/news/macau/17/01/2026/macau-vip-baccarat-delivers-2-53b-in-4q25-accounting-for-30-7-of-ggr/"
+        },
+        {
+          "titre": "AGBrief – VIP baccarat GGR falls 18.8% QoQ in 2Q26",
+          "url": "https://agbrief.com/news/macau/17/07/2026/macau-vip-baccarat-ggr-falls-18-8-qoq-in-2q26/"
+        },
+        {
+          "titre": "AGBrief – Macau government projects US$29.3B GGR for 2026",
+          "url": "https://agbrief.com/news/macau/21/11/2025/macau-government-projects-29-3b-in-gaming-revenue-for-2026/"
+        },
+        {
+          "titre": "The Nevada Independent – Vegas Strip gaming and tourism in 2025",
+          "url": "https://thenevadaindependent.com/article/a-challenging-environment-vegas-strip-gaming-and-tourism-struggled-in-2025"
+        },
+        {
+          "titre": "iGaming Business – Macau maintains 50 junket cap through 2026",
+          "url": "https://igamingbusiness.com/casino/macau-maintains-50-junket-cap-through-2026/"
+        },
+        {"titre": "Macau Business – Junkets, falling from grace", "url": "https://www.macaubusiness.com/special-report-junkets-falling-from-grace/"},
+        {
+          "titre": "GGRAsia – Minimum casino GGR target, table cap (2022)",
+          "url": "https://www.ggrasia.com/macau-announces-minimum-casino-ggr-target-table-cap/"
+        },
+        {
+          "titre": "Inside Asian Gaming – Non-gaming investment +20% triggered (2023)",
+          "url": "https://asgam.com/2024/01/01/macau-ggr-hits-mop183-1-billion-in-2023-triggering-mandatory-20-increase-in-concessionaire-non-gaming-investments/"
+        },
+        {
+          "titre": "Inside Asian Gaming – Satellite casinos consigned to history",
+          "url": "https://asgam.com/2026/01/01/macaus-satellite-casinos-consigned-to-history-as-final-property-landmark-officially-closes/"
+        },
+        {
+          "titre": "iGaming Business – Operators announce satellite casino closures",
+          "url": "https://igamingbusiness.com/casino/macau-gaming-operators-announce-satellite-casino-closures/"
+        },
+        {
+          "titre": "Angel – Smart table installation at Sands China (PDF, 02/2025)",
+          "url": "https://angelplayingcards.com/wp/wp-content/uploads/2025/02/250212_ANGEL-Press-Release_Smart-Table-Installation_ENG.pdf"
+        },
+        {
+          "titre": "AGBrief – AI game changer for smart tables (Angel, 05/2026)",
+          "url": "https://agbrief.com/news/21/05/2026/ai-game-changer-for-smart-tables-angel/"
+        },
+        {
+          "titre": "AGBrief – Smart tables and RFID arms race",
+          "url": "https://agbrief.com/news/19/03/2025/gaming-operators-in-some-markets-in-arms-race-for-smart-tables-and-rfid-roll-out-panel/"
+        },
+        {
+          "titre": "Inside Asian Gaming – Union Gaming on ETGs in Asia",
+          "url": "https://asgam.com/2012/07/02/union-gaming-macau-outlook-on-electronic-table-games-egts-in-asia/"
+        },
+        {
+          "titre": "Identity Week – Macau casinos deploy face recognition",
+          "url": "https://identityweek.net/macau-casinos-deploy-cognitec-face-recognition-system/"
+        },
+        {
+          "titre": "GGRAsia – Face recognition mulled for casino ops (police)",
+          "url": "https://www.ggrasia.com/face-recognition-mulled-for-macau-casino-ops-police/"
+        },
+        {
+          "titre": "Macau Business – Alipay barred from gaming-related payments",
+          "url": "https://macaubusiness.com/alipay-barcode-payment-service-restricted-from-handling-gaming-related-payments-2/"
+        },
+        {
+          "titre": "Inside Asian Gaming – Ban on off-duty casino workers approved",
+          "url": "https://asgam.com/2018/12/19/bill-banning-macau-workers-visiting-casinos-approved/"
+        },
+        {
+          "titre": "Wander in China – Macao casino guide 2026 (age, photos, dress code)",
+          "url": "https://wanderinchina.com/destinations/macao/casinos/"
+        },
+        {
+          "titre": "Inside Asian Gaming – House of Dancing Water returns (05/2025)",
+          "url": "https://asgam.com/2025/05/08/house-of-dancing-water-returns-to-city-of-dreams-macau-with-spectacular-premiere/"
+        },
+        {"titre": "Galaxy Macau – Wikipedia (Galaxy Arena, phases)", "url": "https://en.wikipedia.org/wiki/Galaxy_Macau"},
+        {
+          "titre": "G3 Newswire – Galaxy Phase 4 investment",
+          "url": "https://g3newswire.com/galaxy-entertainment-dips-in-q2-with-extended-world-cup-influencing-customer-behaviour/"
+        },
+        {"titre": "Electrosonic – The Spectacle, MGM Cotai", "url": "https://www.electrosonic.com/projects/the-spectacle-mgm-cotai"},
+        {
+          "titre": "ISR – Wynn Palace opens with ropeway (SkyCab)",
+          "url": "https://en.isr.at/singleview-en-old/article/wynn-palace-opens-with-ropeway-highlight"
+        },
+        {"titre": "WhiteWater – Studio City Water Park case study", "url": "https://www.whitewaterwest.com/?p=31851"},
+        {
+          "titre": "AGBrief – Karl Lagerfeld hotel opens Dec 3 in Macau",
+          "url": "https://agbrief.com/news/02/12/2021/worlds-only-karl-lagerfeld-designed-hotel-opens-dec-3-in-macau/"
+        },
+        {
+          "titre": "Time Out HK – The Londoner Macao opening with David Beckham",
+          "url": "https://www.timeout.com/hong-kong/news/the-londoner-macao-celebrates-its-grand-opening-with-david-beckham-052823"
+        },
+        {"titre": "Horsten – China extends visa-free travel for Belgians until end 2026", "url": "https://www.horsten.be/?p=10149"},
+        {"titre": "evisas – Belgium to Macau visa requirements", "url": "https://evisas.io/visa-requirements/be/mo"},
+        {
+          "titre": "Railway Gazette – Macau LRT Hengqin Line opens",
+          "url": "https://www.railwaygazette.com/metro/macau-opens-hengqin-line/67931.article"
+        },
+        {"titre": "Macao News – Train Guangzhou-Hengqin (01/2024)", "url": "https://macaonews.org/travel/macau-train-guangzhou-hengqin-zhuhai-macao/"},
+        {
+          "titre": "Wander in China – Zhuhai-Macao ports guide 2026",
+          "url": "https://www.wanderinchina.com/destinations/macao/transport/zhuhai-macao-ports-guide/"
+        },
+        {"titre": "AgateTravel – Zhuhai to Guangzhou trains", "url": "https://www.agatetravel.com/zhuhai-to-guangzhou-trains.html"},
+        {"titre": "GGRAsia – Casino shuttle bus routes cut", "url": "https://www.ggrasia.com/macau-casinos-agree-to-cut-shuttle-bus-routes-by-fifth/"},
+        {"titre": "World Travel Guide – Macau money", "url": "https://www.worldtravelguide.net/guides/asia/china/macau/money-duty-free/"},
+        {"titre": "China Highlights – Macau weather in October", "url": "https://www.chinahighlights.com/macau/weather/october.htm"},
+        {"titre": "Historic Centre of Macau – Wikipedia", "url": "https://en.wikipedia.org/wiki/Historic_Centre_of_Macau"}
+      ],
+      "consulte": "04/10/2026"
+    },
+    {
+      "id": "canton-fair",
+      "titre": "Foire de Canton",
+      "icone": "🏭",
+      "resume": "La 140e Foire de Canton (中国进出口商品交易会, « 广交会 ») ouvre le 15 octobre 2026 au complexe de Pazhou (琶洲). La délégation la visitera le jour même de l'ouverture de la phase 1 (15-19/10), consacrée à la « fabrication avancée » : électronique, électroménager, automatisation industrielle, robots de service, éclairage, sécurité électronique, terminaux de paiement. C'est la phase la plus pertinente pour un exploitant de casinos et d'hôtels. Le badge acheteur est délivré sur présentation du passeport après une préinscription en ligne. Il est gratuit d'après des guides récents, mais le tarif n'a pas été confirmé par un document officiel.",
+      "sections": [
+        {
+          "titre": "La 140e édition",
+          "points": [
+            "Calendrier officiel : phase 1 du 15 au 19 octobre 2026, phase 2 du 23 au 27 octobre, phase 3 du 31 octobre au 4 novembre ; pas d'exposition du 20 au 22 ni du 28 au 30 octobre (avis officiel de la Foire du 5 mai 2026).",
+            "Taille annoncée : 1,55 million de m² d'exposition, 75 700 stands et 54 zones thématiques sur l'ensemble des trois phases.",
+            "Thèmes des phases : « Fabrication avancée » (phase 1), « Maison de qualité » (phase 2), « Vie meilleure » (phase 3).",
+            "L'édition marque 70 ans de foire : la première date de 1957 et elle se tient deux fois par an, au printemps et à l'automne.",
+            "Dernière édition, la 139e (avril-mai 2026) : record de 314 000 acheteurs étrangers venus de 220 pays, plus de 32 000 exposants, 75 700 stands sur 1,55 million de m² et plus de 4,65 millions de produits exposés.",
+            "Phase 1 de la 139e édition (avril 2026) : environ 167 000 acheteurs étrangers (+5,9 %), plus de 25 000 stands et plus de 12 000 exposants.",
+            "Phase 1 de la 138e édition (octobre 2025) : 157 946 acheteurs étrangers sur 520 000 m², et première utilisation de visites guidées par IA.",
+            "Horaires d'ouverture habituels : de 9h30 à 18h00. Ils ne sont confirmés que par des guides, pas par un avis officiel de la 140e édition."
+          ]
+        },
+        {
+          "titre": "La phase 1 : ce qu'on y trouve",
+          "points": [
+            "Les 19 zones de la phase 1 : électroménager, électronique grand public et informatique, produits électriques et électroniques, éclairage, énergies nouvelles, matériaux nouveaux et chimie, quincaillerie, outillage, machines de transformation, équipements électriques et de puissance, machines générales, automatisation industrielle et fabrication intelligente, engins de chantier, machines agricoles, véhicules électriques et mobilité intelligente, motos, vélos, pièces automobiles, véhicules.",
+            "Robots de service (服务机器人), une catégorie au cœur des intérêts de la délégation : robots d'accueil et de guidage, de restauration, de nettoyage, de surveillance de sécurité, de livraison et de divertissement. Ils sont regroupés dans une zone spéciale du hall de l'Amitié, hall 21.2 (友谊大厅).",
+            "Automatisation industrielle et fabrication intelligente (工业自动化及智能制造) : robots industriels et vision artificielle, logistique et entrepôts automatisés, jumeaux numériques, apprentissage automatique (« machine learning »), réalité virtuelle.",
+            "Sécurité électronique (电子安全设备) : caméras de surveillance, alarmes, contrôle d'accès, serrures électroniques, cartes à puce.",
+            "Équipements de bureau et d'encaissement (商务自动化设备) : caisses enregistreuses, distributeurs de billets (DAB), compteuses de billets, lecteurs de codes-barres, cartes à puce, visioconférence, projecteurs.",
+            "Électronique grand public et loisirs numériques : produits de jeux électroniques, audio-vidéo et karaoké, objets connectés à porter (« wearables »), maison intelligente, drones grand public.",
+            "Écrans et affichage : la 139e édition a créé une zone « Technologies d'affichage » ; l'automatisation industrielle couvre aussi les dalles d'affichage, les interfaces homme-machine et les automates programmables.",
+            "Éclairage (照明产品) : éclairage de scène et de spectacle, éclairage décoratif, publicitaire et d'exposition, éclairage de sécurité.",
+            "Les produits d'hôtellerie et de décoration (mobilier, articles de table, salles de bain, cadeaux) ne relèvent pas de la phase 1 mais de la phase 2, du 23 au 27 octobre : la délégation ne les verra pas."
+          ]
+        },
+        {
+          "titre": "Le site de Pazhou",
+          "points": [
+            "Adresse : Complexe de la Foire d'import-export de Chine (中国进出口商品交易会展馆), 382 Yuejiang Zhong Lu, Haizhu, Guangzhou (广州市海珠区阅江中路382号) ; adresse vérifiée.",
+            "Le complexe compte quatre zones de halls (A, B, C et D), auxquelles s'ajoutent le Canton Fair Hall, la Canton Fair Tower (hôtel Westin) et le bâtiment B.",
+            "Surface : plus de 1,62 million de m² construits, dont 620 000 m² d'exposition (504 000 m² couverts) ; c'est l'un des plus grands sites d'exposition au monde depuis l'extension inaugurée début 2023.",
+            "Métro ligne 8, station Xingangdong (新港东), sortie A : accès à la zone A et au bureau d'enregistrement de la zone D.",
+            "Métro ligne 8, station Pazhou (琶洲) : sorties A et B vers la zone B, sortie C vers la zone C.",
+            "Métro ligne 11, station Pazhou, sorties E et F vers la zone B. Pour passer de la ligne 8 à la ligne 11, suivre les portes de correspondance balisées (consigne de l'automne 2025, à revérifier pour 2026).",
+            "Terminal de ferries de Pazhou (琶洲港), à environ 5 minutes à pied de la Foire : il dessert l'aéroport de Hong Kong et Tsim Sha Tsui. Aucune liaison avec Macao n'est confirmée, et ce terminal ne sert donc probablement pas pour l'arrivée du 14 octobre.",
+            "Depuis Tianhe, environ 12 km, soit 10 à 20 minutes en taxi selon la circulation (35 à 45 CNY d'après Rome2rio, chiffre indicatif).",
+            "Objets interdits sur le site lors de l'édition précédente : produits inflammables, explosifs, couteaux et drones."
+          ]
+        },
+        {
+          "titre": "Le badge acheteur",
+          "points": [
+            "Préinscription en ligne sur le système officiel « Buyer Service System » (buyer.cantonfair.org.cn) ou sur le site cantonfair.org.cn. Elle est ouverte toute l'année et génère un reçu et un QR code acheteur.",
+            "Documents à présenter au retrait : passeport original, reçu de préinscription (ou QR code) et carte de visite.",
+            "Photo : prévoir une photo d'identité récente sur fond blanc ou bleu (recommandation de guides privés ; la photo peut aussi être prise sur place).",
+            "Coût : selon Trip.com, la demande, le remplacement et le renouvellement du badge sont gratuits pour les acheteurs étrangers. La Foire précise seulement qu'aucun frais n'est perçu en dehors de ceux qu'elle annonce.",
+            "Retrait en dehors du site : aéroport de Baiyun (lors de l'édition précédente, guichets aux arrivées internationales de 8h00 à minuit, et ouverts toute la nuit la veille et le jour de l'ouverture), gare de Guangzhou-Sud, terminal de ferries de Pazhou, environ 60 hôtels partenaires, bureau de la Foire à Hong Kong.",
+            "Retrait sur le site : bureaux d'enregistrement des acheteurs étrangers dans les zones B, C et D, avec bornes en libre-service et guichets.",
+            "Recommandation : chaque délégué se préinscrit individuellement avant le 12 octobre et retire son badge dès l'arrivée à l'hôtel ou à l'aéroport le 14 au soir, pour ne pas faire la queue le matin de l'ouverture.",
+            "Le badge est nominatif et réutilisable lors des éditions suivantes ; le conserver."
+          ]
+        },
+        {
+          "titre": "Conseils pour la visite",
+          "points": [
+            "Avec une seule journée sur 19 zones, cibler à l'avance 4 ou 5 zones prioritaires (robots de service, automatisation, sécurité, affichage, encaissement) et repérer leurs halls dans l'application officielle (plan, recherche d'exposants, navigation par IA).",
+            "Arriver dès l'ouverture : les deux premières heures de la journée sont nettement moins fréquentées que l'après-midi.",
+            "Prévoir de bonnes chaussures et un sac léger : les distances entre zones se comptent en kilomètres.",
+            "Prévoir une carte SIM chinoise ou un forfait d'itinérance, et installer WeChat avant le départ : c'est le canal de contact habituel des exposants.",
+            "Emporter beaucoup de cartes de visite, idéalement bilingues chinois et anglais ; elles sont aussi demandées au retrait du badge.",
+            "Pour un échange technique poussé, prévoir un interprète réservé par un canal fiable (hôtel ou agence). Les commerciaux des stands parlent généralement anglais, mais le niveau varie (hypothèse non chiffrée).",
+            "Escroqueries : la Foire n'a autorisé aucun tiers à vendre des badges ; se méfier des personnes qui abordent les visiteurs hors du site en se présentant comme des usines.",
+            "Tous les exposants ne sont pas fiables : prix gonflés et disparitions après un acompte sont signalés. Ne verser aucun acompte sans vérifier l'entreprise (voir la fiche Guangzhou)."
+          ]
+        }
+      ],
+      "incertitudes": [
+        "Les horaires 9h30-18h00 viennent de guides, pas d'un avis officiel de la 140e édition ; l'heure de fermeture du dernier jour peut différer.",
+        "La gratuité du badge n'est confirmée que par un guide de voyage (Trip.com, 2026). Les éditions précédentes appliquaient parfois des frais sur place (100 à 200 CNY selon des guides privés).",
+        "Les horaires des guichets de badges à l'aéroport sont ceux de la 138e édition (octobre 2025). Ceux de 2026 ne sont pas encore publiés dans les sources consultées. Le comptoir du terminal T1 n'existera plus : T1 est fermé depuis le 7 mai 2026.",
+        "L'affectation des zones de la phase 1 aux halls n'a pas été trouvée, à part le hall 21.2 pour les robots de service : consulter le plan dans l'application officielle.",
+        "La correspondance entre sorties de métro et zones date de l'automne 2025, d'après un guide privé.",
+        "Les chiffres de fréquentation de la 140e édition ne seront connus qu'après le salon ; les chiffres cités datent d'avril-mai 2026 (139e) et d'octobre 2025 (138e).",
+        "Aucune liaison en ferry Macao-Pazhou n'est confirmée : le mode de transfert depuis Macao le 14 octobre reste à vérifier (train, route ou ferry)."
+      ],
+      "sources": [
+        {
+          "titre": "Avis officiel 140e Foire de Canton (reproduit par le Trade and Industry Department de Hong Kong, PDF)",
+          "url": "https://www.tid.gov.hk/en/tradecircular/files/2026/ci4242026a.pdf"
+        },
+        {"titre": "Original sur le site de la Foire (cité dans le PDF)", "url": "https://www.cantonfair.org.cn/zh-CN/posts/1013019065956356096"},
+        {
+          "titre": "MOFCOM – présentation 140e Foire (phases, badge, lieux d'enregistrement)",
+          "url": "https://www.mofcom.gov.cn/zwjg/sqfb/md/art/2026/art_7b21114e2804493fafab631cbf886dfc.html"
+        },
+        {"titre": "Chinanews – 140e Foire : 1,55 M m², 75 700 stands, thèmes", "url": "https://www.chinanews.com.cn/dwq/2026/07-08/10655029.shtml"},
+        {"titre": "Bilan 139e Foire (communiqué, mai 2026)", "url": "https://www.aap.com.au/aapreleases/cision20260507ae53977/"},
+        {
+          "titre": "139e Foire – phase 1 : 167 000 acheteurs (avril 2026)",
+          "url": "https://investinchina.chinaservicesinfo.com/s/202604/21/WS69e9e8b9498e23165e06eff6/first-phase-of-canton-fair-draws-167-000-buyers-from-216-countries.html"
+        },
+        {
+          "titre": "Highlights phase 1 de la 139e Foire (nouvelles zones Display, wearables, drones)",
+          "url": "https://www.bolsamania.com/nota-de-prensa_print/mercados/a-look-at-the-highlights-from-phase-1-of-the-139th-canton-fair--22283188.html"
+        },
+        {"titre": "Phase 1 de la 138e Foire (octobre 2025)", "url": "https://info.newsgd.com/node_e858de83bc/82acbf29bd.shtml"},
+        {
+          "titre": "Gouvernement de Guangzhou – guide badge acheteurs 138e Foire (octobre 2025)",
+          "url": "https://www.gz.gov.cn/guangzhouinternational/Canton%20Fair/content/post_10490584.html"
+        },
+        {
+          "titre": "Gouvernement de Guangzhou – rappels enregistrement acheteurs (137e)",
+          "url": "https://www.gz.gov.cn/guangzhouinternational/the137thcantonfair/content/post_10203823.html"
+        },
+        {"titre": "Trip.com – badge Canton Fair 2026 (gratuité, lieux)", "url": "https://ph.trip.com/guide/info/canton-fair-registration.html"},
+        {
+          "titre": "Wander in China – guide 2026 et transports (métro, sorties)",
+          "url": "https://www.wanderinchina.com/destinations/guangzhou/canton-fair/transport/"
+        },
+        {"titre": "Wego – horaires 9h30-18h00", "url": "https://blog.wego.com/canton-fair/"},
+        {
+          "titre": "CNToolbox – fiche du complexe (surfaces, zones A-D)",
+          "url": "https://cntoolbox.com/en/venues/30-china-import-and-export-fair-complex"
+        },
+        {"titre": "Communiqué extension du complexe (janvier 2023)", "url": "https://www.aap.com.au/aapreleases/cision20230110ae82294/"},
+        {"titre": "Newsgd – terminal de ferries de Pazhou", "url": "https://info.newsgd.com/node_83d599a8dd/27e6f48852.shtml"},
+        {
+          "titre": "Epic Sourcing – guide 2026 (affluence, WeChat, arnaques)",
+          "url": "https://www.epicsourcing.co/post/canton-fair-guide-2026-everything-you-need-to-know-before-you-go"
+        },
+        {"titre": "Rome2rio – Tianhe vers la Foire", "url": "https://www.rome2rio.com/s/Tianhe-Stadium/Canton-Fair-Complex"}
+      ],
+      "consulte": "04/10/2026"
+    },
+    {
+      "id": "guangzhou",
+      "titre": "Guangzhou et sa région",
+      "icone": "🌆",
+      "resume": "Guangzhou (广州, l'ancienne « Canton ») compte 19,1 millions d'habitants et a produit 3 204 milliards de CNY de PIB en 2025. C'est la capitale du Guangdong et l'une des villes-pivots de la « Greater Bay Area » (粤港澳大湾区). Dans un rayon de 100 km se concentrent des pôles directement utiles à la délégation : bornes d'arcade et équipements de divertissement à Panyu (番禺, district de Guangzhou) et à Zhongshan (中山), écrans LED à Shenzhen (深圳), éclairage à Guzhen (古镇), électroménager et robotique chez Midea à Foshan-Shunde (佛山顺德). Le programme des visites du 16 octobre est inconnu. Pour le vol de nuit, les vols internationaux partent du terminal T2 de Baiyun, à environ 44 km de Pazhou.",
+      "sections": [
+        {
+          "titre": "Guangzhou en bref",
+          "points": [
+            "PIB 2025 : 3 203,9 milliards de CNY (+4,0 %), dont 75 % de services ; 19,10 millions d'habitants permanents fin 2025 (bulletin statistique officiel publié en mai 2026).",
+            "Commerce extérieur 2025 : 1 240,7 milliards de CNY d'échanges de marchandises (+10,4 %) ; forte croissance industrielle des véhicules électriques (+21,6 %) et des batteries lithium-ion (+68,8 %).",
+            "Capitale de la province du Guangdong, dont le PIB 2025 atteint 14 585 milliards de CNY, le premier de Chine.",
+            "Ville-pivot de la Greater Bay Area (粤港澳大湾区), qui réunit 9 villes du Guangdong, Hong Kong et Macao ; PIB attendu au-delà de 15 000 milliards de CNY en 2025.",
+            "Quartier d'affaires : Zhujiang New Town (珠江新城), dans le district de Tianhe (天河), avec la CTF Finance Centre (530 m, la plus haute tour de la ville) et, de l'autre côté de la rivière, la Canton Tower (广州塔, 600 m).",
+            "Pazhou (琶洲), où se tient la Foire, est situé dans le district de Haizhu, sur la rive sud de la rivière des Perles, à l'est de Zhujiang New Town.",
+            "Aéroport de Baiyun : 83,6 millions de passagers en 2025 (+9,5 %)."
+          ]
+        },
+        {
+          "titre": "L'usine du monde : où se fabrique quoi",
+          "points": [
+            "Panyu (番禺, district sud de Guangzhou), pôle mondial des machines d'arcade : plus de 1 000 entreprises d'animation et de jeux, plus de 50 000 emplois, environ 60 % du marché chinois des machines à pince et plus de 20 % du marché mondial (China Daily, février 2023).",
+            "Panyu concentre aussi 85 % des modèles de machines de divertissement homologués par le ministère chinois de la Culture et du Tourisme (même source, 2023).",
+            "Panyu est aussi un pôle de l'éclairage et du son de spectacle (灯光音响) : environ 7 000 entreprises, près de 40 % des fabricants chinois du secteur et 48 % de la valeur produite (Yangcheng Evening News, novembre 2024).",
+            "Zhongshan (中山), ville de Gangkou (港口镇) : présentée comme le berceau de l'industrie chinoise du jeu et du divertissement et siège d'une « China Game and Amusement Industry Base » ; environ 60 % des équipements de divertissement chinois y seraient fabriqués (InterGame, article non daté).",
+            "Zhongshan, ville de Guzhen (古镇), surnommée la « capitale chinoise de l'éclairage » : environ 70 % de la production chinoise de luminaires, plus de 100 milliards de CNY de production annuelle (chiffres de source commerciale).",
+            "Shenzhen (深圳), premier pôle mondial de l'affichage LED : plus de 800 entreprises LED dans le seul district de Bao'an (SourceReady, 2026) ; Unilumin (洲明), notamment, y a son siège.",
+            "Foshan (佛山), district de Shunde (顺德), capitale de l'électroménager : siège de Midea (美的) à Beijiao (北滘). Le groupe est aussi présent dans la robotique et l'automatisation industrielle.",
+            "Pour la délégation, trois pistes de visite d'usine se dégagent, par ordre de pertinence : bornes de jeu et divertissement (Panyu ou Zhongshan), murs d'images LED (Shenzhen), robots de service ou automatisation (Midea à Shunde, ou exposants repérés à la Foire). Ces priorités sont une hypothèse, le programme réel étant inconnu."
+          ]
+        },
+        {
+          "titre": "Réussir une visite d'usine",
+          "points": [
+            "Avant la visite, vérifier l'entreprise sur le registre officiel des entreprises chinoises (国家企业信用信息公示系统, gsxt.gov.cn) : raison sociale, représentant légal, capital, activités autorisées.",
+            "Distinguer usine et négociant : demander la licence d'exportation et observer sur place les lignes de production, la capacité réelle et le contrôle qualité en cours de fabrication et en fin de chaîne.",
+            "Marquage CE : en Europe, l'importateur porte la responsabilité de la conformité, qui ne peut pas être reportée sur le fabricant chinois. Exiger le dossier technique et les rapports d'essai.",
+            "Les faux certificats CE sont fréquents : vérifier le numéro du certificat auprès de l'organisme notifié (base européenne NANDO) ou sur les rapports SGS ou TÜV.",
+            "Questions à poser : quantité minimale de commande (MOQ), délais d'échantillon et de production, garantie et pièces détachées, service après-vente en Europe, possibilité de personnalisation (logiciel, habillage).",
+            "Propriété intellectuelle : avant de partager plans ou cahier des charges, faire signer un accord NNN (non-divulgation, non-utilisation, non-contournement) de droit chinois. Un NDA à l'occidentale ne protège pas en Chine.",
+            "Dès la commande, prévoir une inspection indépendante avant expédition plutôt que de se fier aux seules photos du fournisseur.",
+            "Pour les bornes de jeu d'argent, vérifier séparément l'homologation exigée par chaque régulateur (Belgique, France, Suisse). Le marquage CE ne suffit pas (hypothèse réglementaire non vérifiée dans cette recherche)."
+          ]
+        },
+        {
+          "titre": "Vers l'aéroport de Baiyun",
+          "points": [
+            "L'aéroport international de Guangzhou Baiyun (广州白云国际机场, code CAN) se trouve à environ 44 km au nord de Pazhou.",
+            "Taxi depuis la Foire : environ 55 minutes et 150 à 200 CNY selon la circulation (estimation d'un guide de 2025). Prévoir davantage le vendredi soir.",
+            "Métro : ligne 8 jusqu'à Kecun (客村), puis ligne 3 jusqu'à la station Airport North (机场北, terminal T2) ; environ 1 heure pour 8 CNY.",
+            "Terminaux : T2 et T3 sont en service ; T3 (avec un nouveau train interurbain) a ouvert le 31 octobre 2025. T1 est fermé pour rénovation depuis le 7 mai 2026.",
+            "Les départs internationaux (enregistrement, sûreté, douane) se font au T2, où Emirates enregistre ses passagers en cas d'escale à Dubaï. Vérifier le terminal sur le billet.",
+            "Une navette gratuite relie les terminaux 24 heures sur 24, toutes les 10 minutes entre 22h00 et 3h00.",
+            "Pour un vol de nuit : quitter la région des usines tôt le vendredi soir, garder un bagage de cabine prêt et prévoir la marge habituelle des vols internationaux (environ 3 heures avant le départ, recommandation générale)."
+          ]
+        },
+        {
+          "titre": "Pratique",
+          "points": [
+            "Météo de mi-octobre : 21 à 28 °C en moyenne, encore chaud et humide, environ 7 jours de pluie et 80 à 90 mm sur le mois. Prévoir des vêtements légers et une veste pour la climatisation.",
+            "Prévoir une carte SIM chinoise ou un forfait d'itinérance, et WeChat (微信) installé avant le départ.",
+            "Fuseau horaire : UTC+8, soit 6 heures d'avance sur la Belgique le 15 octobre (heure d'été en Europe).",
+            "Garder sur soi l'adresse de l'hôtel et de la Foire en caractères chinois pour les taxis : 广州市海珠区阅江中路382号."
+          ]
+        }
+      ],
+      "incertitudes": [
+        "Le programme du 16 octobre est inconnu : les pistes d'usines sont des suggestions fondées sur la géographie industrielle, pas sur des rendez-vous confirmés.",
+        "Les parts de marché de Panyu datent de 2023 et 2024 ; le chiffre de 60 % pour Zhongshan vient d'un article InterGame non daté, probablement ancien, et ne peut pas s'additionner avec celui de Panyu.",
+        "Les chiffres de Guzhen et de Shenzhen sur la LED viennent de sources commerciales ou anciennes (LEDinside, non daté).",
+        "Le temps de taxi et le tarif vers l'aéroport viennent d'un guide de 2025, et la fermeture du T1 n'est peut-être pas prise en compte dans tous les guides.",
+        "Les compagnies et le terminal du vol retour (escale à Dubaï ou non) ne sont pas confirmés.",
+        "Une liaison ferroviaire interurbaine directe Pazhou-aéroport est mentionnée par un guide privé, mais n'a pas été vérifiée.",
+        "Le décalage horaire dépend du passage à l'heure d'hiver en Europe le 25 octobre 2026 : 6 heures pendant le séjour."
+      ],
+      "sources": [
+        {"titre": "Bulletin statistique 2025 de Guangzhou (gz.gov.cn)", "url": "https://www.gz.gov.cn/zwgk/sjfb/tjgb/content/post_10804075.html"},
+        {"titre": "PIB 2025 du Guangdong", "url": "https://www-web.itiger.com/news/1189840369"},
+        {"titre": "China Daily – PIB de la Greater Bay Area 2025", "url": "https://subsites.chinadaily.com.cn/npc/2026-01/28/c_1157539.htm"},
+        {
+          "titre": "Wikipedia – plus hautes tours de Guangzhou (Zhujiang New Town)",
+          "url": "https://en.wikipedia.org/wiki/List_of_tallest_buildings_in_Guangzhou"
+        },
+        {
+          "titre": "China Daily – Panyu, machines d'arcade (février 2023)",
+          "url": "https://www.chinadaily.com.cn/a/202302/03/WS63dcbf8ca31057c47ebaccf4.html"
+        },
+        {
+          "titre": "Yangcheng Evening News – industries culturelles de Panyu (novembre 2024)",
+          "url": "https://news.ycwb.com/2024-11/19/content_53066399.htm"
+        },
+        {
+          "titre": "InterGame – base de l'industrie du jeu à Gangkou, Zhongshan",
+          "url": "https://www.intergameonline.com/coin-op/news/chinese-game-and-amusement-industry-brings-new-opportunities"
+        },
+        {"titre": "Jing Sourcing – Guzhen, capitale de l'éclairage", "url": "https://jingsourcing.com/?p=135784"},
+        {
+          "titre": "SourceReady – pôles mondiaux de l'affichage LED (2026)",
+          "url": "https://www.sourceready.com/blog/where-led-displays-are-manufactured"
+        },
+        {"titre": "LEDinside – exportations LED de Shenzhen", "url": "https://www.ledinside.com/node/16183"},
+        {"titre": "Wikipedia – Midea Group (Beijiao, Shunde)", "url": "https://en.wikipedia.org/wiki/Midea_Group"},
+        {"titre": "Supplyia – vérifier un fournisseur chinois (gsxt.gov.cn)", "url": "https://www.supplyia.com/how-to-verify-chinese-supplier/"},
+        {"titre": "HQTS – audits ou inspections en Chine", "url": "https://www.hqts.com/china-quality-inspection-audits/"},
+        {"titre": "Harris Sliwoski – accords NNN pour la Chine", "url": "https://harris-sliwoski.com/chinalawblog/china-nnn-and-nda-agreements/"},
+        {
+          "titre": "Global Sources – marquage CE lors d'une importation de Chine",
+          "url": "https://www.globalsources.com/knowledge/ce-marking-when-importing-from-china-a-complete-guide/"
+        },
+        {"titre": "Newsgd – ouverture du terminal T3 de Baiyun", "url": "https://info.newsgd.com/node_73b7112307/494573e8db.shtml"},
+        {
+          "titre": "FilingReader – fermeture du T1 en 2026",
+          "url": "https://filingreader.com/news-wire/shanghai/2026-05-06/baiyun-airport-to-close-t1-for-major-renovation-in-2026"
+        },
+        {
+          "titre": "Gouvernement de Guangzhou – départs internationaux au T2",
+          "url": "https://huacheng.gz-cmc.com/pages/2022/06/27/7141de3cff3e488491a59255f6da0080.html"
+        },
+        {
+          "titre": "Emirates au terminal T2 de Guangzhou",
+          "url": "https://www.globalterminalsinfo.com/emirates-airlines/emirates-airlines-can-terminal-guangzhou-baiyun-international-airport/"
+        },
+        {
+          "titre": "ChinaTravel – trajet aéroport vers la Foire (distance, taxi, métro)",
+          "url": "https://www.chinatravel.com/guide/canton-fair-travel"
+        },
+        {"titre": "China Highlights – météo de Guangzhou en octobre", "url": "https://www.chinahighlights.com/guangzhou/weather/october.htm"}
+      ],
+      "consulte": "04/10/2026"
+    }
   ],
   "presentation": {
     "titre": "Nous présenter",

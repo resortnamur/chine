@@ -237,7 +237,8 @@ function vueProgramme() {
     const auj = estJourCourant(j, now);
     return '<details class="jour' + (auj ? ' aujourdhui' : '') + '"' + (auj ? ' open' : '') + '>' +
       '<summary>' + (auj ? '<span class="etiquette rouge">Aujourd\'hui</span>' : '') + enteteJour(j, i) + '</summary>' +
-      '<div class="jour-corps">' + etiquettesJour(j) + blocCreneaux(j, auj) + '</div></details>';
+      '<div class="jour-corps">' + etiquettesJour(j) + blocCreneaux(j, auj) +
+      ((j.dossier || []).length ? '<div class="boutons">' + j.dossier.map(lienDossier).join('') + '</div>' : '') + '</div></details>';
   }).join('');
 }
 
@@ -262,7 +263,7 @@ function vueSalons() {
         (x.pourquoi ? '<div class="meta">' + t(x.pourquoi) + '</div>' : '') + '</li>').join('') + '</ul>';
     }
     const n = lireNotes().filter((x) => x.salon === s.id).length;
-    h += '<div class="boutons"><a class="btn" href="#notes/' + esc(s.id) + '">✎ Mes notes sur ce salon (' + n + ')</a></div>';
+    h += '<div class="boutons"><a class="btn" href="#notes/' + esc(s.id) + '">✎ Mes notes sur ce salon (' + n + ')</a>' + lienDossier(s.dossier) + '</div>';
     return h + '</div>';
   }).join('');
 }
@@ -756,7 +757,40 @@ function vuePlus() {
     '<a class="btn" href="#phrases"><span class="ico">文</span>Phrases utiles</a>' +
     '<a class="btn" href="#pratique"><span class="ico">✓</span>Pratique</a>' +
     '<a class="btn" href="#convertisseur"><span class="ico">¥</span>€ ↔ ¥</a>' +
+    ((D.dossier || []).length ? '<a class="btn" href="#dossier"><span class="ico">📖</span>Dossier des lieux</a>' : '') +
     '</div>';
+}
+
+/* ---------- Vue : Dossier des lieux ----------
+   Rubrique « dossier » de data.json : [{ id, titre, icone, resume, sections: [{ titre, points: [] }], incertitudes: [], sources: [{ titre, url }] }] */
+function ficheDossier(id) { return (D.dossier || []).find((f) => f.id === id); }
+function lienDossier(id) {
+  const f = id ? ficheDossier(id) : null;
+  return f ? '<a class="btn" href="#dossier/' + esc(f.id) + '">📖 ' + esc(f.titre) + ' : la fiche</a>' : '';
+}
+function vueDossier() {
+  const fiches = D.dossier || [];
+  if (!fiches.length) return '<p class="vide">Aucune fiche dans data.json (rubrique "dossier").</p>';
+  const f = cibleRoute ? ficheDossier(cibleRoute) : null;
+  if (!f) {
+    return '<h2>📖 Dossier des lieux</h2><p class="meta">Une fiche par étape et par visite, consultable sans réseau.</p>' +
+      fiches.map((x) => '<a class="carte fiche-lien" href="#dossier/' + esc(x.id) + '"><span class="fiche-ico">' + esc(x.icone || '📄') + '</span>' +
+        '<span><strong>' + esc(x.titre) + '</strong><span class="meta">' + t(x.resume || '') + '</span></span></a>').join('');
+  }
+  let h = '<a class="btn retour" href="#dossier">← Toutes les fiches</a><h2>' + esc(f.icone || '') + ' ' + esc(f.titre) + '</h2>';
+  if (f.resume) h += '<p class="resume">' + t(f.resume) + '</p>';
+  h += (f.sections || []).map((sec, i) =>
+    '<details class="jour"' + (i === 0 ? ' open' : '') + '><summary><span class="jour-date">' + t(sec.titre) + '</span></summary>' +
+    '<div class="jour-corps"><ul class="liste">' + (sec.points || []).map((p) => '<li>' + t(p) + '</li>').join('') + '</ul></div></details>').join('');
+  if ((f.incertitudes || []).length) {
+    h += '<div class="carte a-verifier"><h3>À vérifier</h3><ul class="liste">' + f.incertitudes.map((p) => '<li>' + t(p) + '</li>').join('') + '</ul></div>';
+  }
+  if ((f.sources || []).length) {
+    h += '<div class="section-titre">Sources (consultées le ' + esc(f.consulte || '') + ')</div><div class="carte sources"><ul class="liste">' +
+      f.sources.map((src) => '<li>' + (/^https?:\/\//.test(src.url || '') ? '<a href="' + esc(src.url) + '" target="_blank" rel="noopener">' + esc(src.titre || src.url) + '</a>' : esc(src.titre || '')) + '</li>').join('') +
+      '</ul></div>';
+  }
+  return h;
 }
 
 /* ---------- Vue : Contacts ---------- */
@@ -904,9 +938,9 @@ function nombre(s) { const n = parseFloat(String(s).replace(/\s/g, '').replace('
 /* ---------- Navigation par onglets ---------- */
 const VUES = {
   aujourdhui: vueAujourdhui, programme: vueProgramme, salons: vueSalons, adresses: vueAdresses,
-  notes: vueNotes, presentation: vuePresentation, plus: vuePlus, contacts: vueContacts, pratique: vuePratique, phrases: vuePhrases, convertisseur: vueConvertisseur
+  notes: vueNotes, presentation: vuePresentation, dossier: vueDossier, plus: vuePlus, contacts: vueContacts, pratique: vuePratique, phrases: vuePhrases, convertisseur: vueConvertisseur
 };
-const SOUS_PLUS = ['contacts', 'pratique', 'phrases', 'convertisseur', 'presentation'];
+const SOUS_PLUS = ['contacts', 'pratique', 'phrases', 'convertisseur', 'presentation', 'dossier'];
 
 function route(garderDefilement) {
   if (!D) return;

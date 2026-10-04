@@ -276,3 +276,14 @@ a.filtre { display: inline-flex; align-items: center; text-decoration: none; }
 .plein-zh.latin { word-break: normal; overflow-wrap: break-word; }
 .plein.long .plein-contenu { justify-content: flex-start; }
 .plein.long .plein-zh { font-weight: 600; line-height: 1.45; }
+
+/* Dossier des lieux */
+.fiche-lien { display: flex; gap: 14px; align-items: flex-start; text-decoration: none; color: var(--texte); }
+.fiche-lien .fiche-ico { font-size: 34px; line-height: 1; }
+.fiche-lien strong { display: block; font-size: 19px; margin-bottom: 2px; }
+.fiche-lien .meta { display: block; }
+.resume { font-size: 18px; font-weight: 600; }
+details.jour .jour-corps ul.liste li { margin-bottom: 10px; }
+.a-verifier { border-color: var(--orange); background: #fff7e6; }
+.sources { font-size: 15px; }
+.sources a { word-break: break-word; }
