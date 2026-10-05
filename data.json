@@ -5118,11 +5118,11 @@
           "zh": "巴尔博唐莱泰尔姆（法国西南）——70多台电子游戏机"
         },
         {
-          "photo": "photos/ville-briancon.jpg",
-          "fr": "Briançon, la plus haute ville de France (1 326 m), et sa cité fortifiée par Vauban, classée à l'UNESCO",
-          "en": "Briançon, the highest town in France (1,326 m), with its Vauban fortifications, a UNESCO World Heritage site",
-          "zh": "布里扬松——法国海拔最高的城市（1326米），其沃邦防御工事被列入联合国教科文组织世界遗产",
-          "credit": "Photo : Zairon, CC BY 4.0, Wikimedia Commons"
+          "photo": "photos/ville-briancon.jpg?v=2",
+          "fr": "Briançon, la plus haute ville de France (1 326 m) : remparts de Vauban classés à l'UNESCO",
+          "en": "Briançon, France's highest town: Vauban fortifications, UNESCO World Heritage",
+          "zh": "布里扬松：法国海拔最高的城市，沃邦要塞为世界遗产",
+          "credit": "Photo : Celeda, CC BY-SA 4.0, Wikimedia Commons"
         },
         {
           "photo": "photos/fr-briancon.jpg",
@@ -5131,11 +5131,11 @@
           "zh": "布里扬松（上阿尔卑斯）——58台电子游戏机"
         },
         {
-          "photo": "photos/ville-carnac.jpg",
+          "photo": "photos/ville-carnac.jpg?v=2",
           "fr": "Carnac (Bretagne) : des alignements de menhirs vieux de plus de 6 000 ans",
           "en": "Carnac (Brittany): standing-stone alignments more than 6,000 years old",
           "zh": "卡尔纳克（布列塔尼）：拥有六千多年历史的巨石阵列",
-          "credit": "Photo : Le Passant, CC BY-SA 4.0, Wikimedia Commons"
+          "credit": "Photo : Karsten Wentink, CC BY-SA 4.0, Wikimedia Commons"
         },
         {
           "photo": "photos/fr-carnac.jpg",
