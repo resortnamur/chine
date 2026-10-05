@@ -428,39 +428,35 @@
     {
       "groupe": "Organisation du voyage",
       "nom": "Nikkel Kebsi",
-      "role": "Membre du groupe B — a envoyé les invitations Outlook",
+      "role": "Membre du groupe B — événementiel ; a envoyé les invitations Outlook",
+      "telephone": "+32 479 97 57 45"
+    },
+    {
+      "groupe": "Équipe",
+      "nom": "Yannick Bellefroid",
+      "role": "Direction — à l'origine de la demande « robot » [À COMPLÉTER] fonction exacte",
       "telephone": "+32 [À COMPLÉTER]"
+    },
+    {
+      "groupe": "Équipe",
+      "nom": "Arnaud Roufosse",
+      "role": "Chef de projet, ancien responsable marketing, bras droit de Yannick",
+      "telephone": "+32 470 44 27 22"
     },
     {"groupe": "Équipe", "nom": "Christophe Van Kerrebroeck", "role": "Fonction [À COMPLÉTER]", "telephone": "+32 [À COMPLÉTER]"},
-    {"groupe": "Équipe", "nom": "Arnaud Roufosse", "role": "Fonction [À COMPLÉTER]", "telephone": "+32 470 44 27 22"},
-    {"groupe": "Équipe", "nom": "François Collienne", "role": "Fonction [À COMPLÉTER]", "telephone": "+32 [À COMPLÉTER]"},
-    {"groupe": "Équipe", "nom": "Karim Tekaya", "role": "Fonction [À COMPLÉTER]", "telephone": "+32 [À COMPLÉTER]"},
-    {
-      "groupe": "Équipe",
-      "nom": "Toufan Aslan",
-      "role": "Fonction [À COMPLÉTER]",
-      "telephone": "+32 [À COMPLÉTER]",
-      "note": "Écrit « Tufan » dans l'appli des organisateurs."
-    },
-    {
-      "groupe": "Équipe",
-      "nom": "Hakim Nabil",
-      "role": "Fonction [À COMPLÉTER] — numéro peut-être parmi les numéros sans nom",
-      "telephone": "+32 [À COMPLÉTER]"
-    },
+    {"groupe": "Équipe", "nom": "Tufan Aslan", "role": "Manager General Betting Landbase", "telephone": "+32 497 16 66 61"},
+    {"groupe": "Équipe", "nom": "Lucien Christ", "role": "CX/UX manager, Head of research (Gaming1)", "telephone": "+32 478 66 32 39"},
+    {"groupe": "Équipe", "nom": "François Collienne", "role": "Cybersécurité et automatisation", "telephone": "+32 [À COMPLÉTER]"},
+    {"groupe": "Équipe", "nom": "Jérôme Farinaux", "role": "Head of procurement (achats)", "telephone": "+32 [À COMPLÉTER]"},
+    {"groupe": "Équipe", "nom": "Corentin (IT) — Merle ou Pochet [à vérifier]", "role": "IT", "telephone": "+32 485 85 53 87"},
     {"groupe": "Équipe", "nom": "Corentin Merle", "role": "Fonction [À COMPLÉTER]", "telephone": "+32 [À COMPLÉTER]"},
-    {"groupe": "Équipe", "nom": "Lucien Christ", "role": "IT", "telephone": "+32 [À COMPLÉTER]"},
     {"groupe": "Équipe", "nom": "Corentin Pochet", "role": "Fonction [À COMPLÉTER]", "telephone": "+32 [À COMPLÉTER]"},
-    {"groupe": "Équipe", "nom": "Jérôme Farinaux", "role": "Fonction [À COMPLÉTER]", "telephone": "+32 [À COMPLÉTER]"},
-    {"groupe": "Équipe", "nom": "Renaud Meurs", "role": "Fonction [À COMPLÉTER]", "telephone": "+32 [À COMPLÉTER]"},
-    {"groupe": "Équipe", "nom": "Nom [À COMPLÉTER]", "role": "Membre de la délégation", "telephone": "+32 499 80 42 99"},
-    {"groupe": "Équipe", "nom": "Nom [À COMPLÉTER]", "role": "Membre de la délégation", "telephone": "+32 485 85 53 87"},
-    {"groupe": "Équipe", "nom": "Nom [À COMPLÉTER]", "role": "Membre de la délégation", "telephone": "+32 477 77 92 91"},
-    {"groupe": "Équipe", "nom": "Nom [À COMPLÉTER]", "role": "Membre de la délégation", "telephone": "+32 497 86 81 56"},
-    {"groupe": "Équipe", "nom": "Nom [À COMPLÉTER]", "role": "Membre de la délégation", "telephone": "+32 479 97 57 45"},
-    {"groupe": "Équipe", "nom": "Nom [À COMPLÉTER]", "role": "Membre de la délégation", "telephone": "+32 495 58 96 68"},
-    {"groupe": "Équipe", "nom": "Nom [À COMPLÉTER]", "role": "Membre de la délégation", "telephone": "+32 499 14 12 61"},
-    {"groupe": "Équipe", "nom": "Nom [À COMPLÉTER]", "role": "Membre de la délégation", "telephone": "+32 478 66 32 39"},
+    {"groupe": "Équipe", "nom": "Renaud Meurs", "role": "Fonction [À COMPLÉTER]", "telephone": "+32 497 86 81 56"},
+    {"groupe": "Équipe", "nom": "Hakim Nabil", "role": "Fonction [À COMPLÉTER]", "telephone": "+32 499 80 42 99"},
+    {"groupe": "Équipe", "nom": "Karim Tekaya", "role": "Fonction [À COMPLÉTER]", "telephone": "+32 [À COMPLÉTER]"},
+    {"groupe": "Équipe", "nom": "Nom [À COMPLÉTER]", "role": "Membre de la délégation — numéro du groupe WhatsApp", "telephone": "+32 477 77 92 91"},
+    {"groupe": "Équipe", "nom": "Nom [À COMPLÉTER]", "role": "Membre de la délégation — numéro du groupe WhatsApp", "telephone": "+32 495 58 96 68"},
+    {"groupe": "Équipe", "nom": "Nom [À COMPLÉTER]", "role": "Membre de la délégation — numéro du groupe WhatsApp", "telephone": "+32 499 14 12 61"},
     {
       "groupe": "Guides et hôtes",
       "nom": "Guide [À COMPLÉTER]",
