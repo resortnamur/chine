@@ -1,6 +1,6 @@
 /* Service worker : met tout le site en cache pour un usage hors ligne.
    Changer VERSION à chaque modification du code (pas nécessaire pour data.json). */
-const VERSION = 'v12';
+const VERSION = 'v13';
 const CACHE = 'chine-' + VERSION;
 // Photos du diaporama : cache à part, conservé d'une version à l'autre (≈ 5 Mo à ne télécharger qu'une fois)
 const CACHE_PHOTOS = 'photos-chine';
@@ -97,9 +97,9 @@ self.addEventListener('fetch', (e) => {
     return;
   }
 
-  // Photos du diaporama : cache dédié d'abord
+  // Photos du diaporama : cache dédié d'abord (adresse exacte : « ?v=2 » dans data.json force le rechargement)
   if (url.pathname.includes('/photos/')) {
-    e.respondWith(caches.open(CACHE_PHOTOS).then((c) => c.match(req, { ignoreSearch: true }).then((r) => r || fetch(req).then((rep) => {
+    e.respondWith(caches.open(CACHE_PHOTOS).then((c) => c.match(req).then((r) => r || fetch(req).then((rep) => {
       if (rep.ok) c.put(req, rep.clone());
       return rep;
     }))));

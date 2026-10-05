@@ -944,7 +944,7 @@ function diaporamaHtml(dp) {
   const liste = (dp && dp.diapos) || [];
   if (!liste.length) return '';
   let h = '<button class="btn principal diapo-lancer" data-diapo="0">📷 ' + esc(dp.titre || 'Diaporama') +
-    '<small>' + liste.filter((x) => x.photo).length + ' photos — légendes en chinois et en anglais</small></button>';
+    '<small>' + liste.filter((x) => x.photo).length + ' photos et cartes — légendes en chinois et en anglais</small></button>';
   if (dp.aide) h += '<p class="meta">' + esc(dp.aide) + '</p>';
   h += '<div class="diapo-grille">';
   liste.forEach((x, i) => {
@@ -964,7 +964,8 @@ function contenuDiapo(x) {
   const lieu = x.lieu ? '<div class="diapo-lieu" lang="zh-CN">' + esc(x.lieu.zh) + ' · ' + esc(x.lieu.en) + '</div>' : '';
   return '<img class="diapo-img" src="' + esc(x.photo) + '" alt="' + esc(x.en) + '">' +
     '<div class="diapo-legende">' + lieu + '<div class="diapo-zh" lang="zh-CN">' + esc(x.zh) + '</div>' +
-    '<div class="diapo-en">' + esc(x.en) + '</div></div>';
+    '<div class="diapo-en">' + esc(x.en) + '</div>' +
+    (x.credit ? '<div class="diapo-credit">' + esc(x.credit) + '</div>' : '') + '</div>';
 }
 function afficherDiapo(i) {
   const liste = diapos();
@@ -973,6 +974,7 @@ function afficherDiapo(i) {
   const x = liste[diapoIndex];
   const el = $('#diapo');
   el.classList.toggle('chapitre', !!x.chapitre);
+  el.classList.toggle('carte-geo', /\.svg(\?|$)/.test(x.photo || ''));
   $('#diapo-contenu').innerHTML = contenuDiapo(x);
   $('#diapo-fr').textContent = x.chapitre ? (x.fr + (x.sous ? ' — ' + x.sous.fr : '')) : x.fr;
   $('#diapo-compteur').textContent = (diapoIndex + 1) + ' / ' + liste.length;

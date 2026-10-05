@@ -4848,6 +4848,13 @@
           ]
         },
         {
+          "photo": "photos/carte-groupe.svg",
+          "fr": "Nos établissements en Belgique, en France et en Suisse",
+          "en": "Our venues in Belgium, France and Switzerland",
+          "zh": "我们在比利时、法国和瑞士的娱乐场所",
+          "credit": "Fond de carte : Natural Earth"
+        },
+        {
           "chapitre": true,
           "fr": "Circus Casino Resort Namur",
           "en": "Circus Casino Resort Namur",
@@ -4863,6 +4870,13 @@
             {"v": "9", "fr": "salles de séminaire, jusqu'à 500 personnes", "en": "meeting rooms, up to 500 guests", "zh": "间会议厅，最多容纳500人"},
             {"v": "3 + 2", "fr": "bars et spas", "en": "bars and spas", "zh": "个酒吧 + 2个水疗中心"}
           ]
+        },
+        {
+          "photo": "photos/ville-namur.jpg",
+          "fr": "Namur, capitale de la Wallonie, au confluent de la Sambre et de la Meuse, dominée par sa citadelle",
+          "en": "Namur, capital of Wallonia, where the Sambre meets the Meuse, overlooked by its citadel",
+          "zh": "那慕尔——瓦隆大区首府，位于桑布尔河与默兹河交汇处，城堡雄踞其上",
+          "credit": "Photo : NEW - Namur, CC BY-SA 4.0, Wikimedia Commons"
         },
         {
           "photo": "photos/namur-facade.jpg",
@@ -4971,6 +4985,13 @@
           ]
         },
         {
+          "photo": "photos/ville-spa.jpg",
+          "fr": "Spa, la ville thermale des Ardennes belges",
+          "en": "Spa, the spa town of the Belgian Ardennes",
+          "zh": "斯帕——比利时阿登地区的温泉小城",
+          "credit": "Photo : Marc Ryckaert, CC BY 3.0, Wikimedia Commons"
+        },
+        {
           "photo": "photos/spa-exterieur.jpg",
           "fr": "Le Casino de Spa, dans la ville qui a donné son nom à tous les « spas » du monde",
           "en": "The Casino de Spa, in the town that gave its name to every “spa” in the world",
@@ -5004,6 +5025,27 @@
             {"v": "30+", "fr": "salles partout en Belgique", "en": "halls all over Belgium", "zh": "家游戏厅，遍布比利时"},
             {"v": "24/7", "fr": "la plupart ouvertes jour et nuit", "en": "most of them open day and night", "zh": "大多数全天候营业"}
           ]
+        },
+        {
+          "photo": "photos/carte-belgique.svg",
+          "fr": "Belgique : le Resort de Namur, le Casino de Spa et plus de 30 salles Circus",
+          "en": "Belgium: the Namur Resort, the Casino de Spa and more than 30 Circus gaming halls",
+          "zh": "比利时：那慕尔度假村、斯帕娱乐场和30多家Circus游戏厅",
+          "credit": "Fond de carte : Natural Earth"
+        },
+        {
+          "photo": "photos/ville-liege.jpg",
+          "fr": "Liège, berceau du groupe : la gare des Guillemins, signée Santiago Calatrava",
+          "en": "Liège, the group's birthplace: the Guillemins station designed by Santiago Calatrava",
+          "zh": "列日——集团的发源地：由圣地亚哥·卡拉特拉瓦设计的吉耶曼火车站",
+          "credit": "Photo : Michielverbeek, CC BY-SA 4.0, Wikimedia Commons"
+        },
+        {
+          "photo": "photos/ville-bruxelles.jpg",
+          "fr": "Bruxelles, capitale de la Belgique et siège des institutions européennes, à une heure de Namur : la Grand-Place",
+          "en": "Brussels, capital of Belgium and seat of the European institutions, one hour from Namur: the Grand-Place",
+          "zh": "布鲁塞尔——比利时首都、欧盟机构所在地，距那慕尔约一小时车程：大广场",
+          "credit": "Photo : Celuici, CC BY-SA 4.0, Wikimedia Commons"
         },
         {"photo": "photos/salle-guillemins.jpg", "fr": "Circus Liège-Guillemins", "en": "Circus Liège-Guillemins", "zh": "Circus列日-吉耶曼店"},
         {"photo": "photos/salle-braine.jpg", "fr": "Circus Braine", "en": "Circus Braine", "zh": "Circus布赖讷店"},
@@ -5053,10 +5095,24 @@
           "zh": "巴尔博唐莱泰尔姆（法国西南）——70多台电子游戏机"
         },
         {
+          "photo": "photos/ville-briancon.jpg",
+          "fr": "Briançon, la plus haute ville de France (1 326 m), et sa cité fortifiée par Vauban, classée à l'UNESCO",
+          "en": "Briançon, the highest town in France (1,326 m), with its Vauban fortifications, a UNESCO World Heritage site",
+          "zh": "布里扬松——法国海拔最高的城市（1326米），其沃邦防御工事被列入联合国教科文组织世界遗产",
+          "credit": "Photo : Zairon, CC BY 4.0, Wikimedia Commons"
+        },
+        {
           "photo": "photos/fr-briancon.jpg",
           "fr": "Briançon (Hautes-Alpes) — 58 machines à sous",
           "en": "Briançon (High Alps) — 58 slot machines",
           "zh": "布里扬松（上阿尔卑斯）——58台电子游戏机"
+        },
+        {
+          "photo": "photos/ville-carnac.jpg",
+          "fr": "Carnac (Bretagne) : des alignements de menhirs vieux de plus de 6 000 ans",
+          "en": "Carnac (Brittany): standing-stone alignments more than 6,000 years old",
+          "zh": "卡尔纳克（布列塔尼）：拥有六千多年历史的巨石阵列",
+          "credit": "Photo : Le Passant, CC BY-SA 4.0, Wikimedia Commons"
         },
         {
           "photo": "photos/fr-carnac.jpg",
@@ -5065,16 +5121,37 @@
           "zh": "卡尔纳克（布列塔尼）——90多台电子游戏机"
         },
         {
+          "photo": "photos/ville-leucate.jpg",
+          "fr": "Leucate, entre étangs et Méditerranée : le phare du cap Leucate",
+          "en": "Leucate, between lagoons and the Mediterranean: the Cap Leucate lighthouse",
+          "zh": "勒卡特——位于潟湖与地中海之间：勒卡特角灯塔",
+          "credit": "Photo : H. Zell, CC BY-SA 3.0, Wikimedia Commons"
+        },
+        {
           "photo": "photos/fr-leucate.jpg",
           "fr": "Port-Leucate (Méditerranée) — 75 machines à sous",
           "en": "Port-Leucate (Mediterranean) — 75 slot machines",
           "zh": "勒卡特港（地中海）——75台电子游戏机"
         },
         {
+          "photo": "photos/ville-ardeche.jpg",
+          "fr": "L'Ardèche, près de Vals-les-Bains : le Pont d'Arc, arche naturelle au-dessus de la rivière",
+          "en": "The Ardèche, near Vals-les-Bains: the Pont d'Arc, a natural arch over the river",
+          "zh": "阿尔代什（瓦尔莱班附近）：横跨河面的天然石拱“弧桥”",
+          "credit": "Photo : Celeda, CC BY-SA 4.0, Wikimedia Commons"
+        },
+        {
           "photo": "photos/fr-vals.jpg",
           "fr": "Vals-les-Bains (Ardèche) — 125 machines à sous",
           "en": "Vals-les-Bains (Ardèche) — 125 slot machines",
           "zh": "瓦尔莱班（阿尔代什）——125台电子游戏机"
+        },
+        {
+          "photo": "photos/ville-paris.jpg",
+          "fr": "Paris : la tour Eiffel et le pont Alexandre III",
+          "en": "Paris: the Eiffel Tower and the Pont Alexandre III",
+          "zh": "巴黎：埃菲尔铁塔与亚历山大三世桥",
+          "credit": "Photo : Getfunky Paris, CC BY 2.0, Wikimedia Commons"
         },
         {
           "photo": "photos/fr-paris.jpg",
@@ -5104,6 +5181,13 @@
           ]
         },
         {
+          "photo": "photos/ville-crans.jpg",
+          "fr": "Crans-Montana, station des Alpes suisses à 1 500 m d'altitude",
+          "en": "Crans-Montana, a Swiss Alpine resort at 1,500 m",
+          "zh": "克朗-蒙塔纳——海拔1500米的瑞士阿尔卑斯度假胜地",
+          "credit": "Photo : Himalayanfinch, CC BY-SA 4.0, Wikimedia Commons"
+        },
+        {
           "photo": "photos/ch-crans.jpg",
           "fr": "Casino de Crans-Montana (Valais) — plus de 130 machines à sous",
           "en": "Crans-Montana Casino (Valais) — more than 130 slot machines",
@@ -5114,6 +5198,13 @@
           "fr": "Crans-Montana : tables de jeu chaque soir",
           "en": "Crans-Montana: gaming tables every evening",
           "zh": "克朗-蒙塔纳：每晚开放游戏桌"
+        },
+        {
+          "photo": "photos/ville-davos.jpg",
+          "fr": "Davos et son Centre des congrès, où se réunit chaque année le Forum économique mondial",
+          "en": "Davos and its Congress Centre, home of the annual World Economic Forum",
+          "zh": "达沃斯会议中心——世界经济论坛年会每年在此举行",
+          "credit": "Photo : World Economic Forum, CC BY-SA 2.0, Wikimedia Commons"
         },
         {
           "photo": "photos/ch-davos.jpg",
