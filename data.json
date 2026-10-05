@@ -1,10 +1,10 @@
 {
   "voyage": {
     "titre": "Mission Chine 2026",
-    "sousTitre": "Shanghai – Macao – Guangzhou",
+    "sousTitre": "Shanghai – Macao – Guangzhou · Groupe B — Circus",
     "debut": "2026-10-10",
     "fin": "2026-10-17",
-    "note": "Programme repris du calendrier Outlook du 28/09 (organisation : Nikkel Kebsi), complété par le groupe WhatsApp. Heures en heure de Chine, sauf le jour du départ (heure belge). Horaires indicatifs, à confirmer."
+    "note": "Programme du groupe B (Circus), d'après l'appli des organisateurs Expo Trip et le calendrier Outlook. Trois groupes voyagent en parallèle. Heures en heure de Chine, sauf le jour du départ (heure belge). Horaires indicatifs."
   },
   "taux": {"eurCny": 8.0, "date": "[À COMPLÉTER] date du taux"},
   "jours": [
@@ -22,87 +22,125 @@
         },
         {
           "heure": "21:40",
-          "titre": "Décollage de Bruxelles vers Shanghai",
+          "titre": "Vol Bruxelles → Dubaï — Emirates EK 182",
           "lieu": "aeroport-bru",
-          "transport": "Vol [À COMPLÉTER] compagnie et numéro de vol",
-          "note": "Valise cabine + sac à dos. Alipay installé. eSIM activée. Arrivée à Shanghai le 11/10 vers 22 h (heure locale). Escale à Dubaï annoncée dans le groupe le 09/09, absente du calendrier [à vérifier]."
+          "transport": "EK 182 : décollage 21:40, arrivée à Dubaï le 11/10 à 06:55 (heure de Dubaï). Nuit à bord.",
+          "note": "Valise cabine + sac à dos. Passeport, médicaments, chargeur, adaptateur et une tenue de rechange en cabine."
         }
       ],
       "dossier": ["culture-affaires", "tech-chine"]
     },
     {
       "date": "2026-10-11",
-      "titre": "Arrivée à Shanghai",
-      "ville": "Shanghai",
+      "titre": "Dubaï, puis arrivée à Shanghai",
+      "ville": "Dubaï → Shanghai",
       "hotel": "hotel-shanghai",
       "creneaux": [
+        {"heure": "10:55", "titre": "Escale à Dubaï (atterrissage 06:55, heure de Dubaï)", "note": "Correspondance pour Shanghai."},
         {
-          "heure": "22:00",
-          "fin": "23:30",
-          "titre": "Arrivée à Shanghai Pudong, transfert vers l'hôtel",
-          "lieu": "aeroport-pvg",
-          "note": "Chambres doubles : binômes à former pendant le vol."
+          "heure": "13:40",
+          "fin": "22:20",
+          "titre": "Vol Dubaï → Shanghai — Emirates EK 304 (décollage 09:40, heure de Dubaï)",
+          "transport": "EK 304 : 8 h 40 de vol, arrivée à Shanghai Pudong à 22:20 (heure locale)."
+        },
+        {"heure": "22:20", "fin": "23:30", "titre": "Arrivée à Shanghai Pudong : immigration et bagages", "lieu": "aeroport-pvg"},
+        {
+          "heure": "23:30",
+          "titre": "Transfert en bus du groupe vers le Jing An Shangri-La, puis check-in",
+          "lieu": "hotel-shanghai",
+          "note": "Bus du groupe au départ de Pudong, après le retrait des bagages."
         }
       ],
       "dossier": ["shanghai-ville"]
     },
     {
       "date": "2026-10-12",
-      "titre": "Salon à Shanghai — jour 1",
+      "titre": "Salon de la robotique",
       "ville": "Shanghai",
       "hotel": "hotel-shanghai",
       "creneaux": [
         {
           "heure": "09:00",
           "fin": "18:00",
-          "titre": "Salon à Shanghai — 1er jour",
+          "titre": "Salon de la robotique — journée commune aux trois groupes",
           "lieu": "salon-shanghai",
           "salon": "salon-1",
-          "note": "Horaires indicatifs, à confirmer."
+          "note": "Horaires indicatifs. Probablement la CIIF au NECC (non confirmé par les organisateurs)."
         }
       ],
       "dossier": ["shanghai-salon", "shanghai-ville", "robot-achat"]
     },
     {
       "date": "2026-10-13",
-      "titre": "Salon, Agibot, puis Macao",
+      "titre": "Agibot ou salon, puis vol pour Macao",
       "ville": "Shanghai → Macao",
       "hotel": "hotel-macao",
       "creneaux": [
-        {"heure": "09:00", "fin": "12:30", "titre": "Salon à Shanghai — 2e jour (matinée)", "lieu": "salon-shanghai", "salon": "salon-1"},
         {
-          "heure": "14:00",
-          "fin": "17:00",
-          "titre": "Visite d'Agibot (usine de robots humanoïdes)",
-          "lieu": "agibot",
-          "salon": "salon-3",
-          "note": "Horaire à confirmer."
+          "heure": "",
+          "titre": "Check-out du Jing An Shangri-La (le matin, avant de partir)",
+          "lieu": "hotel-shanghai",
+          "note": "Dernière journée commune aux trois groupes."
         },
+        {"heure": "", "titre": "Au choix : visite d'Agibot ou retour au salon de la robotique", "lieu": "agibot", "salon": "salon-3"},
         {
-          "heure": "18:30",
-          "fin": "21:30",
-          "titre": "Vol Shanghai → Macao",
+          "heure": "",
+          "titre": "Retour à l'hôtel 3 h avant le vol du groupe",
+          "lieu": "hotel-shanghai",
+          "note": "Les vols vers Macao décollent entre 17:00 et 19:00 selon le groupe."
+        },
+        {"heure": "", "titre": "Transfert vers l'aéroport de Pudong, avec les bagages", "lieu": "aeroport-pvg"},
+        {
+          "heure": "",
+          "titre": "Vol Shanghai → Macao — China Eastern MU 9991 (décollage entre 17:00 et 19:00)",
           "lieu": "aeroport-mfm",
-          "transport": "Vol [À COMPLÉTER] (environ 2 h 40)",
-          "note": "Passeport : contrôle à l'entrée à Macao."
+          "transport": "MU 9991, Pudong → Macao International (MFM), environ 2 h 40.",
+          "note": "Passeport sur soi : Macao est une frontière."
         },
-        {"heure": "22:00", "fin": "01:00", "titre": "Soirée casino à Macao", "lieu": "cotai"}
+        {
+          "heure": "",
+          "titre": "Entrée à Macao : contrôle des passeports",
+          "note": "Sortie de Chine continentale. À Macao, la monnaie (pataca, HKD accepté) et le réseau mobile changent."
+        },
+        {"heure": "", "titre": "Check-in au Conrad Macao (dans The Londoner, Cotai)", "lieu": "hotel-macao"},
+        {
+          "heure": "",
+          "titre": "Soirée casino sur le Cotai",
+          "lieu": "cotai",
+          "note": "Prévue dans le calendrier Outlook. Photos interdites en salle, passeport exigé à l'entrée."
+        }
       ],
       "dossier": ["shanghai-salon", "agibot", "macao-jeu", "macao-ville", "robot-achat"]
     },
     {
       "date": "2026-10-14",
-      "titre": "Macao, puis Guangzhou",
+      "titre": "Journée libre à Macao, puis Guangzhou",
       "ville": "Macao → Guangzhou",
       "hotel": "hotel-guangzhou",
       "creneaux": [
-        {"heure": "10:00", "fin": "17:00", "titre": "Journée libre / visites à Macao"},
+        {"heure": "", "titre": "Check-out du Conrad Macao (avant de partir pour la journée)", "lieu": "hotel-macao"},
+        {
+          "heure": "10:00",
+          "fin": "17:00",
+          "titre": "Journée libre à Macao",
+          "note": "Passeport sur soi pour le retour en Chine continentale en fin de journée."
+        },
         {
           "heure": "18:00",
           "fin": "21:00",
-          "titre": "Trajet Macao → Guangzhou",
-          "transport": "Train Zhuhai–Guangzhou ou transfert par la route (2 à 3 h), à confirmer",
-          "note": "Passeport : contrôle au retour en Chine continentale."
+          "titre": "Transfert Macao → Guangzhou (départ en fin de journée)",
+          "transport": "Horaire indicatif (calendrier Outlook) : train via Zhuhai/Hengqin ou route, 2 à 3 h."
+        },
+        {
+          "heure": "",
+          "titre": "Passage de frontière Macao → Chine continentale",
+          "note": "Nouvelle entrée en Chine continentale : contrôle des passeports. Passeport obligatoire sur soi."
+        },
+        {
+          "heure": "",
+          "titre": "Check-in au Ritz-Carlton Guangzhou",
+          "lieu": "hotel-guangzhou",
+          "note": "Si possible, retirer le badge de la Foire de Canton dès ce soir (hôtels partenaires, aéroport)."
         }
       ],
       "dossier": ["macao-ville", "guangzhou"]
@@ -116,36 +154,55 @@
         {
           "heure": "09:30",
           "fin": "18:00",
-          "titre": "Foire de Canton (140e édition, phase 1)",
+          "titre": "Foire de Canton (140e édition, phase 1) — journée au salon",
           "lieu": "canton-fair",
           "salon": "salon-2",
-          "note": "Badge acheteur à enregistrer en ligne avant le voyage."
+          "note": "Badge ET passeport obligatoires à chaque entrée. Point de rendez-vous fiable : l'entrée A."
         }
       ],
       "dossier": ["canton-fair", "robot-achat"]
     },
     {
       "date": "2026-10-16",
-      "titre": "Visites d'usines",
-      "ville": "Guangzhou (région)",
-      "hotel": "hotel-guangzhou",
-      "creneaux": [{"heure": "09:00", "fin": "18:00", "titre": "Visites d'usines", "salon": "salon-4", "note": "Programme à confirmer."}],
+      "titre": "Foire de Canton et visites, puis vol retour",
+      "ville": "Guangzhou",
+      "creneaux": [
+        {
+          "heure": "",
+          "titre": "Check-out du Ritz-Carlton (avant 12:00)",
+          "lieu": "hotel-guangzhou",
+          "note": "Pas de nuit d'hôtel le 16 : le vol retour décolle à 00:20. Garder un sac prêt pour la journée."
+        },
+        {"heure": "09:30", "fin": "18:00", "titre": "Foire de Canton et visites (sur réservation)", "lieu": "canton-fair", "salon": "salon-2"},
+        {
+          "heure": "",
+          "titre": "Transfert vers l'aéroport de Baiyun, en soirée",
+          "lieu": "aeroport-can",
+          "note": "Vol à 00:20 : viser l'arrivée à l'aéroport vers 21:30 (conseil). Départs internationaux au terminal T2 [à vérifier]."
+        }
+      ],
       "dossier": ["guangzhou", "robot-achat"]
     },
     {
       "date": "2026-10-17",
       "titre": "Retour en Belgique",
-      "ville": "Guangzhou → Bruxelles",
+      "ville": "Guangzhou → Dubaï → Bruxelles",
       "creneaux": [
         {
-          "heure": "",
-          "titre": "Vol retour vers Bruxelles",
-          "transport": "Vol [À COMPLÉTER] heure de départ de Chine et numéro de vol",
-          "note": "Retour via Dubaï annoncé dans le groupe le 09/09 (départ de Dubaï à 7 h 50), absent du calendrier [à vérifier]."
+          "heure": "00:20",
+          "fin": "08:00",
+          "titre": "Vol Guangzhou → Dubaï — Emirates EK 363 (décollage 00:20, nuit du 16 au 17)",
+          "lieu": "aeroport-can",
+          "transport": "EK 363 : 7 h 40 de vol, arrivée à Dubaï à 04:00 (heure de Dubaï)."
+        },
+        {
+          "heure": "11:50",
+          "titre": "Vol Dubaï → Bruxelles — Emirates EK 183 (décollage 07:50, heure de Dubaï)",
+          "transport": "EK 183 : 7 h 40 de vol, arrivée à Bruxelles à 13:30 (heure belge)."
         },
         {
           "heure": "19:30",
-          "titre": "Atterrissage à Bruxelles (13 h 30, heure belge)",
+          "titre": "Atterrissage à Bruxelles (13 h 30, heure belge) — fin du voyage",
           "lieu": "aeroport-bru",
           "note": "Parking P3 Holiday réservé jusqu'à 15:30 (heure belge) : 2 h de marge après l'atterrissage."
         }
@@ -156,8 +213,8 @@
   "salons": [
     {
       "id": "salon-1",
-      "nom": "Salon à Shanghai [À COMPLÉTER] nom du salon",
-      "dates": "12 octobre (journée) et 13 octobre 2026 (matinée)",
+      "nom": "Salon de la robotique, Shanghai (probablement la CIIF)",
+      "dates": "Lundi 12 octobre (journée commune aux trois groupes) ; mardi 13 au choix avec Agibot",
       "horaires": "9 h – 18 h le 12/10, 9 h – 12 h 30 le 13/10 (indicatif)",
       "lieu": "salon-shanghai",
       "halls": "[À COMPLÉTER]",
@@ -168,7 +225,7 @@
     {
       "id": "salon-2",
       "nom": "Foire de Canton (Canton Fair) — 140e édition, phase 1",
-      "dates": "Phase 1 du 15 au 19 octobre 2026 — visite le 15 octobre",
+      "dates": "Phase 1 du 15 au 19 octobre 2026 — visite les 15 et 16 octobre",
       "horaires": "9 h 30 – 18 h (indicatif)",
       "lieu": "canton-fair",
       "halls": "Phase 1 : électronique, électroménager, machines, outillage, énergie",
@@ -183,8 +240,8 @@
     {
       "id": "salon-3",
       "nom": "Visite d'Agibot (智元机器人) — robots humanoïdes",
-      "dates": "13 octobre 2026, après-midi",
-      "horaires": "14 h – 17 h (à confirmer)",
+      "dates": "Mardi 13 octobre, au choix avec le salon de la robotique",
+      "horaires": "Avant le retour à l'hôtel, 3 h avant le vol pour Macao (17:00-19:00) [à vérifier]",
       "lieu": "agibot",
       "objectifs": ["Découvrir l'état de l'art des robots humanoïdes", "Imaginer des usages en accueil et en service client"],
       "exposants": [],
@@ -192,9 +249,9 @@
     },
     {
       "id": "salon-4",
-      "nom": "Visites d'usines — région de Guangzhou",
-      "dates": "16 octobre 2026",
-      "horaires": "Programme à confirmer",
+      "nom": "Visites sur réservation — région de Guangzhou",
+      "dates": "Vendredi 16 octobre, en parallèle de la Foire de Canton",
+      "horaires": "Sur réservation auprès des organisateurs",
       "objectifs": ["[À COMPLÉTER]"],
       "exposants": [],
       "dossier": "guangzhou"
@@ -204,38 +261,38 @@
     {
       "id": "hotel-shanghai",
       "categorie": "Hôtel",
-      "nom": "Hôtel à Shanghai [À COMPLÉTER]",
-      "nomEn": "[À COMPLÉTER]",
-      "nomZh": "上海酒店（待补充）",
-      "adresse": "[À COMPLÉTER]",
-      "adresseEn": "[À COMPLÉTER]",
-      "adresseZh": "",
-      "telephone": "",
-      "note": "Nuits du 11 et du 12 octobre."
+      "nom": "Jing An Shangri-La, Shanghai",
+      "nomEn": "Jing An Shangri-La, Shanghai",
+      "nomZh": "上海静安香格里拉大酒店",
+      "adresse": "1218, Middle Yan'an Road, Jing An Kerry Centre, Shanghai 200040",
+      "adresseEn": "1218 Middle Yan'an Road, Jing An Kerry Centre, Shanghai 200040, China",
+      "adresseZh": "上海市静安区延安中路1218号 静安嘉里中心",
+      "telephone": "+86 21 2203 8888",
+      "note": "Nuits du 11 au 13 octobre. Check-in à partir de 14:00, check-out avant 12:00. Petit-déjeuner buffet inclus. Christophe : chambre twin avec Karim Tekaya. GPS 31.224, 121.4487. Source : appli des organisateurs Expo Trip (05/10/2026)."
     },
     {
       "id": "hotel-macao",
       "categorie": "Hôtel",
-      "nom": "Hôtel à Macao [À COMPLÉTER]",
-      "nomEn": "[À COMPLÉTER]",
-      "nomZh": "澳門酒店（待補充）",
-      "adresse": "[À COMPLÉTER]",
-      "adresseEn": "[À COMPLÉTER]",
-      "adresseZh": "",
-      "telephone": "",
-      "note": "Nuit du 13 octobre. À Macao, les caractères traditionnels sont d'usage."
+      "nom": "Conrad Macao (dans The Londoner Macao)",
+      "nomEn": "Conrad Macao",
+      "nomZh": "澳門康萊德酒店",
+      "adresse": "Estrada do Istmo, s/n, Cotai, Macao (The Londoner Macao)",
+      "adresseEn": "Estrada do Istmo, s/n, Cotai, Macao (The Londoner Macao)",
+      "adresseZh": "澳門路氹連貫公路 澳門倫敦人 澳門康萊德酒店",
+      "telephone": "+853 2882 9000",
+      "note": "Nuit du 13 au 14 octobre. Christophe : chambre twin avec Karim Tekaya. GPS 22.147, 113.563. À Macao, les caractères traditionnels sont d'usage. Source : appli des organisateurs Expo Trip (05/10/2026)."
     },
     {
       "id": "hotel-guangzhou",
       "categorie": "Hôtel",
-      "nom": "Hôtel à Guangzhou [À COMPLÉTER]",
-      "nomEn": "[À COMPLÉTER]",
-      "nomZh": "广州酒店（待补充）",
-      "adresse": "[À COMPLÉTER]",
-      "adresseEn": "[À COMPLÉTER]",
-      "adresseZh": "",
-      "telephone": "",
-      "note": "Nuits du 14, 15 et 16 octobre [à vérifier]."
+      "nom": "The Ritz-Carlton, Guangzhou",
+      "nomEn": "The Ritz-Carlton, Guangzhou",
+      "nomZh": "广州富力丽思卡尔顿酒店",
+      "adresse": "3, Xing An Road, Pearl River New City, Tianhe, Guangzhou 510623",
+      "adresseEn": "3 Xing An Road, Pearl River New City, Tianhe District, Guangzhou 510623, China",
+      "adresseZh": "广州市天河区珠江新城兴安路3号",
+      "telephone": "+86 20 3813 6688",
+      "note": "Nuits du 14 au 16 octobre. Check-in à partir de 15:00, check-out avant 12:00 (le 16). Petit-déjeuner buffet inclus, restaurant FOODS. Christophe : chambre twin avec Karim Tekaya. GPS 23.1186, 113.3229. Source : appli des organisateurs Expo Trip (05/10/2026)."
     },
     {
       "id": "salon-shanghai",
@@ -321,6 +378,17 @@
       "adresseZh": "北京市朝阳区三里屯路6号",
       "telephone": "+86 10 6532 1736",
       "note": "Coordonnées à vérifier sur diplomatie.belgium.be avant le départ [à vérifier]"
+    },
+    {
+      "id": "aeroport-can",
+      "categorie": "Transport",
+      "nom": "Aéroport international de Guangzhou Baiyun (CAN)",
+      "nomEn": "Guangzhou Baiyun International Airport",
+      "nomZh": "广州白云国际机场",
+      "adresse": "Baiyun, Guangzhou — départs internationaux au terminal T2 [à vérifier]",
+      "adresseEn": "Baiyun District, Guangzhou",
+      "adresseZh": "广州市白云区白云国际机场 2号航站楼",
+      "note": "Vol retour EK 363 à 00:20 dans la nuit du 16 au 17. Environ 1 h de taxi depuis Pazhou ou Tianhe (150 à 250 yuans)."
     }
   ],
   "contacts": [
@@ -328,6 +396,7 @@
     {"groupe": "Urgences en Chine", "nom": "Ambulance", "role": "Urgences médicales", "telephone": "120"},
     {"groupe": "Urgences en Chine", "nom": "Pompiers", "role": "Incendie", "telephone": "119"},
     {"groupe": "Urgences en Chine", "nom": "Accident de la route", "role": "Police de la circulation", "telephone": "122"},
+    {"groupe": "Urgences en Chine", "nom": "Urgences à Macao", "role": "Police, ambulance, pompiers (Macao uniquement)", "telephone": "999"},
     {"groupe": "Ambassade", "nom": "Ambassade de Belgique à Pékin", "role": "Standard [à vérifier]", "telephone": "+86 10 6532 1736"},
     {"groupe": "Ambassade", "nom": "SPF Affaires étrangères", "role": "Centre de crise, Bruxelles [à vérifier]", "telephone": "+32 2 501 81 11"},
     {
@@ -348,25 +417,42 @@
       "role": "Standard [À COMPLÉTER] [à vérifier]",
       "telephone": "+852 [À COMPLÉTER]"
     },
-    {"groupe": "Organisation du voyage", "nom": "Nikkel Kebsi", "role": "Organisateur du voyage (NK Consulting)", "telephone": "+32 [À COMPLÉTER]"},
+    {"groupe": "Organisation du voyage", "nom": "Jean-Marc Van Bever", "role": "Organisateur", "telephone": "+32 475 82 28 24"},
+    {
+      "groupe": "Organisation du voyage",
+      "nom": "Benjamin Ferdinand",
+      "role": "Organisateur — joignable en priorité sur WhatsApp",
+      "telephone": "+32 472 82 62 44"
+    },
+    {"groupe": "Organisation du voyage", "nom": "Christophe Pezzetti", "role": "Organisateur", "telephone": "+32 485 66 92 03"},
+    {
+      "groupe": "Organisation du voyage",
+      "nom": "Nikkel Kebsi",
+      "role": "Membre du groupe B — a envoyé les invitations Outlook",
+      "telephone": "+32 [À COMPLÉTER]"
+    },
     {"groupe": "Équipe", "nom": "Christophe Van Kerrebroeck", "role": "Fonction [À COMPLÉTER]", "telephone": "+32 [À COMPLÉTER]"},
     {"groupe": "Équipe", "nom": "Arnaud Roufosse", "role": "Fonction [À COMPLÉTER]", "telephone": "+32 470 44 27 22"},
     {"groupe": "Équipe", "nom": "François Collienne", "role": "Fonction [À COMPLÉTER]", "telephone": "+32 [À COMPLÉTER]"},
     {"groupe": "Équipe", "nom": "Karim Tekaya", "role": "Fonction [À COMPLÉTER]", "telephone": "+32 [À COMPLÉTER]"},
-    {"groupe": "Équipe", "nom": "Toufan Aslan", "role": "Fonction [À COMPLÉTER]", "telephone": "+32 [À COMPLÉTER]"},
+    {
+      "groupe": "Équipe",
+      "nom": "Toufan Aslan",
+      "role": "Fonction [À COMPLÉTER]",
+      "telephone": "+32 [À COMPLÉTER]",
+      "note": "Écrit « Tufan » dans l'appli des organisateurs."
+    },
     {
       "groupe": "Équipe",
       "nom": "Hakim Nabil",
       "role": "Fonction [À COMPLÉTER] — numéro peut-être parmi les numéros sans nom",
       "telephone": "+32 [À COMPLÉTER]"
     },
-    {
-      "groupe": "Équipe",
-      "nom": "Corentin [À COMPLÉTER]",
-      "role": "IT — numéro peut-être parmi les numéros sans nom",
-      "telephone": "+32 [À COMPLÉTER]"
-    },
-    {"groupe": "Équipe", "nom": "Lucien [À COMPLÉTER]", "role": "IT — numéro peut-être parmi les numéros sans nom", "telephone": "+32 [À COMPLÉTER]"},
+    {"groupe": "Équipe", "nom": "Corentin Merle", "role": "Fonction [À COMPLÉTER]", "telephone": "+32 [À COMPLÉTER]"},
+    {"groupe": "Équipe", "nom": "Lucien Christ", "role": "IT", "telephone": "+32 [À COMPLÉTER]"},
+    {"groupe": "Équipe", "nom": "Corentin Pochet", "role": "Fonction [À COMPLÉTER]", "telephone": "+32 [À COMPLÉTER]"},
+    {"groupe": "Équipe", "nom": "Jérôme Farinaux", "role": "Fonction [À COMPLÉTER]", "telephone": "+32 [À COMPLÉTER]"},
+    {"groupe": "Équipe", "nom": "Renaud Meurs", "role": "Fonction [À COMPLÉTER]", "telephone": "+32 [À COMPLÉTER]"},
     {"groupe": "Équipe", "nom": "Nom [À COMPLÉTER]", "role": "Membre de la délégation", "telephone": "+32 499 80 42 99"},
     {"groupe": "Équipe", "nom": "Nom [À COMPLÉTER]", "role": "Membre de la délégation", "telephone": "+32 485 85 53 87"},
     {"groupe": "Équipe", "nom": "Nom [À COMPLÉTER]", "role": "Membre de la délégation", "telephone": "+32 477 77 92 91"},
@@ -441,6 +527,93 @@
       ]
     },
     {
+      "titre": "Téléphone, data et VPN (conseils des organisateurs)",
+      "points": [
+        "Appeler son opérateur pour activer l'option « hors Europe » : sans elle, aucune donnée mobile. Demander un tarif à la journée plutôt qu'au mégaoctet.",
+        "Désactiver la mise à jour automatique des applications, sinon la facture grimpe.",
+        "Le Wi-Fi des hôtels est correct et gratuit.",
+        "VPN : les organisateurs conseillent d'installer et de payer un VPN avant le départ (les sites de VPN sont bloqués depuis la Chine), et de noter son mot de passe ailleurs que dans un gestionnaire qui a besoin du réseau. Rappel : les VPN non agréés sont officiellement interdits en Chine ; l'eSIM « Asie » donne en principe accès à WhatsApp et Gmail sans VPN.",
+        "Macao : le forfait chinois ne couvre pas Macao (le réseau et le tarif changent) ; le VPN y est inutile."
+      ]
+    },
+    {
+      "titre": "Argent et banque",
+      "points": [
+        "Prévenir sa banque du voyage, sinon la carte est bloquée au premier paiement.",
+        "Alipay ou WeChat Pay : vérification d'identité depuis la Belgique (photo du passeport, parfois 48 h), puis un paiement test de quelques euros.",
+        "Espèces : 500 à 1 000 yuans pour les taxis et les petits marchés. Les distributeurs des aéroports acceptent les cartes européennes.",
+        "Macao : pataca (MOP), mais le dollar de Hong Kong est accepté partout ; le yuan n'y a pas cours. Les cartes Visa et Mastercard y sont acceptées normalement, contrairement au continent."
+      ]
+    },
+    {
+      "titre": "Passeport au quotidien",
+      "points": [
+        "Validité de six mois minimum après le retour, et au moins deux pages vierges.",
+        "Photographier la page d'identité et se l'envoyer par e-mail avant le départ.",
+        "Le passeport doit être sur soi en permanence, pas dans le coffre de l'hôtel : il est demandé à l'entrée du salon, aux frontières et dans les hôtels.",
+        "Jamais dans la valise du car ni en soute les jours de frontière (13 et 14 octobre).",
+        "Exemption de visa ou visa : selon la nationalité, géré au sein de chaque groupe."
+      ]
+    },
+    {
+      "titre": "Bagages",
+      "points": [
+        "Batterie externe obligatoirement en bagage à main, jamais en soute.",
+        "En cabine : passeport, médicaments, chargeur, adaptateur et une tenue de rechange (les bagages en soute arrivent parfois un jour plus tard).",
+        "Prendre deux adaptateurs universels : un pour le téléphone, un pour l'ordinateur.",
+        "Prévoir de la place au retour : les échantillons prennent du volume (ou les faire expédier)."
+      ]
+    },
+    {
+      "titre": "Santé",
+      "points": [
+        "Aucun vaccin obligatoire.",
+        "Médicaments dans leur boîte d'origine, avec l'ordonnance ; petite pharmacie : antidiarrhéique, paracétamol, pansements.",
+        "Ne pas boire l'eau du robinet. La nourriture de rue est correcte si elle est servie chaude.",
+        "Les hôtels ont un médecin de garde joignable par la réception."
+      ]
+    },
+    {
+      "titre": "Taxis",
+      "points": [
+        "Les chauffeurs ne parlent pas anglais et ne lisent pas l'alphabet latin : utiliser « Montrer au chauffeur » (onglet Adresses), qui fonctionne sans réseau.",
+        "Repères de prix : course en ville 20 à 40 yuans ; trajet vers l'aéroport 150 à 250 yuans.",
+        "Toujours exiger le compteur ; refuser un prix forfaitaire annoncé à l'avance.",
+        "Didi (dans Alipay ou WeChat, interface en anglais) : paiement automatique, pas de discussion de prix."
+      ]
+    },
+    {
+      "titre": "Foire de Canton : sur place",
+      "points": [
+        "Badge nominatif + passeport obligatoires à chaque entrée. Un badge perdu se refait au centre des visiteurs, contre passeport, en une heure environ.",
+        "Trois zones, seize halls, 1,5 million de m² : vingt minutes pour traverser à pied. Chaussures confortables et bouteille d'eau.",
+        "Pour se retrouver, l'entrée A est le seul repère vraiment fiable.",
+        "Photographier chaque stand intéressant avec la carte de visite de l'exposant (onglet Notes) : sinon tout se mélange le soir.",
+        "Les échantillons sont lourds : demander l'expédition à l'hôtel. Le Wi-Fi du salon est saturé, ne pas compter dessus."
+      ]
+    },
+    {
+      "titre": "En réunion d'affaires",
+      "points": [
+        "Cartes de visite : en prévoir beaucoup (idéalement recto français, verso chinois) ; les donner et les recevoir à deux mains, les lire quelques secondes avant de les ranger.",
+        "Ne jamais écrire sur une carte devant son interlocuteur, ni la mettre dans sa poche arrière.",
+        "Le premier rendez-vous sert à se connaître, pas à conclure ; la précipitation est mal vue.",
+        "« Ce sera difficile » veut dire non : une réponse directement négative est rare. Le silence n'est pas une gêne : laisser l'interprète finir.",
+        "À table : attendre que l'hôte s'assoie et commence ; pour « ganbei », tenir son verre légèrement plus bas que celui de la personne la plus âgée ; refuser un plat n'offense personne, en goûter un peu suffit."
+      ]
+    },
+    {
+      "titre": "Passeport perdu ou volé",
+      "etapes": true,
+      "points": [
+        "Prévenir d'abord l'organisateur (onglet Contacts).",
+        "Déclarer la perte au poste de police le plus proche et obtenir le procès-verbal écrit : rien n'est possible sans lui.",
+        "Appeler l'ambassade de Belgique à Pékin, ou le consulat général à Hong Kong si la perte a lieu à Macao.",
+        "Fournir la photo de la page d'identité prise avant le départ et, si possible, deux photos d'identité.",
+        "Délais : titre de voyage provisoire en 1 à 3 jours ouvrables, puis nouveau visa de sortie auprès des autorités chinoises (environ 2 jours de plus). Un retour à la date prévue n'est pas garanti."
+      ]
+    },
+    {
       "titre": "Internet et téléphone",
       "points": [
         "eSIM : suivre la procédure « eSIM pour la Chine » ci-dessus (Airalo, forfait Asie), à préparer AVANT le départ.",
@@ -500,7 +673,13 @@
     "Un peu d'espèces en CNY",
     "Assurance voyage : numéro d'assistance noté",
     "Voix chinoise installée (Android) et bouton 🔊 testé en mode avion",
-    "Ce site ouvert une fois avec réseau, puis installé sur l'écran d'accueil"
+    "Ce site ouvert une fois avec réseau, puis installé sur l'écran d'accueil",
+    "Banque prévenue du voyage",
+    "Option « hors Europe » activée chez l'opérateur (ou eSIM en place)",
+    "Photo de la page d'identité du passeport envoyée par e-mail",
+    "Deux adaptateurs universels",
+    "Petite pharmacie de voyage (antidiarrhéique, paracétamol, pansements)",
+    "Une tenue de rechange dans le bagage cabine"
   ],
   "dossier": [
     {
