@@ -4818,7 +4818,328 @@
         "en": "Hello! We are a delegation of executives from Gaming1 Retail, the entertainment venues division of Gaming1, a Belgian group from Liège that now employs several thousand people. Gaming1 is part of Ardent Group, a Liège-based group active in real estate and on the international stage.\n\nIn Belgium, we operate the Casino de Spa, one of the oldest casinos in the world, the Namur Casino Resort, 30 gaming halls and the Odd's bars. In France, we run 7 casinos and a gaming club in Paris; in Switzerland, 2 casinos.\n\nWe have made this long journey because we are convinced that the future of technology is being built in China today. Your capacity for innovation, the strength of your industry and the speed at which you turn ideas into products are a benchmark for us.\n\nWe are particularly interested in artificial intelligence and automation, customer experience, as well as displays, hospitality and security. We have come to learn and to discover your latest innovations, and we would be glad to stay in touch, in a spirit of mutually beneficial cooperation.\n\nThank you for your warm welcome!",
         "zh": "您好！我们是Gaming1 Retail的管理层代表团。Gaming1 Retail是比利时Gaming1集团旗下负责娱乐场所的业务板块。Gaming1诞生于比利时列日，如今拥有数千名员工，隶属于同样来自列日的Ardent集团，该集团业务涵盖房地产等领域，并积极拓展国际市场。\n\n在比利时，我们经营着世界上历史最悠久的娱乐场之一——斯帕娱乐场（Casino de Spa），以及那慕尔娱乐度假村、30家游戏厅和Odd's连锁酒吧。在法国，我们经营7家娱乐场和巴黎的一家游戏俱乐部；在瑞士，我们经营2家娱乐场。\n\n我们之所以远道而来，是因为我们深信：今天，科技的未来正在中国书写。中国的创新能力、产业实力，以及将创意迅速转化为产品的速度，都是我们学习的榜样。\n\n我们尤其关注人工智能与自动化、客户体验，以及显示屏、酒店科技和安防等领域。我们此行的目的是学习和了解贵方的最新创新成果，也非常希望与各位保持联系，本着合作共赢的精神携手前行。\n\n感谢您的热情接待！"
       }
-    ]
+    ],
+    "diaporama": {
+      "titre": "Notre groupe en images",
+      "aide": "Plein écran : glisser ou toucher les bords pour changer de photo.",
+      "diapos": [
+        {
+          "photo": "photos/namur-meuse.jpg",
+          "fr": "Gaming1 · Circus — le divertissement à la belge, en Belgique, en France et en Suisse",
+          "en": "Gaming1 · Circus — Belgian entertainment in Belgium, France and Switzerland",
+          "zh": "Gaming1 · Circus——来自比利时的娱乐集团，业务遍及比利时、法国和瑞士",
+          "lieu": {"fr": "Namur, Belgique", "en": "Namur, Belgium", "zh": "比利时 · 那慕尔"}
+        },
+        {
+          "chapitre": true,
+          "fr": "Notre groupe",
+          "en": "Our group",
+          "zh": "我们的集团",
+          "sous": {
+            "fr": "Né à Liège en 1992, le groupe exploite les lieux de divertissement Circus en Belgique, en France et en Suisse.",
+            "en": "Founded in Liège in 1992, the group operates the Circus entertainment venues in Belgium, France and Switzerland.",
+            "zh": "集团1992年创立于比利时列日，在比利时、法国和瑞士经营Circus品牌娱乐场所。"
+          },
+          "chiffres": [
+            {"v": "30+", "fr": "ans d'expérience (depuis 1992)", "en": "years of experience (since 1992)", "zh": "年行业经验（始于1992年）"},
+            {"v": "3", "fr": "pays : Belgique, France, Suisse", "en": "countries: Belgium, France, Switzerland", "zh": "个国家：比利时、法国、瑞士"},
+            {"v": "11", "fr": "casinos et un club de jeux à Paris", "en": "casinos and a gaming club in Paris", "zh": "家娱乐场，另有巴黎一家游戏俱乐部"},
+            {"v": "30+", "fr": "salles de jeux Circus en Belgique", "en": "Circus gaming halls in Belgium", "zh": "家比利时Circus游戏厅"}
+          ]
+        },
+        {
+          "chapitre": true,
+          "fr": "Circus Casino Resort Namur",
+          "en": "Circus Casino Resort Namur",
+          "zh": "那慕尔Circus娱乐度假村",
+          "sous": {
+            "fr": "Le premier casino resort de Belgique : casino, hôtel, restaurant, bars, spa et séminaires en un seul lieu.",
+            "en": "Belgium's first casino resort: casino, hotel, restaurant, bars, spa and meetings in one place.",
+            "zh": "比利时首家娱乐度假村：娱乐场、酒店、餐厅、酒吧、水疗和会议设施集于一处。"
+          },
+          "chiffres": [
+            {"v": "250+", "fr": "machines à sous", "en": "slot machines", "zh": "台电子游戏机"},
+            {"v": "100", "fr": "chambres, hôtel Mercure 4★", "en": "rooms, Mercure 4★ hotel", "zh": "间客房（美居四星级酒店）"},
+            {"v": "9", "fr": "salles de séminaire, jusqu'à 500 personnes", "en": "meeting rooms, up to 500 guests", "zh": "间会议厅，最多容纳500人"},
+            {"v": "3 + 2", "fr": "bars et spas", "en": "bars and spas", "zh": "个酒吧 + 2个水疗中心"}
+          ]
+        },
+        {
+          "photo": "photos/namur-facade.jpg",
+          "fr": "Le casino de Namur, plus d'un siècle d'histoire, rénové et agrandi en resort",
+          "en": "The Namur casino: more than a century of history, renovated and expanded into a resort",
+          "zh": "那慕尔娱乐场拥有一百多年历史，经翻新扩建成为综合度假村"
+        },
+        {
+          "photo": "photos/namur-accueil.jpg",
+          "fr": "L'accueil du casino : marbre, lumière et identification de chaque client",
+          "en": "The casino reception: marble, light and identity check for every guest",
+          "zh": "娱乐场接待大厅：大理石与灯光设计，每位客人入场均需身份核验"
+        },
+        {
+          "photo": "photos/namur-grand-casino.jpg",
+          "fr": "Le Grand Casino : tables de jeu, bar central, paris sportifs sur grands écrans",
+          "en": "The Grand Casino: gaming tables, central bar, sports betting on large screens",
+          "zh": "大娱乐厅：游戏桌、中央吧台，以及大屏幕体育竞猜区"
+        },
+        {
+          "photo": "photos/namur-machines.jpg",
+          "fr": "Plus de 250 machines à sous — dont un espace au décor asiatique",
+          "en": "More than 250 slot machines — including an Asian-themed area",
+          "zh": "250多台电子游戏机——其中设有一个亚洲风格主题区"
+        },
+        {
+          "photo": "photos/namur-tables.jpg",
+          "fr": "Jeux de table : roulette, blackjack, ultimate poker, tous les jours jusqu'à 4 h du matin",
+          "en": "Table games: roulette, blackjack, ultimate poker, every day until 4 a.m.",
+          "zh": "桌面游戏：轮盘、二十一点、终极扑克，每天营业至凌晨4点"
+        },
+        {
+          "photo": "photos/namur-poker.jpg",
+          "fr": "Circus Poker : Namur est la référence du poker en Belgique (tournois et cash game)",
+          "en": "Circus Poker: Namur is Belgium's poker reference (tournaments and cash games)",
+          "zh": "Circus扑克：那慕尔是比利时扑克的标杆（锦标赛与现金桌）"
+        },
+        {
+          "photo": "photos/namur-spectacle.jpg",
+          "fr": "Soirées et spectacles : le Casino Club, salle historique de 450 m², accueille jusqu'à 500 personnes",
+          "en": "Shows and events: the Casino Club, a historic 450 m² hall, welcomes up to 500 guests",
+          "zh": "晚会与演出：历史悠久的Casino Club大厅面积450平方米，可容纳500人"
+        },
+        {
+          "photo": "photos/namur-hotel.jpg",
+          "fr": "L'hôtel Mercure 4★ : 100 chambres, dont 7 suites, 11 avec jacuzzi et 16 avec terrasse",
+          "en": "The Mercure 4★ hotel: 100 rooms, including 7 suites, 11 with jacuzzi and 16 with terrace",
+          "zh": "美居四星级酒店：100间客房，其中7间套房、11间带按摩浴缸、16间带露台"
+        },
+        {
+          "photo": "photos/namur-hall-hotel.jpg",
+          "fr": "Le hall de l'hôtel, ouvert sur le casino et la Meuse",
+          "en": "The hotel lobby, opening onto the casino and the Meuse river",
+          "zh": "酒店大堂，与娱乐场相连，面向默兹河"
+        },
+        {
+          "photo": "photos/namur-restaurant.jpg",
+          "fr": "La Carte du Roi : brasserie chic, cuisine européenne raffinée",
+          "en": "La Carte du Roi: an elegant brasserie serving refined European cuisine",
+          "zh": "“国王菜单”（La Carte du Roi）：高雅的欧式餐厅"
+        },
+        {
+          "photo": "photos/namur-terrasse.jpg",
+          "fr": "La terrasse panoramique sur la Meuse",
+          "en": "The panoramic terrace overlooking the Meuse",
+          "zh": "俯瞰默兹河的全景露台"
+        },
+        {
+          "photo": "photos/namur-bar.jpg",
+          "fr": "Trois bars : le bar du Grand Casino, celui du Casino Club et celui du restaurant",
+          "en": "Three bars: the Grand Casino bar, the Casino Club bar and the restaurant bar",
+          "zh": "三个酒吧：大娱乐厅酒吧、Casino Club酒吧和餐厅酒吧"
+        },
+        {
+          "photo": "photos/namur-spa-soin.jpg",
+          "fr": "Spa Cinq Mondes : soins et massages",
+          "en": "Cinq Mondes Spa: treatments and massages",
+          "zh": "Cinq Mondes水疗中心：理疗与按摩"
+        },
+        {
+          "photo": "photos/namur-spa-jacuzzi.jpg",
+          "fr": "Deux espaces bien-être (jacuzzi, sauna, hammam), dont un entièrement privatisable",
+          "en": "Two wellness areas (jacuzzi, sauna, steam room), one of which can be fully privatised",
+          "zh": "两个休闲养生区（按摩池、桑拿、蒸汽浴），其中一个可整体包场"
+        },
+        {
+          "photo": "photos/namur-seminaire.jpg",
+          "fr": "Séminaires et réceptions : 9 salles équipées, de 20 à 500 personnes, avec hôtel et restauration sur place",
+          "en": "Meetings and receptions: 9 equipped rooms for 20 to 500 people, with hotel and catering on site",
+          "zh": "会议与宴会：9间设备齐全的会议厅，可容纳20至500人，酒店与餐饮一应俱全"
+        },
+        {
+          "chapitre": true,
+          "fr": "Casino de Spa",
+          "en": "Casino de Spa",
+          "zh": "斯帕娱乐场",
+          "sous": {
+            "fr": "L'un des plus anciens casinos du monde, au cœur de la ville thermale de Spa.",
+            "en": "One of the oldest casinos in the world, in the heart of the spa town of Spa.",
+            "zh": "世界上历史最悠久的娱乐场之一，位于温泉小城斯帕的中心。"
+          },
+          "chiffres": [
+            {"v": "≈ 100", "fr": "machines à sous", "en": "slot machines", "zh": "台电子游戏机"},
+            {"v": "7/7", "fr": "roulette et blackjack chaque soir", "en": "roulette and blackjack every evening", "zh": "每晚开放轮盘和二十一点"},
+            {"v": "1", "fr": "restaurant : Le Grill du Casino", "en": "restaurant: Le Grill du Casino", "zh": "家餐厅：Le Grill du Casino"}
+          ]
+        },
+        {
+          "photo": "photos/spa-exterieur.jpg",
+          "fr": "Le Casino de Spa, dans la ville qui a donné son nom à tous les « spas » du monde",
+          "en": "The Casino de Spa, in the town that gave its name to every “spa” in the world",
+          "zh": "斯帕娱乐场——英文“spa”（水疗）一词正是源于斯帕这座小城"
+        },
+        {
+          "photo": "photos/spa-plafond.jpg",
+          "fr": "Les salons historiques : les croupiers de Spa ont formé ceux du Casino de Monaco",
+          "en": "The historic halls: Spa's croupiers trained those of the Monte-Carlo Casino",
+          "zh": "历史悠久的大厅：当年摩纳哥蒙特卡洛娱乐场的荷官正是由斯帕的荷官培训的"
+        },
+        {"photo": "photos/spa-roulette.jpg", "fr": "La roulette du Casino de Spa", "en": "Roulette at the Casino de Spa", "zh": "斯帕娱乐场的轮盘"},
+        {"photo": "photos/spa-machines.jpg", "fr": "Près d'une centaine de machines à sous", "en": "Nearly one hundred slot machines", "zh": "近百台电子游戏机"},
+        {
+          "photo": "photos/spa-grill.jpg",
+          "fr": "Le Grill du Casino : grillades sur pierre de lave",
+          "en": "Le Grill du Casino: lava-stone grilled dishes",
+          "zh": "Le Grill du Casino：火山石烧烤"
+        },
+        {
+          "chapitre": true,
+          "fr": "Salles de jeux Circus",
+          "en": "Circus gaming halls",
+          "zh": "Circus游戏厅",
+          "sous": {
+            "fr": "Machines à sous, roulettes électroniques et animations toute l'année. La première salle Circus a ouvert à Liège en 1992.",
+            "en": "Slot machines, electronic roulette and events all year round. The first Circus hall opened in Liège in 1992.",
+            "zh": "电子游戏机、电子轮盘，全年举办各类活动。第一家Circus游戏厅于1992年在列日开业。"
+          },
+          "chiffres": [
+            {"v": "30+", "fr": "salles partout en Belgique", "en": "halls all over Belgium", "zh": "家游戏厅，遍布比利时"},
+            {"v": "24/7", "fr": "la plupart ouvertes jour et nuit", "en": "most of them open day and night", "zh": "大多数全天候营业"}
+          ]
+        },
+        {"photo": "photos/salle-guillemins.jpg", "fr": "Circus Liège-Guillemins", "en": "Circus Liège-Guillemins", "zh": "Circus列日-吉耶曼店"},
+        {"photo": "photos/salle-braine.jpg", "fr": "Circus Braine", "en": "Circus Braine", "zh": "Circus布赖讷店"},
+        {
+          "photo": "photos/salle-le-bizet.jpg",
+          "fr": "Circus Le Bizet : roulette électronique à jackpot",
+          "en": "Circus Le Bizet: electronic roulette with jackpot",
+          "zh": "Circus勒比泽店：带累积奖池的电子轮盘"
+        },
+        {"photo": "photos/salle-rocourt.jpg", "fr": "Circus Rocourt", "en": "Circus Rocourt", "zh": "Circus罗库尔店"},
+        {
+          "chapitre": true,
+          "fr": "Circus Casino France",
+          "en": "Circus Casino France",
+          "zh": "法国Circus娱乐场",
+          "sous": {
+            "fr": "Présents en France depuis 2016, avec restaurants, un restaurant gastronomique et deux hôtels.",
+            "en": "In France since 2016, with restaurants, a fine-dining restaurant and two hotels.",
+            "zh": "自2016年进入法国市场，另设多家餐厅、一家高级餐厅和两家酒店。"
+          },
+          "chiffres": [
+            {
+              "v": "7",
+              "fr": "casinos, de la Bretagne aux Alpes et à la Méditerranée",
+              "en": "casinos, from Brittany to the Alps and the Mediterranean",
+              "zh": "家娱乐场，从布列塔尼到阿尔卑斯山和地中海"
+            },
+            {"v": "1", "fr": "club de jeux à Paris, temple du poker", "en": "gaming club in Paris, a poker temple", "zh": "家巴黎游戏俱乐部，扑克圣地"}
+          ]
+        },
+        {
+          "photo": "photos/fr-allevard.jpg",
+          "fr": "Allevard (Alpes) — 62 machines à sous et jeux de table",
+          "en": "Allevard (Alps) — 62 slot machines and table games",
+          "zh": "阿勒瓦尔（阿尔卑斯山）——62台电子游戏机及桌面游戏"
+        },
+        {
+          "photo": "photos/fr-balaruc.jpg",
+          "fr": "Balaruc-les-Bains (Méditerranée) — 97 machines à sous",
+          "en": "Balaruc-les-Bains (Mediterranean) — 97 slot machines",
+          "zh": "巴拉吕克莱班（地中海）——97台电子游戏机"
+        },
+        {
+          "photo": "photos/fr-barbotan.jpg",
+          "fr": "Barbotan-les-Thermes (Sud-Ouest) — plus de 70 machines à sous",
+          "en": "Barbotan-les-Thermes (South-West) — more than 70 slot machines",
+          "zh": "巴尔博唐莱泰尔姆（法国西南）——70多台电子游戏机"
+        },
+        {
+          "photo": "photos/fr-briancon.jpg",
+          "fr": "Briançon (Hautes-Alpes) — 58 machines à sous",
+          "en": "Briançon (High Alps) — 58 slot machines",
+          "zh": "布里扬松（上阿尔卑斯）——58台电子游戏机"
+        },
+        {
+          "photo": "photos/fr-carnac.jpg",
+          "fr": "Carnac (Bretagne) — plus de 90 machines à sous",
+          "en": "Carnac (Brittany) — more than 90 slot machines",
+          "zh": "卡尔纳克（布列塔尼）——90多台电子游戏机"
+        },
+        {
+          "photo": "photos/fr-leucate.jpg",
+          "fr": "Port-Leucate (Méditerranée) — 75 machines à sous",
+          "en": "Port-Leucate (Mediterranean) — 75 slot machines",
+          "zh": "勒卡特港（地中海）——75台电子游戏机"
+        },
+        {
+          "photo": "photos/fr-vals.jpg",
+          "fr": "Vals-les-Bains (Ardèche) — 125 machines à sous",
+          "en": "Vals-les-Bains (Ardèche) — 125 slot machines",
+          "zh": "瓦尔莱班（阿尔代什）——125台电子游戏机"
+        },
+        {
+          "photo": "photos/fr-paris.jpg",
+          "fr": "Club Circus Paris — ouvert tous les jours de 15 h à 6 h",
+          "en": "Club Circus Paris — open every day from 3 p.m. to 6 a.m.",
+          "zh": "巴黎Circus俱乐部——每天15点营业至次日6点"
+        },
+        {
+          "photo": "photos/fr-paris-poker.jpg",
+          "fr": "Club Circus Paris : poker et jeux de table, 13 tables ouvertes chaque jour",
+          "en": "Club Circus Paris: poker and table games, 13 tables open every day",
+          "zh": "巴黎Circus俱乐部：扑克及桌面游戏，每天开放13张游戏桌"
+        },
+        {
+          "chapitre": true,
+          "fr": "Suisse",
+          "en": "Switzerland",
+          "zh": "瑞士",
+          "sous": {
+            "fr": "Deux stations alpines prestigieuses ; la Suisse est un modèle en matière de jeu responsable.",
+            "en": "Two prestigious Alpine resorts; Switzerland is a model of responsible gaming.",
+            "zh": "两座著名的阿尔卑斯度假胜地；瑞士是负责任博彩的典范。"
+          },
+          "chiffres": [
+            {"v": "2", "fr": "casinos : Crans-Montana et Davos", "en": "casinos: Crans-Montana and Davos", "zh": "家娱乐场：克朗-蒙塔纳和达沃斯"},
+            {"v": "2044", "fr": "concessions valables jusqu'en 2044", "en": "licences valid until 2044", "zh": "经营许可有效期至2044年"}
+          ]
+        },
+        {
+          "photo": "photos/ch-crans.jpg",
+          "fr": "Casino de Crans-Montana (Valais) — plus de 130 machines à sous",
+          "en": "Crans-Montana Casino (Valais) — more than 130 slot machines",
+          "zh": "克朗-蒙塔纳娱乐场（瓦莱州）——130多台电子游戏机"
+        },
+        {
+          "photo": "photos/ch-crans-roulette.jpg",
+          "fr": "Crans-Montana : tables de jeu chaque soir",
+          "en": "Crans-Montana: gaming tables every evening",
+          "zh": "克朗-蒙塔纳：每晚开放游戏桌"
+        },
+        {
+          "photo": "photos/ch-davos.jpg",
+          "fr": "Casino Davos — dans la ville du Forum économique mondial",
+          "en": "Casino Davos — in the home town of the World Economic Forum",
+          "zh": "达沃斯娱乐场——位于世界经济论坛举办地达沃斯"
+        },
+        {
+          "photo": "photos/ch-davos-salle.jpg",
+          "fr": "Davos : plus de 60 machines à sous, roulette, blackjack et poker",
+          "en": "Davos: more than 60 slot machines, roulette, blackjack and poker",
+          "zh": "达沃斯：60多台电子游戏机，以及轮盘、二十一点和扑克"
+        },
+        {
+          "chapitre": true,
+          "fr": "Merci !",
+          "en": "Thank you!",
+          "zh": "谢谢！",
+          "sous": {
+            "fr": "Nous venons découvrir vos innovations et serions heureux de construire une coopération gagnant-gagnant.",
+            "en": "We have come to discover your innovations and would be glad to build a win-win cooperation.",
+            "zh": "我们此行是为了了解贵方的创新成果，期待与您携手，实现合作共赢。"
+          }
+        }
+      ]
+    }
   },
   "categoriesPhrases": [
     {"nom": "Politesse et présentations", "icone": "🤝"},

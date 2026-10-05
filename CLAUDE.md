@@ -13,7 +13,7 @@ En ligne : https://resortnamur.github.io/chine/ — dépôt public `resortnamur/
 - Ne jamais changer l'`id` d'un salon (les notes du téléphone y sont rattachées).
 
 ## Structure de `data.json`
-`voyage`, `taux`, `jours[]` (date, `fuseau` facultatif — le 10/10 est en heure belge —, `hotel`, `dossier[]`, `creneaux[]` : heure en heure de Chine, `fin`, `titre`, `lieu` = id d'adresse, `salon` = id de salon, `transport`, `note`), `salons[]`, `adresses[]` (nom FR/EN/ZH, adresse FR/EN/ZH, téléphone, note), `contacts[]` (groupe, nom, rôle, téléphone), `pratique[]` (`titre`, `points[]`, `etapes: true` = liste numérotée), `checklist[]`, `dossier[]` (chapitres : `sections[]` avec `paragraphes`, `chiffres`, `points`, plus `incertitudes`, `sources`), `presentation`, `categoriesPhrases`, `phrases[]`.
+`voyage`, `taux`, `jours[]` (date, `fuseau` facultatif — le 10/10 est en heure belge —, `hotel`, `dossier[]`, `creneaux[]` : heure en heure de Chine, `fin`, `titre`, `lieu` = id d'adresse, `salon` = id de salon, `transport`, `note`), `salons[]`, `adresses[]` (nom FR/EN/ZH, adresse FR/EN/ZH, téléphone, note), `contacts[]` (groupe, nom, rôle, téléphone), `pratique[]` (`titre`, `points[]`, `etapes: true` = liste numérotée), `checklist[]`, `dossier[]` (chapitres : `sections[]` avec `paragraphes`, `chiffres`, `points`, plus `incertitudes`, `sources`), `presentation` (`versions[]` de texte + `diaporama.diapos[]` : soit `{photo, fr, en, zh, lieu?}`, soit `{chapitre: true, fr, en, zh, sous?, chiffres[]}`), `categoriesPhrases`, `phrases[]`.
 Marqueurs affichés en jaune : `[À COMPLÉTER]`, `[à vérifier]`.
 
 Écriture conseillée de `data.json` (lisible) : objets de moins de 150 caractères sur une ligne, sinon indentation de 2 espaces ; `json.dumps(..., ensure_ascii=False)`.
@@ -25,4 +25,9 @@ Marqueurs affichés en jaune : `[À COMPLÉTER]`, `[à vérifier]`.
 - Vérifier qu'aucune requête ne part vers un autre domaine.
 
 ## Écrans
-Aujourd'hui · Programme · Salons · Notes (photos, export .zip) · Adresses (« Montrer au chauffeur », 🔊) · Plus : Contacts, Phrases (145, par catégories), Pratique, Convertisseur, Nous présenter (FR/EN/ZH), Dossier des lieux (10 chapitres, dont « Acheter un robot »).
+Aujourd'hui · Programme · Salons · Notes (photos, export .zip) · Adresses (« Montrer au chauffeur », 🔊) · Plus : Contacts, Phrases (145, par catégories), Pratique, Convertisseur, Nous présenter (diaporama « Notre groupe en images » : 45 diapositives / 38 photos du groupe, légendes ZH + EN + FR, plein écran, glisser ; puis le texte FR/EN/ZH), Dossier des lieux (10 chapitres, dont « Acheter un robot »).
+
+## Photos du diaporama
+- Dossier `photos/` (JPEG 1280 px, qualité 70, ≈ 5 Mo au total). Sources : `Desktop\Divers\IMAGES\Photos CCRN` (Namur) et sites officiels du groupe (circuscasinoresort.com, casinodespa.be, circus-casino-places.be, circuscasino.fr, casinodavos.ch), téléchargées avec l'accord de l'utilisateur le 05/10/2026. Jamais d'image générée par IA.
+- Le service worker les met dans un cache à part (`photos-chine`) conservé entre versions ; la liste vient de `data.json`. Ajouter une photo = la déposer dans `photos/` + la citer dans `data.json` (pas besoin de changer `VERSION`).
+- Vocabulaire chinois acté : casino = 娱乐场 (jamais 赌场), machine à sous = 电子游戏机, salle de jeux = 游戏厅. Aucune mention du jeu en ligne (sensible en Chine).

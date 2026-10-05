@@ -297,3 +297,68 @@ table.chiffres td:last-child { font-weight: 800; text-align: right; width: 42%; 
 .sommaire ol.liste { padding-left: 24px; margin: 6px 0 0; }
 .lien-sommaire { font: inherit; color: var(--rouge); background: none; border: 0; padding: 4px 0; text-align: left; text-decoration: underline; cursor: pointer; }
 details.chapitre summary .jour-date { font-size: 18px; }
+
+/* Diaporama « Notre groupe en images » */
+.diapo-lancer { width: 100%; flex-direction: column; min-height: 76px; margin-bottom: 6px; }
+.diapo-lancer small { font-weight: 400; font-size: 14px; opacity: .9; }
+.diapo-grille { display: grid; grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); gap: 6px; margin: 10px 0 8px; }
+.diapo-vignette { padding: 0; border: 0; border-radius: 8px; overflow: hidden; aspect-ratio: 4 / 3; background: var(--fond-2); cursor: pointer; }
+.diapo-vignette img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.diapo-chapitre {
+  grid-column: 1 / -1; text-align: left; font: inherit; font-weight: 800; font-size: 16px; color: var(--rouge);
+  background: none; border: 0; border-bottom: 2px solid var(--rouge); padding: 12px 0 4px; cursor: pointer;
+}
+.diapo-chapitre span { font-weight: 400; color: var(--texte-2); margin-left: 8px; }
+.diapo {
+  position: fixed; inset: 0; z-index: 210; background: #000; color: #fff;
+  display: flex; flex-direction: column; user-select: none; -webkit-user-select: none;
+}
+.diapo.chapitre { background: #7d0d0d; }
+.diapo-contenu { flex: 1; position: relative; min-height: 0; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.diapo-img { width: 100%; height: 100%; object-fit: contain; }
+.diapo-legende {
+  position: absolute; left: 0; right: 0; bottom: 0; padding: 40px 16px 12px;
+  background: linear-gradient(transparent, rgba(0,0,0,.82) 45%);
+}
+.diapo-lieu { font-size: 14px; letter-spacing: .04em; opacity: .85; margin-bottom: 2px; }
+.diapo-zh { font-size: clamp(20px, 4.6vw, 34px); font-weight: 700; line-height: 1.35; }
+.diapo-en { font-size: clamp(14px, 2.8vw, 20px); opacity: .9; margin-top: 4px; line-height: 1.35; }
+.diapo-titre-page { padding: 24px 20px; max-width: 900px; text-align: center; overflow-y: auto; max-height: 100%; }
+.diapo-titre-page h2 { font-size: clamp(32px, 8vw, 60px); margin: 0 0 4px; color: #fff; }
+.diapo-titre-page .diapo-en { font-size: clamp(18px, 4vw, 28px); font-weight: 700; }
+.diapo-sous { font-size: clamp(17px, 3.6vw, 24px); line-height: 1.5; margin: 18px 0 4px; }
+.diapo-sous-en { font-size: clamp(14px, 2.6vw, 18px); opacity: .85; margin: 0; }
+.diapo-chiffres { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-top: 22px; }
+.diapo-chiffre { background: rgba(255,255,255,.12); border-radius: 12px; padding: 12px 10px; display: flex; flex-direction: column; gap: 4px; }
+.diapo-chiffre b { font-size: clamp(28px, 6vw, 44px); line-height: 1; }
+.diapo-chiffre span { font-size: 17px; line-height: 1.3; }
+.diapo-chiffre small { font-size: 13px; opacity: .8; }
+.diapo-barre { display: flex; align-items: center; gap: 8px; padding: 6px 10px; background: rgba(0,0,0,.6); }
+.diapo-btn {
+  min-width: 52px; min-height: 48px; border-radius: 12px; border: 2px solid rgba(255,255,255,.5);
+  background: transparent; color: #fff; font: inherit; font-size: 26px; font-weight: 800; cursor: pointer;
+}
+.diapo-compteur { flex: 1; text-align: center; font-weight: 700; }
+.diapo-fermer { font-size: 20px; }
+.diapo-fr {
+  background: #1b1b1b; color: #ddd; font-size: 14px; line-height: 1.35;
+  padding: 8px 14px calc(8px + env(safe-area-inset-bottom));
+}
+.diapo-fr::before { content: "FR · "; font-weight: 800; color: #fff; }
+@media (orientation: landscape) and (max-height: 500px) {
+  .diapo-legende { padding: 24px 16px 8px; }
+  .diapo-zh { font-size: 22px; }
+  .diapo-en { font-size: 14px; }
+  .diapo-fr { display: none; }
+  .diapo-chiffres { grid-template-columns: repeat(4, 1fr); gap: 8px; margin-top: 10px; }
+  .diapo-titre-page { padding: 10px 16px; }
+  .diapo-titre-page h2 { font-size: 30px; }
+  .diapo-titre-page .diapo-en { font-size: 16px; margin-top: 0; }
+  .diapo-sous { font-size: 16px; margin: 8px 0 2px; line-height: 1.35; }
+  .diapo-sous-en { font-size: 13px; }
+  .diapo-chiffre { padding: 8px 6px; gap: 2px; }
+  .diapo-chiffre b { font-size: 24px; }
+  .diapo-chiffre span { font-size: 14px; }
+  .diapo-chiffre small { font-size: 11px; }
+  .diapo-btn { min-height: 40px; font-size: 22px; }
+}

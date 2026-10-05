@@ -887,7 +887,7 @@ function majResultatsPhrases() {
 function sommairePhrasesHtml() {
   const phrases = D.phrases || [];
   const pres = D.presentation && (D.presentation.versions || []).length
-    ? '<a class="btn principal tuile-presentation" href="#presentation">🤝 ' + esc(D.presentation.titre || 'Nous présenter') + '<small>texte de présentation en chinois et en anglais</small></a>'
+    ? '<a class="btn principal tuile-presentation" href="#presentation">🤝 ' + esc(D.presentation.titre || 'Nous présenter') + '<small>photos du groupe et texte de présentation, en chinois et en anglais</small></a>'
     : '';
   return pres + '<div class="grille-boutons">' + categoriesPhrases().map((c, k) => {
     const n = phrases.filter((p) => (p.categorie || 'Divers') === c.nom).length;
@@ -922,6 +922,7 @@ function vuePresentation() {
   if (!versions[k]) k = 0;
   const v = versions[k];
   let h = '<a class="btn retour" href="#phrases">← Phrases utiles</a><h2>🤝 ' + esc(P.titre || 'Nous présenter') + '</h2>';
+  if (P.diaporama) h += diaporamaHtml(P.diaporama) + '<div class="section-titre">Texte de présentation</div>';
   if (versions.length > 1) {
     h += '<div class="filtres">' + versions.map((x, i) =>
       '<a class="filtre' + (i === k ? ' actif' : '') + '" href="#presentation/' + i + '">' + esc(x.nom || 'Version ' + (i + 1)) + '</a>').join('') + '</div>';
@@ -935,6 +936,88 @@ function vuePresentation() {
   if (v.en) h += '<div class="section-titre">English</div><div class="carte texte-long" lang="en">' + esc(v.en) + '</div>';
   return h;
 }
+
+/* ---------- Diaporama : le groupe en images (plein écran, légendes ZH / EN / FR) ---------- */
+let diapoIndex = 0;
+function diapos() { return ((D.presentation || {}).diaporama || {}).diapos || []; }
+function diaporamaHtml(dp) {
+  const liste = (dp && dp.diapos) || [];
+  if (!liste.length) return '';
+  let h = '<button class="btn principal diapo-lancer" data-diapo="0">📷 ' + esc(dp.titre || 'Diaporama') +
+    '<small>' + liste.filter((x) => x.photo).length + ' photos — légendes en chinois et en anglais</small></button>';
+  if (dp.aide) h += '<p class="meta">' + esc(dp.aide) + '</p>';
+  h += '<div class="diapo-grille">';
+  liste.forEach((x, i) => {
+    if (x.chapitre) h += '<button class="diapo-chapitre" data-diapo="' + i + '">' + esc(x.fr) + '<span lang="zh-CN">' + esc(x.zh) + '</span></button>';
+    else h += '<button class="diapo-vignette" data-diapo="' + i + '" aria-label="' + esc(x.fr) + '"><img src="' + esc(x.photo) + '" alt="" loading="lazy" decoding="async"></button>';
+  });
+  return h + '</div>';
+}
+function contenuDiapo(x) {
+  if (x.chapitre) {
+    const ch = (x.chiffres || []).map((c) => '<div class="diapo-chiffre"><b>' + esc(c.v) + '</b><span lang="zh-CN">' + esc(c.zh) +
+      '</span><small>' + esc(c.en) + '</small></div>').join('');
+    return '<div class="diapo-titre-page"><h2 lang="zh-CN">' + esc(x.zh) + '</h2><div class="diapo-en">' + esc(x.en) + '</div>' +
+      (x.sous ? '<p class="diapo-sous" lang="zh-CN">' + esc(x.sous.zh) + '</p><p class="diapo-sous-en">' + esc(x.sous.en) + '</p>' : '') +
+      (ch ? '<div class="diapo-chiffres">' + ch + '</div>' : '') + '</div>';
+  }
+  const lieu = x.lieu ? '<div class="diapo-lieu" lang="zh-CN">' + esc(x.lieu.zh) + ' · ' + esc(x.lieu.en) + '</div>' : '';
+  return '<img class="diapo-img" src="' + esc(x.photo) + '" alt="' + esc(x.en) + '">' +
+    '<div class="diapo-legende">' + lieu + '<div class="diapo-zh" lang="zh-CN">' + esc(x.zh) + '</div>' +
+    '<div class="diapo-en">' + esc(x.en) + '</div></div>';
+}
+function afficherDiapo(i) {
+  const liste = diapos();
+  if (!liste.length) return;
+  diapoIndex = (i + liste.length) % liste.length;
+  const x = liste[diapoIndex];
+  const el = $('#diapo');
+  el.classList.toggle('chapitre', !!x.chapitre);
+  $('#diapo-contenu').innerHTML = contenuDiapo(x);
+  $('#diapo-fr').textContent = x.chapitre ? (x.fr + (x.sous ? ' — ' + x.sous.fr : '')) : x.fr;
+  $('#diapo-compteur').textContent = (diapoIndex + 1) + ' / ' + liste.length;
+  // Précharge la photo suivante pour un défilement sans attente
+  const suiv = liste[(diapoIndex + 1) % liste.length];
+  if (suiv && suiv.photo) new Image().src = suiv.photo;
+}
+function ouvrirDiapo(i) {
+  afficherDiapo(i);
+  $('#diapo').hidden = false;
+  document.body.style.overflow = 'hidden';
+  if (navigator.wakeLock) navigator.wakeLock.request('screen').then((v) => { verrouEcran = v; }).catch(() => {});
+}
+function fermerDiapo() {
+  if ($('#diapo').hidden) return;
+  $('#diapo').hidden = true;
+  $('#diapo-contenu').innerHTML = '';
+  document.body.style.overflow = '';
+  if (verrouEcran) { verrouEcran.release().catch(() => {}); verrouEcran = null; }
+}
+(function gestesDiapo() {
+  const el = $('#diapo');
+  let x0 = null, y0 = 0;
+  el.addEventListener('touchstart', (e) => { x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; }, { passive: true });
+  el.addEventListener('touchend', (e) => {
+    if (x0 === null) return;
+    const dx = e.changedTouches[0].clientX - x0, dy = e.changedTouches[0].clientY - y0;
+    x0 = null;
+    if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) { afficherDiapo(diapoIndex + (dx < 0 ? 1 : -1)); el.dataset.glisse = '1'; }
+  });
+  el.addEventListener('click', (e) => {
+    if (el.dataset.glisse) { delete el.dataset.glisse; return; }
+    if (e.target.closest('#diapo-fermer')) { fermerDiapo(); return; }
+    if (e.target.closest('#diapo-prec')) { afficherDiapo(diapoIndex - 1); return; }
+    if (e.target.closest('#diapo-suiv')) { afficherDiapo(diapoIndex + 1); return; }
+    if (e.target.closest('#diapo-fr')) return;
+    afficherDiapo(diapoIndex + (e.clientX < window.innerWidth / 3 ? -1 : 1));
+  });
+  document.addEventListener('keydown', (e) => {
+    if (el.hidden) return;
+    if (e.key === 'ArrowRight' || e.key === ' ') afficherDiapo(diapoIndex + 1);
+    else if (e.key === 'ArrowLeft') afficherDiapo(diapoIndex - 1);
+    else if (e.key === 'Escape') fermerDiapo();
+  });
+})();
 
 /* ---------- Vue : Convertisseur ---------- */
 function vueConvertisseur() {
@@ -1084,6 +1167,8 @@ document.addEventListener('click', (e) => {
     else ouvrirPlein(v.zh, '', '');
     return;
   }
+  const di = e.target.closest('[data-diapo]');
+  if (di) { ouvrirDiapo(+di.dataset.diapo); return; }
   const ph = e.target.closest('[data-phrase]');
   if (ph) {
     const p = D.phrases[+ph.dataset.phrase];
@@ -1110,7 +1195,7 @@ document.addEventListener('change', (e) => {
   if (e.target.id === 'note-salon') salonChoisi = { salon: e.target.value, jour: ymd(maintenant(), TZ_CN) };
 });
 $('#plein-fermer').addEventListener('click', fermerPlein);
-window.addEventListener('hashchange', () => { fermerPlein(); $('#visionneuse').hidden = true; route(false); });
+window.addEventListener('hashchange', () => { fermerPlein(); fermerDiapo(); $('#visionneuse').hidden = true; route(false); });
 window.addEventListener('online', majEtat);
 window.addEventListener('offline', majEtat);
 
