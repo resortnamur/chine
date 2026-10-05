@@ -61,7 +61,7 @@
           "note": "Horaires indicatifs, à confirmer."
         }
       ],
-      "dossier": ["shanghai-salon", "shanghai-ville"]
+      "dossier": ["shanghai-salon", "shanghai-ville", "robot-achat"]
     },
     {
       "date": "2026-10-13",
@@ -88,7 +88,7 @@
         },
         {"heure": "22:00", "fin": "01:00", "titre": "Soirée casino à Macao", "lieu": "cotai"}
       ],
-      "dossier": ["shanghai-salon", "agibot", "macao-jeu", "macao-ville"]
+      "dossier": ["shanghai-salon", "agibot", "macao-jeu", "macao-ville", "robot-achat"]
     },
     {
       "date": "2026-10-14",
@@ -122,7 +122,7 @@
           "note": "Badge acheteur à enregistrer en ligne avant le voyage."
         }
       ],
-      "dossier": ["canton-fair"]
+      "dossier": ["canton-fair", "robot-achat"]
     },
     {
       "date": "2026-10-16",
@@ -130,7 +130,7 @@
       "ville": "Guangzhou (région)",
       "hotel": "hotel-guangzhou",
       "creneaux": [{"heure": "09:00", "fin": "18:00", "titre": "Visites d'usines", "salon": "salon-4", "note": "Programme à confirmer."}],
-      "dossier": ["guangzhou"]
+      "dossier": ["guangzhou", "robot-achat"]
     },
     {
       "date": "2026-10-17",
@@ -1402,6 +1402,945 @@
         {"titre": "Wikipedia (japonais) – Henn na Hotel", "url": "https://ja.wikipedia.org/wiki/変なホテル"}
       ],
       "consulte": "04/10/2026"
+    },
+    {
+      "id": "robot-achat",
+      "titre": "Acheter un robot pour l'hôtel ou la salle de jeu",
+      "icone": "🦾",
+      "resume": "Dossier de décision demandé par la direction : quels robots existent réellement en 2026, à quel prix, avec quelles contraintes légales en Belgique, et comment préparer un achat pendant le voyage. Recommandation : commencer par un pilote de trois mois à l'hôtel avec des robots de service à roues loués (Keenon, Pudu), garder l'humanoïde (Agibot) pour une opération d'image, et ne pas envisager la salle de jeu avant une consultation de la Commission des jeux de hasard.",
+      "sections": [
+        {
+          "titre": "Synthèse pour la direction : ce qu'il faut retenir",
+          "paragraphes": [
+            "La demande est d'étudier l'achat d'un robot pour l'hôtel du Casino-Resort de Namur et/ou pour la salle de jeu. La conclusion de ce dossier est nette : il faut commencer par l'hôtel et la restauration, avec des robots de service à roues, en location et sous forme de pilote de trois mois, et traiter un éventuel humanoïde comme une opération d'image, séparée et budgétée en communication. Ce sont les seuls usages où des milliers d'établissements ont plusieurs années de recul, et les deux leaders mondiaux, Pudu et Keenon, ont des distributeurs, des pièces et le marquage CE en Europe, ce qui n'est pas encore démontré pour les humanoïdes.",
+            "La salle de jeu n'est pas le bon premier terrain, pour des raisons d'exploitation et surtout de droit. L'espace y est encombré et la clientèle d'habitués se lasse vite de la nouveauté. Surtout, la loi sur les jeux de hasard ne dit rien des robots : il faudrait consulter formellement la Commission des jeux de hasard avant tout déploiement (contrôle d'accès à 21 ans et EPIS, interdiction des bonus, publicité quasi interdite depuis 2023-2024, vidéosurveillance imposée). Et la loi belge sur les caméras pose un obstacle sérieux : si les images du robot servent, même accessoirement, à la sécurité, il devient une caméra de surveillance mobile, que l'article 7/2 n'autorise pratiquement pas dans un hall ou une salle ouverte au public. Un déploiement limité à l'hôtel évite l'essentiel de ces difficultés.",
+            "Les ordres de grandeur, à confirmer par devis : un robot de livraison en chambre (type Keenon W3 ou Pudu FlashBot) coûte environ 25 000 à 30 000 euros à l'achat, soit environ 56 000 euros de coût complet sur trois ans ; un robot d'accueil à écran environ 9 000 euros, soit environ 27 000 euros sur trois ans ; un humanoïde Agibot X2 environ 48 000 euros et un A2 environ 120 000 euros, soit 100 000 à 200 000 euros sur trois ans. En location, un premier lot de deux ou trois robots à roues se situe vraisemblablement entre 1 500 et 3 500 euros par mois, et un humanoïde se loue en Europe à partir d'environ 900 euros par jour avec technicien. Le pilote recommandé ne demande aucun achat : environ 3 000 à 6 000 euros pour trois mois, voire moins si le fournisseur prête un appareil.",
+            "Le voyage est l'occasion de préparer la décision, pas de la prendre. Chez Agibot le 13 octobre, l'objectif est d'obtenir un prix ferme, une offre de location et des réponses écrites sur le marquage CE, l'hébergement européen des données et le service après-vente en Belgique. Au salon de Shanghai (12-13/10) et dans le hall 21.2 de la Foire de Canton (15/10), il s'agit de comparer au moins trois fournisseurs de robots de service. Keenon a son siège à Shanghai et Pudu à Shenzhen, à environ une heure de Guangzhou : une visite peut se demander dès maintenant à l'organisateur. Rien ne doit être signé ni payé sur place.",
+            "Avant tout déploiement, quatre préalables internes sont incontournables : une analyse d'impact sur la protection des données (AIPD) avec le délégué à la protection des données, l'information et la concertation du conseil d'entreprise (CCT n° 39) ainsi que l'avis du CPPT, une vérification par l'assureur de la responsabilité civile, et, si la salle de jeu est envisagée un jour, une consultation écrite de la Commission des jeux de hasard. Si Gaming1 importait directement depuis la Chine, il porterait en outre la responsabilité d'importateur au sens du marquage CE : c'est un argument fort pour acheter via un distributeur européen."
+          ],
+          "chiffres": [
+            {"libelle": "Premier pas recommandé", "valeur": "Pilote de 3 mois à l'hôtel, robots à roues loués"},
+            {"libelle": "Coût du pilote", "valeur": "≈ 3 000 à 6 000 € (0 € d'achat)"},
+            {"libelle": "Robot de livraison, coût complet 3 ans", "valeur": "≈ 56 000 €"},
+            {"libelle": "Humanoïde Agibot X2 / A2, coût complet 3 ans", "valeur": "≈ 100 000 € / ≈ 200 000 €"},
+            {"libelle": "Location humanoïde événementielle (Europe)", "valeur": "à partir de ≈ 900 € / jour"},
+            {"libelle": "Salle de jeu", "valeur": "Pas avant consultation de la Commission des jeux de hasard"}
+          ],
+          "points": [
+            "Dès maintenant : envoyer les demandes de rendez-vous (modèles de messages plus bas) et demander à l'organisateur une visite Keenon (Shanghai) ou Pudu (Shenzhen).",
+            "Pendant le voyage : comparer au moins 3 fournisseurs avec les 20 questions de ce dossier ; obtenir prix fermes et offres de location ; ne rien signer ni payer.",
+            "Au retour : cahier des charges d'une page, choix du fournisseur du pilote, AIPD, conseil d'entreprise et CPPT, assureur.",
+            "Après 3 mois de pilote : décider sur des indicateurs mesurés (livraisons par nuit, heures libérées, satisfaction des clients et du personnel)."
+          ]
+        },
+        {
+          "titre": "Marché · Ce que le marché sait vraiment faire en octobre 2026",
+          "paragraphes": [
+            "Le marché des robots de service commerciaux est aujourd'hui un marché chinois, mature sur quelques tâches simples et encore expérimental sur tout le reste. Selon IDC, les fabricants chinois représentaient 84,7 % des livraisons mondiales de robots de service commerciaux en 2024 ; Frost & Sullivan estime que ce marché a crû d'environ 37 % par an entre 2021 et 2025. Deux entreprises dominent : Pudu (Shenzhen) et Keenon (Shanghai), qui revendiquent chacune la première place selon le cabinet qui les classe, avec environ un quart du marché chacune. Leur produit phare n'est pas un humanoïde, mais un plateau motorisé sur roues, doté d'un lidar et de caméras, qui transporte des assiettes, des serviettes ou des produits d'accueil d'un point A à un point B et sait, dans les meilleures configurations, prendre l'ascenseur.",
+            "Il faut distinguer trois niveaux de maturité. Le premier regroupe ce qui fonctionne en exploitation courante depuis plusieurs années, avec des dizaines de milliers d'unités en service : le transport de plats et de vaisselle en restaurant, la livraison d'objets en chambre et le nettoyage autonome des sols. Le deuxième rassemble ce qui fonctionne, mais avec une valeur plus discutable : l'accueil sur écran, le guidage et l'affichage publicitaire mobile. Le troisième couvre ce qui relève encore largement de la démonstration, même lorsque c'est vendu : l'humanoïde réceptionniste, le concierge conversationnel autonome et la ronde de sécurité par robot quadrupède dans un lieu recevant du public.",
+            "Le basculement de 2026 vient des humanoïdes. Agibot a annoncé sa 10 000e unité produite le 30 mars 2026, puis la 15 000e fin juin ; Unitree a livré plus de 5 500 humanoïdes en 2025 et s'est introduit en bourse à Shanghai en août 2026 ; UBTech a vendu 1 079 humanoïdes de grande taille en 2025. Ces volumes sont réels, mais leur destination l'est aussi : 74 % des humanoïdes Unitree vendus en 2025 sont allés à des universités, des laboratoires et des développeurs, pas à des exploitants. Le chiffre d'affaires du secteur repose encore largement sur la recherche, l'événementiel et les vitrines technologiques.",
+            "Pour un dirigeant, la conclusion pratique est la suivante : un robot à roues qui livre ou qui nettoie est un équipement d'exploitation qu'on peut chiffrer, louer et remplacer ; un humanoïde est en 2026 un investissement d'image dont le rendement se mesure en attention, en photos et en couverture médiatique, pas en heures de travail économisées. Les deux logiques sont légitimes, mais elles ne se comparent pas avec les mêmes critères."
+          ],
+          "chiffres": [
+            {"libelle": "Part des fabricants chinois dans les livraisons mondiales de robots de service commerciaux (IDC, 2024)", "valeur": "84,7 %"},
+            {"libelle": "Croissance annuelle moyenne du marché 2021-2025 (Frost & Sullivan, juillet 2026)", "valeur": "environ 37 %"},
+            {"libelle": "Humanoïdes Agibot produits (cumul, fin juin 2026)", "valeur": "15 000"},
+            {"libelle": "Part des humanoïdes Unitree vendus en 2025 à la recherche et aux développeurs", "valeur": "74 %"}
+          ]
+        },
+        {
+          "titre": "Marché · Les usages dans un hôtel-casino, classés par maturité",
+          "paragraphes": [
+            "Le service en restaurant et au bar est l'usage le plus éprouvé. Un robot comme le BellaBot de Pudu ou le DINERBOT de Keenon porte trois à quatre plateaux, fait l'aller-retour cuisine-salle et ramène la vaisselle sale ; Pudu annonce jusqu'à 400 livraisons par jour pour un BellaBot. Le robot ne remplace pas le serveur : il supprime les trajets, et le serveur reste à table pour prendre la commande, servir et encaisser. Les retours concrets montrent la limite : à la Brasserie de Chauderon à Lausanne, le gérant expliquait en novembre 2022 que son BellaBot, apprécié des clients, se mettait à tourner sur lui-même quand la salle était bondée. À Namur, l'usage pertinent serait le restaurant de l'hôtel et les banquets, où les distances cuisine-salle sont longues, davantage qu'un bar de salle de jeux étroit et encombré.",
+            "La livraison en chambre est mature techniquement mais rentable seulement dans certains cas. Les robots spécialisés (Keenon W3, Pudu FlashBot) ont des compartiments fermés, appellent l'ascenseur et téléphonent au client à son arrivée. Le Renaissance Paris La Défense (Marriott, 330 chambres) a ainsi étendu son room service à 24 heures sans renfort de nuit, selon un témoignage d'avril 2024. La condition décisive n'est pas le robot mais l'ascenseur : il faut une interface entre le robot et la machinerie de l'ascenseur, à faire installer par l'ascensoriste, et c'est souvent le poste de coût et de délai sous-estimé. L'intérêt réel se situe la nuit, quand une demande de serviettes ou de brosse à dents mobilise un réceptionniste seul au comptoir.",
+            "Le nettoyage des sols est l'usage le plus rentable et le moins spectaculaire. Plus de 70 % du chiffre d'affaires de Pudu en 2025 provient désormais du nettoyage, signe que c'est là que les clients paient sans hésiter. Le robot lave ou aspire de grandes surfaces dégagées pendant les heures creuses : halls, couloirs, salles de séminaire, restaurants après fermeture. Une salle de jeux avec moquette, machines à sous serrées et clientèle présente la nuit est un terrain plus difficile qu'un hall carrelé, et ce point doit être testé sur place.",
+            "L'accueil, l'information et le guidage fonctionnent, mais rapportent peu en exploitation. Un robot à écran sait répondre aux questions fréquentes (horaires, restaurant, toilettes, parking) et accompagner un client vers une salle de séminaire. Une étude de Hotelschool The Hague menée auprès de 200 clients dans deux hôtels d'application d'Amsterdam et La Haye et un cinq étoiles d'Amsterdam ne trouve aucune différence de satisfaction entre un humain et un robot pour la simple fourniture d'informations. Autrement dit, le robot ne dégrade pas l'expérience, mais il ne la transforme pas non plus.",
+            "L'animation et la promotion constituent l'usage le plus intéressant pour un casino, et le plus délicat juridiquement en Belgique. Des robots comme le KettyBot de Pudu ou le T10 de Keenon portent un grand écran publicitaire, circulent, s'arrêtent devant les clients et diffusent des messages ou des vidéos. L'effet d'attraction est réel, surtout la première année. En revanche, la publicité pour les jeux de hasard est très encadrée depuis l'arrêté royal du 27 février 2023, en vigueur depuis le 1er juillet 2023 ; ce qu'un robot peut afficher ou dire dans la salle de jeux (promotions, tournois, offres) doit être validé juridiquement avant tout achat. La promotion du restaurant, des spectacles ou de l'hôtel pose a priori moins de difficultés.",
+            "La conciergerie multilingue et les rondes de sécurité restent du domaine de la démonstration. Les robots conversationnels branchés sur un grand modèle de langage répondent en 14 à 60 langues selon les fabricants, mais personne ne garantit l'exactitude de la réponse sur un allergène, un horaire ou une règle de jeu ; l'hôtel Devín de Bratislava, qui a mis un humanoïde Unitree à l'accueil en juillet 2026, reconnaît qu'il ne gère ni l'enregistrement, ni les clés, ni les paiements. Pour la sécurité, les références existent surtout aux États-Unis, sur des parkings : le robot Knightscope K5 patrouille les parkings et le garage du M Resort à Las Vegas depuis 2023. Dans une salle de jeux surveillée par vidéo et par des agents, un robot de ronde n'apporte presque rien de plus."
+          ],
+          "chiffres": [
+            {"libelle": "Livraisons par jour annoncées pour un BellaBot (Pudu)", "valeur": "jusqu'à 400"},
+            {"libelle": "Part du nettoyage dans le chiffre d'affaires de Pudu (2025)", "valeur": "plus de 70 %"},
+            {
+              "libelle": "Clients interrogés par Hotelschool The Hague (robot contre humain, information)",
+              "valeur": "200, aucune différence significative de satisfaction"
+            }
+          ],
+          "points": [
+            "Mature : service en salle (transport de plats et de vaisselle), livraison en chambre, nettoyage des sols.",
+            "Utile mais à faible rendement : accueil sur écran, guidage, affichage promotionnel mobile.",
+            "Démonstration : humanoïde réceptionniste, concierge conversationnel autonome, ronde de sécurité en intérieur."
+          ]
+        },
+        {
+          "titre": "Marché · Les robots de service à roues : le cœur du marché",
+          "paragraphes": [
+            "Pudu Robotics, fondé en 2016 à Shenzhen, propose la gamme la plus complète pour un hôtel-restaurant. Le BellaBot, reconnaissable à son visage de chat sur écran, porte quatre plateaux, tient 10 à 12 heures sur une charge et se recharge en quatre à cinq heures ; il se vend environ 16 000 dollars en version Pro aux États-Unis, soit autour de 14 000 euros, ou 899 dollars par mois en location. Le KettyBot Pro, plus étroit (il passe dans 52 cm), combine livraison et grand écran publicitaire de 18,5 pouces pour environ 14 000 dollars ou 749 dollars par mois. Le FlashBot est le robot de livraison en chambre à compartiments fermés ; sa version FlashBot Arm, présentée le 31 mars 2025, ajoute deux bras capables d'appuyer sur les boutons d'ascenseur, ce qui évite en théorie l'intégration avec l'ascensoriste, mais reste un produit très récent. Pudu ne publie aucun prix catalogue : tout passe par devis, et les écarts entre revendeurs sont importants.",
+            "Keenon Robotics, fondé en 2010 et installé à Shanghai, est le grand concurrent. IDC le classe premier mondial en 2024 avec 22,7 % des livraisons de robots de service commerciaux, 29,8 % des robots de livraison et 40,4 % des robots de service en restauration. Sa gamme DINERBOT (T9, T10) couvre le service en salle ; le T9 apparaît chez un revendeur allemand à 9 250 euros hors TVA. Le Butler W3 est le robot de livraison en chambre de référence : quatre compartiments fermés, 90 litres de capacité, écran de 11,6 pouces, plus de 14 langues, ascenseur, recharge autonome, vitesse de 0,8 m/s ; les prix observés vont de 19 600 dollars à 24 219 livres sterling selon les canaux. Keenon a aussi le S100 pour les bagages et le C40 pour le nettoyage, ce qui permet une offre hôtelière complète auprès d'un seul fabricant.",
+            "Les alternatives non chinoises sont rares et ne changent pas le tableau. Bear Robotics, start-up de la Silicon Valley dont le robot Servi transporte plats et vaisselle, est contrôlé à 51 % par LG Electronics depuis janvier 2025, et LG y fond son activité de robots commerciaux CLOi ; le Servi Plus est utilisé par exemple au Paragon Casino Resort en Louisiane depuis novembre 2024. Richtech Robotics, basé à Las Vegas et coté au Nasdaq, vend le Matradee pour l'accueil en restaurant (environ 15 000 dollars) et le Titan pour le transport lourd (environ 30 000 dollars), et cible explicitement les casinos américains. En Europe, ces deux marques sont peu présentes et leur service après-vente local est faible.",
+            "Orionstar, filiale du groupe pékinois Cheetah Mobile créée en 2016, occupe une position intermédiaire : plus de 62 000 robots déployés en 2025, une filiale européenne aux Pays-Bas, et une gamme qui couvre la livraison (LuckiBot, vendu 11 990 euros par un revendeur européen) et l'accueil (GreetingBot). C'est un fournisseur crédible pour un robot d'accueil, moins pour la livraison où Pudu et Keenon ont une avance nette.",
+            "Côté distribution, Pudu est le mieux implanté dans notre zone. Sa filiale européenne, Pudu Robotics Europe B.V., est aux Pays-Bas ; l'entreprise a annoncé en septembre 2026 un futur siège européen en Allemagne et revendique des équipes locales parlant anglais, allemand, français, espagnol et italien. Ses références européennes citées sont surtout du nettoyage en commerce : 200 robots CC1 chez Denner en Suisse, des déploiements chez MediaMarkt, Albert Heijn et Carrefour Pologne. Des distributeurs agréés proposent de la location dès 250 euros par mois pour les modèles d'entrée de gamme. Keenon passe historiquement par un partenariat EMEA avec SoftBank Robotics, qui a fourni le W3 du Renaissance La Défense. Nous n'avons pas trouvé de distributeur exclusif identifié pour la Belgique chez l'un ou l'autre : c'est une question à poser directement aux deux fabricants à Shanghai et Shenzhen."
+          ],
+          "chiffres": [
+            {"libelle": "BellaBot Pro (Pudu), achat / location, prix américains", "valeur": "environ 16 000 $ (≈ 14 000 €) / 899 $ par mois"},
+            {"libelle": "KettyBot Pro (Pudu), achat / location", "valeur": "environ 14 000 $ (≈ 12 000 €) / 749 $ par mois"},
+            {"libelle": "DINERBOT T9 (Keenon), revendeur allemand", "valeur": "9 250 € HT"},
+            {"libelle": "Butler W3 (Keenon), livraison en chambre", "valeur": "19 600 $ à 24 219 £ selon le canal"},
+            {"libelle": "LuckiBot (Orionstar), revendeur européen", "valeur": "11 990 €"},
+            {"libelle": "Location d'entrée de gamme chez un distributeur Pudu en Europe", "valeur": "dès 250 € par mois"}
+          ]
+        },
+        {
+          "titre": "Marché · Robots d'accueil et de promotion à écran",
+          "paragraphes": [
+            "La famille des robots d'accueil est la plus abordable et la plus visible, mais aussi celle dont l'utilité s'use le plus vite. Le Temi, conçu par une société israélo-américaine, est une tablette de 13,3 pouces sur roues avec haut-parleurs et micros directionnels ; il se vend autour de 4 500 dollars, ou à partir de 3 995 dollars en configuration hôtelière avec un abonnement de service de 249 dollars par mois. Il sait guider un client vers une salle, afficher un plan, lancer un appel vidéo avec la réception. Le Cruzr d'UBTech, plus imposant, avec une tête et des bras décoratifs, est vendu environ 35 000 dollars aux États-Unis ou 1 000 dollars par mois ; c'est cher pour un écran mobile, et le produit n'est plus au centre de la stratégie d'UBTech, désormais tournée vers les humanoïdes.",
+            "Pour un casino, le meilleur rapport utilité-prix dans cette famille est le robot hybride livraison-promotion, du type KettyBot Pro de Pudu ou DINERBOT T10 de Keenon. Le même appareil peut circuler avec un écran publicitaire dans le hall et la salle le soir, puis servir au restaurant ou aux banquets. Le contenu de l'écran se modifie depuis une plateforme en ligne, ce qui permet de diffuser le programme des spectacles, le menu du jour ou l'animation de la soirée. Le T10 apparaît entre 13 500 et 20 580 dollars chez trois revendeurs le même jour, soit 52 % d'écart, ce qui illustre la nécessité de négocier directement en Chine.",
+            "Les limites sont connues. Un robot à écran attire l'œil les premières semaines, puis devient un meuble pour les habitués, qui sont précisément la clientèle majoritaire d'un casino. Ses réponses vocales sont correctes sur des questions préparées et fragiles au-delà. Enfin, toute fonction de reconnaissance faciale ou d'enregistrement vocal soulève la question du règlement européen sur la protection des données, et doit être désactivée ou cadrée par écrit avec le fournisseur."
+          ],
+          "chiffres": [
+            {"libelle": "Temi version hôtellerie, achat / service", "valeur": "dès 3 995 $ / 249 $ par mois"},
+            {"libelle": "UBTech Cruzr, achat / location (États-Unis)", "valeur": "environ 35 000 $ / environ 1 000 $ par mois"},
+            {"libelle": "Écart de prix observé sur un même robot Keenon T10 chez trois revendeurs", "valeur": "13 500 $ à 20 580 $ (52 %)"}
+          ]
+        },
+        {
+          "titre": "Marché · Humanoïdes et quadrupèdes : la vitrine de 2026",
+          "paragraphes": [
+            "Agibot (智元机器人), fondé à Shanghai en février 2023 par d'anciens ingénieurs de Huawei, est devenu en trois ans le premier fabricant mondial d'humanoïdes en volume, avec plus de 5 100 unités livrées en 2025. Sa gamme pertinente pour l'accueil comprend l'A2, humanoïde bipède de grande taille certifié en Chine, aux États-Unis et en Europe, destiné aux visites guidées, au service client et au divertissement, affiché à 119 999 euros chez un revendeur européen ; l'A3, présenté le 13 février 2026 et lancé commercialement en avril, de 1,73 m et 55 kg, avec 10 heures d'autonomie et un changement de batterie en 10 secondes ; et le X2, plus petit, orienté événementiel et commerce, dont les prix observés vont de 28 000 dollars à près de 48 000 euros selon le revendeur. Le prix de l'A3 n'est pas publié ; les estimations de 32 000 à 45 000 dollars circulent mais ne sont pas vérifiées. En septembre 2026, à l'IFA de Berlin, Agibot a annoncé des certifications TÜV Rheinland pour la série A, dont l'A3 Ultra. Son agent commercial en Europe est le groupe Minth, équipementier automobile taïwanais.",
+            "Unitree, basé à Hangzhou, est l'autre géant, avec une logique différente : des machines moins chères, très agiles, d'abord vendues aux chercheurs. Le G1 (1,32 m, 35 kg) démarre autour de 12 500 euros hors TVA et se vend entre 17 900 et 27 400 euros chez des revendeurs allemands ; le petit R1 est annoncé à 9 996 euros. Mais l'autonomie du G1 est d'environ deux heures, ses bras portent 3 à 5 kg, et le fabricant lui-même recommande de garder une distance de sécurité avec le robot. Surtout, deux problèmes de sécurité informatique sont documentés : une faille Bluetooth publiée en septembre 2025 permettant de prendre le contrôle du robot à 30 mètres, deux nouvelles failles identifiées en août 2026, et une étude d'Alias Robotics affirmant que le G1 transmettait audio, vidéo et position vers des serveurs en Chine sans en informer l'utilisateur, ce qu'Unitree conteste. Dans un établissement régi par la Commission des jeux de hasard, avec caméras et données clients, ce point est rédhibitoire sans audit préalable.",
+            "UBTech, coté à Hong Kong et basé à Shenzhen, a réalisé 2 milliards de yuans de chiffre d'affaires en 2025, dont 820 millions sur les humanoïdes ; son Walker S2 vise d'abord l'usine (plus de 800 millions de yuans de commandes annoncées en 2025) plutôt que l'hôtellerie. Fourier (Shanghai) propose le GR-3, humanoïde aux surfaces douces conçu pour les soins et l'accompagnement, dont le prix n'est pas publié (ses modèles précédents dépassaient 100 000 dollars). Galbot (Pékin) a ouvert des boutiques entièrement tenues par un robot à Hong Kong et équipe des pharmacies automatisées : c'est la démonstration la plus avancée d'un humanoïde qui fait un travail ennuyeux, mais dans un environnement très contrôlé. Keenon, enfin, a placé fin octobre 2025 un humanoïde d'accueil, le XMAN-R1, au Shangri-La Traders Hotel de l'aéroport de Hongqiao à Shanghai, entouré de ses robots à roues qui font le vrai travail logistique ; ce modèle « humanoïde pour l'accueil, roues pour le reste » est probablement le plus réaliste.",
+            "En Europe, les humanoïdes d'accueil restent des premières médiatiques. Le Bled Rose Hotel, en Slovénie, forme le robot Jože de la société Vandri Robotics, présenté en juin 2026 comme le premier réceptionniste humanoïde d'Europe, qui fonctionne en partie piloté à distance par un humain. L'hôtel Devín de Bratislava a installé en juillet 2026 un humanoïde Unitree baptisé Robbie, qui accueille, oriente, recommande et danse, mais ne monte pas les marches ordinaires et n'accompagne pas en chambre. Ces cas valent pour leur retombée de presse, pas comme preuves d'économies.",
+            "Les quadrupèdes de sécurité forment un segment à part. L'Agibot D1 Ultra coûte environ 8 000 dollars ; ces quadrupèdes d'entrée de gamme sont des plateformes agiles, utilisées pour la démonstration et l'inspection légère. L'ANYmal X de la société suisse ANYbotics, à environ 200 000 dollars, est un vrai robot d'inspection industrielle certifié pour les zones explosives, sans rapport avec un casino. Les références en casino sont des robots à roues de surveillance de parking (Knightscope K5 à Las Vegas et en Louisiane). Pour Namur, un quadrupède n'a de sens qu'en animation, pas en sécurité."
+          ],
+          "chiffres": [
+            {"libelle": "Agibot A2, prix revendeur européen (juin 2026)", "valeur": "119 999 €"},
+            {"libelle": "Agibot X2, prix observés", "valeur": "27 999 $ à 47 900 €"},
+            {"libelle": "Agibot A3, autonomie / changement de batterie", "valeur": "10 heures / 10 secondes"},
+            {"libelle": "Unitree G1, prix Europe / autonomie", "valeur": "12 500 € HT à 27 400 € / environ 2 heures"},
+            {"libelle": "UBTech, chiffre d'affaires 2025 dont humanoïdes", "valeur": "2 Md CNY dont 820 M CNY"},
+            {"libelle": "Agibot D1 Ultra (quadrupède)", "valeur": "environ 8 000 $"}
+          ]
+        },
+        {
+          "titre": "Marché · Robots de nettoyage : le retour sur investissement le plus net",
+          "paragraphes": [
+            "Le nettoyage est devenu le premier relais de croissance des fabricants. Frost & Sullivan attribue à Pudu environ 29 % du chiffre d'affaires mondial des robots de nettoyage commerciaux, et environ 60 % des livraisons de son CC1 partent vers l'Europe et l'Amérique du Nord. Le CC1, robot quatre-en-un (balayage, aspiration, lavage, serpillière), se vend environ 34 000 dollars aux États-Unis ou 1 495 dollars par mois, et apparaît autour de 21 500 euros sur le marché européen de l'occasion récente. Il est conçu pour des surfaces de plusieurs centaines à plusieurs milliers de mètres carrés.",
+            "Gausium (Shanghai) et Avidbots (Canada) occupent le segment des autolaveuses autonomes plus lourdes. Le Scrubber 50 Pro de Gausium, primé en Europe en 2022, coûte entre 43 000 et 51 600 dollars ou environ 1 600 dollars par mois, avec une station qui vide, remplit et recharge seule ; il a été présenté au salon hôtelier allemand dès 2022. L'Avidbots Neo 2 couvre jusqu'à 3 900 m² par heure, pour 30 000 à 50 000 dollars. Ces machines remplacent l'autolaveuse conduite par un agent, pas l'agent d'entretien lui-même, qui reste nécessaire pour les recoins, les sanitaires et la moquette.",
+            "Pour le Casino-Resort, le calcul est simple à faire et devrait être fait avant toute visite : surface carrelée ou en sol dur du hall, des couloirs, des salles de séminaire et du restaurant ; heures de nettoyage mécanique actuellement payées ; contrat de nettoyage externe éventuel. Si l'entretien est sous-traité, le robot n'a d'intérêt que s'il est intégré au contrat du prestataire. Ce chiffrage dira en une demi-journée si le nettoyage est le premier robot rentable, indépendamment de tout effet vitrine."
+          ],
+          "chiffres": [
+            {"libelle": "Part de Pudu dans le chiffre d'affaires mondial des robots de nettoyage commerciaux", "valeur": "environ 29 %"},
+            {"libelle": "Pudu CC1 Pro, achat / location (États-Unis)", "valeur": "environ 34 000 $ / 1 495 $ par mois"},
+            {"libelle": "Gausium Scrubber 50 Pro", "valeur": "43 000 à 51 600 $ / environ 1 600 $ par mois"},
+            {"libelle": "Avidbots Neo 2, surface couverte", "valeur": "jusqu'à 3 900 m² par heure"}
+          ]
+        },
+        {
+          "titre": "Marché · Les fabricants et les rendez-vous à prendre pendant le voyage",
+          "paragraphes": [
+            "Pudu (普渡机器人, Shenzhen) revendique plus de 130 000 robots livrés dans plus de 85 pays et 50 000 clients finaux, environ 25 % du chiffre d'affaires mondial et 44 % des exportations des fabricants chinois du secteur. Il a levé 150 millions de dollars en avril 2026 sur une valorisation de 1,5 milliard et prépare une introduction à la bourse de Hong Kong. Son chiffre d'affaires a doublé en 2025. C'est le fournisseur le plus solide pour un premier robot en Europe, grâce à sa filiale néerlandaise et ses équipes francophones. Shenzhen n'est pas sur l'itinéraire, mais Pudu expose habituellement dans les grands salons chinois et peut être rencontré à Canton le 15 octobre ou visité depuis Guangzhou le 16 (environ 30 minutes de train à grande vitesse).",
+            "Keenon (擎朗智能, Shanghai) revendique plus de 100 000 robots livrés dans plus de 60 pays et 600 villes, avec plus de 80 points de service. Son siège étant à Shanghai, une visite le 12 ou le 14 octobre est la plus simple à organiser, avec démonstration du W3, du T10 et du XMAN-R1. C'est le seul fabricant à proposer en démonstration la combinaison complète accueil humanoïde, livraison en chambre, bagages et nettoyage dans un hôtel réel (le Shangri-La Traders de Hongqiao, proche du centre d'exposition de Shanghai où se tient le CIIF).",
+            "Agibot (Shanghai), déjà au programme le 13 octobre, est le seul acteur de la liste à avoir signé avec un opérateur de casinos : Genting Malaysia, par protocole d'accord du 17 avril 2026, pour des humanoïdes d'accueil, de conciergerie et de spectacle. Les questions à poser sont précises : prix ferme de l'A3 et du X2 livrés en Belgique, marquage CE et certificats TÜV, conditions de service après-vente en Europe via Minth, possibilité de location pour un événement, hébergement des données et désactivation des connexions vers la Chine. Agibot prépare lui aussi une introduction à Hong Kong, avec une valorisation visée de 5 à 6,4 milliards de dollars.",
+            "Unitree (Hangzhou, à une heure de Shanghai en train) est coté au STAR Market depuis août 2026, a réalisé 1,7 milliard de yuans de chiffre d'affaires en 2025 et vise 10 000 à 20 000 humanoïdes livrés en 2026. Un rendez-vous n'a de sens que si la direction veut un humanoïde d'animation bon marché ; il faudrait alors exiger des réponses écrites sur les failles de sécurité publiées. UBTech (Shenzhen) et Orionstar (Pékin) sont des options secondaires : UBTech pour son Cruzr d'accueil, Orionstar pour sa filiale européenne aux Pays-Bas et ses robots d'accueil. Le CIIF (Shanghai, 12 au 16 octobre, plus de 3 000 exposants) et la phase 1 de la Foire de Canton, dont la zone robots de service rassemble les fabricants de Shanghai et Shenzhen, permettent de voir l'ensemble en deux jours ; la Foire de Canton est surtout utile pour comparer les fabricants de second rang, souvent 30 à 50 % moins chers, mais sans réseau européen."
+          ],
+          "chiffres": [
+            {"libelle": "Pudu : robots livrés / pays / clients finaux (juillet 2026)", "valeur": "plus de 130 000 / plus de 85 / plus de 50 000"},
+            {"libelle": "Pudu : levée d'avril 2026 / valorisation", "valeur": "150 M$ / 1,5 Md$"},
+            {"libelle": "Keenon : robots livrés / pays", "valeur": "plus de 100 000 / plus de 60"},
+            {"libelle": "Unitree : chiffre d'affaires 2025 / objectif 2026", "valeur": "1,699 Md CNY / 10 000 à 20 000 humanoïdes"},
+            {"libelle": "Orionstar : robots déployés (2025)", "valeur": "plus de 62 000"}
+          ],
+          "points": [
+            "Keenon (Shanghai) : visite le 12 ou le 14 octobre, avec démonstration hôtelière complète.",
+            "Agibot (Shanghai) : 13 octobre, questions écrites sur prix livré, CE, données et location.",
+            "Pudu (Shenzhen) : à rencontrer à Canton le 15 ou en visite le 16 depuis Guangzhou.",
+            "Unitree (Hangzhou) : seulement si un humanoïde d'animation est envisagé."
+          ]
+        },
+        {
+          "titre": "Marché · Ce qu'enseignent les cas réels, réussites et échecs",
+          "paragraphes": [
+            "Les casinos qui utilisent des robots le font surtout en coulisses. Marina Bay Sands à Singapour a annoncé en juin 2025 une flotte de 12 robots mobiles autonomes pour les livraisons internes de l'hôtel et du centre de congrès : chacun porte 300 kg, prend l'ascenseur seul, et l'ensemble a réduit d'environ 30 % la dépendance à la main-d'œuvre sur plus de 200 livraisons manuelles par jour, avec cinq robots supplémentaires prévus. En Corée du Sud, GKL, exploitant des casinos Seven Luck réservés aux étrangers, a annoncé en avril 2025 un partenariat pour faire transporter jetons et cartes par des robots autonomes. Aux États-Unis, les exemples sont modestes : un Servi Plus au Paragon Casino Resort, des robots de livraison Ottonomy au Santa Ana Star, des robots de sécurité Knightscope sur des parkings. À Macao, les projets publics concernent surtout des robots croupiers (LT Game) et des robots d'information trilingues, sans déploiement de masse documenté.",
+            "Le seul partenariat de grande envergure entre un opérateur de casinos et un fabricant d'humanoïdes est celui de Genting Malaysia avec Agibot, signé en avril 2026. Il porte sur des humanoïdes d'accueil et de conciergerie, sur l'intégration de robots dans les spectacles et sur des projets pilotes ; le premier spectacle de robots d'Agibot hors de Chine doit être présenté à Resorts World Genting début 2027. À ce stade, il s'agit d'un protocole d'accord et d'un spectacle annoncé, pas d'un retour d'exploitation : il faut le lire comme un signal stratégique, pas comme une preuve.",
+            "Le parc Chimelong Spaceship de Zhuhai est l'échelle supérieure. Depuis fin septembre 2026, plus de 300 robots Agibot y sont déployés dans sept usages : spectacles, éducation scientifique, visites guidées, vente, compagnie, services hôteliers et compétitions sportives. Les robots font des démonstrations d'arts martiaux et de tai-chi, jouent au tennis de table avec les visiteurs, répondent aux questions et guident les visiteurs ; à l'hôtel, ils accueillent les clients. Un réseau 5G dédié a été construit avec China Mobile pour assurer la connexion dans les zones de forte affluence, ce qui rappelle que ces déploiements exigent une infrastructure lourde. Les conditions financières ne sont pas publiées, et Chimelong est partenaire de recherche d'Agibot : c'est une vitrine co-construite, pas un client ordinaire.",
+            "En Europe et en Belgique, les cas hôteliers sont rares et anciens. Le Marriott de Gand a fait travailler dès juin 2015 Mario, un petit robot NAO de 48 cm programmé par la société belge Zora Robotics, qui parlait 19 langues, remettait les clés et animait les séminaires, pour environ 15 000 euros d'investissement ; l'expérience a fait beaucoup parler mais ne s'est pas généralisée. Le Parkhotel d'Eisenstadt en Autriche a déployé fin 2023 cinq types de robots Pudu (accueil, service, débarrassage, nettoyage, livraison en chambre) ; les retours publiés viennent du fabricant. Le Renaissance La Défense est le cas le plus solide pour le room service de nuit. Aux Pays-Bas, de nombreux restaurants ont adopté des robots de service face à la pénurie de personnel. Nous n'avons trouvé aucun casino européen, ni chez Holland Casino ni chez les grands groupes français, qui communique sur un robot en salle de jeux.",
+            "Les échecs sont aussi instructifs que les succès. Le Henn-na Hotel de Nagasaki, entré au Guinness en 2015 comme premier hôtel tenu par des robots, a retiré en janvier 2019 environ la moitié de ses 243 robots : ils créaient du travail au lieu d'en supprimer, réveillaient des clients qui ronflaient en croyant entendre une question, ne savaient pas répondre à des demandes simples, et le personnel faisait des heures supplémentaires pour les réparer. Pepper, l'humanoïde de SoftBank, a vu sa production arrêtée en juin 2021 après seulement 27 000 unités, faute de demande, et sa filiale française Aldebaran a été placée en redressement en février 2025 avant la reprise de ses actifs par le chinois Maxvision. À Canton, trois restaurants avaient renoncé dès 2016 à leurs serveurs robots, incapables de porter une soupe sans la renverser. La leçon commune est que le robot échoue quand on lui confie une tâche ouverte, avec des humains imprévisibles, et réussit quand on lui confie un trajet."
+          ],
+          "chiffres": [
+            {
+              "libelle": "Marina Bay Sands : robots de logistique interne / baisse de la dépendance à la main-d'œuvre",
+              "valeur": "12 (+5 prévus) / environ 30 %"
+            },
+            {"libelle": "Chimelong Spaceship (Zhuhai) : robots Agibot depuis septembre 2026", "valeur": "plus de 300, dans 7 usages"},
+            {"libelle": "Henn-na Hotel : robots retirés en janvier 2019", "valeur": "environ la moitié de 243"},
+            {"libelle": "Pepper (SoftBank) : unités produites 2014-2020", "valeur": "27 000"},
+            {"libelle": "Robot Mario au Marriott de Gand (2015) : investissement", "valeur": "environ 15 000 €"}
+          ]
+        },
+        {
+          "titre": "Marché · Recommandation pour un premier pas à Namur",
+          "paragraphes": [
+            "La recommandation est de commencer par l'hôtel et le restaurant, avec des robots à roues loués, et de traiter l'humanoïde comme une opération d'image séparée, limitée dans le temps. Concrètement, un premier lot de deux à trois appareils suffit : un robot de livraison en chambre de type Keenon W3 ou Pudu FlashBot pour le service de nuit, un robot hybride service et promotion de type KettyBot Pro ou T10 pour le restaurant, les banquets et le hall, et éventuellement un robot de nettoyage si le chiffrage des surfaces le justifie. En location, l'ensemble se situe vraisemblablement entre 1 500 et 3 500 euros par mois, hors adaptation de l'ascenseur ; à l'achat, entre 40 000 et 80 000 euros. Ces montants sont des estimations établies à partir de prix américains et européens observés, et doivent être confirmés par devis.",
+            "Ce choix se justifie par trois raisons. D'abord, ce sont les seuls usages où des milliers d'établissements ont plusieurs années de recul. Ensuite, Pudu et Keenon disposent d'équipes et de distributeurs en Europe, avec marquage CE et pièces détachées, ce qui n'est pas encore démontré pour les humanoïdes. Enfin, la location permet de mesurer pendant six mois des indicateurs simples (nombre de livraisons par nuit, temps de service au restaurant, heures de nettoyage économisées, réactions des clients et du personnel) et d'arrêter sans perte si les résultats ne suivent pas. La salle de jeux elle-même n'est pas le bon premier terrain : l'espace est encombré, la clientèle est surtout composée d'habitués que la nouveauté lasse vite, et la publicité pour les jeux y est encadrée par la loi.",
+            "Un humanoïde n'est pas le premier choix rationnel en exploitation. Il coûte 10 000 à 120 000 euros selon le modèle, fonctionne deux à dix heures, ne gère ni clé, ni paiement, ni enregistrement, exige une supervision humaine et pose, pour certaines marques, des questions de sécurité informatique documentées. Les cas européens (Bled, Bratislava) sont des premières médiatiques, et le seul opérateur de casinos engagé, Genting, en est au protocole d'accord. Le nouveau règlement européen sur les machines, applicable à partir du 20 janvier 2027, ajoutera des exigences de cybersécurité et d'évaluation des fonctions d'intelligence artificielle qui pourraient retarder ou renchérir la mise sur le marché de certains modèles.",
+            "Il peut pourtant avoir du sens comme vitrine, à condition de l'assumer comme telle. Un humanoïde de type Agibot X2 ou A3 au Casino-Resort, pour l'ouverture d'une saison, un gala ou un événement, ferait probablement l'objet d'une couverture médiatique régionale et serait une première pour un casino belge, ce que nous n'avons trouvé nulle part ailleurs en Europe. La bonne formule est la location événementielle ou un achat unique budgété en communication, pas en exploitation, avec un contrat qui garantit l'hébergement européen des données. Le rendez-vous Agibot du 13 octobre est l'occasion d'obtenir un prix ferme et une proposition de location ; la décision d'achat, elle, peut attendre le retour du pilote à roues."
+          ],
+          "chiffres": [
+            {"libelle": "Pilote recommandé", "valeur": "2 à 3 robots à roues (livraison en chambre, service et promotion, nettoyage éventuel)"},
+            {"libelle": "Budget estimé du pilote en location (hors ascenseur, à confirmer)", "valeur": "1 500 à 3 500 € par mois"},
+            {"libelle": "Budget estimé à l'achat (à confirmer)", "valeur": "40 000 à 80 000 €"},
+            {"libelle": "Application du règlement européen sur les machines 2023/1230", "valeur": "20 janvier 2027"}
+          ],
+          "points": [
+            "D'abord : chiffrer les surfaces de nettoyage et le volume de demandes en chambre la nuit, avant le voyage.",
+            "Pendant le voyage : devis écrits Keenon, Pudu et Agibot, avec prix livré en Belgique, location, CE et données.",
+            "Après : pilote de six mois en location, avec indicateurs mesurés, puis décision sur l'humanoïde vitrine."
+          ]
+        },
+        {
+          "titre": "Cadre légal · Sécurité du produit et marquage CE : qui porte la responsabilité d'un robot venu de Chine",
+          "paragraphes": [
+            "Un robot de service est à la fois une machine, un appareil électrique, un émetteur radio (Wi-Fi, Bluetooth, 4G/5G), un produit à batterie lithium et un futur déchet électronique. Chacune de ces qualités déclenche un texte européen distinct, et le marquage CE n'a de valeur que si le fabricant les a tous appliqués et les cite un par un dans une déclaration UE de conformité signée. Le texte central est aujourd'hui la directive Machines 2006/42/CE, remplacée le 20 janvier 2027 par le règlement (UE) 2023/1230, directement applicable et sans période de cohabitation. Ce qui compte est la date de mise sur le marché ou en service de chaque robot, pas celle de la commande : un robot livré en février 2027 devra être conforme au règlement, ce qu'il faut écrire dans le contrat.",
+            "Le règlement 2023/1230 vise précisément ce type de machine. Il ajoute des exigences pour les machines mobiles autonomes et pour les systèmes au « comportement totalement ou partiellement auto-évolutif » fondés sur l'apprentissage automatique : le robot ne doit pas sortir des limites de mouvement et de tâches fixées par le fabricant, ses décisions liées à la sécurité doivent être traçables, et l'interface doit s'adapter aux personnes présentes. Il impose aussi une protection contre la corruption accidentelle ou malveillante des composants qui conditionnent la sécurité, ce qui fait entrer la cybersécurité dans la sécurité physique. Les machines dont une fonction de sécurité repose sur l'IA peuvent exiger l'intervention d'un organisme notifié. La notice peut être numérique, mais une version papier gratuite doit être fournie sur demande.",
+            "Plusieurs autres textes s'appliquent cumulativement. Les directives basse tension 2014/35/UE et compatibilité électromagnétique 2014/30/UE couvrent la sécurité électrique et les perturbations ; pour un appareil radio, la directive RED 2014/53/UE les absorbe et, depuis le 1er août 2025, son règlement délégué 2022/30 impose des exigences de cybersécurité (normes EN 18031 publiées en janvier 2025). Le règlement batteries (UE) 2023/1542 encadre l'étiquetage, la sécurité et la reprise des batteries lithium. Les directives RoHS 2011/65/UE et DEEE 2012/19/UE limitent les substances dangereuses et organisent la fin de vie, en Belgique via Recupel et Bebat. Le règlement sur la sécurité générale des produits (UE) 2023/988 comble les angles morts pour un usage au contact du public.",
+            "Les normes ne sont pas obligatoires, mais leur respect crée une présomption de conformité, et c'est ce que vérifieront un assureur, un contrôleur ou un juge après un accident. Pour un robot circulant parmi des clients, la référence est l'ISO 13482 (robots de service), dont l'édition 2014 est en cours de remplacement par une édition élargie aux robots professionnels, au stade final d'approbation depuis juillet 2025. L'EN ISO 3691-4:2023, harmonisée depuis mai 2024, couvre les robots mobiles autonomes de transport, donc les robots de livraison en étage. Les ISO 10218-1 et -2 (2025) ne concernent que les robots dotés d'un bras manipulateur. Le fournisseur doit produire les rapports d'essai d'un laboratoire accrédité, pas une attestation commerciale.",
+            "Le point décisif est la qualité juridique de Gaming1. S'il achète à un distributeur établi dans l'Union, c'est ce distributeur ou l'importateur en amont qui répond de la conformité ; Gaming1 reste seulement tenu, comme employeur, de n'utiliser que des équipements conformes. S'il achète directement à l'usine chinoise et dédouane lui-même, il devient l'opérateur économique européen du produit : le règlement 2019/1020 exige qu'un opérateur établi dans l'Union réponde de chaque produit, et l'article 13 du règlement 2023/1230 fait de l'importateur le garant de la conformité. Il doit alors vérifier la procédure d'évaluation, l'existence du dossier technique, le marquage CE et la notice en français, apposer son nom et son adresse sur le robot ou l'emballage, conserver la déclaration de conformité dix ans et organiser les rappels.",
+            "Toute modification substantielle du robot après achat (module ajouté, logiciel de sécurité changé, vitesses ou zones de circulation modifiées) fait de celui qui la réalise un « fabricant » au sens du règlement 2023/1230, tenu de refaire l'évaluation de conformité ; c'est à surveiller si un intégrateur local adapte le robot au Resort. Un robot non conforme peut être retiré du service sur décision administrative. Recommandation : acheter via un distributeur ou un mandataire établi dans l'UE, ou à défaut imposer contractuellement au fabricant chinois la désignation d'un importateur européen solvable."
+          ],
+          "chiffres": [
+            {"libelle": "Application du règlement Machines (UE) 2023/1230", "valeur": "20 janvier 2027, sans période transitoire"},
+            {"libelle": "Cybersécurité obligatoire des appareils radio (RED, règlement délégué 2022/30)", "valeur": "depuis le 1er août 2025"},
+            {"libelle": "Conservation de la déclaration UE de conformité par l'importateur", "valeur": "10 ans"},
+            {"libelle": "Accessibilité en ligne de la notice numérique", "valeur": "durée de vie de la machine + au moins 10 ans"}
+          ]
+        },
+        {
+          "titre": "Cadre légal · AI Act (règlement (UE) 2024/1689) : classement du robot et obligations du déployeur",
+          "paragraphes": [
+            "Le règlement européen sur l'intelligence artificielle distingue le fournisseur (celui qui développe ou met sur le marché le système d'IA, ici le fabricant chinois ou son représentant) et le déployeur (celui qui l'utilise sous sa propre autorité, ici le Casino-Resort). Un robot d'accueil doté d'un agent conversationnel et de caméras n'est en principe pas un système à haut risque : l'accueil, l'orientation, la livraison ou le divertissement ne figurent pas dans la liste de l'annexe III. Il le devient s'il intègre certaines fonctions, en particulier l'identification biométrique à distance (reconnaître un client par son visage), la catégorisation biométrique ou la reconnaissance des émotions, toutes trois listées à l'annexe III. Le classement dépend donc moins du robot que des fonctions activées, et c'est un choix de paramétrage que la direction peut et doit faire en amont.",
+            "Certaines pratiques sont purement interdites depuis le 2 février 2025 (article 5). La reconnaissance des émotions sur le lieu de travail est prohibée : un robot qui analyserait le visage ou la voix des croupiers, réceptionnistes ou serveurs pour en déduire stress, fatigue ou humeur est illégal, sauf raisons médicales ou de sécurité au sens strict. La catégorisation biométrique visant à déduire l'origine, les opinions, la religion ou l'orientation sexuelle est également interdite. L'interdiction de l'identification biométrique à distance « en temps réel » dans les espaces publics vise les autorités répressives et non un opérateur privé ; mais pour Gaming1, la reconnaissance faciale des clients reste soumise au RGPD, qui l'interdit sauf consentement explicite, et elle ferait basculer le système dans le haut risque. Les sanctions pour une pratique interdite peuvent atteindre 35 millions d'euros ou 7 % du chiffre d'affaires mondial.",
+            "Les obligations de transparence de l'article 50 s'appliquent depuis le 2 août 2026 et concernent directement ce projet. Le fournisseur doit concevoir le robot de manière à ce que les personnes sachent qu'elles interagissent avec une IA, sauf si c'est évident ; la Commission a publié le 20 juillet 2026 ses lignes directrices finales sur ces obligations. Un robot à l'apparence humanoïde qui converse en langage naturel n'est pas forcément « évident » pour un client âgé ou un enfant : une annonce vocale et un affichage clair sont prudents. Le déployeur qui utilise un système de reconnaissance des émotions ou de catégorisation biométrique sur des clients doit, de son côté, en informer les personnes exposées. Le marquage des contenus générés par IA (images, voix de synthèse diffusées) bénéficie d'un délai jusqu'au 2 décembre 2026 pour les systèmes déjà sur le marché.",
+            "Le calendrier a changé en 2026. Le « Digital Omnibus » sur l'IA, règlement (UE) 2026/1744 publié le 24 juillet 2026 et en vigueur depuis le 27 juillet, reporte les obligations à haut risque de l'annexe III au 2 décembre 2027 et celles des produits réglementés (annexe I) au 2 août 2028. Surtout, il déplace le règlement Machines de la section A à la section B de l'annexe I : l'IA embarquée dans une machine sera principalement encadrée par le règlement Machines 2023/1230 plutôt que par le régime haut risque de l'AI Act. L'obligation de « maîtrise de l'IA » (article 4) a été assouplie, mais former le personnel reste la meilleure défense en cas d'incident. Les interdictions, la transparence et les règles sur la reconnaissance des émotions sont inchangées.",
+            "Si une fonction à haut risque était malgré tout activée, le déployeur devrait à partir de décembre 2027 suivre la notice, confier la supervision humaine à des personnes compétentes, conserver les journaux au moins six mois et informer les représentants des travailleurs avant la mise en service (article 26). En Belgique, le BIPT est l'autorité principale de surveillance du marché pour l'AI Act, mais le cadre d'exécution belge reste incomplet. Recommandation : exiger que reconnaissance faciale, analyse des émotions et profilage soient désactivés par défaut et ne puissent être activés qu'après décision écrite de la direction et analyse juridique."
+          ],
+          "chiffres": [
+            {"libelle": "Pratiques interdites (article 5)", "valeur": "applicables depuis le 2 février 2025"},
+            {"libelle": "Transparence (article 50)", "valeur": "applicable depuis le 2 août 2026"},
+            {"libelle": "Haut risque annexe III (après omnibus 2026/1744)", "valeur": "2 décembre 2027"},
+            {"libelle": "Haut risque intégré à des produits (annexe I)", "valeur": "2 août 2028"},
+            {"libelle": "Amende maximale pour pratique interdite", "valeur": "35 M€ ou 7 % du CA mondial"}
+          ]
+        },
+        {
+          "titre": "Cadre légal · RGPD et loi caméras : le robot est une caméra et un micro mobiles",
+          "paragraphes": [
+            "Un robot qui se déplace dans un hall d'hôtel ou une salle de jeux filme, écoute et localise des personnes en permanence, même si ce n'est pas sa fonction principale : caméras de navigation, capteurs de profondeur, microphones de l'assistant vocal, parfois écran tactile qui collecte des saisies. Le Casino-Resort, qui décide d'utiliser ce robot et à quelles fins, est responsable du traitement au sens du RGPD ; le fabricant qui reçoit des données sur son cloud est au minimum sous-traitant, et souvent responsable conjoint s'il réutilise les données pour entraîner ses modèles. Il faut donc un contrat de sous-traitance conforme à l'article 28 du RGPD, une base légale pour chaque finalité, une information des clients et du personnel, une durée de conservation définie et une inscription au registre des traitements. L'intérêt légitime peut fonder la navigation et le service rendu, mais pas l'enregistrement systématique de conversations ni la reconnaissance faciale, qui requiert un consentement explicite (article 9).",
+            "Une analyse d'impact relative à la protection des données (AIPD, article 35 du RGPD) est à considérer comme obligatoire. La liste adoptée par l'APD (décision 01/2019) vise notamment le traitement de données biométriques pour identifier des personnes dans un lieu privé accessible au public, ainsi que le traitement à grande échelle de données issues d'objets connectés munis de capteurs servant à analyser comportements ou déplacements, et le recours à une technologie nouvelle est un facteur aggravant reconnu par le Comité européen de la protection des données. L'AIPD doit être réalisée avant le déploiement, avec le délégué à la protection des données du groupe, et doit décrire les flux de données, les risques (enfants, joueurs vulnérables, personnes exclues, conversations surprises à table ou au comptoir) et les mesures (floutage à la source, absence d'enregistrement, effacement immédiat). Si un risque élevé subsiste après mesures, la consultation préalable de l'APD est obligatoire.",
+            "La loi belge du 21 mars 2007 sur les caméras de surveillance, modifiée par la loi du 21 mars 2018, ajoute une contrainte décisive. Elle ne vise que les caméras utilisées pour surveiller et contrôler ; une caméra de pure navigation, sans enregistrement ni visionnage, relève du seul RGPD. Mais si les images du robot servent, même accessoirement, à la sécurité, il devient une caméra de surveillance mobile. Or l'article 7/2 n'autorise un responsable privé à utiliser des caméras mobiles dans un lieu fermé que dans trois cas : dans le cadre de l'article 142 de la loi du 2 octobre 2017 sur la sécurité privée, dans les parties où personne n'est supposé être présent, ou à des fins domestiques. Un hall d'hôtel ou une salle de jeux étant des lieux fermés accessibles au public, un robot de surveillance y est, en l'état du texte, quasi inadmissible.",
+            "Il faut donc verrouiller contractuellement et techniquement que les flux vidéo ne servent qu'à la navigation, sans enregistrement ni transmission à une centrale de surveillance, et l'écrire dans la politique de confidentialité. Un éventuel volet sécurité (rondes de nuit) ne peut viser que des zones où personne n'est censé se trouver, avec notification à la police au plus tard la veille de la mise en service, registre et pictogrammes ; les images de surveillance se conservent en principe un mois au maximum. Le RGPD prévoit des amendes jusqu'à 20 millions d'euros ou 4 % du chiffre d'affaires mondial.",
+            "Le transfert de données vers la Chine est le risque le plus lourd. La Chine ne bénéficie d'aucune décision d'adéquation : un cloud situé en Chine, et même un simple accès à distance depuis la Chine pour la maintenance, constituent un transfert soumis au chapitre V du RGPD. Le 2 mai 2025, l'autorité irlandaise a infligé 530 millions d'euros à TikTok pour un tel accès à distance, en relevant que la loi chinoise sur le renseignement et la loi antiterroriste s'écartent des standards européens. Des clauses contractuelles types ne suffisent pas sans analyse du transfert, qui conclura difficilement à une protection équivalente. Il faut donc exiger un hébergement dans l'Union, aucun accès distant depuis la Chine (ou un accès journalisé sans données personnelles), un mode de fonctionnement local et l'interdiction de réutiliser les données pour l'entraînement."
+          ],
+          "chiffres": [
+            {"libelle": "Amende TikTok (DPC, 2 mai 2025) pour accès aux données depuis la Chine", "valeur": "530 M€"},
+            {"libelle": "Conservation maximale des images de surveillance (régime général loi caméras)", "valeur": "1 mois"},
+            {"libelle": "Notification police des caméras mobiles", "valeur": "au plus tard la veille de la mise en service"},
+            {"libelle": "Amende RGPD maximale", "valeur": "20 M€ ou 4 % du CA mondial"}
+          ]
+        },
+        {
+          "titre": "Cadre légal · Jeux de hasard : ce que la loi du 7 mai 1999 implique pour un robot en salle",
+          "paragraphes": [
+            "La loi du 7 mai 1999 sur les jeux de hasard ne contient aucune règle sur les robots : rien n'interdit ni n'autorise un robot de service dans un casino (classe I) ou une salle de jeux automatiques (classe II). Ce silence n'est pas une liberté, car le robot touche plusieurs obligations de la licence : contrôle d'accès, protection des joueurs, interdiction des bonus, publicité et vidéosurveillance imposée par la Commission des jeux de hasard. La licence étant un actif critique, il faut consulter formellement la Commission avant tout déploiement en salle, avec un descriptif précis des fonctions du robot. Un déploiement limité à l'hôtel, hors salles de jeux, ne pose pas cette difficulté.",
+            "Le contrôle d'accès est le premier point de friction. L'article 54 de la loi, modifié par la loi du 18 février 2024, fixe désormais à 21 ans l'âge minimum pour tous les jeux de hasard, et l'accès aux salles des classes I et II suppose l'identification du joueur, l'inscription dans un registre (article 62) et la consultation du système EPIS des personnes exclues ; la Cour constitutionnelle a validé ce contrôle par son arrêt 45/2026 du 16 avril 2026. Un robot ne peut pas se substituer à ce contrôle sans validation de la Commission, et il ne doit pas pouvoir guider ou faire entrer une personne dans la salle en contournant le poste d'accueil. À l'inverse, un robot circulant dans le Resort croisera des mineurs et des personnes exclues : son discours ne doit jamais les inciter à jouer.",
+            "La loi du 18 février 2024 a aussi clarifié l'interdiction des bonus (participations gratuites, crédits de jeu et avantages destinés à attirer ou retenir les joueurs) et posé une interdiction de principe de la publicité pour les jeux de hasard ; la Cour constitutionnelle a rejeté pour l'essentiel les recours contre ces mesures (arrêt 165/2025 du 11 décembre 2025). L'arrêté royal du 27 février 2023 sur la publicité, en vigueur depuis le 1er juillet 2023, interdit déjà la plupart des formes de publicité, notamment dans l'espace public et par communication personnalisée. Un robot qui, dans le hall de l'hôtel ou à l'extérieur, vanterait les jeux, distribuerait des bons de jeu ou proposerait des avantages aux joueurs risquerait d'être qualifié de publicité ou de bonus prohibés. Le scénario conversationnel du robot doit donc être relu par le service conformité, et toute fonction promotionnelle liée au jeu exclue par défaut.",
+            "Le protocole informatique de la Commission pour les casinos (version 15.0.1 du 12 décembre 2018, en exécution de l'article 33 de la loi) impose des caméras à des endroits déterminés, notamment au poste d'enregistrement des joueurs et dans les locaux techniques, une conservation des enregistrements pendant huit semaines et la notification immédiate de toute panne. Un robot circulant entre les tables pourrait masquer une caméra, perturber le réseau ou constituer une source de données non déclarée ; tout raccordement au réseau de la salle doit être isolé des systèmes de jeux et du système de contrôle relié à la Commission. Aucun texte ne règle ces points : c'est précisément ce qu'il faut soumettre à la Commission.",
+            "La demande à la Commission devrait décrire les zones de circulation, les fonctions, l'absence d'interaction avec les jeux et de fonction promotionnelle, le traitement des images et l'impact sur la vidéosurveillance réglementaire, et solliciter une confirmation écrite. Si le robot sert de l'alcool en salle, le cas des clients manifestement ivres doit être traité. Les sites français et suisses du groupe relèvent d'autres régulateurs (ANJ et ministère de l'Intérieur, CFMJ) et exigent une analyse séparée."
+          ],
+          "chiffres": [
+            {"libelle": "Âge minimum pour tous les jeux de hasard (loi du 18 février 2024)", "valeur": "21 ans"},
+            {"libelle": "Conservation des enregistrements vidéo en casino (protocole Commission)", "valeur": "8 semaines"},
+            {"libelle": "Arrêté royal publicité jeux de hasard", "valeur": "27 février 2023, en vigueur au 1er juillet 2023"},
+            {"libelle": "Arrêt de la Cour constitutionnelle validant le contrôle EPIS", "valeur": "45/2026 du 16 avril 2026"}
+          ]
+        },
+        {
+          "titre": "Cadre légal · Droit du travail belge : information, concertation, bien-être et surveillance",
+          "paragraphes": [
+            "L'introduction d'un robot dans un hôtel ou une salle de jeux est juridiquement une introduction de nouvelle technologie. La convention collective de travail n° 39 du 13 décembre 1983 du Conseil national du travail s'applique aux entreprises occupant au moins 50 travailleurs : lorsque l'investissement a des conséquences collectives importantes sur l'emploi, l'organisation du travail ou les conditions de travail, l'employeur doit informer le conseil d'entreprise (à défaut la délégation syndicale) au plus tard trois mois avant le début de l'implantation, sur la nature de la technologie, les raisons économiques, les conséquences sociales et le calendrier, puis se concerter. Un robot de service qui reprend une partie des tâches de room service, de bagagistes ou de serveurs entre clairement dans ce champ. Le non-respect expose à un contentieux social et, en pratique, à un blocage du projet par les organisations syndicales.",
+            "Le comité pour la prévention et la protection au travail (CPPT) doit, de son côté, rendre un avis préalable sur tout projet susceptible d'avoir des conséquences sur le bien-être des travailleurs, et spécifiquement sur les nouvelles technologies (article 65 de la loi du 4 août 1996 sur le bien-être et articles II.7-2 et suivants du Code du bien-être au travail). Le robot étant un équipement de travail au sens du livre IV du Code, l'employeur doit réaliser une analyse des risques avec le conseiller en prévention : collisions avec le personnel, coincements, charges transportées, risques électriques et d'incendie de batterie, mais aussi risques psychosociaux (charge mentale, perte de sens, crainte pour l'emploi, sentiment d'être observé). Les résultats de cette analyse alimentent les consignes, la signalisation et la formation.",
+            "La surveillance des travailleurs est encadrée par la CCT n° 68 du 16 juin 1998 (caméras) et la CCT n° 81 du 26 avril 2002 (données de communication électroniques). Un robot qui filme filme aussi le personnel : la CCT n° 68 n'admet la surveillance que pour la sécurité et la santé, la protection des biens, le contrôle de la production ou du travail, impose une information préalable du conseil d'entreprise et des travailleurs (finalité, conservation, nombre et emplacement des caméras, périodes) et exige que le contrôle du travail soit temporaire et proportionné. Les journaux d'interaction du robot avec des employés identifiables peuvent devenir un outil de contrôle des performances, ce qui doit être exclu ou concerté.",
+            "L'acceptation sociale est un enjeu réel : dans des métiers où l'accueil humain fait l'expérience client, le robot peut être perçu comme l'annonce de suppressions d'emplois. Le présenter au conseil d'entreprise comme un pilote limité dans le temps et l'espace, avec une évaluation partagée et, si la direction le décide, un engagement écrit d'absence de licenciement lié au projet, désamorce une partie des résistances. La formation doit couvrir l'utilisation, l'arrêt d'urgence, la conduite à tenir en cas d'incident avec un client et les réponses aux questions sur les données."
+          ],
+          "chiffres": [
+            {"libelle": "Délai d'information du conseil d'entreprise (CCT n° 39)", "valeur": "au moins 3 mois avant l'implantation"},
+            {"libelle": "Seuil d'application de la CCT n° 39", "valeur": "50 travailleurs"},
+            {"libelle": "CCT caméras sur le lieu de travail", "valeur": "n° 68 du 16 juin 1998"},
+            {"libelle": "CCT données de communication électroniques", "valeur": "n° 81 du 26 avril 2002"}
+          ]
+        },
+        {
+          "titre": "Cadre légal · Responsabilité civile, assurances et cybersécurité",
+          "paragraphes": [
+            "En cas de collision avec un client, la victime se retournera d'abord contre l'exploitant. Depuis le 1er janvier 2025, le livre 6 du Code civil sur la responsabilité extracontractuelle remplace les anciens articles 1382 et suivants ; son article 6.16 rend le gardien d'une chose corporelle responsable sans faute du dommage causé par un défaut de cette chose, le propriétaire étant présumé gardien, et une chose est défectueuse lorsqu'elle n'offre pas la sécurité que l'on peut légitimement attendre. Le Resort sera donc présumé responsable de son robot, et devra ensuite se retourner contre le fabricant ou l'importateur. Les victimes vulnérables (enfant qui court, personne âgée, client en fauteuil, client ivre qui trébuche sur le robot) sont précisément celles pour lesquelles la sécurité « légitimement attendue » sera appréciée le plus sévèrement. Le client de l'hôtel peut aussi invoquer la responsabilité contractuelle de l'hôtelier, tenu d'une obligation de sécurité.",
+            "La nouvelle directive (UE) 2024/2853 sur la responsabilité du fait des produits défectueux doit être transposée au plus tard le 9 décembre 2026 et s'appliquera aux produits mis sur le marché après cette date ; le Conseil des ministres belge a approuvé un avant-projet de transposition le 18 juillet 2026. Elle inclut expressément les logiciels, y compris les mises à jour et les systèmes d'IA, considère qu'un défaut de cybersécurité ou l'absence de mise à jour de sécurité peut rendre un produit défectueux, et allège la charge de la preuve de la victime pour les produits techniquement complexes. Surtout, lorsque le fabricant est établi hors de l'Union, la victime peut agir contre l'importateur, puis contre le mandataire ou le prestataire de services d'exécution des commandes. Si Gaming1 importe lui-même, il devient la cible naturelle des actions, sans fabricant européen solvable derrière lui : c'est un argument fort en faveur de l'achat via un distributeur européen.",
+            "Côté assurances, la police de responsabilité civile exploitation doit couvrir explicitement les dommages causés par des robots autonomes et des systèmes d'IA, sans exclusion des « risques technologiques ». L'assurance obligatoire de responsabilité objective incendie-explosion (loi du 30 juillet 1979), à laquelle l'hôtel et le casino sont soumis comme établissements accessibles au public, indemnise les tiers sans faute de l'exploitant : un emballement thermique de la batterie du robot en relève, mais l'assureur doit être informé de ce nouveau risque. Le robot lui-même doit être couvert en bris de machine, vol et vandalisme, et la police cyber doit couvrir une compromission via cet objet connecté circulant au milieu du public.",
+            "Le règlement (UE) 2024/2847 sur la cyber-résilience (CRA) imposera aux produits numériques une sécurité dès la conception, une gestion des vulnérabilités et des mises à jour pendant la période de support. Son calendrier est échelonné : organismes d'évaluation depuis le 11 juin 2026, signalement des vulnérabilités activement exploitées depuis le 11 septembre 2026, exigences complètes au 11 décembre 2027. Il vise surtout fabricant et importateur, mais donne un levier contractuel : durée de support de sécurité définie (au moins cinq ans), point de contact vulnérabilités, liste des composants logiciels. Côté exploitant, le robot doit être sur un réseau isolé, sans accès aux systèmes de réservation, de caisse ou de jeux, et ses comptes d'administration maîtrisés par le Resort."
+          ],
+          "chiffres": [
+            {"libelle": "Entrée en vigueur du livre 6 du Code civil (responsabilité extracontractuelle)", "valeur": "1er janvier 2025"},
+            {"libelle": "Transposition de la directive 2024/2853 (produits défectueux, logiciels inclus)", "valeur": "9 décembre 2026"},
+            {"libelle": "CRA : signalement des vulnérabilités exploitées", "valeur": "depuis le 11 septembre 2026"},
+            {"libelle": "CRA : application complète", "valeur": "11 décembre 2027"}
+          ]
+        },
+        {
+          "titre": "Cadre légal · Accessibilité, sécurité incendie, évacuation et cohabitation avec les personnes à mobilité réduite",
+          "paragraphes": [
+            "Un robot qui circule dans les couloirs d'un hôtel et dans une salle de jeux occupe physiquement les chemins d'évacuation. L'hôtel est soumis aux normes de sécurité incendie applicables aux établissements d'hébergement touristique en Wallonie et doit disposer d'une attestation de sécurité incendie délivrée par le bourgmestre sur rapport des pompiers ; la salle de jeux relève de la réglementation communale et des normes de base de prévention incendie. Ces textes n'évoquent pas les robots, mais ils interdisent d'encombrer les chemins d'évacuation et de réduire leur largeur utile. Le robot doit donc avoir une zone de stationnement et de recharge hors des voies d'évacuation, recevoir le signal d'alarme incendie et rejoindre automatiquement cette zone, et pouvoir être déplacé à la main en cas de panne. Il est prudent de soumettre le plan de circulation et l'emplacement des bornes de recharge au service incendie lors de la prochaine visite.",
+            "La batterie lithium est le principal risque incendie. Les bornes de recharge doivent être placées à l'écart des matériaux combustibles et des issues, sous détection incendie, et l'installation électrique contrôlée par un organisme agréé conformément au Règlement général sur les installations électriques. Si le robot utilise les ascenseurs, son interfaçage avec leur commande modifie l'installation : l'arrêté royal du 9 mars 2003 relatif à la sécurité des ascenseurs soumet celle-ci au contrôle d'un service externe pour les contrôles techniques (SECT), qui devra valider l'intégration. Le robot ne doit jamais utiliser l'ascenseur en cas d'alarme incendie.",
+            "La cohabitation avec les personnes à mobilité réduite, malvoyantes ou âgées relève autant de la sécurité que de la non-discrimination. Le robot ne doit pas occuper rampes, ascenseurs ou passages adaptés quand une personne en a besoin, doit détecter cannes, déambulateurs et fauteuils (à démontrer par les essais ISO 13482 et EN ISO 3691-4) et émettre des signaux sonores et lumineux. Une alternative humaine doit toujours rester disponible pour chaque service. L'Acte européen sur l'accessibilité (directive 2019/882), applicable depuis le 28 juin 2025, ne couvre pas en principe l'accueil hôtelier, mais s'impose au terminal de paiement que le robot intégrerait."
+          ],
+          "chiffres": [
+            {"libelle": "Application de l'Acte européen sur l'accessibilité", "valeur": "28 juin 2025"},
+            {"libelle": "Arrêté royal sécurité des ascenseurs", "valeur": "9 mars 2003 (modifié en dernier lieu le 27 novembre 2022)"}
+          ]
+        },
+        {
+          "titre": "Cadre légal · Check-list de conformité et documents à exiger du fournisseur",
+          "paragraphes": [
+            "La check-list ordonne les étapes : les premières conditionnent la signature du bon de commande, les suivantes la mise en service. Conseil d'entreprise, CPPT, Commission des jeux de hasard et AIPD ont des délais incompressibles : une mise en service en salle de jeux moins de quatre à six mois après la décision de principe est irréaliste. Un pilote limité à l'hôtel, sans surveillance ni reconnaissance faciale, avec un fournisseur établi dans l'UE, lève la plupart des points bloquants. Un fournisseur incapable de produire les documents ci-dessous avant la commande ne doit pas être retenu, quel que soit le prix.",
+            "Documents à exiger du fournisseur : la déclaration UE de conformité signée citant toutes les législations applicables (Machines 2006/42/CE ou règlement 2023/1230 selon la date de livraison, RED 2014/53/UE et règlement délégué 2022/30, CEM, basse tension si pertinent, RoHS, batteries 2023/1542) ; l'identité et l'adresse de l'importateur ou du mandataire établi dans l'Union ; l'accès au dossier technique sur demande des autorités ; les rapports d'essai d'un laboratoire accrédité sur ISO 13482 et EN ISO 3691-4 (et EN 18031 pour la cybersécurité) ; l'analyse de risques du fabricant ; la notice en français et en néerlandais ; la fiche de sécurité de la batterie et le certificat de transport UN 38.3 ; une fiche RGPD décrivant les données collectées, leur finalité, leur localisation et leur durée de conservation ; la localisation précise des serveurs et la liste des sous-traitants ; le projet de contrat de sous-traitance (article 28 RGPD) ; la description des fonctions d'IA et leur classement AI Act ; la politique de mises à jour et la durée de support de sécurité ; l'attestation d'assurance responsabilité produits du fournisseur ou de l'importateur ; les références d'installations similaires en Europe."
+          ],
+          "chiffres": [
+            {"libelle": "Délai minimal réaliste avant mise en service en salle de jeux", "valeur": "4 à 6 mois (hypothèse)"},
+            {"libelle": "Nombre de points de la check-list", "valeur": "20"}
+          ],
+          "points": [
+            "1. Décider du périmètre : hôtel seul (pilote) ou salle de jeux, et lister les fonctions exactes du robot.",
+            "2. Acheter via un distributeur, un importateur ou un mandataire établi dans l'UE ; à défaut, assumer formellement le rôle d'importateur.",
+            "3. Exiger la conformité au règlement Machines 2023/1230 pour toute livraison à partir du 20 janvier 2027.",
+            "4. Obtenir la déclaration UE de conformité complète et vérifier le marquage CE et l'adresse de l'opérateur UE sur le robot.",
+            "5. Obtenir les rapports d'essai ISO 13482, EN ISO 3691-4 et EN 18031 d'un laboratoire accrédité.",
+            "6. Désactiver contractuellement et techniquement reconnaissance faciale, analyse des émotions et profilage.",
+            "7. Mettre en place l'annonce « vous parlez à une IA » (article 50 AI Act).",
+            "8. Réaliser l'AIPD avec le DPO avant tout déploiement ; consulter l'APD si un risque élevé subsiste.",
+            "9. Limiter les caméras à la navigation, sans enregistrement ni transmission à la surveillance ; aucune surveillance mobile en zone publique.",
+            "10. Exiger un hébergement des données dans l'UE, aucun accès distant depuis la Chine et un mode de fonctionnement local.",
+            "11. Signer un contrat de sous-traitance RGPD et mettre à jour le registre des traitements et la politique de confidentialité.",
+            "12. Informer le conseil d'entreprise au moins 3 mois avant l'implantation (CCT n° 39) et organiser la concertation.",
+            "13. Recueillir l'avis préalable du CPPT et réaliser l'analyse des risques avec le conseiller en prévention.",
+            "14. Informer le personnel sur les caméras et données du robot (CCT n° 68 et n° 81) et exclure le contrôle des performances.",
+            "15. Consulter par écrit la Commission des jeux de hasard avant tout déploiement en salle de classe I ou II.",
+            "16. Faire relire le scénario conversationnel par la conformité : aucune publicité, aucun bonus, aucune incitation au jeu.",
+            "17. Vérifier l'absence d'impact sur le contrôle d'accès, EPIS et la vidéosurveillance réglementaire du casino.",
+            "18. Déclarer le robot aux assureurs RC exploitation, incendie (loi du 30 juillet 1979), matériel et cyber.",
+            "19. Valider avec le service incendie et le SECT le plan de circulation, la recharge et l'usage des ascenseurs.",
+            "20. Former le personnel (arrêt d'urgence, incident client, réponses sur les données) et prévoir une alternative humaine à chaque service."
+          ]
+        },
+        {
+          "titre": "Achat · Recommandation en une page",
+          "paragraphes": [
+            "La recommandation est de ne rien acheter pendant le voyage, mais d'en revenir avec trois offres comparables et la promesse écrite d'un robot prêté ou loué pour un pilote de trois mois à Namur. Le voyage est une occasion unique de rencontrer les directions commerciales au siège, là où se décident les remises et les prêts de démonstration ; ce n'est pas le bon endroit pour signer, parce qu'aucun des fabricants rencontrés ne pourra, sur un stand, garantir le service après-vente en Belgique, l'intégration aux ascenseurs de l'hôtel ou la conformité aux règles européennes. Signer en Chine ferait de Gaming1 l'importateur du robot, avec les responsabilités juridiques qui vont avec, pour une économie qui disparaît dès la première panne sérieuse.",
+            "Les trois scénarios n'ont ni le même coût ni la même logique. Le robot de livraison à roues pour l'hôtel (Keenon W3, Pudu FlashBot) est le seul des trois qui puisse produire un gain opérationnel mesurable, surtout la nuit, quand le réceptionniste ne peut pas quitter le comptoir ; il coûte environ 56 000 € sur trois ans tout compris si on l'achète. Le robot d'accueil à écran pour la salle (Orionstar GreetingBot Mini, Pudu KettyBot) est un support d'animation et d'information bon marché, environ 27 000 € sur trois ans, dont l'intérêt dépend presque entièrement de la qualité des contenus qu'on lui fait diffuser et des règles belges sur la publicité pour les jeux. L'humanoïde (Agibot X2 ou A2, Unitree G1) est un outil d'image : spectaculaire, encore fragile, à faible autonomie, et qui exige un opérateur ; son coût complet va d'environ 100 000 € (X2) à plus de 200 000 € (A2) sur trois ans à l'achat, alors que la location à l'événement démarre à 899 € par jour en Europe.",
+            "L'arbitrage proposé est donc double. Pour l'hôtel, un pilote de trois mois en location ou en prêt, avec une décision d'achat ou d'abonnement seulement si les indicateurs fixés à l'avance sont atteints. Pour l'image et la salle, louer un humanoïde à la journée pour deux ou trois temps forts (soirée de gala, ouverture, presse) plutôt que d'en acheter un, et ne tester un robot d'accueil à écran qu'après validation juridique des messages qu'il pourra diffuser. Cette approche limite l'engagement initial à quelques milliers d'euros tout en répondant clairement à la demande de Yannick : le contact est pris, au plus haut niveau, avec les leaders du marché.",
+            "Hypothèses principales de ce dossier : les prix sont hors TVA, en euros, relevés sur des revendeurs européens entre avril et septembre 2026 ; le coût horaire chargé d'un collaborateur de l'hôtel est estimé à 35 € ; la taille exacte de l'hôtel, la marque des ascenseurs et l'état du Wi-Fi ne sont pas connus et doivent être vérifiés sur place avant toute offre ferme."
+          ],
+          "chiffres": [
+            {
+              "libelle": "Robot de livraison hôtel, achat, coût complet 3 ans / 5 ans",
+              "valeur": "≈ 56 000 € / ≈ 73 000 € (hypothèses détaillées section 2)"
+            },
+            {"libelle": "Robot d'accueil à écran, achat, coût complet 3 ans / 5 ans", "valeur": "≈ 27 000 € / ≈ 38 000 €"},
+            {"libelle": "Humanoïde Agibot X2, achat, coût complet 3 ans", "valeur": "≈ 100 000 €"},
+            {"libelle": "Humanoïde Agibot A2, achat, coût complet 3 ans", "valeur": "≈ 200 000 €"},
+            {"libelle": "Location humanoïde Agibot en Europe, avec technicien", "valeur": "à partir de 899 € / jour (lancement MWC, mars 2026)"},
+            {
+              "libelle": "Engagement recommandé avant le pilote",
+              "valeur": "0 € d'achat ; pilote de 3 mois estimé entre 3 000 et 6 000 € hors prêt gratuit"
+            }
+          ]
+        },
+        {
+          "titre": "Achat · Coût complet sur 3 et 5 ans, et choix entre achat, location et abonnement",
+          "paragraphes": [
+            "Le prix catalogue n'est qu'une partie du coût. Pour un robot de service, les études de maintenance et les intégrateurs s'accordent sur une maintenance annuelle de 10 à 15 % du prix d'achat, sur un remplacement de batterie lithium tous les deux à quatre ans, et sur le fait qu'une part importante du coût total, souvent près de la moitié, intervient après l'achat. À cela s'ajoutent des postes rarement chiffrés par les vendeurs : l'intégration aux ascenseurs et aux portes automatiques, la mise à niveau du Wi-Fi dans les couloirs, l'assurance, la création de contenus pour l'écran, et surtout le temps d'un référent interne qui recharge, débloque, signale les pannes et gère les plaintes. Les calculs ci-dessous rendent ces postes explicites ; ils sont volontairement prudents.",
+            "Scénario (a), robot de livraison pour l'hôtel. Le Keenon W3 (quatre compartiments fermés, prise d'ascenseur, écran de 11,6 pouces, plus de 14 langues) est affiché à 28 560 € hors TVA chez un revendeur irlandais et à 24 219 £ au Royaume-Uni ; le Pudu FlashBot se situe entre 20 000 et 28 000 dollars selon les marchés. En retenant 28 600 € d'achat, 8 000 € d'intégration (module ascenseur, intervention de l'ascensoriste, une ou deux portes, couverture Wi-Fi), 1 000 € de formation, une garantie d'un an puis 3 400 € de maintenance par an, 300 € d'assurance annuelle et deux heures par semaine de référent à 35 €, on arrive à environ 56 000 € sur trois ans, soit 18 800 € par an. Sur cinq ans, avec une batterie de remplacement estimée à 1 500 €, le total monte à environ 73 000 €, soit 14 500 € par an. Le poste le plus sous-estimé est le temps du référent (près de 11 000 € sur trois ans), devant l'intégration aux ascenseurs, dont le coût réel dépend de l'ascensoriste et peut doubler.",
+            "Scénario (b), robot d'accueil et de promotion pour la salle. L'Orionstar GreetingBot Mini (écran de 14 pouces, 30 langues annoncées, 12 heures d'autonomie, reconnaissance vocale annoncée à 97 % dans 75 dB de bruit) est vendu environ 9 000 € par un revendeur européen. Avec 1 000 € d'installation et de cartographie, 2 500 € par an de création et mise à jour de contenus, 1 000 € de maintenance par an après la garantie, 200 € d'assurance et une heure par semaine de suivi, le coût complet atteint environ 27 000 € sur trois ans et 38 000 € sur cinq ans. Ici, le contenu coûte plus cher que la machine : un robot qui répète la même animation pendant six mois devient du mobilier.",
+            "Scénario (c), humanoïde vitrine. Les prix européens relevés chez OpenELAB en 2026 sont de 47 900 € pour l'Agibot X2, 120 000 € pour l'A2 et 125 230 € pour le G2 ; l'Unitree G1 de base se trouve entre 17 900 et 27 400 € selon le revendeur, mais sans accès de programmation, la version éducation dépassant 40 000 dollars, et son autonomie est d'environ deux heures. Un humanoïde exige un opérateur formé à chaque sortie. Pour un X2 acheté, avec 15 % de maintenance par an après garantie, 1 000 € d'assurance, 5 000 € de scénarios et de programmation, et six heures d'opérateur par semaine, le coût complet est d'environ 100 000 € sur trois ans et 143 000 € sur cinq ans. Pour un A2, il dépasse 200 000 € sur trois ans et 265 000 € sur cinq ans. Le risque principal n'est pas la panne, c'est l'obsolescence : les générations d'humanoïdes se succèdent tous les douze à dix-huit mois, et la valeur de revente d'un modèle de 2026 sera faible en 2028.",
+            "Achat, location ou abonnement. La location longue durée ou le « Robot as a Service » (abonnement mensuel incluant maintenance, mises à jour et remplacement) se pratique entre 200 et 500 € par mois pour les petits robots de service en France, et autour de 900 à 1 300 € par mois pour un robot hôtelier de type W3 (les distributeurs parlent de 30 à 50 dollars par jour). Sur trois ans, un abonnement à 1 100 € par mois coûte environ 40 000 €, auxquels il faut ajouter l'intégration et le temps du personnel : le total rejoint celui de l'achat, à environ 58 000 €. L'abonnement ne fait donc pas économiser d'argent ; il achète le droit de sortir, la maintenance garantie et le remplacement par le modèle suivant. Pour un premier robot dans un groupe qui n'en a jamais exploité, c'est le bon choix. L'achat ne devient rationnel qu'au deuxième ou troisième exemplaire, une fois l'usage prouvé et la durée de vie connue. Pour l'humanoïde, la location à l'événement (Agibot à partir de 899 € par jour en Europe, technicien inclus) est nettement préférable : douze journées par an coûtent environ 11 000 €, soit trois fois moins que l'amortissement seul d'un X2."
+          ],
+          "chiffres": [
+            {"libelle": "Keenon W3, prix revendeur Irlande (hors TVA)", "valeur": "28 560 €"},
+            {"libelle": "Keenon W3, prix revendeur Royaume-Uni (hors TVA)", "valeur": "24 219 £"},
+            {"libelle": "Pudu FlashBot (multi-étages, ascenseurs)", "valeur": "20 000 à 28 000 USD selon marché"},
+            {"libelle": "Orionstar GreetingBot Mini, revendeur européen", "valeur": "≈ 9 000 € (9 990 € avant remise)"},
+            {"libelle": "Agibot X2 / A2 / G2, OpenELAB 2026", "valeur": "47 900 € / 120 000 € / 125 230 €"},
+            {"libelle": "Unitree G1 base, revendeurs européens avril 2026", "valeur": "17 900 à 27 400 €"},
+            {"libelle": "Maintenance annuelle courante", "valeur": "10 à 15 % du prix d'achat (hypothèse 15-20 % pour un humanoïde)"},
+            {"libelle": "Abonnement robot hôtelier (estimation)", "valeur": "900 à 1 300 € / mois"},
+            {"libelle": "Location humanoïde à l'événement", "valeur": "899 € / jour (Agibot Europe) ; ≈ 900 USD / jour (Unitree G1, États-Unis)"},
+            {"libelle": "Hypothèse coût horaire chargé du personnel", "valeur": "35 €"}
+          ]
+        },
+        {
+          "titre": "Achat · Retour sur investissement : ce qu'on peut espérer, ce qui est illusoire, comment le mesurer",
+          "paragraphes": [
+            "Le gain réaliste d'un robot de livraison à l'hôtel n'est pas une suppression de poste, c'est un service rendu sans quitter le comptoir. La nuit, quand une seule personne tient la réception, chaque demande de serviettes, de brosse à dents, de chargeur ou de plateau oblige à choisir entre laisser l'accueil vide et faire attendre le client ; le robot supprime ce dilemme. Les retours d'hôteliers publiés vont dans ce sens : à l'hôtel EMC2 de Chicago, deux robots font environ 400 livraisons par semaine pour 195 chambres, et les ventes du service en chambre ont presque doublé dans les deux premières semaines. Il faut lire ce chiffre avec prudence : l'effet de nouveauté est fort au début et la source est le fabricant. Les chiffres plus spectaculaires qui circulent (économies de main-d'œuvre de plusieurs centaines de milliers de dollars par an, retour sur investissement en dix mois) proviennent de grands hôtels américains à fort volume ou de vendeurs, et ne sont pas transposables à Namur.",
+            "Ce qui est illusoire, c'est d'attendre du robot qu'il augmente directement le produit des jeux, qu'il remplace un collaborateur à temps plein dans un hôtel de taille moyenne, ou qu'il fonctionne sans surveillance dans une salle bondée. Le cas de la Brasserie de Chauderon à Lausanne est parlant : son BellaBot tourne en rond lorsque la salle est pleine et que les clients lui barrent le passage, au point que l'exploitant envisage de s'en séparer. Une salle de jeux un samedi soir est un environnement plus difficile encore : chaises déplacées, clients qui se retournent, éclairage changeant des écrans de machines. Le robot d'accueil y sera utile aux heures calmes et à l'entrée, pas au milieu des allées en pleine affluence. Quant à l'humanoïde, son rendement est médiatique : un premier humanoïde dans un casino belge peut générer un pic d'articles et de vidéos, mais cet effet s'épuise en quelques semaines si rien de neuf ne se passe.",
+            "Méthode simple pour Namur. Avant le pilote, faire compter par la réception, pendant deux semaines, toutes les demandes de livraison en chambre, avec l'heure et le temps passé par le collaborateur (aller-retour, attente d'ascenseur). Multiplier le nombre moyen de demandes par le temps moyen pour obtenir des heures par an, puis par 35 € : c'est le plafond théorique du gain. Par exemple, 15 demandes par jour à 12 minutes représentent 3 heures par jour, environ 1 100 heures par an et 38 000 € de temps théorique ; si le robot en prend 60 %, le temps libéré vaut environ 23 000 € par an, à comparer aux 14 500 à 18 800 € de coût annuel. Ce temps libéré n'est un gain que s'il est réaffecté (accueil, vente additionnelle, contrôle) ou s'il permet d'éviter un renfort de nuit ; sinon il reste théorique. Il faut ajouter, séparément, le chiffre d'affaires additionnel du service en chambre et des minibars si le robot permet d'ouvrir un service de nuit, et la valeur médiatique mesurée en contenus publiés et en audience.",
+            "Indicateurs du pilote, à fixer par écrit avant le démarrage pour éviter de juger à l'impression : nombre de livraisons par jour et part de nuit ; taux de livraisons réussies sans intervention humaine (objectif d'au moins 90 %) ; délai moyen entre la demande et la remise au client ; nombre d'incidents (blocage, ascenseur, porte, batterie) et délai de résolution par le fournisseur ; heures de personnel effectivement libérées ; chiffre d'affaires du service en chambre comparé à la même période de l'année précédente ; note de satisfaction sur les avis clients mentionnant le robot. Pour la salle : interactions par heure, codes QR scannés, inscriptions au programme de fidélité attribuables au robot, plaintes. Pour l'image : nombre de contenus publiés, vues, retombées presse. Un pilote se juge sur trois chiffres : fiabilité, usage réel et coût par livraison."
+          ],
+          "chiffres": [
+            {
+              "libelle": "Hôtel EMC2 Chicago (source fabricant Relay)",
+              "valeur": "≈ 400 livraisons / semaine pour 195 chambres ; service en chambre presque doublé en 2 semaines"
+            },
+            {"libelle": "Exemple Namur (hypothèse) : 15 demandes/jour × 12 min", "valeur": "≈ 1 100 h/an, soit ≈ 38 000 € de temps théorique"},
+            {"libelle": "Si le robot prend 60 % des demandes", "valeur": "≈ 23 000 € / an de temps libéré, contre 14 500 à 18 800 € de coût annuel"},
+            {"libelle": "Seuil de fiabilité visé pendant le pilote", "valeur": "≥ 90 % de livraisons sans intervention humaine"},
+            {"libelle": "Bruit toléré annoncé (GreetingBot Mini)", "valeur": "reconnaissance vocale 97 % à 75 dB, à vérifier en salle"}
+          ]
+        },
+        {
+          "titre": "Achat · Intégration technique à vérifier à Namur",
+          "paragraphes": [
+            "Le système de gestion de l'hôtel, Mews, n'est pas un obstacle pour démarrer. Mews dispose d'une interface de programmation ouverte et d'une place de marché de plus de mille intégrations, chacune certifiée après un pilote réel dans un établissement ; nos recherches n'ont pas trouvé d'intégration robot déjà certifiée, ce qui reste à confirmer auprès de Mews et des fabricants. Pour un pilote, aucune intégration n'est nécessaire : la réception déclenche la livraison depuis la tablette ou l'application du robot. L'intégration ne devient utile qu'à grande échelle, par exemple pour qu'une demande du client depuis l'application ou une tâche Mews déclenche automatiquement le robot ; c'est un développement à faire chiffrer, pas une fonctionnalité acquise.",
+            "Les ascenseurs sont le point le plus délicat. Le robot appelle et pilote l'ascenseur grâce à un boîtier relié à l'armoire de commande ; cette intervention doit être faite ou autorisée par l'ascensoriste titulaire du contrat d'entretien, sinon le contrat et la conformité de l'installation peuvent être remis en cause. Il faut donc connaître dès maintenant la marque des ascenseurs de l'hôtel, leur âge, et demander à l'ascensoriste s'il a déjà raccordé un robot Keenon ou Pudu et à quel prix. Les portes automatiques, les portes coupe-feu à fermeture automatique et les portes de service doivent être recensées une à une : chaque porte non motorisée est un arrêt du robot. Le Wi-Fi doit couvrir les couloirs, la cuisine et les paliers d'ascenseur sans coupure ; un relevé de couverture prend une demi-journée. Il faut enfin vérifier les sols (seuils de plus de 1 à 2 cm, moquettes épaisses, rampes) et la largeur des couloirs lorsque des chariots de ménage y stationnent.",
+            "Dans la salle de jeux, les contraintes sont d'une autre nature. Le bruit, la foule, les reflets des écrans et des miroirs perturbent les capteurs et la reconnaissance vocale ; les annonces des fabricants sont mesurées en conditions de démonstration et doivent être vérifiées un soir d'affluence. Les langues doivent être testées en français, en néerlandais (y compris le vocabulaire belge), en anglais et en allemand, à l'oral comme à l'écran : beaucoup de robots chinois sont excellents en anglais et approximatifs en néerlandais. Surtout, ce que le robot dit et affiche dans une salle de jeux relève des règles belges sur la publicité pour les jeux de hasard, fortement restreinte depuis 2023 ; tout message de promotion devra être validé par la conformité avant le pilote.",
+            "Données et sécurité. Ces robots portent des caméras, des capteurs de profondeur et parfois des microphones toujours actifs, et beaucoup envoient des données vers un nuage du fabricant. Il faut obtenir par écrit où sont hébergées les données (Union européenne ou Chine), lesquelles sont collectées, combien de temps elles sont conservées, et pouvoir désactiver toute reconnaissance faciale ; le délégué à la protection des données doit être consulté avant l'installation, d'autant que la salle de jeux est déjà un espace sous surveillance réglementée. Le robot doit être placé sur un réseau séparé, sans aucun accès au réseau du casino ni aux systèmes de jeux. Les mises à jour à distance doivent être planifiées et pouvoir être refusées ou différées. Enfin, depuis août 2026, les règles européennes sur l'intelligence artificielle imposent d'informer clairement les personnes qu'elles dialoguent avec une machine ; un robot conversationnel doit le dire."
+          ],
+          "chiffres": [
+            {
+              "libelle": "Intégrations disponibles sur la place de marché Mews",
+              "valeur": "plus de 1 000 (aucune intégration robot certifiée trouvée)"
+            },
+            {"libelle": "Langues à tester", "valeur": "FR, NL, EN, DE, à l'oral et à l'écran"},
+            {"libelle": "Relevé Wi-Fi des zones de passage", "valeur": "≈ une demi-journée, avant toute offre ferme"}
+          ]
+        },
+        {
+          "titre": "Achat · Acheter en Chine ou passer par l'Europe",
+          "paragraphes": [
+            "L'écart de prix est réel et explique la tentation d'acheter sur place : le Keenon W3 est annoncé entre 9 500 et 13 500 dollars de prix conseillé aux États-Unis et à 28 560 € hors TVA en Irlande, et le prix en Chine est plus bas encore. Mais cet écart rémunère des services qui disparaissent en cas d'import direct. L'importateur devient juridiquement responsable de la conformité du robot : marquage CE, déclaration de conformité, dossier technique, notice dans les langues du pays, conformité radio pour le Wi-Fi et règles sur les batteries. À partir du 20 janvier 2027, le nouveau règlement européen sur les machines (2023/1230) s'appliquera et renforce les obligations de l'importateur ; un robot livré début 2027 devra y être conforme.",
+            "Les autres coûts de l'import direct sont moins visibles. Les droits de douane sont faibles (1,7 % pour la position des robots industriels, à confirmer selon la classification retenue), la TVA de 21 % est récupérable mais doit être avancée, et le transport d'un robot à batterie lithium relève des marchandises dangereuses : pas de bagage en soute, fret aérien spécialisé ou maritime de quatre à six semaines. Plus grave, la version vendue en Chine est souvent liée au nuage chinois du fabricant, avec des langues et des services limités, et les filiales européennes refusent fréquemment d'assurer la garantie et les mises à jour d'un robot acheté hors de leur réseau. Une pièce à faire venir de Shenzhen, c'est deux à trois semaines d'immobilisation.",
+            "Les grands fabricants ont désormais une présence européenne qui rend l'import direct inutile. Pudu a des bureaux en Allemagne et aux Pays-Bas (Pudu Robotics Europe B.V.), un stock européen, un support en français, et prépare un siège européen en Allemagne ; il revendique plus de vingt pays européens et des références hôtelières (Marriott en Pologne, Parkhotel en Autriche). Keenon a un pôle aux Pays-Bas et revendique des clients comme Sofitel, Westin et Hilton. Agibot a lancé en juin 2026 à Londres une plateforme de partenaires européens couvrant le Royaume-Uni, la France, l'Allemagne, l'Italie, l'Espagne et les pays nordiques, avec un modèle d'abonnement ; le Benelux n'est pas cité. Unitree passe par des distributeurs comme MyBotShop en Allemagne ou RobotShop, et UBTech par Terra Robotics pour la zone germanophone. Le bon schéma consiste à négocier en Chine, au siège, les conditions de référence (remise, prêt, formation), puis à faire contracter et livrer par la filiale ou le distributeur européen, qui porte la conformité et le service après-vente.",
+            "Acheter un premier exemplaire de démonstration peut se justifier, à condition de le traiter comme un pilote et non comme un achat définitif : prix de démonstration négocié, clause de reprise ou de conversion en abonnement si le pilote échoue, garantie européenne pleine. Pour le paiement, ne jamais verser la totalité à la commande : un acompte de 30 % au maximum, le solde à la livraison et à la réception technique sur site ; vérifier par téléphone, auprès d'un interlocuteur déjà connu, tout changement de coordonnées bancaires reçu par courriel, car c'est la fraude la plus fréquente dans les achats internationaux ; payer uniquement sur le compte de la société signataire, jamais sur un compte personnel ou d'une société tierce."
+          ],
+          "chiffres": [
+            {"libelle": "Keenon W3 : prix conseillé États-Unis vs Irlande", "valeur": "9 500-13 500 USD vs 28 560 € hors TVA"},
+            {"libelle": "Droit de douane (position robots industriels 8479 50)", "valeur": "1,7 % (classification à confirmer)"},
+            {"libelle": "TVA belge à l'importation", "valeur": "21 %, récupérable mais à préfinancer"},
+            {"libelle": "Application du règlement machines 2023/1230", "valeur": "20 janvier 2027"},
+            {"libelle": "Délai de fret maritime Chine-Anvers (estimation)", "valeur": "4 à 6 semaines"},
+            {"libelle": "Acompte maximal recommandé", "valeur": "30 %, solde après réception sur site"}
+          ]
+        },
+        {
+          "titre": "Achat · Démarche recommandée et contrat",
+          "paragraphes": [
+            "Étape 1, avant le départ (d'ici au 9 octobre) : un cahier des charges d'une page, en anglais, à remettre à chaque fournisseur. Il décrit l'hôtel (nombre de chambres et d'étages, nombre et marque des ascenseurs, portes, Wi-Fi), l'usage visé (livraisons en chambre, surtout la nuit ; accueil et information en salle ; animation événementielle), les langues, les contraintes de données (hébergement dans l'Union européenne, pas de reconnaissance faciale), la demande d'un pilote de trois mois et le calendrier. Sans ce document, chaque fournisseur présentera son meilleur produit plutôt que de répondre au besoin, et les offres ne seront pas comparables.",
+            "Étape 2, pendant le voyage : rencontres et démonstrations, collecte des offres indicatives et, surtout, engagement de principe sur un prêt ou une location de démonstration. Étape 3, fin octobre : présélection de trois fournisseurs au plus, en comparant sur une même grille la fiabilité démontrée, la présence d'un service après-vente en Belgique ou à moins de 300 km, les références hôtelières européennes vérifiables, la qualité du néerlandais et du français, l'hébergement des données, et le coût complet sur trois ans plutôt que le prix d'achat. Étape 4, novembre : visite technique sur site par chaque fournisseur retenu, avec l'ascensoriste, et offre ferme. Étape 5, janvier à mars 2027 : pilote de trois mois avec les indicateurs de la section 3. Étape 6, avril 2027 : décision d'achat, d'abonnement ou d'arrêt.",
+            "Négociation. Le voyage d'une délégation de treize dirigeants d'un groupe présent dans trois pays est un argument : les fabricants cherchent des références européennes dans l'hôtellerie et le jeu, comme l'a montré l'accord d'Agibot avec Genting Malaysia en avril 2026. Il faut demander, en échange d'une référence publique possible, le prêt gratuit d'un robot pendant le pilote ou une location au prix coûtant, la formation et l'intégration ascenseur incluses, une remise de première référence (10 à 20 % est un ordre de grandeur courant, à obtenir et non à présumer), un prix bloqué pour les exemplaires suivants dans les autres établissements du groupe, et la possibilité de convertir la location en achat en déduisant les loyers versés.",
+            "Contrat. Les clauses indispensables sont : un engagement de niveau de service avec un délai d'intervention à distance (par exemple quatre heures ouvrées) et sur site (par exemple deux jours ouvrés), un robot de remplacement au-delà ; la disponibilité des pièces pendant au moins cinq ans ; les mises à jour logicielles et de sécurité incluses pendant toute la durée, sans suppression de fonctionnalités ; la propriété des données et des cartes des lieux par Gaming1, leur hébergement dans l'Union européenne et leur suppression en fin de contrat ; la réversibilité, c'est-à-dire la reprise du matériel et l'effacement des données en cas d'arrêt ; une clause de sortie sans pénalité à l'issue du pilote ou en cas de non-respect répété du niveau de service ; enfin, la responsabilité du fournisseur ou de son distributeur européen pour la conformité CE et l'assurance responsabilité civile produit."
+          ],
+          "chiffres": [
+            {"libelle": "Cahier des charges", "valeur": "1 page, en anglais, prêt au 9 octobre 2026"},
+            {"libelle": "Présélection", "valeur": "3 fournisseurs maximum, fin octobre 2026"},
+            {"libelle": "Pilote", "valeur": "3 mois, janvier à mars 2027 ; décision en avril 2027"},
+            {"libelle": "Délais d'intervention à exiger (proposition)", "valeur": "4 h ouvrées à distance, 2 jours ouvrés sur site"},
+            {"libelle": "Disponibilité des pièces", "valeur": "au moins 5 ans"}
+          ]
+        },
+        {
+          "titre": "Achat · Plan de contact pendant le voyage",
+          "paragraphes": [
+            "Shanghai, 12 et 13 octobre, salon CIIF au centre national des expositions (NECC, Hongqiao). Le CIIF se tient du 12 au 16 octobre et regroupe neuf salons dont le Robotics Show, avec plus de 3 000 exposants attendus. La liste des exposants du Robotics Show n'était pas encore publiée lors de nos recherches : il faut la demander à l'organisateur, repérer les stands de robots de service (et non de robots industriels, qui dominent ce salon) et prévoir une demi-journée ciblée plutôt qu'une visite au hasard. Unitree, basé à Hangzhou, hors de l'itinéraire, y est souvent présent ; c'est l'occasion de le voir sans détour.",
+            "Shanghai, 13 octobre après-midi, visite d'Agibot. Il faut obtenir que la visite comprenne un temps de réunion commerciale avec la direction internationale, et pas seulement un parcours de démonstration ; le président des marchés Europe et États-Unis est William Shi. Questions à poser : quel partenaire couvre la Belgique, puisque le Benelux ne figure pas dans la plateforme européenne lancée à Londres ; conditions de location à l'événement (899 € par jour) et d'abonnement en Europe ; ce que fait concrètement Agibot pour Genting Malaysia et pour Chimelong (plus de 300 robots) ; quel modèle pour un accueil en hôtel et en casino, X2 ou A2 ; qualité du français et du néerlandais ; autonomie réelle, présence d'un opérateur nécessaire, et conformité au règlement machines de 2027.",
+            "Shanghai, Keenon. Le siège de Keenon se trouve au 1000 Jinhai Road, bâtiment 56, à Pudong, à environ une heure de voiture du NECC. Oui, il faut demander un rendez-vous dès maintenant, par l'adresse générale global@keenon.com, en visant le 12 octobre en fin de journée ou le 13 octobre au matin, avant Agibot ; Keenon est le fabricant du W3, le robot hôtelier le plus abouti du marché, et une démonstration de prise d'ascenseur au siège vaut plus qu'un stand. Un responsable commercial pour l'Europe apparaît sur les profils publics (Ace Jing, division Europe II), à confirmer. Macao, 13 et 14 octobre : pas de fabricant à rencontrer, mais l'occasion d'observer si les grands casinos utilisent des robots en salle ou à l'hôtel, et comment les clients réagissent.",
+            "Guangzhou, 15 octobre, Foire de Canton, phase 1. La zone des robots de service est au hall 21.2 (zone D) ; lors de la session d'avril 2026, elle réunissait 46 entreprises sur 4 200 m², dont Pudu, Ninebot (robots hôteliers de livraison), Magic Atom (humanoïdes), Dobot, Ecovacs et iFlytek, et elle est reconduite à la session d'octobre (phase 1 du 15 au 19). L'accès exige un badge acheteur enregistré à l'avance en ligne, avec passeport : à vérifier immédiatement auprès de l'organisateur pour les treize participants. Prévoir deux heures sur le hall 21.2 avec le cahier des charges imprimé.",
+            "Shenzhen, 16 octobre, si le programme le permet. Pudu a son siège au 11e étage du bâtiment 2A de l'International Innovation Valley, Dashi 1st Road, district de Nanshan (téléphone +86 400 082 6660), qui sert aussi de centre de démonstration ; c'est la visite la plus utile de cette journée, à demander par le formulaire de contact du site, avec un relais vers la filiale européenne. UBTech, également à Shenzhen, est pertinent pour les humanoïdes (Walker S2), moins pour l'hôtel. Orionstar, fabricant du GreetingBot Mini, est basé à Pékin ; il se contacte par global_business@orionstar.com et expose dans les salons du jeu (ICE), ce qui en fait un interlocuteur naturel pour la salle.",
+            "À demander à l'organisateur dès aujourd'hui : la liste des exposants robotique du CIIF et leur hall ; les badges acheteurs de la Foire de Canton pour tous les participants ; la confirmation qu'Agibot prévoit une réunion commerciale en anglais avec la direction Europe ; un créneau libre à Shanghai pour Keenon et la faisabilité de l'aller-retour à Shenzhen le 16 ; un interprète pour les visites d'usines ; des cartes de visite bilingues et un compte WeChat de groupe pour échanger avec les commerciaux, qui utilisent WeChat plus que le courriel."
+          ],
+          "chiffres": [
+            {"libelle": "CIIF 2026, NECC Shanghai", "valeur": "12-16 octobre ; plus de 3 000 exposants ; Robotics Show inclus"},
+            {"libelle": "Keenon, siège", "valeur": "Building 56, 1000 Jinhai Road, Pudong, Shanghai ; global@keenon.com"},
+            {"libelle": "Agibot", "valeur": "visite le 13/10 ; William Shi, président marchés Europe et États-Unis ; boutique store.agibot.com"},
+            {
+              "libelle": "Foire de Canton, zone robots de service",
+              "valeur": "hall 21.2 (zone D), 46 entreprises en avril 2026 ; phase 1 du 15 au 19 octobre"
+            },
+            {
+              "libelle": "Pudu, siège et démonstration",
+              "valeur": "11/F, Building 2A, International Innovation Valley, Dashi 1st Road, Nanshan, Shenzhen ; +86 400 082 6660"
+            },
+            {"libelle": "Pudu Europe", "valeur": "Pudu Robotics Europe B.V. (Pays-Bas) et bureau en Allemagne"},
+            {"libelle": "Orionstar", "valeur": "global_business@orionstar.com (siège à Pékin)"},
+            {"libelle": "Unitree en Europe", "valeur": "via distributeurs MyBotShop (Allemagne) ou RobotShop"}
+          ],
+          "points": [
+            "Organisateur : liste des exposants robotique du CIIF et numéros de hall",
+            "Organisateur : badges acheteurs de la Foire de Canton pour les 13 participants (passeport requis)",
+            "Organisateur : réunion commerciale en anglais avec la direction Europe d'Agibot le 13/10",
+            "Organisateur : créneau Keenon à Shanghai (12/10 soir ou 13/10 matin)",
+            "Organisateur : faisabilité de la journée Shenzhen le 16/10 (Pudu, éventuellement UBTech)",
+            "Organisateur : interprète, cartes de visite bilingues, groupe WeChat"
+          ]
+        },
+        {
+          "titre": "Achat · Modèle de message 1 : demande de rendez-vous pendant le voyage (anglais et chinois)",
+          "paragraphes": [
+            "Subject: Meeting request – Gaming1 delegation in China, 12–16 October 2026 – service robots for hotel and casino",
+            "Dear [Name / Sales Team],\n\nI am writing on behalf of Gaming1, a European gaming and hospitality group operating the Casino-Resort de Namur (casino and hotel) and the Casino de Spa in Belgium, around thirty gaming venues and the Odd's bars, seven casinos in France and two in Switzerland.\n\nA delegation of 13 senior executives, led by our CEO, will be in China from 10 to 17 October 2026. We are evaluating service robots for two uses at the Casino-Resort de Namur: autonomous delivery to hotel rooms (multi-floor, with elevators, especially at night) and guest welcome and information in the gaming area. We are also interested in humanoid robots for events.\n\nWe would like to meet your international sales team and see a live demonstration, ideally of elevator integration. Our availability is:\n- Shanghai: 12 October (afternoon/evening) or 13 October (morning)\n- Guangzhou, Canton Fair: 15 October\n- Shenzhen: 16 October\n\nWe would appreciate it if the meeting could cover: your European subsidiary or partner able to serve Belgium, after-sales service in Europe, EU data hosting, French and Dutch language support, purchase, rental and subscription options, and the possibility of a 3-month pilot at our hotel in Namur.\n\nPlease let us know which slot suits you and the name of the person we will meet. A one-page brief of our needs is attached.\n\nKind regards,\n[Name]\n[Title], Gaming1\n[Phone / WeChat ID] – [E-mail]",
+            "Version courte en chinois simplifié (WeChat) :\n\n您好！我是比利时 Gaming1 集团的[姓名]。Gaming1 在比利时、法国和瑞士经营赌场和酒店。我们 13 位高管将于 2026 年 10 月 10 日至 17 日访问中国（上海、澳门、广州、深圳）。我们正在为那慕尔赌场度假村选择服务机器人：酒店客房配送（多楼层、乘电梯）以及赌场区域的迎宾和信息服务。希望能与贵公司国际销售团队见面并观看现场演示。可选时间：10 月 12 日下午或 13 日上午（上海），10 月 15 日（广交会），10 月 16 日（深圳）。请告知方便的时间和联系人。谢谢！"
+          ],
+          "chiffres": [],
+          "points": [
+            "Joindre le cahier des charges d'une page",
+            "Envoyer au plus tard le 6 octobre pour laisser le temps de fixer les créneaux",
+            "Faire relire la version chinoise par l'interprète ou l'organisateur avant envoi"
+          ]
+        },
+        {
+          "titre": "Achat · Modèle de message 2 : demande d'offre pour un pilote à Namur (anglais)",
+          "paragraphes": [
+            "Subject: Request for proposal – 3-month service robot pilot at Casino-Resort de Namur (Belgium)",
+            "Dear [Name],\n\nThank you for meeting our delegation in [city] on [date]. As discussed, Gaming1 would like to receive a proposal for a 3-month pilot at the Casino-Resort de Namur, Belgium, starting in January 2027.\n\nScope:\n1. Hotel: autonomous delivery to guest rooms, [number] rooms on [number] floors, [number] elevators (brand: [brand]), including night-time operation.\n2. Gaming area (optional): welcome and information robot with screen, in a noisy and crowded environment.\n3. Events (optional): humanoid robot rental for 2 to 3 days per year.\n\nPlease include in your proposal:\n- Recommended model(s) and the European entity or partner that will contract, deliver and support the robot in Belgium.\n- Pilot terms: free loan or rental price, installation, mapping, elevator and door integration, staff training, and on-site support.\n- After the pilot: purchase price, rental and Robot-as-a-Service monthly price over 36 and 60 months, with what each includes (maintenance, software updates, batteries, replacement unit).\n- Service levels: remote and on-site response times in Belgium, location of technicians and spare parts, parts availability period.\n- Compliance: CE declaration of conformity, readiness for EU Machinery Regulation 2023/1230 (applicable from 20 January 2027), radio and battery compliance.\n- Data: data collected, hosting location (EU required), retention, ability to disable facial recognition, network requirements.\n- Languages: French, Dutch, English and German, voice and screen.\n- European hotel or casino references we may contact.\n- Contract conditions: payment schedule, warranty, exit clause after the pilot, data deletion and equipment return at the end of the contract.\n\nWe would appreciate your proposal by [date, e.g. 15 November 2026]. A site visit can be organised in Namur in November.\n\nKind regards,\n[Name]\n[Title], Gaming1\n[Phone] – [E-mail]"
+          ],
+          "chiffres": [],
+          "points": [
+            "Envoyer à chaque fournisseur présélectionné dans la semaine suivant le retour (19-23 octobre)",
+            "Compléter avant envoi : nombre de chambres, d'étages, d'ascenseurs et marque des ascenseurs",
+            "Même texte pour tous, afin d'obtenir des offres comparables"
+          ]
+        },
+        {
+          "titre": "Achat · Vingt questions à poser à tout fournisseur",
+          "paragraphes": [
+            "Ces questions servent de grille commune : poser les mêmes à chaque fournisseur et noter les réponses par écrit permet de comparer des offres qui, sans cela, mettent chacune en avant ce qu'elles font le mieux. Les réponses floues sur le service en Europe et sur les données sont, en pratique, les meilleurs signaux d'alerte."
+          ],
+          "chiffres": [],
+          "points": [
+            "Produit 1 : combien de robots de ce modèle fonctionnent aujourd'hui dans des hôtels européens, et pouvons-nous en appeler deux ?",
+            "Produit 2 : quel est le taux réel de livraisons réussies sans intervention humaine, et comment le mesurez-vous ?",
+            "Produit 3 : autonomie réelle, temps de charge et durée de vie de la batterie ; prix d'une batterie de remplacement ?",
+            "Produit 4 : comment le robot se comporte-t-il dans une foule et un bruit de 75 dB ou plus ? Pouvons-nous le tester un soir d'affluence ?",
+            "Produit 5 : quelle est la qualité du français et du néerlandais, à l'oral et à l'écran, et qui peut modifier les textes ?",
+            "Sécurité 6 : le robot est-il marqué CE, avec quelle déclaration de conformité, et sera-t-il conforme au règlement machines 2023/1230 au 20 janvier 2027 ?",
+            "Sécurité 7 : comment se fait le raccordement aux ascenseurs, avec quels ascensoristes l'avez-vous déjà fait, et qui en porte la responsabilité ?",
+            "Sécurité 8 : que se passe-t-il en cas de chute, de collision avec un enfant ou une personne âgée, d'incendie ou d'alarme ?",
+            "Données 9 : quelles données sont collectées (images, voix, cartes), où sont-elles hébergées, combien de temps sont-elles conservées ?",
+            "Données 10 : peut-on désactiver la reconnaissance faciale et l'enregistrement audio, et fonctionner sans nuage ?",
+            "Données 11 : à qui appartiennent les données et les cartes des lieux, et comment sont-elles supprimées en fin de contrat ?",
+            "Données 12 : comment sont gérées les mises à jour à distance et la cybersécurité ; le robot peut-il rester sur un réseau isolé ?",
+            "SAV Europe 13 : quelle entité européenne contracte et assure la garantie, et où sont les techniciens les plus proches de Namur ?",
+            "SAV Europe 14 : quels délais d'intervention à distance et sur site garantissez-vous par écrit, et fournissez-vous un robot de remplacement ?",
+            "SAV Europe 15 : où est le stock de pièces en Europe et pendant combien d'années les pièces sont-elles garanties disponibles ?",
+            "Prix 16 : prix d'achat, de location et d'abonnement sur 36 et 60 mois, et que comprend exactement chacun ?",
+            "Prix 17 : quels coûts ne sont pas inclus (intégration ascenseur, portes, Wi-Fi, contenus, déplacements des techniciens) ?",
+            "Prix 18 : quelles conditions pour un pilote de trois mois (prêt, prix) et pour des exemplaires suivants dans d'autres établissements du groupe ?",
+            "Contrat 19 : quel échéancier de paiement, quelle garantie et quelles pénalités en cas de non-respect du niveau de service ?",
+            "Contrat 20 : quelle clause de sortie après le pilote et en cours de contrat, et quelles conditions de reprise du matériel ?"
+          ]
+        }
+      ],
+      "incertitudes": [
+        "Les prix en euros sont pour la plupart extrapolés de prix américains (taux supposé de 1 $ ≈ 0,86 €) ou de revendeurs isolés ; Pudu et Keenon ne publient aucun tarif et les écarts entre revendeurs atteignent 50 %.",
+        "Aucun distributeur exclusif Pudu ou Keenon pour la Belgique n'a été identifié ; la couverture du Benelux passe a priori par la filiale néerlandaise de Pudu et par le partenariat EMEA de Keenon avec SoftBank Robotics, à confirmer.",
+        "Les parts de marché de Pudu et de Keenon proviennent de deux cabinets différents (Frost & Sullivan et IDC) commandés ou relayés par les fabricants, et chacun se dit premier ; les chiffres ne sont pas directement comparables.",
+        "Les retours d'expérience hôteliers européens publiés (Parkhotel d'Eisenstadt, Renaissance La Défense, Horebot) proviennent des fabricants ou distributeurs ; aucun retour indépendant chiffré n'a été trouvé.",
+        "Le prix de l'Agibot A3 et le détail du marquage CE des humanoïdes Agibot et Unitree ne sont pas vérifiés ; les certifications TÜV annoncées à l'IFA 2026 ne valent pas à elles seules marquage CE au sens du futur règlement machines.",
+        "Le cadre juridique belge de ce qu'un robot peut afficher ou dire dans une salle de jeux (arrêté royal du 27 février 2023 sur la publicité) n'a pas été analysé en détail et doit être validé par le service juridique ou la Commission des jeux de hasard.",
+        "La présence effective de Pudu, Keenon et Agibot dans la zone robots de service de la Foire de Canton (phase 1, 15 octobre) n'est pas confirmée par une liste d'exposants.",
+        "Aucun casino européen utilisant un robot en salle de jeux n'a été trouvé ; l'absence de résultat ne prouve pas l'absence de cas.",
+        "Aucun texte belge ni aucune position publiée de la Commission des jeux de hasard ne vise les robots en salle de jeux : l'analyse repose sur l'application par analogie des règles d'accès, de bonus, de publicité et de vidéosurveillance ; une consultation écrite de la Commission est indispensable.",
+        "La frontière entre caméra de navigation (RGPD seul) et caméra de surveillance mobile (loi du 21 mars 2007, article 7/2) dépend de la finalité réelle et n'a pas été tranchée pour les robots par l'APD ou la jurisprudence ; l'interprétation retenue ici est prudente.",
+        "Le texte final belge de transposition de la directive 2024/2853 n'est pas encore adopté (avant-projet approuvé le 18 juillet 2026) et la date de publication de la nouvelle édition de l'ISO 13482 n'a pas été confirmée.",
+        "La qualification d'importateur lorsqu'une entreprise importe pour son propre usage, et non pour revendre, repose sur la notion de mise en service et sur le Guide bleu de la Commission ; elle mérite une validation par un conseil en droit des produits avant un achat direct en Chine.",
+        "Les règles de vidéosurveillance citées pour les casinos proviennent du protocole informatique de la Commission de 2018 ; une version plus récente peut exister et doit être vérifiée par le service conformité.",
+        "La répartition exacte des compétences de surveillance du marché belge (SPF Emploi, SPF Économie, BIPT) pour un robot à double usage professionnel et grand public n'a pas été confirmée par une source officielle ; le cadre belge d'exécution de l'AI Act reste incomplet.",
+        "Le délai de 4 à 6 mois avant une mise en service en salle de jeux est une estimation fondée sur les délais légaux (3 mois CCT n° 39) et sur une hypothèse de délai de réponse de la Commission.",
+        "Les prix européens proviennent de revendeurs (Nisbets Irlande, OpenELAB, Joybuy, Reichelt, mondonovo) et non de tarifs officiels des fabricants ; les remises réelles et les prix des filiales européennes de Pudu et Keenon sont inconnus.",
+        "Les coûts d'intégration (ascenseurs 3 000 à 10 000 €, portes, Wi-Fi), de maintenance pour les humanoïdes (15-20 %/an), d'assurance et le coût horaire de 35 € sont des hypothèses à confirmer par l'ascensoriste, les fournisseurs et les RH.",
+        "La taille de l'hôtel, le nombre de demandes de livraison par jour et la marque des ascenseurs ne sont pas connus : l'exemple de retour sur investissement (15 demandes/jour) est illustratif.",
+        "Aucune intégration robot certifiée sur la place de marché Mews n'a été trouvée ; la faisabilité d'un déclenchement automatique depuis Mews reste à vérifier.",
+        "Le tarif d'abonnement d'un robot hôtelier (900 à 1 300 €/mois) est extrapolé d'indications générales (30 à 50 USD/jour) ; aucune grille publique européenne n'a été trouvée.",
+        "La liste des exposants du Robotics Show du CIIF et du hall 21.2 de la session d'octobre 2026 n'était pas publiée ; les noms cités viennent de la session d'avril 2026.",
+        "Le nom du responsable commercial Europe de Keenon provient d'un annuaire de profils publics et peut être périmé ; la localisation exacte du site Agibot visité n'est pas connue.",
+        "Les règles belges sur la publicité pour les jeux de hasard et les obligations de transparence du règlement européen sur l'IA appliquées à un robot en salle doivent être confirmées par la conformité et le délégué à la protection des données.",
+        "Le classement douanier des robots de service (1,7 % pour la position des robots industriels) est à confirmer par le transitaire."
+      ],
+      "sources": [
+        {
+          "titre": "Pudu Robotics classé n°1 mondial sur quatre dimensions par Frost & Sullivan (16/07/2026)",
+          "url": "https://kyodonewsprwire.jp/release/202607162704"
+        },
+        {
+          "titre": "Pudu Robotics renforce sa présence européenne après l'IFA 2026 (14/09/2026)",
+          "url": "https://www.webull.com/news/15576613901386752"
+        },
+        {
+          "titre": "Keenon Robotics n°1 mondial selon IDC (21/07/2025)",
+          "url": "https://www.keenon.com/en/news/keenon-robotics-continues-global-lead-in-commercial-service-robot-market-securing-triple-no-1-rankings-idc-reports"
+        },
+        {
+          "titre": "Keenon : humanoïde XMAN-R1 au Shangri-La Traders Hongqiao (31/10/2025)",
+          "url": "https://en.prnasia.com/releases/apac/keenon-humanoid-robot-joins-hotel-workforce-pioneering-world-s-first-general-purpose-special-purpose-robot-collaboration-model-509473.shtml"
+        },
+        {
+          "titre": "Pudu : levée de 150 M$ à 1,5 Md$ de valorisation (avril 2026)",
+          "url": "https://pulse2.com/pudu-robotics-150-million-at-1-5-billion-valuation-raised-for-commercial-service-robotics-expansion/amp/"
+        },
+        {"titre": "Pudu FlashBot Arm (31/03/2025)", "url": "https://pudurobotics.com/en/news/1075"},
+        {"titre": "Pudu KettyBot Pro (janvier 2024)", "url": "https://pudurobotics.com/about/news/65bc885f3e0bf00039afdf11"},
+        {"titre": "Parkhotel Eisenstadt équipé par Pudu (22/12/2023)", "url": "https://www.pudurobotics.com/about/news/658bfff79bc71f00446c345b"},
+        {"titre": "Keenon Butler W3 (fiche revendeur)", "url": "https://www.knoxlabs.com/products/keenon-butlerbot-w3-delivery-robot"},
+        {
+          "titre": "Keenon DINERBOT T9 (Unchained Robotics)",
+          "url": "https://unchainedrobotics.de/en/products/robot/mobile-robots/amr/keenon-robotics-dinerbot-t9"
+        },
+        {"titre": "Robot World, distributeur Pudu, location dès 250 €/mois", "url": "https://robotworld.com/b2b"},
+        {
+          "titre": "Guide des prix Agibot en euros, édition 2026 (OpenELAB)",
+          "url": "https://openelab.io/blogs/learn/how-much-does-the-agibot-cost-a-price"
+        },
+        {"titre": "Agibot atteint 10 000 unités (30/03/2026)", "url": "https://kyodonewsprwire.jp/release/202603306613"},
+        {
+          "titre": "Agibot A3 et X2 à l'IFA 2026, certifications TÜV",
+          "url": "https://www.originofbots.com/news/ifa-2026-berlin-showcases-next-gen-commercial-humanoids-agibot-a3-and-xiaomi-cyberone-make-european-"
+        },
+        {
+          "titre": "Agibot choisit Minth pour son déploiement européen",
+          "url": "https://www2.yicaiglobal.com/news/global-humanoid-robot-leader-agibot-taps-minth-group-to-drive-european-rollout"
+        },
+        {"titre": "Agibot A3 (fiche technique)", "url": "https://humanoid.guide/product/agibot-a3/"},
+        {"titre": "Agibot : guide des prix 2026 (D1, X2, G2)", "url": "https://globaldronehq.com/blogs/guides/agibot-robot-price-guide-2026"},
+        {
+          "titre": "Projet d'introduction en bourse d'Agibot à Hong Kong (Reuters via Yahoo)",
+          "url": "https://finance.yahoo.com/news/exclusive-chinese-robot-maker-agibot-091938722.html"
+        },
+        {
+          "titre": "Genting Malaysia et Agibot : protocole d'accord (17/04/2026)",
+          "url": "https://rwgenting.com/content/dam/approved/rw-genting/web/images/press-releases/2026/20260417-GENMXAGIBOT-EN.pdf"
+        },
+        {
+          "titre": "Genting Malaysia et Agibot (GGRAsia)",
+          "url": "https://www.ggrasia.com/genting-malaysia-agibot-tie-to-advance-ai-robotics-in-hospitality"
+        },
+        {
+          "titre": "Chimelong Spaceship : plus de 300 robots Agibot (25/09/2026)",
+          "url": "https://blooloop.com/news/chimelong-spaceship-agibot-300-robots"
+        },
+        {
+          "titre": "Unitree : introduction au STAR Market (août 2026)",
+          "url": "https://autonews.gasgoo.com/articles/news/unitree-launches-star-market-ipo-issuance-process-subscriptions-open-august-10-2083181368883253248"
+        },
+        {
+          "titre": "Unitree vise une introduction après un chiffre d'affaires quadruplé",
+          "url": "https://kr-asia.com/unitree-targets-ipo-after-revenue-quadruples-on-robotics-demand"
+        },
+        {"titre": "Prix des humanoïdes en 2026 (Unitree G1, R1)", "url": "https://www.monsterdealz.de/magazin/humanoide-roboter-kaufen"},
+        {"titre": "Unitree G1 à l'IFA et questions de sécurité non résolues", "url": "https://humanoid.guide/?p=17802"},
+        {
+          "titre": "UBTech : ventes d'humanoïdes multipliées par 23 (SCMP)",
+          "url": "https://www.scmp.com/tech/article/3348635/ubtech-surges-leaps-and-bounds-humanoid-robot-sales-jump-23-fold"
+        },
+        {"titre": "UBTech Walker S2 : production de masse et 800 M CNY de commandes", "url": "https://kyodonewsprwire.jp/release/202511179261"},
+        {"titre": "UBTech Cruzr (RobotLAB)", "url": "https://www.robotlab.com/store/cruzr/"},
+        {"titre": "Temi (RobotLAB)", "url": "https://www.robotlab.com/store/temi-robot"},
+        {"titre": "Fourier GR-3", "url": "https://mikekalil.com/blog/fourier-gr3-carebot/"},
+        {
+          "titre": "Galbot ouvre des boutiques autonomes à Hong Kong",
+          "url": "https://www.thestandard.com.hk/news/article/342052/Mainland-embodied-AI-firm-Galbot-opens-first-autonomous-retail-stores-in-HK"
+        },
+        {
+          "titre": "Orionstar : solutions d'accueil et de livraison (Reichelt)",
+          "url": "https://www.reichelt.com/magazin/fr/actualites/robotique-de-service-accueil-visiteurs-hotellerie-robot-de-transport/"
+        },
+        {
+          "titre": "Orionstar LuckiBot (revendeur européen)",
+          "url": "https://shop.mondonovo.net/en/smart-robot/636-lucky-bot-robot-for-deliveries-and-table-service-orionstar-ai.html"
+        },
+        {
+          "titre": "LG prend 51 % de Bear Robotics (The Robot Report)",
+          "url": "https://www.therobotreport.com/lg-acquires-majority-stake-in-bear-robotics/"
+        },
+        {
+          "titre": "Paragon Casino Resort et le robot Servi Plus (12/11/2024)",
+          "url": "https://www.indiangaming.com/paragon-casino-resort-introduces-ai-powered-robot/"
+        },
+        {"titre": "Richtech Robotics (Nasdaq)", "url": "https://www.nasdaq.com/articles/bull-day-richtech-robotics-rr"},
+        {"titre": "Guide des prix Pudu 2026 (BellaBot, KettyBot)", "url": "https://grabarobot.com/blog/pudu-robotics-price-guide-2026/"},
+        {"titre": "Guide des prix Gausium 2026", "url": "https://grabarobot.com/blog/gausium-cleaning-robot-price-guide-2026/"},
+        {"titre": "Pudu CC1 Pro (RobotShop)", "url": "https://www.robotshop.com/es/products/pudu-cc1-pro-intelligent-cleaning-robot-black"},
+        {
+          "titre": "Marina Bay Sands : robots de logistique interne (18/06/2025)",
+          "url": "https://www.techgoondu.com/2025/06/18/robots-at-singapores-marina-bay-sands-cut-labour-dependency-by-30-per-cent/"
+        },
+        {
+          "titre": "Knightscope K5 au M Resort Spa Casino, Las Vegas (28/02/2023)",
+          "url": "https://www.businesswire.com/news/home/20230228006289/en/M-Resort-Spa-Casino-Deploys-Knightscope-Nasdaq-KSCP-K5-Security-Robot"
+        },
+        {"titre": "Robots de service à Macao (GGB News)", "url": "https://ggbnews.com/article/service-robots-coming-to-macau"},
+        {
+          "titre": "Renaissance Paris La Défense et le robot W3 (08/04/2024)",
+          "url": "https://tophotel.news/room-service-delivery-made-easy-with-the-help-of-a-trusted-robot-softbank-robotics/"
+        },
+        {
+          "titre": "Mario, robot réceptionniste du Marriott de Gand (Forum économique mondial, 2016)",
+          "url": "https://weforum.org/agenda/2016/06/mario-the-robot-receptionist-speaks-19-languages-and-dances-to-michael-jackson"
+        },
+        {
+          "titre": "Vandri Robotics présente Jože, réceptionniste humanoïde (Bled)",
+          "url": "https://www.intellinews.com/slovenia-s-vandri-robotics-unveils-humanoid-hotel-receptionist-jo-e-at-mwc-shanghai-2026-451491/"
+        },
+        {
+          "titre": "Robbie, humanoïde à l'hôtel Devín de Bratislava (juillet 2026)",
+          "url": "https://webiano.digital/robbie-starts-work-at-hotel-devin-as-slovakias-first-humanoid-hotel-assistant/"
+        },
+        {
+          "titre": "Hotelschool The Hague : humain contre robot",
+          "url": "https://www.hotelschool.nl/blog/research/human-vs-robot-crucial-insights-into-technology-integration-customer-perceptions-and-staffing-strategies-for-hospitality-industry"
+        },
+        {
+          "titre": "BellaBot à Lausanne menacé pour ses erreurs (26/11/2022)",
+          "url": "https://www.iamexpat.ch/lifestyle/lifestyle-news/revolutionary-robot-waiter-swiss-city-risks-losing-its-job-due-errors"
+        },
+        {
+          "titre": "Restaurants de Canton qui renoncent à leurs serveurs robots (CBS News)",
+          "url": "https://www.cbsnews.com/amp/news/chinese-restaurant-fires-subpar-robot-waiters"
+        },
+        {
+          "titre": "Henn-na Hotel retire la moitié de ses robots (Engadget, 16/01/2019)",
+          "url": "https://engadget.com/2019/01/16/japan-robot-hotel-fires-over-half-its-robots"
+        },
+        {
+          "titre": "SoftBank arrête la production de Pepper (Bloomberg, 29/06/2021)",
+          "url": "https://www.bloomberg.com/news/articles/2021-06-29/softbank-mothballs-once-hyped-1-800-pepper-humanoid-robot"
+        },
+        {
+          "titre": "Aldebaran en redressement judiciaire (The Robot Report)",
+          "url": "https://www.therobotreport.com/aldebaran-pepper-nao-robots-receivership/"
+        },
+        {"titre": "Maxvision reprend Aldebaran (heise)", "url": "https://heise.de/-10495554"},
+        {
+          "titre": "Règlement européen 2023/1230 sur les machines (EU-OSHA)",
+          "url": "https://osha.europa.eu/en/legislation/directive/regulation-20231230eu-machinery"
+        },
+        {
+          "titre": "Publicité pour les jeux de hasard en Belgique (police.be)",
+          "url": "https://www.police.be/5337/actualites/la-publicite-pour-les-jeux-de-hasard-ce-qui-est-interdi"
+        },
+        {"titre": "CIIF 2026, Shanghai, 12-16 octobre (J-messe)", "url": "https://www.jetro.go.jp/en/database/j-messe/tradefair/detail/159922"},
+        {"titre": "Foire de Canton, zone robots de service (phase 1, avril 2026)", "url": "https://kyodonewsprwire.jp/release/202604147395"},
+        {"titre": "Règlement (UE) 2023/1230 sur les machines (EUR-Lex)", "url": "https://eur-lex.europa.eu/eli/reg/2023/1230/oj"},
+        {
+          "titre": "INRS, Nouveau règlement machines : quelles évolutions ?",
+          "url": "https://www.inrs.fr/publications/juridique/focus-juridiques/nouveau-reglement-machines.html"
+        },
+        {
+          "titre": "Eurogip / ETUI, Machines : de la directive au nouveau règlement (2023)",
+          "url": "https://eurogip.fr/wp-content/uploads/2023/09/FR-EUROGIP-ETUI_Machines-de-la-directive-au-nouveau-reglement-V1-2023-08.pdf"
+        },
+        {"titre": "Règlement (UE) 2023/1542 relatif aux batteries (EUR-Lex)", "url": "https://eur-lex.europa.eu/eli/reg/2023/1542/oj?locale=fr"},
+        {
+          "titre": "SGS, RED cybersecurity requirements mandatory on 1 August 2025",
+          "url": "https://www.sgs.com/en-se/news/2025/06/red-cybersecurity-requirements-mandatory-on-1-august-2025"
+        },
+        {
+          "titre": "ANSI, ISO 10218-1:2025 Robots and robotic devices safety",
+          "url": "https://blog.ansi.org/ansi/iso-10218-1-2025-robots-and-robotic-devices-safety/"
+        },
+        {"titre": "Projet ISO/FDIS 13482 (révision robots de service)", "url": "https://isrsm.gov.mk/en/project/show/iso:proj:83498"},
+        {
+          "titre": "Lovguiden, mise à jour des normes harmonisées machines (7 septembre 2026)",
+          "url": "https://lovguiden.dk/en/det-offentlige/eur-lex-eu-tidende/2026-09-07-eu-opdaterer-harmoniserede-maskinstandarder-og-ophaever-tidligere-afgoerelse"
+        },
+        {
+          "titre": "Règlement (UE) 2024/1689 sur l'IA, article 50 (AI Act Service Desk, Commission)",
+          "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-50"
+        },
+        {
+          "titre": "Sidley, provisional agreement to delay key EU AI Act obligations (22 juin 2026)",
+          "url": "https://datamatters.sidley.com/2026/06/22/eu-lawmakers-reach-provisional-agreement-to-delay-key-eu-ai-act-obligations/"
+        },
+        {"titre": "Modulos, EU AI Act Omnibus now law (règlement 2026/1744)", "url": "https://www.modulos.ai/blog/eu-ai-act-omnibus-now-law"},
+        {
+          "titre": "DLA Piper, Digital Omnibus on AI (2026)",
+          "url": "https://www.dlapiper.com/en/insights/publications/law-in-tech/2026/digital-omnibus-on-ai"
+        },
+        {
+          "titre": "Stephenson Harwood, Commission adopts guidelines on Article 50 transparency",
+          "url": "https://perspectives.stephensonharwood.com/post/102nfqh/eu-ai-act-update-european-commission-adopts-guidelines-on-article-50-transparenc"
+        },
+        {"titre": "CMS, AI regulation scanner Belgium", "url": "https://cms.law/en/int/expert-guides/ai-regulation-scanner/belgium"},
+        {
+          "titre": "APD, décision SG 01/2019 : liste des traitements soumis à AIPD",
+          "url": "https://www.autoriteprotectiondonnees.be/publications/decision-n-01-2019-du-16-janvier-2019.pdf"
+        },
+        {
+          "titre": "Chambre, doc. 54 2855/007 : texte de la loi du 21 mars 2018 modifiant la loi caméras (art. 7/1 à 7/3)",
+          "url": "https://www.dekamer.be/FLWB/Pdf/54/2855/54K2855007.pdf"
+        },
+        {
+          "titre": "Loyens & Loeff, Belgian rules on use of surveillance cameras revised",
+          "url": "https://www.loyensloeff.com/insights/news--events/news/belgian-rules-on-use-of-surveillance-cameras-revised/"
+        },
+        {
+          "titre": "AR du 6 décembre 2018 lieux à risque particulier (loi caméras)",
+          "url": "https://www.besafe.be/sites/default/files/2022-08/cameras_-_ar_lieux_a_risques-_06-12-2018-mb.pdf"
+        },
+        {
+          "titre": "Law Society Gazette, TikTok fined €530m over data transfers to China (mai 2025)",
+          "url": "https://www.lawsociety.ie/gazette/top-stories/2025/may/tiktok-fined-530m-over-data-transfers-to-china/"
+        },
+        {
+          "titre": "Commission des jeux de hasard, Protocole informatique classe I (casinos) v15.0.1",
+          "url": "https://gamingcommission.be/sites/default/files/2021-10/Casinos%20(Classe%20I).pdf"
+        },
+        {
+          "titre": "Cour constitutionnelle, arrêt 165/2025 (loi du 18 février 2024), communiqué",
+          "url": "https://fr.const-court.be/public/f/2025/2025-165f-info.pdf"
+        },
+        {
+          "titre": "Cour constitutionnelle, arrêt 45/2026 (contrôle EPIS), communiqué",
+          "url": "https://fr.const-court.be/public/f/2026/2026-045f-info.pdf"
+        },
+        {
+          "titre": "APD (CPVP), avis 31/2002 sur le registre d'accès aux salles de classe I et II (article 62)",
+          "url": "https://autoriteprotectiondonnees.be/publications/avis-n-31-2002.pdf"
+        },
+        {
+          "titre": "ACCG, outil CCT n° 39 nouvelles technologies",
+          "url": "https://www.accg.be/sites/default/files/sectors/accg-tool-cct-39-procedure-d-information-et-de-concertation-sur-les-consequences-sociales-de-l-introduction-des-nouvelles-technologies.pdf"
+        },
+        {
+          "titre": "ACCG, outil CCT n° 68 surveillance par caméras",
+          "url": "https://www.accg.be/sites/default/files/sectors/accg-tool-cct-68-la-protection-de-la-vie-privee-des-travailleurs-a-l-egard-de-la-la-surveillance-par-cameras-utilisee-sur-le-lieu-de-travail.pdf"
+        },
+        {
+          "titre": "SPF Emploi, CCT intersectorielles",
+          "url": "https://emploi.belgique.be/fr/themes/commissions-paritaires-et-conventions-collectives-de-travail-cct/conventions-collectives-0"
+        },
+        {
+          "titre": "Securex, matières soumises à l'avis préalable du CPPT",
+          "url": "https://www.securex.be/fr/lex4you/employeur/themes/bien-etre-au-travail/comite-pour-la-prevention-et-la-protection-au-travail-(cppt)/quelles-sont-les-matieres-soumises-a-l-avis-prealable-du-cppt"
+        },
+        {
+          "titre": "Lexgo, Le nouveau livre 6 du Code civil : principales nouveautés",
+          "url": "https://www.lexgo.be/en/news-and-articles/13733-la-responsabilite-extracontractuelle-nouveau-livre-6-du-code-civil-principales-nouveautes-en-pratique"
+        },
+        {
+          "titre": "Linklaters, Belgium moves to transpose new Product Liability Directive (2026)",
+          "url": "https://www.linklaters.com/insights/blogs/productliabilitylinks/2026/belgium-moves-to-transpose-new-product-liability-directive"
+        },
+        {
+          "titre": "Stibbe, Nouvelles règles de l'UE sur la responsabilité du fait des produits défectueux",
+          "url": "https://www.stibbe.com/fr/publications-and-insights/nouvelles-regles-de-lue-sur-la-responsabilite-du-fait-des-produits"
+        },
+        {
+          "titre": "Ethias, fiche info assurance obligatoire RC objective incendie-explosion",
+          "url": "https://www.ethias.be/pro/content/fiche-info-assurance-obligatoire-rc-objective-incendie-explosion.pdf"
+        },
+        {"titre": "Calendrier du Cyber Resilience Act (règlement 2024/2847)", "url": "https://donneespersonnelles.fr/cra-calendrier"},
+        {
+          "titre": "Wallex, arrêté d'exécution du décret relatif aux établissements d'hébergement touristique",
+          "url": "https://wallex.wallonie.be/eli/arrete/2004/12/09/2004027001/2008/04/10"
+        },
+        {
+          "titre": "SPF Emploi, La modernisation des ascenseurs (AR du 9 mars 2003)",
+          "url": "https://emploi.belgique.be/fr/actualites/la-modernisation-des-ascenseurs-la-traine?id=44188"
+        },
+        {"titre": "Accessible.org, EAA rules for self-service terminals", "url": "https://accessible.org/eaa-self-service-terminals/"},
+        {
+          "titre": "Yicai Global, Chinese insurers move into robot liability market",
+          "url": "https://www2.yicaiglobal.com/news/chinese-insurers-launch-new-humanoid-robot-products-amid-growing-risks-of-accidents"
+        },
+        {"titre": "Nisbets Irlande, Keenon W3 (prix hors TVA)", "url": "https://www.nisbets.ie/keenon/_/a33-1"},
+        {
+          "titre": "Advantage Catering Equipment, Keenon W3 Room Service Butlerbot (Royaume-Uni)",
+          "url": "https://www.advantage-catering-equipment.co.uk/products/keenon-w3-room-service-butlerbot"
+        },
+        {
+          "titre": "Generation Robots, Pudu FlashBot",
+          "url": "https://www.generationrobots.com/en/404254-delivery-robot-for-buildings-pudu-flashbot.html"
+        },
+        {"titre": "RobotLAB, FlashBot (prix)", "url": "https://robotlab.com/restaurant-robots/store/flashbot"},
+        {
+          "titre": "BGR, Agibot Launches Humanoid Robot Rental Program (899 € par jour, mars 2026)",
+          "url": "https://bgr.com/2115577/agibot-robot-rental-program-price-release-date/"
+        },
+        {
+          "titre": "RobotShop, Unitree G1 EDU rental",
+          "url": "https://ca.robotshop.com/products/unitree-g1-edu-u2-humanoid-robot-rental-w-on-site-service"
+        },
+        {"titre": "Orionstar, GreetingBot Mini (fiche technique, contact)", "url": "https://de.orionstar.com/mini.html"},
+        {
+          "titre": "Mondonovo, Mini Bot Orionstar (prix européen)",
+          "url": "https://shop.mondonovo.net/en/smart-robot/637-mini-bot-robot-for-reception-orionstar-ai.html"
+        },
+        {
+          "titre": "HelloPro, Combien coûte un robot humanoïde (location en France)",
+          "url": "https://conseils.hellopro.fr/combien-coute-un-robot-humanoide-1530.html"
+        },
+        {
+          "titre": "Oxmaint, Room Service Robots for Hotels: Maintenance Guide 2026",
+          "url": "https://oxmaint.com/industries/hospitality/room-service-robots-hotel-maintenance"
+        },
+        {
+          "titre": "Relay Robotics, In-room dining doubles at Chicago hotel",
+          "url": "https://relayrobotics.com/blog/in-room-dinning-doubles-at-chicago-hotel-thanks-to-delivery-robots"
+        },
+        {
+          "titre": "Indian Gaming, Chinook Winds introduces robot delivery",
+          "url": "https://www.indiangaming.com/chinook-winds-introduces-robot-delivery-to-enhance-guest-service/"
+        },
+        {
+          "titre": "Bebeez, Pudu Robotics deepens European presence following IFA 2026 (14/09/2026)",
+          "url": "https://bebeez.eu/2026/09/14/pudu-robotics-deepens-european-presence-following-ifa-2026-advancing-a-scaled-and-localized-growth-strategy/"
+        },
+        {"titre": "Keenon Robotics, site officiel et contact", "url": "https://www.keenon.com/en/contactus"},
+        {
+          "titre": "EqualOcean, AGIBOT launches European partner platform in London (juillet 2026)",
+          "url": "https://equalocean.com/news/2026071622032-agibot-launches-european-partner-platform-london-expands-robot-as-service-model"
+        },
+        {
+          "titre": "EqualOcean, AGIBOT enters German market (février 2026)",
+          "url": "https://equalocean.com/news/2026022621755-agibot-enters-german-market-robotics-push/amp"
+        },
+        {
+          "titre": "Business Today, Genting Malaysia acquires AGIBOT humanoid for pilot programmes (17/04/2026)",
+          "url": "https://www.businesstoday.com.my/2026/04/17/genting-malaysia-acquires-agibot-humanoid-for-pilot-programmes/"
+        },
+        {
+          "titre": "China Daily / Invest in China, Unitree deepens European presence (juin 2026)",
+          "url": "https://investinchina.chinaservicesinfo.com/s/202606/29/WS6a41c81f498e23165e07051d/robot-maker-deepens-european-presence.html"
+        },
+        {
+          "titre": "Börse Express, UBTech : Terra Robotics distributeur DACH",
+          "url": "https://www.boerse-express.com/news/articles/ubtech-terra-robotics-wird-dach-distributor-898139"
+        },
+        {
+          "titre": "Global Trade Fairs, Shanghai Robotics Show 2026 (CIIF)",
+          "url": "https://globaltradefairs.com/tradefairs/event-details/2026-shanghai-robotics-show-rs"
+        },
+        {"titre": "36Kr Europe, exposants de la zone robots de service de la Foire de Canton", "url": "https://eu.36kr.com/en/p/3768776195814151"},
+        {
+          "titre": "Mofcom, dates de la 140e Foire de Canton",
+          "url": "https://cv.mofcom.gov.cn/sqfb/art/2026/art_dd6600a0db984a28bd8c1f9e94edc34c.html"
+        },
+        {
+          "titre": "Hotel Tech Report, Mews dépasse 1 000 intégrations Marketplace",
+          "url": "https://hoteltechreport.com/fr/news/mews-1000-marketplace-integrations"
+        },
+        {
+          "titre": "DWF, New Machinery Regulation 2023/1230",
+          "url": "https://dwfgroup.com/en/news-and-insights/insights/2023/7/new-machinery-regulation"
+        },
+        {"titre": "Celna24, tarif douanier 8479", "url": "https://celna24.pl/customs-tariff/8479"},
+        {"titre": "Expolume, Pudu Robotics (adresse du siège)", "url": "https://expolume.com/company/pudu-robotics/"}
+      ],
+      "consulte": "05/10/2026"
     },
     {
       "id": "macao-ville",
