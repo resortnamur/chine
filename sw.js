@@ -1,6 +1,6 @@
 /* Service worker : met tout le site en cache pour un usage hors ligne.
    Changer VERSION à chaque modification du code (pas nécessaire pour data.json). */
-const VERSION = 'v13';
+const VERSION = 'v14';
 const CACHE = 'chine-' + VERSION;
 // Photos du diaporama : cache à part, conservé d'une version à l'autre (≈ 5 Mo à ne télécharger qu'une fois)
 const CACHE_PHOTOS = 'photos-chine';

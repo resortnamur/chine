@@ -4848,11 +4848,26 @@
           ]
         },
         {
-          "photo": "photos/carte-groupe.svg",
+          "photo": "photos/carte-groupe.svg?v=3",
           "fr": "Nos établissements en Belgique, en France et en Suisse",
           "en": "Our venues in Belgium, France and Switzerland",
           "zh": "我们在比利时、法国和瑞士的娱乐场所",
-          "credit": "Fond de carte : Natural Earth"
+          "credit": "Fond de carte : Natural Earth",
+          "points": [
+            {"n": 1, "type": "resort", "zh": "那慕尔度假村", "fr": "Namur — Resort"},
+            {"n": 2, "type": "casino", "zh": "斯帕", "fr": "Spa"},
+            {"n": 3, "type": "club", "zh": "巴黎俱乐部", "fr": "Paris — Club"},
+            {"n": 4, "type": "casino", "zh": "卡尔纳克", "fr": "Carnac"},
+            {"n": 5, "type": "casino", "zh": "巴尔博唐", "fr": "Barbotan"},
+            {"n": 6, "type": "casino", "zh": "勒卡特港", "fr": "Port-Leucate"},
+            {"n": 7, "type": "casino", "zh": "巴拉吕克", "fr": "Balaruc"},
+            {"n": 8, "type": "casino", "zh": "瓦尔莱班", "fr": "Vals-les-Bains"},
+            {"n": 9, "type": "casino", "zh": "阿勒瓦尔", "fr": "Allevard"},
+            {"n": 10, "type": "casino", "zh": "布里扬松", "fr": "Briançon"},
+            {"n": 11, "type": "casino", "zh": "克朗-蒙塔纳", "fr": "Crans-Montana"},
+            {"n": 12, "type": "casino", "zh": "达沃斯", "fr": "Davos"},
+            {"n": "•", "type": "salle", "zh": "30多家Circus游戏厅（比利时）", "fr": "30+ salles Circus (Belgique)"}
+          ]
         },
         {
           "chapitre": true,
@@ -5027,11 +5042,19 @@
           ]
         },
         {
-          "photo": "photos/carte-belgique.svg",
+          "photo": "photos/carte-belgique.svg?v=3",
           "fr": "Belgique : le Resort de Namur, le Casino de Spa et plus de 30 salles Circus",
           "en": "Belgium: the Namur Resort, the Casino de Spa and more than 30 Circus gaming halls",
           "zh": "比利时：那慕尔度假村、斯帕娱乐场和30多家Circus游戏厅",
-          "credit": "Fond de carte : Natural Earth"
+          "credit": "Fond de carte : Natural Earth",
+          "points": [
+            {"n": 1, "type": "resort", "zh": "那慕尔度假村", "fr": "Namur — Resort"},
+            {"n": 2, "type": "casino", "zh": "斯帕娱乐场", "fr": "Spa — Casino"},
+            {"n": 3, "type": "ville", "zh": "列日 · 总部", "fr": "Liège (siège du groupe)"},
+            {"n": 4, "type": "ville", "zh": "布鲁塞尔 · 首都", "fr": "Bruxelles (capitale)"},
+            {"n": 5, "type": "ville", "zh": "安特卫普", "fr": "Anvers"},
+            {"n": "•", "type": "salle", "zh": "Circus游戏厅（27家）", "fr": "Salles Circus (27)"}
+          ]
         },
         {
           "photo": "photos/ville-liege.jpg",

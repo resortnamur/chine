@@ -1,7 +1,8 @@
 """Génère photos/carte-groupe.svg et photos/carte-belgique.svg (fond Natural Earth 1:10m).
 Données (≈ 3,6 Mo, non versionnées) : https://cdn.jsdelivr.net/npm/world-atlas@2/countries-10m.json
 à déposer à côté de ce script. Lancer : python outils/cartes.py
-Après modification d'une carte : passer son adresse à « photos/carte-xxx.svg?v=N » dans data.json."""
+Après modification d'une carte : passer son adresse à « photos/carte-xxx.svg?v=N » dans data.json
+et recopier outils/points.json dans le champ « points » de la diapositive."""
 import json, math, os
 
 ICI = os.path.dirname(os.path.abspath(__file__))
@@ -54,7 +55,6 @@ def carte(nom, lon0, lon1, lat0, lat1, largeur, contenu, titre):
         return "".join(d)
     svg = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{largeur}" height="{hauteur}" viewBox="0 0 {largeur} {hauteur}" font-family="sans-serif">',
            f'<title>{titre}</title>',
-           '<style>.h{paint-order:stroke;stroke:#fff;stroke-width:6px;stroke-linejoin:round}.pays{fill:#9a8f86;font-weight:700;letter-spacing:2px}.mer{fill:#5d8fb3;font-style:italic}</style>',
            f'<rect width="{largeur}" height="{hauteur}" fill="#cfe3f1"/>',
            f'<path d="{chemin(VOISINS)}" fill="#ecebe7" stroke="#b9b5ae" stroke-width="1.2"/>',
            f'<path d="{chemin(sorted(GROUPE))}" fill="#fff6e8" stroke="#a11212" stroke-width="2.2"/>']
@@ -87,67 +87,70 @@ SALLES = [(50.592026, 5.849207), (50.6711765, 5.5495454), (50.4037431, 3.6755447
           (50.4675927, 4.268752), (50.686943267282, 4.4050463231539), (50.8474921, 4.8209039), (50.5632731, 5.5486348),
           (49.5489311, 5.8124628), (49.653655, 5.819157), (51.2187395, 4.4198051)]
 
+# Les noms des lieux ne sont PAS écrits sur la carte (illisibles sur téléphone) : pastilles numérotées,
+# la liste « numéro → nom » est affichée en texte HTML sous la carte (champ « points » de la diapositive).
+COULEURS = {"resort": "#6e0b0b", "casino": "#c41a1a", "club": "#c98a00", "ville": "#555555"}
+POINTS = {}
+
+def pastille(x, y, n, type_, r=30):
+    c = COULEURS[type_]
+    if type_ == "club":
+        forme = f'<polygon points="{x:.1f},{y - r * 1.25:.1f} {x + r * 1.25:.1f},{y:.1f} {x:.1f},{y + r * 1.25:.1f} {x - r * 1.25:.1f},{y:.1f}" fill="{c}" stroke="#fff" stroke-width="4"/>'
+    elif type_ == "ville":
+        forme = f'<rect x="{x - r:.1f}" y="{y - r:.1f}" width="{2 * r}" height="{2 * r}" rx="6" fill="{c}" stroke="#fff" stroke-width="4"/>'
+    else:
+        anneau = f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{r + 7}" fill="#f2b705"/>' if type_ == "resort" else ""
+        forme = anneau + f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{r}" fill="{c}" stroke="#fff" stroke-width="4"/>'
+    return forme + f'<text x="{x:.1f}" y="{y + r * 0.42:.1f}" font-size="{round(r * 1.25)}" font-weight="700" text-anchor="middle" fill="#fff">{n}</text>'
+
+def nom_pays(P, lon, lat, t, taille, couleur="#8a7f76"):
+    x, y = P(lon, lat)
+    return f'<text x="{x:.0f}" y="{y:.0f}" font-size="{taille}" font-weight="700" text-anchor="middle" fill="{couleur}" letter-spacing="4">{t}</text>'
+
+def salles(P, r, trait):
+    return "".join(f'<circle cx="{P(lon, lat)[0]:.1f}" cy="{P(lon, lat)[1]:.1f}" r="{r}" fill="#e0701b" stroke="#fff" stroke-width="{trait}"/>' for lat, lon in SALLES)
+
 # ---------- Carte 1 : le groupe (Belgique, France, Suisse) ----------
-F = 40  # taille des étiquettes (viewBox ≈ 1200 px de large, affiché ≈ 375-800 px sur téléphone)
-CASINOS_FR = [  # (lat, lon, zh, latin, dx, dy, ancre)
-    (45.394, 6.075, "阿勒瓦尔", "Allevard", -20, -8, "end"),
-    (43.441, 3.678, "巴拉吕克", "Balaruc", 20, 4, "start"),
-    (43.948, -0.042, "巴尔博唐", "Barbotan", 20, 14, "start"),
-    (44.897, 6.635, "布里扬松", "Briançon", 0, 58, "middle"),
-    (47.584, -3.078, "卡尔纳克", "Carnac", 6, 56, "middle"),
-    (42.850, 3.040, "勒卡特港", "Leucate", 20, 26, "start"),
-    (44.665, 4.366, "瓦尔莱班", "Vals", -20, 14, "end"),
+LIEUX_GROUPE = [  # n, type, lat, lon, zh, fr
+    (1, "resort", 50.460, 4.860, "那慕尔度假村", "Namur — Resort"),
+    (2, "casino", 50.492, 5.864, "斯帕", "Spa"),
+    (3, "club", 48.857, 2.352, "巴黎俱乐部", "Paris — Club"),
+    (4, "casino", 47.584, -3.078, "卡尔纳克", "Carnac"),
+    (5, "casino", 43.948, -0.042, "巴尔博唐", "Barbotan"),
+    (6, "casino", 42.850, 3.040, "勒卡特港", "Port-Leucate"),
+    (7, "casino", 43.441, 3.678, "巴拉吕克", "Balaruc"),
+    (8, "casino", 44.665, 4.366, "瓦尔莱班", "Vals-les-Bains"),
+    (9, "casino", 45.394, 6.075, "阿勒瓦尔", "Allevard"),
+    (10, "casino", 44.897, 6.635, "布里扬松", "Briançon"),
+    (11, "casino", 46.311, 7.481, "克朗-蒙塔纳", "Crans-Montana"),
+    (12, "casino", 46.802, 9.836, "达沃斯", "Davos"),
 ]
 def contenu_groupe(P, W, H):
-    s = []
-    for lon, lat, t, cls, ta in [(1.6, 46.4, "法国 FRANCE", "pays", 48), (7.75, 47.0, "瑞士", "pays", 38), (9.7, 50.3, "德国", "pays", 38),
-                                 (-3.0, 45.6, "大西洋", "mer", 38), (5.3, 42.35, "地中海", "mer", 38), (9.4, 44.6, "意大利", "pays", 38)]:
-        x, y = P(lon, lat); s.append(texte(x, y, t, ta, "middle", "h " + cls, False))
-    for lat, lon in SALLES:
-        x, y = P(lon, lat); s.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="6" fill="#e0701b" stroke="#fff" stroke-width="2"/>')
-    for lat, lon, zh, lat_, dx, dy, a in CASINOS_FR:
-        x, y = P(lon, lat); s.append(rond(x, y, 14))
-        s.append(texte(x + dx, y + dy, f"{zh} {lat_}", F, a))
-    x, y = P(2.3522, 48.8566); s.append(losange(x, y, 19)); s.append(texte(x + 26, y + 14, "巴黎 Paris", F))
-    for lat, lon, zh, la, dx, dy, a in [(46.311, 7.481, "克朗-蒙塔纳", "Crans-Montana", -6, 56, "middle"), (46.802, 9.836, "达沃斯", "Davos", 10, -28, "end")]:
-        x, y = P(lon, lat); s.append(rond(x, y, 14)); s.append(texte(x + dx, y + dy, f"{zh} {la}", F, a))
-    x, y = P(4.86, 50.46); s.append(etoile(x, y, 26)); s.append(texte(x - 32, y + 14, "那慕尔 Namur", F + 4, "end"))
-    x, y = P(5.864, 50.492); s.append(rond(x, y, 14)); s.append(texte(x + 22, y + 14, "斯帕 Spa", F))
-    x, y = P(4.5, 51.35); s.append(texte(x, y - 20, "比利时 BELGIQUE", 38, "middle", "h pays", False))
-    # Légende en bas à gauche (océan et Espagne : aucun établissement)
-    lx, ly = 30, H - 196; L = 34
-    s.append(f'<rect x="{lx - 14}" y="{ly - 46}" width="330" height="236" rx="16" fill="#fff" fill-opacity=".94" stroke="#bbb"/>')
-    s.append(etoile(lx + 18, ly - 10, 20)); s.append(texte(lx + 50, ly, "度假村 Resort", L, gras=False))
-    s.append(rond(lx + 18, ly + 46, 13)); s.append(texte(lx + 50, ly + 58, "娱乐场 Casino", L, gras=False))
-    s.append(losange(lx + 18, ly + 102, 17)); s.append(texte(lx + 50, ly + 114, "俱乐部 Club", L, gras=False))
-    s.append(f'<circle cx="{lx + 18}" cy="{ly + 158}" r="8" fill="#e0701b" stroke="#fff" stroke-width="2"/>')
-    s.append(texte(lx + 50, ly + 170, "游戏厅 Salles", L, gras=False))
+    s = [nom_pays(P, 2.0, 46.7, "法国", 76), nom_pays(P, 8.3, 47.25, "瑞士", 56), nom_pays(P, 3.0, 51.08, "比利时", 46),
+         nom_pays(P, 9.6, 50.0, "德国", 52, "#aaa59e"), nom_pays(P, 9.3, 44.4, "意大利", 52, "#aaa59e"),
+         nom_pays(P, -3.4, 45.2, "大西洋", 50, "#6d97b8"), nom_pays(P, 5.6, 42.5, "地中海", 50, "#6d97b8"), salles(P, 7, 2)]
+    for n, t, lat, lon, zh, fr in LIEUX_GROUPE:
+        x, y = P(lon, lat); s.append(pastille(x, y, n, t, 36 if t == "resort" else 30))
+    POINTS["carte-groupe.svg"] = [{"n": n, "type": t, "zh": zh, "fr": fr} for n, t, _, _, zh, fr in LIEUX_GROUPE] +         [{"n": "•", "type": "salle", "zh": "30多家Circus游戏厅（比利时）", "fr": "30+ salles Circus (Belgique)"}]
     return s
 
-carte("carte-groupe.svg", -5.3, 11.2, 41.9, 51.75, 1200, contenu_groupe, "Gaming1 · Circus — Belgique, France, Suisse")
+carte("carte-groupe.svg", -5.0, 11.0, 42.2, 51.75, 1200, contenu_groupe, "Gaming1 · Circus — Belgique, France, Suisse")
 
 # ---------- Carte 2 : Belgique ----------
+LIEUX_BELGIQUE = [
+    (1, "resort", 50.460, 4.860, "那慕尔度假村", "Namur — Resort"),
+    (2, "casino", 50.492, 5.864, "斯帕娱乐场", "Spa — Casino"),
+    (3, "ville", 50.6326, 5.5797, "列日 · 总部", "Liège (siège du groupe)"),
+    (4, "ville", 50.8466, 4.3528, "布鲁塞尔 · 首都", "Bruxelles (capitale)"),
+    (5, "ville", 51.2194, 4.4025, "安特卫普", "Anvers"),
+]
 def contenu_belgique(P, W, H):
-    s = []
-    for lon, lat, t, cls, ta in [(6.4, 50.9, "德国", "pays", 40), (4.75, 51.47, "荷兰", "pays", 40), (3.6, 49.7, "法国 France", "pays", 42),
-                                 (6.2, 49.62, "卢森堡", "pays", 34), (2.85, 51.42, "北海", "mer", 40)]:
-        x, y = P(lon, lat); s.append(texte(x, y, t, ta, "middle", "h " + cls, False))
-    for lat, lon in SALLES:
-        x, y = P(lon, lat); s.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="12" fill="#e0701b" stroke="#fff" stroke-width="3"/>')
-    for lat, lon, t, dx, dy, a in [(50.8466, 4.3528, "布鲁塞尔 Bruxelles", 0, -24, "middle"), (51.2194, 4.4025, "安特卫普 Anvers", 0, -26, "middle"),
-                                   (50.6326, 5.5797, "列日 Liège（总部 HQ）", -10, -30, "middle")]:
-        x, y = P(lon, lat)
-        s.append(f'<rect x="{x - 9:.1f}" y="{y - 9:.1f}" width="18" height="18" fill="#555" stroke="#fff" stroke-width="2.5"/>')
-        s.append(texte(x + dx, y + dy, t, 40, a, couleur="#333"))
-    x, y = P(4.86, 50.46); s.append(etoile(x, y, 36)); s.append(texte(x, y + 76, "那慕尔 Namur", 48, "middle"))
-    x, y = P(5.864, 50.492); s.append(rond(x, y, 19)); s.append(texte(x + 28, y + 14, "斯帕 Spa", 44))
-    lx, ly = W - 470, 64; L = 34
-    s.append(f'<rect x="{lx - 16}" y="{ly - 48}" width="474" height="236" rx="16" fill="#fff" fill-opacity=".94" stroke="#bbb"/>')
-    s.append(etoile(lx + 18, ly - 10, 20)); s.append(texte(lx + 50, ly, "度假村 Resort", L, gras=False))
-    s.append(rond(lx + 18, ly + 46, 14)); s.append(texte(lx + 50, ly + 58, "娱乐场 Casino", L, gras=False))
-    s.append(f'<circle cx="{lx + 18}" cy="{ly + 102}" r="12" fill="#e0701b" stroke="#fff" stroke-width="3"/>')
-    s.append(texte(lx + 50, ly + 114, "Circus游戏厅 Salles", L, gras=False))
-    s.append(f'<rect x="{lx + 9}" y="{ly + 149}" width="18" height="18" fill="#555"/>'); s.append(texte(lx + 50, ly + 170, "城市 Ville", L, gras=False))
+    s = [nom_pays(P, 6.3, 50.95, "德国", 60, "#aaa59e"), nom_pays(P, 5.65, 51.36, "荷兰", 56, "#aaa59e"), nom_pays(P, 3.5, 49.75, "法国", 64, "#aaa59e"),
+         nom_pays(P, 2.85, 51.42, "北海", 56, "#6d97b8"), nom_pays(P, 4.2, 50.15, "比利时", 72), salles(P, 13, 3)]
+    for n, t, lat, lon, zh, fr in LIEUX_BELGIQUE:
+        x, y = P(lon, lat); s.append(pastille(x, y, n, t, 44 if t == "resort" else 36))
+    POINTS["carte-belgique.svg"] = [{"n": n, "type": t, "zh": zh, "fr": fr} for n, t, _, _, zh, fr in LIEUX_BELGIQUE] +         [{"n": "•", "type": "salle", "zh": "Circus游戏厅（27家）", "fr": "Salles Circus (27)"}]
     return s
 
 carte("carte-belgique.svg", 2.45, 6.55, 49.42, 51.56, 1300, contenu_belgique, "Circus en Belgique")
+json.dump(POINTS, open(os.path.join(ICI, "points.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)

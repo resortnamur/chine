@@ -962,7 +962,11 @@ function contenuDiapo(x) {
       (ch ? '<div class="diapo-chiffres">' + ch + '</div>' : '') + '</div>';
   }
   const lieu = x.lieu ? '<div class="diapo-lieu" lang="zh-CN">' + esc(x.lieu.zh) + ' · ' + esc(x.lieu.en) + '</div>' : '';
+  // Cartes : liste « numéro → lieu » en texte HTML (net à toute taille) sous la carte
+  const points = (x.points || []).map((p) => '<div class="diapo-point ' + esc(p.type) + '"><span class="pastille ' + esc(p.type) + '">' + esc(p.n) +
+    '</span><span class="noms"><span lang="zh-CN">' + esc(p.zh) + '</span><small>' + esc(p.fr) + '</small></span></div>').join('');
   return '<img class="diapo-img" src="' + esc(x.photo) + '" alt="' + esc(x.en) + '">' +
+    (points ? '<div class="diapo-points">' + points + '</div>' : '') +
     '<div class="diapo-legende">' + lieu + '<div class="diapo-zh" lang="zh-CN">' + esc(x.zh) + '</div>' +
     '<div class="diapo-en">' + esc(x.en) + '</div>' +
     (x.credit ? '<div class="diapo-credit">' + esc(x.credit) + '</div>' : '') + '</div>';
