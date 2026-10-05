@@ -25,7 +25,7 @@
           "titre": "Vol Bruxelles → Dubaï — Emirates EK 182",
           "lieu": "aeroport-bru",
           "transport": "EK 182 : décollage 21:40, arrivée à Dubaï le 11/10 à 06:55 (heure de Dubaï). Nuit à bord.",
-          "note": "Valise cabine + sac à dos. Passeport, médicaments, chargeur, adaptateur et une tenue de rechange en cabine."
+          "note": "Valise cabine + sac à dos. Passeport, médicaments, chargeur, adaptateur et une tenue de rechange en cabine. Carte d'arrivée électronique (appli NIA 12367) à remplir avant, sinon avec les organisateurs à l'aéroport."
         }
       ],
       "dossier": ["culture-affaires", "tech-chine"]
@@ -43,12 +43,18 @@
           "titre": "Vol Dubaï → Shanghai — Emirates EK 304 (décollage 09:40, heure de Dubaï)",
           "transport": "EK 304 : 8 h 40 de vol, arrivée à Shanghai Pudong à 22:20 (heure locale)."
         },
-        {"heure": "22:20", "fin": "23:30", "titre": "Arrivée à Shanghai Pudong : immigration et bagages", "lieu": "aeroport-pvg"},
         {
-          "heure": "23:30",
-          "titre": "Transfert en bus du groupe vers le Jing An Shangri-La, puis check-in",
+          "heure": "22:20",
+          "fin": "22:30",
+          "titre": "Arrivée à Shanghai Pudong : immigration et bagages",
+          "lieu": "aeroport-pvg",
+          "note": "Présenter le QR code de la carte d'arrivée électronique (capture d'écran)."
+        },
+        {
+          "heure": "22:30",
+          "titre": "Rendez-vous du groupe à partir de 22:30, après le retrait des bagages — bus vers le Jing An Shangri-La",
           "lieu": "hotel-shanghai",
-          "note": "Bus du groupe au départ de Pudong, après le retrait des bagages."
+          "note": "Rendez-vous fixé par les organisateurs après le « baggage claim » (message de Benjamin Ferdinand, 05/10). Check-in en fin de soirée."
         }
       ],
       "dossier": ["shanghai-ville"]
@@ -474,8 +480,21 @@
   ],
   "pratique": [
     {
+      "titre": "Carte d'arrivée électronique (E-Arrival Card) — obligatoire",
+      "etapes": true,
+      "points": [
+        "Installer l'application officielle NIA 12367 (Administration nationale de l'immigration) avant le départ.",
+        "Préparer : le passeport, le numéro du vol d'arrivée en Chine (EK 304, Dubaï → Shanghai Pudong, le 11/10) et l'adresse du premier hôtel.",
+        "Adresse à saisir : Jing An Shangri-La, 1218 Middle Yan'an Road, Jing An Kerry Centre, Shanghai 200040, China.",
+        "Remplir la carte à l'avance, puis faire une capture d'écran du QR code obtenu.",
+        "En cas de difficulté : les organisateurs aident à la remplir à l'aéroport le samedi 10/10. (message de Benjamin Ferdinand, 05/10)"
+      ]
+    },
+    {
       "titre": "Applis à installer avant le départ",
       "points": [
+        "NIA 12367 : application officielle de l'immigration chinoise, pour la carte d'arrivée électronique obligatoire (voir la rubrique au-dessus).",
+        "Alipay et WeChat : créer les comptes avec son numéro belge depuis la Belgique, la validation par SMS y est bien plus simple. Dans WeChat, ajouter aussi sa carte dans « Pay » comme moyen de paiement de secours (message de Benjamin Ferdinand, 05/10).",
         "Alipay (支付宝) : lier une carte Visa ou Mastercard et valider l'identité avec le passeport. C'est le moyen de paiement n° 1.",
         "WeChat (微信) : messagerie utilisée par tous les contacts chinois, avec WeChat Pay. L'inscription peut exiger la validation par un utilisateur existant : s'y prendre tôt.",
         "Didi (滴滴) : l'équivalent d'Uber. Accessible aussi depuis Alipay, sans appli séparée.",
@@ -525,6 +544,7 @@
     {
       "titre": "Téléphone, data et VPN (conseils des organisateurs)",
       "points": [
+        "Consigne des organisateurs : eSIM (Holafly, Saily ou autre) couvrant la Chine ET Hong Kong — et vérifier qu'elle couvre aussi Macao —, installée avant le départ ; elle s'active à l'arrivée. Sur le Wi-Fi des hôtels, WhatsApp, Google, Gmail et Instagram sont bloqués : l'eSIM est indispensable pour suivre le groupe WhatsApp du voyage.",
         "Appeler son opérateur pour activer l'option « hors Europe » : sans elle, aucune donnée mobile. Demander un tarif à la journée plutôt qu'au mégaoctet.",
         "Désactiver la mise à jour automatique des applications, sinon la facture grimpe.",
         "Le Wi-Fi des hôtels est correct et gratuit.",
@@ -538,7 +558,8 @@
         "Prévenir sa banque du voyage, sinon la carte est bloquée au premier paiement.",
         "Alipay ou WeChat Pay : vérification d'identité depuis la Belgique (photo du passeport, parfois 48 h), puis un paiement test de quelques euros.",
         "Espèces : 500 à 1 000 yuans pour les taxis et les petits marchés. Les distributeurs des aéroports acceptent les cartes européennes.",
-        "Macao : pataca (MOP), mais le dollar de Hong Kong est accepté partout ; le yuan n'y a pas cours. Les cartes Visa et Mastercard y sont acceptées normalement, contrairement au continent."
+        "Macao : pataca (MOP), mais le dollar de Hong Kong est accepté partout ; le yuan n'y a pas cours. Les cartes Visa et Mastercard y sont acceptées normalement, contrairement au continent.",
+        "Douane chinoise : au-delà de 5 000 USD en espèces (environ 4 500 €), déclaration obligatoire — consigne des organisateurs : ne pas dépasser ce montant."
       ]
     },
     {
@@ -554,6 +575,7 @@
     {
       "titre": "Bagages",
       "points": [
+        "Météo annoncée : chaude, 26 à 32 °C. Vêtements légers, plus une petite couche pour la climatisation (salons, hôtels, avion) (message de Benjamin Ferdinand, 05/10).",
         "Batterie externe obligatoirement en bagage à main, jamais en soute.",
         "En cabine : passeport, médicaments, chargeur, adaptateur et une tenue de rechange (les bagages en soute arrivent parfois un jour plus tard).",
         "Prendre deux adaptateurs universels : un pour le téléphone, un pour l'ordinateur.",
@@ -657,6 +679,8 @@
   ],
   "checklist": [
     "Passeport (validité 6 mois) + photo du passeport dans le téléphone",
+    "WeChat : compte créé avec le numéro belge, carte ajoutée dans « Pay » (secours)",
+    "Carte d'arrivée électronique remplie (appli NIA 12367) et QR code en capture d'écran",
     "Visa ou exemption vérifiée",
     "Badge acheteur de la Foire de Canton enregistré en ligne",
     "Alipay installé, carte liée, identité validée",
