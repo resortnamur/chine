@@ -392,3 +392,10 @@ details.chapitre summary .jour-date { font-size: 18px; }
   .diapo-chiffre small { font-size: 11px; }
   .diapo-btn { min-height: 40px; font-size: 22px; }
 }
+
+/* Dossiers : conseils séparés des faits */
+.conseil { border-left: 5px solid #1f6fb2; background: #eaf3fb; border-radius: 10px; padding: 10px 14px; margin: 12px 0 4px; }
+.conseil-titre { font-weight: 800; color: #1f6fb2; font-size: 15px; text-transform: uppercase; letter-spacing: .04em; margin-bottom: 4px; }
+.conseil p { margin: 6px 0; line-height: 1.5; }
+.conseil .liste { margin: 6px 0 2px; }
+.legende-conseil { border-left: 5px solid #1f6fb2; padding-left: 8px; }

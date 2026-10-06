@@ -769,7 +769,8 @@ function lienDossier(id) {
   return f ? '<a class="btn" href="#dossier/' + esc(f.id) + '">📖 ' + esc(f.titre) + ' : la fiche</a>' : '';
 }
 function motsFiche(f) {
-  const txt = [f.resume || ''].concat(...(f.sections || []).map((x) => (x.paragraphes || []).concat(x.points || []))).join(' ');
+  const txt = [f.resume || '', f.resumeConseil || ''].concat(...(f.sections || []).map((x) =>
+    (x.paragraphes || []).concat(x.points || [], x.conseils || [], x.conseilsPoints || []))).join(' ');
   return txt.split(/\s+/).filter(Boolean).length;
 }
 function vueDossier() {
@@ -785,6 +786,10 @@ function vueDossier() {
   let h = '<a class="btn retour" href="#dossier">← Tous les chapitres</a><h2>' + esc(f.icone || '') + ' ' + esc(f.titre) + '</h2>' +
     '<p class="meta">' + Math.max(1, Math.round(motsFiche(f) / 230)) + ' min de lecture · ' + secs.length + ' parties</p>';
   if (f.resume) h += '<p class="resume">' + t(f.resume) + '</p>';
+  if (f.resumeConseil) h += '<div class="conseil"><div class="conseil-titre">💡 Recommandation</div><p>' + t(f.resumeConseil) + '</p></div>';
+  if (secs.some((x) => (x.conseils || []).length || (x.conseilsPoints || []).length)) {
+    h += '<p class="meta legende-conseil">Texte normal : faits et sources. Encadrés 💡 : conseils et recommandations.</p>';
+  }
   if (secs.length > 3) {
     h += '<div class="carte sommaire"><h3>Sommaire</h3><ol class="liste">' +
       secs.map((sec, i) => '<li><button class="lien-sommaire" data-aller="sec-' + i + '">' + t(sec.titre) + '</button></li>').join('') + '</ol></div>';
@@ -796,6 +801,12 @@ function vueDossier() {
       c += '<table class="chiffres">' + sec.chiffres.map((x) => '<tr><td>' + t(x.libelle) + '</td><td>' + t(x.valeur) + '</td></tr>').join('') + '</table>';
     }
     if ((sec.points || []).length) c += '<ul class="liste">' + sec.points.map((p) => '<li>' + t(p) + '</li>').join('') + '</ul>';
+    // Conseils : toujours dans un encadré distinct, après les faits
+    if ((sec.conseils || []).length || (sec.conseilsPoints || []).length) {
+      c += '<div class="conseil"><div class="conseil-titre">💡 Conseils</div>' +
+        (sec.conseils || []).map((p) => '<p>' + t(p) + '</p>').join('') +
+        ((sec.conseilsPoints || []).length ? '<ul class="liste">' + sec.conseilsPoints.map((p) => '<li>' + t(p) + '</li>').join('') + '</ul>' : '') + '</div>';
+    }
     return '<details class="jour chapitre" id="sec-' + i + '"' + (i === 0 ? ' open' : '') + '><summary><span class="jour-date">' + t(sec.titre) + '</span></summary>' +
       '<div class="jour-corps">' + c + '</div></details>';
   }).join('');
