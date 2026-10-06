@@ -5081,6 +5081,83 @@
         {"photo": "photos/salle-rocourt.jpg", "fr": "Circus Rocourt", "en": "Circus Rocourt", "zh": "Circus罗库尔店"},
         {
           "chapitre": true,
+          "fr": "Circus Sport",
+          "en": "Circus Sport",
+          "zh": "Circus Sport体育竞猜",
+          "sous": {
+            "fr": "Les paris sportifs en Belgique : des dizaines d'agences et de librairies partenaires, équipées de bornes modernes.",
+            "en": "Sports betting in Belgium: dozens of shops and partner newsagents, equipped with modern self-service terminals.",
+            "zh": "比利时的体育竞猜业务：数十家门店和合作书报亭，配备现代化自助终端。"
+          },
+          "chiffres": [
+            {"v": "1 000+", "fr": "événements sportifs en direct et avant-match", "en": "live and pre-match sports events", "zh": "场体育赛事（直播及赛前）"},
+            {
+              "v": "2",
+              "fr": "réseaux : agences Circus et librairies partenaires",
+              "en": "networks: Circus shops and partner newsagents",
+              "zh": "种渠道：Circus门店和合作书报亭"
+            }
+          ]
+        },
+        {
+          "photo": "photos/sport-betting-center.jpg",
+          "fr": "Un betting center Circus Sport : grands écrans et ambiance de stade",
+          "en": "A Circus Sport betting centre: big screens and a stadium atmosphere",
+          "zh": "Circus Sport体育竞猜中心：大屏幕，体育场般的氛围"
+        },
+        {
+          "photo": "photos/sport-borne.jpg",
+          "fr": "La borne Circus Sport : on parie en quelques secondes, puis on scanne son ticket pour vérifier ses gains",
+          "en": "The Circus Sport terminal: place a bet in seconds, then scan the ticket to check winnings",
+          "zh": "Circus Sport自助终端：几秒钟即可完成竞猜，扫描票据即可查询奖金"
+        },
+        {
+          "photo": "photos/sport-librairie.jpg",
+          "fr": "Dans les librairies partenaires : une borne Circus Sport au coin de la rue",
+          "en": "In partner newsagents: a Circus Sport terminal around the corner",
+          "zh": "合作书报亭：街角就有Circus Sport自助终端"
+        },
+        {
+          "chapitre": true,
+          "fr": "Odd's Sportsbar",
+          "en": "Odd's Sportsbar",
+          "zh": "Odd's体育酒吧",
+          "sous": {
+            "fr": "Sport, food & fun : les grandes compétitions en direct, des burgers maison et des soirées DJ.",
+            "en": "Sport, food & fun: the big competitions live, homemade burgers and DJ nights.",
+            "zh": "体育、美食与欢乐：现场直播重大赛事，供应自制汉堡，还有DJ之夜。"
+          },
+          "chiffres": [
+            {
+              "v": "3",
+              "fr": "sports bars en Belgique (Boncelles, Herstal, Gosselies)",
+              "en": "sports bars in Belgium (Boncelles, Herstal, Gosselies)",
+              "zh": "家体育酒吧，均位于比利时"
+            },
+            {"v": "≈ 20", "fr": "burgers maison à la carte", "en": "homemade burgers on the menu", "zh": "款自制汉堡"}
+          ]
+        },
+        {
+          "photo": "photos/odds-facade.jpg",
+          "fr": "Odd's Sportsbar : trois bars sportifs en Belgique",
+          "en": "Odd's Sportsbar: three sports bars in Belgium",
+          "zh": "Odd's体育酒吧：在比利时共有三家"
+        },
+        {
+          "photo": "photos/odds-bar.jpg",
+          "fr": "Ligue des Champions, tennis, F1… tous les grands matchs en direct sur grands écrans",
+          "en": "Champions League, tennis, F1… every big match live on large screens",
+          "zh": "欧冠、网球、F1……所有重大赛事都在大屏幕上直播"
+        },
+        {"photo": "photos/odds-match.jpg", "fr": "L'ambiance des soirs de match", "en": "The atmosphere on match nights", "zh": "比赛之夜的热烈氛围"},
+        {
+          "photo": "photos/odds-burger.jpg",
+          "fr": "Une vingtaine de burgers maison, dont le « Hazard » et le « Zizou », baptisés d'après des stars du football",
+          "en": "About twenty homemade burgers, including the “Hazard” and the “Zizou”, named after football stars",
+          "zh": "约二十款自制汉堡，例如以足球明星命名的“阿扎尔”和“齐达内”"
+        },
+        {
+          "chapitre": true,
           "fr": "Circus Casino France",
           "en": "Circus Casino France",
           "zh": "法国Circus娱乐场",
