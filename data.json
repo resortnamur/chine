@@ -1,10 +1,10 @@
 {
   "voyage": {
     "titre": "Mission Chine 2026",
-    "sousTitre": "Shanghai – Macao – Guangzhou · Groupe B — Circus",
+    "sousTitre": "Shanghai – Macao – Guangzhou",
     "debut": "2026-10-10",
     "fin": "2026-10-17",
-    "note": "Programme du groupe B (Circus). Trois groupes voyagent en parallèle. Heures en heure de Chine, sauf le jour du départ (heure belge). Horaires indicatifs."
+    "note": "Heures en heure de Chine, sauf le jour du départ (heure belge). Horaires indicatifs."
   },
   "taux": {"eurCny": 8.0, "date": "taux indicatif"},
   "jours": [
@@ -62,7 +62,7 @@
         {
           "heure": "09:00",
           "fin": "18:00",
-          "titre": "Salon de la robotique — journée commune aux trois groupes",
+          "titre": "Salon de la robotique",
           "lieu": "salon-shanghai",
           "salon": "salon-1",
           "note": "Horaires indicatifs. Probablement la CIIF au NECC (non confirmé)."
@@ -76,19 +76,9 @@
       "ville": "Shanghai → Macao",
       "hotel": "hotel-macao",
       "creneaux": [
-        {
-          "heure": "",
-          "titre": "Check-out du Jing An Shangri-La (le matin, avant de partir)",
-          "lieu": "hotel-shanghai",
-          "note": "Dernière journée commune aux trois groupes."
-        },
+        {"heure": "", "titre": "Check-out du Jing An Shangri-La (le matin, avant de partir)", "lieu": "hotel-shanghai"},
         {"heure": "", "titre": "Au choix : visite d'Agibot ou retour au salon de la robotique", "lieu": "agibot", "salon": "salon-3"},
-        {
-          "heure": "",
-          "titre": "Retour à l'hôtel 3 h avant le vol du groupe",
-          "lieu": "hotel-shanghai",
-          "note": "Les vols vers Macao décollent entre 17:00 et 19:00 selon le groupe."
-        },
+        {"heure": "", "titre": "Retour à l'hôtel 3 h avant le vol du groupe", "lieu": "hotel-shanghai", "note": "Vol vers Macao entre 17:00 et 19:00."},
         {"heure": "", "titre": "Transfert vers l'aéroport de Pudong, avec les bagages", "lieu": "aeroport-pvg"},
         {
           "heure": "",
@@ -209,7 +199,7 @@
     {
       "id": "salon-1",
       "nom": "Salon de la robotique, Shanghai (probablement la CIIF)",
-      "dates": "Lundi 12 octobre (journée commune aux trois groupes) ; mardi 13 au choix avec Agibot",
+      "dates": "Lundi 12 octobre ; mardi 13 au choix avec Agibot",
       "horaires": "9 h – 18 h le 12/10, 9 h – 12 h 30 le 13/10 (indicatif)",
       "lieu": "salon-shanghai",
       "objectifs": ["Outils d'automatisation et intégration de l'IA", "Expérience client", "Écrans et affichage, hôtellerie, sécurité"],
@@ -410,7 +400,7 @@
     },
     {"groupe": "Équipe", "nom": "Tufan Aslan", "role": "Manager General Betting Landbase", "telephone": "+32 497 16 66 61"},
     {"groupe": "Équipe", "nom": "Lucien Christ", "role": "CX/UX manager, Head of research (Gaming1)", "telephone": "+32 478 66 32 39"},
-    {"groupe": "Équipe", "nom": "François Collienne", "telephone": "+32 496 70 95 03"},
+    {"groupe": "Équipe", "nom": "François Collienne", "telephone": "+32 496 70 95 03", "role": "Automation and AI Manager"},
     {"groupe": "Équipe", "nom": "Jérôme Farinaux", "role": "Head of procurement", "telephone": ""},
     {"groupe": "Équipe", "nom": "Corentin Merle", "role": "Data scientist", "telephone": ""},
     {"groupe": "Équipe", "nom": "Corentin Pochet", "telephone": "+32 485 85 53 87"},
@@ -509,7 +499,7 @@
         "Photographier la page d'identité et se l'envoyer par e-mail avant le départ.",
         "Le passeport doit être sur soi en permanence, pas dans le coffre de l'hôtel : il est demandé à l'entrée du salon, aux frontières et dans les hôtels.",
         "Jamais dans la valise du car ni en soute les jours de frontière (13 et 14 octobre).",
-        "Exemption de visa ou visa : selon la nationalité, géré au sein de chaque groupe."
+        "Exemption de visa ou visa : selon la nationalité."
       ]
     },
     {

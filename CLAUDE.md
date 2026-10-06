@@ -1,6 +1,6 @@
 # App « Mission Chine 2026 » — notes pour Claude
 
-PWA hors ligne du voyage de la délégation Gaming1 Retail (groupe B — Circus) en Chine, 10-17 octobre 2026.
+PWA hors ligne du voyage de la délégation Gaming1 Retail en Chine, 10-17 octobre 2026.
 En ligne : https://resortnamur.github.io/chine/ — dépôt public `resortnamur/chine`, branche `main`, publiée par GitHub Pages (push = mise en ligne en ~1 min).
 
 ## Règles
