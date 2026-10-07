@@ -76,6 +76,7 @@
       "ville": "Shanghai → Macao",
       "hotel": "hotel-macao",
       "creneaux": [
+        {"heure": "", "titre": "🎂 Ne pas oublier : c'est l'anniversaire de Bernard ! 😄"},
         {"heure": "", "titre": "Check-out du Jing An Shangri-La (le matin, avant de partir)", "lieu": "hotel-shanghai"},
         {"heure": "", "titre": "Au choix : visite d'Agibot ou retour au salon de la robotique", "lieu": "agibot", "salon": "salon-3"},
         {"heure": "", "titre": "Retour à l'hôtel 3 h avant le vol du groupe", "lieu": "hotel-shanghai", "note": "Vol vers Macao entre 17:00 et 19:00."},
