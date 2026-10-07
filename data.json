@@ -1664,7 +1664,7 @@
           ],
           "conseils": [
             "Pour le Resort, la piste à privilégier est un robot humanoïde d'animation, doté d'une personnalité propre, et d'abord loué avec un opérateur pour un événement ou quelques journées fortes. Un robot qui fait s'arrêter les clients et leur donne envie de filmer correspond au positionnement d'un lieu de divertissement ; c'est aussi l'usage où un humanoïde apporte le plus, alors qu'il n'est pas encore rentable comme employé.",
-            "Le premier candidat à examiner pendant le voyage est l'Agibot X2, à comparer avec deux autres familles : l'humanoïde conversationnel (Ameca comme référence de qualité) et le robot qui prépare quelque chose devant le client (barman ou portraitiste), qui a l'avantage de donner une raison de revenir.",
+            "Le premier candidat à examiner pendant le voyage est l'Agibot X2, à comparer avec deux autres familles : l'humanoïde conversationnel (Ameca comme référence de qualité) et le robot barman, qui a l'avantage de donner une raison de revenir. Pour ce dernier, trois pistes se dégagent : Makr Shakr (Italie) pour une installation spectaculaire et durable, Moton ou RobotAnno (Chine) pour un format compact moins cher, et la location avec équipe pour tester l'effet.",
             "Le point décisif ne sera pas la machine mais le personnage créé autour d'elle : son nom, son humour, son rituel et son lien avec le Resort. C'est cela qui transforme une curiosité technologique en attraction dont on parle.",
             "Ce dossier ne prévoit aucun rendez-vous en dehors du programme : les robots se voient chez Agibot le 13 octobre, au salon de Shanghai (12-13 octobre) et dans la zone des robots de service de la Foire de Canton (15 octobre) ; les offres se demandent ensuite, au retour."
           ],
@@ -1701,7 +1701,7 @@
             "Humanoïde mobile et danseur : gestes, petite chorégraphie, salutation, pose pour les photos (Agibot X2, Unitree G1 et R1).",
             "Humanoïde expressif et conversationnel : regard, mimiques, échanges avec les visiteurs (Ameca, d'Engineered Arts).",
             "Chien robot : déplacements et mouvements amusants, démonstrations (quadrupèdes d'entrée de gamme, autour de 8 000 dollars).",
-            "Robot barman ou barista : préparation visible d'un cocktail ou d'un café (bras robotisés sous vitrine, comme chez Moton).",
+            "Robot barman ou barista : préparation visible d'un cocktail ou d'un café (bras robotisés sous vitrine : Makr Shakr, Moton, RobotAnno).",
             "Robot dessinateur : portrait ou dessin souvenir réalisé en moins d'une minute, avec un opérateur.",
             "Robot serveur ou d'accueil sur roues : livraison, guidage, écran promotionnel (Pudu KettyBot Pro, Keenon T10).",
             "Robot nettoyeur : entretien autonome des sols."
@@ -1777,22 +1777,83 @@
           "conseils": [
             "Ameca sert de référence pour juger la qualité d'une conversation et d'expressions, même s'il sort du sourcing chinois. L'idée serait un personnage installé dans un espace dédié, avec lequel les visiteurs discutent : humour, présentation du Resort, questions inattendues.",
             "Pour des vidéos où le client interagit vraiment avec le robot, cette approche peut être plus forte qu'une danse. Tout dépend de la voix française, du délai de réponse et de la compréhension dans le bruit : c'est à tester en personne, après le voyage, par exemple lors d'une démonstration en Europe."
+          ],
+          "image": {
+            "photo": "photos/doc-ameca.jpg",
+            "legende": "Ameca, l'humanoïde d'Engineered Arts : un visage très expressif, conçu pour la conversation.",
+            "credit": "Photo : Willy Jackson, CC BY-SA 4.0, Wikimedia Commons"
+          }
+        },
+        {
+          "titre": "Le robot barman : l'option la plus durable",
+          "image": {
+            "photo": "photos/doc-robot-barista.jpg",
+            "legende": "Un kiosque robotisé Robox à Varsovie : le bras prépare la boisson sous une vitrine, devant le client. Les bars à cocktails robotisés reprennent le même principe.",
+            "credit": "Photo : Brandmeister, CC0, Wikimedia Commons"
+          },
+          "paragraphes": [
+            "Un robot barman est un bras robotisé, installé sous une vitrine ou derrière un comptoir, qui prépare devant le client un cocktail commandé sur un écran ou une application : il saisit les verres, dose les alcools et les sirops, mélange ou secoue, puis dépose la boisson. Le marché va du kiosque compact de 2 m² vendu par des fabricants chinois au grand bar-spectacle à deux bras avec des bouteilles suspendues au plafond, conçu en Italie.",
+            "Les exploitants qui en ont installé le présentent comme une attraction, pas comme un remplaçant du barman. Le Tipsy Robot, ouvert en 2017 dans les Miracle Mile Shops de Las Vegas avec deux bras Makr Shakr, fonctionne toujours en 2026 et a ouvert un second bar au Venetian fin 2023 ; il emploie huit personnes pour l'accueil, l'encaissement, le réapprovisionnement et le nettoyage, et son fondateur résume : « les robots sont une attraction ». En 2023, une vidéo virale y a critiqué un service automatique de 10 % et un verre trop peu glacé ; le bar propose désormais aussi des cocktails préparés par des barmans.",
+            "Le cas le plus connu montre aussi l'usure de l'effet. Royal Caribbean a installé un « Bionic Bar » Makr Shakr sur neuf navires à partir de 2014, mais n'en a pas prévu sur son nouveau navire amiral Icon of the Seas (2024) et l'a remplacé par un bar classique sur Harmony of the Seas, puis sur Ovation of the Seas lors de sa rénovation d'avril 2026. À l'inverse, l'aéroport de Singapour-Changi exploite deux bars Makr Shakr depuis fin 2022, et l'Américain Richtech Robotics a placé son robot ADAM dans des stades, des arènes et chez l'exploitant de casinos Boyd Gaming.",
+            "Aucun retour chiffré indépendant n'est publié. Le seul chiffre disponible vient d'un fabricant : au stade Globe Life Field (Texas), le robot ADAM a servi 1 365 boissons pour 32 746 dollars en 30 jours, soit environ 45 verres par jour d'ouverture.",
+            "La cadence réelle est d'environ un cocktail par minute et par bras, soit 60 à 120 verres par heure pour les modèles « spectacle » ; seuls les distributeurs sans geste dépassent 200 verres par heure. Les recettes sont limitées aux bouteilles chargées, et la glace pilée, les garnitures fraîches et les mousses restent difficiles à automatiser."
+          ],
+          "chiffres": [
+            {"libelle": "Cadence d'un robot « spectacle »", "valeur": "≈ 1 cocktail par minute et par bras"},
+            {"libelle": "Tipsy Robot (Las Vegas) : ouvert depuis / personnel", "valeur": "2017 / 8 personnes"},
+            {"libelle": "Royal Caribbean : navires équipés d'un Bionic Bar", "valeur": "9 depuis 2014, retrait progressif depuis 2024"},
+            {"libelle": "ADAM au Globe Life Field, 30 premiers jours (chiffre du fabricant)", "valeur": "1 365 verres / 32 746 $"}
+          ],
+          "conseils": [
+            "Le robot barman reste, pour le Resort, l'option la plus intéressante à moyen terme : il crée un rendez-vous que les clients ont envie de revivre, il est associé à une consommation qui le finance en partie, et il se filme naturellement. Ses limites sont claires : il ne remplace pas l'équipe, il ne sert qu'une fraction du public lors d'un grand événement, et son attrait s'use s'il n'est pas animé.",
+            "Les exemples de Las Vegas et de Royal Caribbean conduisent à le penser comme un spectacle intégré à un bar vivant, avec des barmans à côté, plutôt que comme un bar entièrement automatique."
           ]
         },
         {
-          "titre": "L'alternative à prendre au sérieux : le robot barman",
+          "titre": "Robots barmans : les modèles à comparer",
           "paragraphes": [
-            "Plusieurs fabricants chinois vendent des bars robotisés. Moton Robotics, fondé en 2020 et basé à Shanghai, propose une station où un bras robotisé à six axes prépare et sert les cocktails commandés sur un écran tactile ou sur mobile, dans une cabine ouverte et éclairée qui se regarde comme un petit spectacle à 180 degrés. La station prépare un verre en une minute environ, soit une soixantaine par heure, gère jusqu'à douze ingrédients, occupe 2,9 m² et intègre des programmes de nettoyage automatique. Le fabricant la destine aux bars, hôtels, salons, boutiques éphémères et espaces VIP ; le prix est sur devis.",
-            "D'autres concepts de boissons robotisées fonctionnent déjà à Shanghai, comme les bars et cafés RATIO ou COFE+, décrits dans le chapitre sur la technologie en Chine."
+            "Dix modèles de huit fabricants ont été examinés. Trois offres sont à la fois commercialisées aujourd'hui et livrables en Europe : le haut de gamme italien Makr Shakr et deux fabricants chinois de kiosques compacts, Moton et RobotAnno. Deux produits européens souvent cités ne sont pas fiables en 2026 : le Barney de F&P Robotics (Suisse), qui ne figure plus au catalogue, et le Yanu (Estonie), toujours en prévente. Les modèles américains (ADAM de Richtech, Rotender) ne sont pas distribués en Europe.",
+            "Makr Shakr (Turin), issu d'un laboratoire du MIT, fabrique ses bars avec les bras du fabricant allemand KUKA. Le Toni, son modèle phare à deux bras, porte 158 bouteilles suspendues et annonce plus de 80 cocktails par heure ; il a été lancé à 99 000 euros en 2019, sans prix public récent. Le Toni Compatto, à un bras, compte 70 bouteilles, sert aussi le café et annonce plus de 60 boissons par heure. Le Toni Veloce, conçu pour les discothèques, atteint 250 verres par heure avec des recettes plus simples. Ces bars équipent des navires Royal Caribbean, le Tipsy Robot de Las Vegas, l'aéroport de Changi, des bars à Milan, Amsterdam, Prague et Londres ; Makr Shakr a présenté en 2026 un humanoïde barman, Robi, sans commercialisation annoncée.",
+            "Moton Robotics, fondé en 2020 à Shanghai, revendique plus de 5 000 machines livrées dans plus de 40 pays, surtout des cafés robotisés. Son bar à cocktails place un bras JAKA à six axes dans une cabine vitrée éclairée : un verre en 60 secondes environ, 12 ingrédients, 2,9 m², 1,5 kW ; prix sur devis, aucune référence publiée pour les cocktails.",
+            "RobotAnno (Shenzhen, fondé en 2017) vend un kiosque à cocktails autonome : un verre en 45 secondes, 12 bases pour 10 à 20 recettes, moins de 2 m², 350 kg, nettoyage automatique et paiement intégré ; prix sur devis, présence revendiquée dans 60 à 70 pays.",
+            "Cecilia.ai (Israël) mise sur l'interaction plutôt que sur le geste : une barmaid virtuelle sur grand écran converse en 40 langues pendant que la machine prépare jusqu'à 120 cocktails par heure, avec un scanner de pièce d'identité. Elle était proposée en 2021 à 45 000 dollars ou 2 000 dollars par mois, avec des références aux États-Unis (Microsoft, Wyndham Orlando) mais aucune en Europe.",
+            "Pour l'événementiel, des sociétés françaises louent un robot bar avec son équipe, dont Evotion (groupe EVEOZ), qui annonce plus de 180 événements, une installation en 2 h 30 sur environ 2 m², des cartes de cinq cocktails et une intervention dans toute l'Europe ; tarifs sur devis. Le café robotisé a son propre marché, avec par exemple les kiosques COFE+ (Shanghai), présents selon le fabricant dans 75 pays."
           ],
           "chiffres": [
-            {"libelle": "Moton : temps par verre / capacité", "valeur": "≈ 60 s / ≈ 60 verres par heure"},
-            {"libelle": "Surface / ingrédients", "valeur": "2,9 m² / jusqu'à 12"}
+            {"libelle": "Makr Shakr Toni (Italie) : 2 bras, 158 bouteilles", "valeur": "80+ verres/h ; 99 000 € en 2019, prix actuel sur devis"},
+            {"libelle": "Makr Shakr Toni Compatto : 1 bras, 70 bouteilles, café", "valeur": "60+ verres/h ; sur devis"},
+            {"libelle": "Makr Shakr Toni Veloce : discothèque", "valeur": "250 verres/h ; sur devis"},
+            {"libelle": "Moton (Shanghai) : bras JAKA en cabine vitrée", "valeur": "≈ 60 s/verre ; 12 ingrédients ; 2,9 m² ; sur devis"},
+            {"libelle": "RobotAnno (Shenzhen) : kiosque autonome", "valeur": "45 s/verre ; < 2 m² ; sur devis"},
+            {"libelle": "Cecilia.ai (Israël) : barmaid virtuelle, 40 langues", "valeur": "120 verres/h ; 45 000 $ ou 2 000 $/mois (2021)"},
+            {"libelle": "Richtech ADAM (États-Unis) : 2 bras", "valeur": "≈ 3 500 $/mois (2024) ; non distribué en Europe"},
+            {"libelle": "Location événementielle avec équipe (France, toute l'Europe)", "valeur": "≈ 2 m², montage 2 h 30 ; sur devis"}
           ],
           "conseils": [
-            "Pour le Resort, le robot barman a un avantage décisif sur l'humanoïde : les clients ont une raison de revenir l'utiliser après la première découverte. Quelques cocktails signatures et une préparation visuellement travaillée en feraient une attraction durable, associée à une consommation.",
-            "Il faut toutefois examiner l'installation complète : espace nécessaire, nettoyage, réapprovisionnement, temps réel par verre et intervention humaine. Il se conçoit comme un petit spectacle intégré au bar, avec l'équipe, pas comme un remplacement du barman.",
-            "Moton étant basé à Shanghai, il est utile de vérifier s'il expose au salon de Shanghai [à vérifier]."
+            "Trois pistes se dégagent, selon l'ambition. Pour une installation permanente et spectaculaire au bar du Grand Casino : Makr Shakr, la référence du secteur, la seule avec une base européenne et des installations de longue durée dans des lieux de loisirs. Pour un coût plus bas et un format compact : Moton ou RobotAnno, à condition d'obtenir la déclaration de conformité européenne complète et un contrat de maintenance avec un partenaire en Europe. Pour tester l'effet sans investir : la location d'un robot bar avec son équipe pour une soirée ou un week-end.",
+            "Cecilia.ai est une variante à garder en tête pour les événements et l'accueil VIP : moins de spectacle mécanique, plus de conversation, mais sans présence européenne à ce jour.",
+            "Moton étant basé à Shanghai et RobotAnno à Shenzhen, il est utile de repérer leurs stands éventuels au salon de Shanghai et à la Foire de Canton [à vérifier], sans visite supplémentaire."
+          ]
+        },
+        {
+          "titre": "Robot barman : le faire fonctionner au Resort",
+          "paragraphes": [
+            "Depuis le 1er juillet 2024, la loi belge interdit la vente de boissons alcoolisées par distributeur automatique (SPF Santé publique). Les spiritueux, et donc la quasi-totalité des cocktails, ne peuvent être vendus qu'aux personnes majeures ; bière et vin sont autorisés dès 16 ans s'ils ne contiennent pas d'alcool ajouté.",
+            "Un robot barman est aussi une machine, soumise au marquage CE (le nouveau règlement européen sur les machines s'applique le 20 janvier 2027), un équipement au contact des aliments, soumis aux règles d'hygiène et à l'autocontrôle de l'AFSCA, et un point de vente dont l'encaissement doit passer par le système de caisse enregistreuse obligatoire dans l'horeca. Selon les modèles, il demande de 1,5 à 5,5 kW, une arrivée et une évacuation d'eau, une connexion réseau et jusqu'à près d'une tonne au sol pour les plus gros."
+          ],
+          "conseils": [
+            "La règle belge sur les distributeurs automatiques impose un montage simple, qui est aussi le meilleur pour l'ambiance : le robot est installé dans un bar avec personnel ; un barman prend la commande, encaisse dans la caisse du bar et vérifie l'âge, puis le robot prépare le verre sous les yeux du client. Un kiosque qui vendrait seul de l'alcool risquerait d'être assimilé à un distributeur interdit ; ce point est à faire confirmer par un juriste avant tout achat.",
+            "L'emplacement idéal est un bar visible depuis le passage, avec un fond lumineux et assez de recul pour filmer : le bar du Grand Casino, où l'âge d'accès est déjà contrôlé, ou un comptoir dédié lors des soirées du Casino Club. Une carte courte de quatre à six cocktails signatures, aux noms liés au Resort, rend le choix rapide et le geste du robot reconnaissable.",
+            "Il faut prévoir l'exploitation dès le départ : réapprovisionnement et glace, nettoyage quotidien (le nettoyage automatique ne remplace pas le démontage), personne formée pour relancer la machine, stock de pièces ou contrat de maintenance en Europe, et cadence réaliste (60 verres par heure ne suffisent pas pour 500 invités : le robot complète le bar, il ne le remplace pas).",
+            "Pour juger de l'intérêt avant d'investir, la séquence logique est la même que pour l'humanoïde : une location avec équipe pour une ou deux soirées, puis une mesure simple (verres servis, prix moyen, files d'attente, vidéos publiées), et seulement ensuite un achat ou un abonnement."
+          ],
+          "conseilsPoints": [
+            "Questions spécifiques au robot barman : cadence réelle par heure, temps de réapprovisionnement, gestion de la glace et des garnitures.",
+            "Quelles recettes peut-on créer nous-mêmes, et combien de bouteilles ou d'ingrédients à la fois ?",
+            "Déclaration UE de conformité complète (machine, électricité, contact alimentaire), et conformité au règlement Machines au 20 janvier 2027.",
+            "Peut-on désactiver le paiement intégré et brancher la commande sur notre caisse ?",
+            "Plan de nettoyage quotidien, durée, consommables ; maintenance et pièces en Europe, délai d'intervention.",
+            "Location possible pour un événement en Belgique, avec équipe ? Prix d'achat, de location ou d'abonnement."
           ]
         },
         {
@@ -1895,7 +1956,7 @@
           "titre": "Où voir ces robots pendant le voyage",
           "paragraphes": [
             "Trois moments du programme permettent de voir l'essentiel sans rendez-vous supplémentaire. Le salon international de l'industrie de Chine (CIIF) se tient du 12 au 16 octobre 2026 au National Exhibition and Convention Center de Shanghai, avec son salon de la robotique (Robotics Show) qui présente aussi des robots de service. Le 13 octobre, la visite d'Agibot donne accès à toute la gamme, X2 compris. Le 15 octobre, la phase 1 de la Foire de Canton comprend une zone des robots de service où exposent habituellement les fabricants de Shanghai et de Shenzhen.",
-            "La liste des exposants n'était pas publiée début octobre ; la présence de Unitree, Moton, Pudu ou Keenon sur ces salons n'est pas confirmée."
+            "La liste des exposants n'était pas publiée début octobre ; la présence de Unitree, Moton, RobotAnno, Pudu ou Keenon sur ces salons n'est pas confirmée."
           ],
           "conseils": [
             "Le programme étant complet, il ne faut prévoir aucune visite d'usine en plus : les comparaisons se font sur les stands et chez Agibot, et les offres se demandent au retour.",
@@ -1937,8 +1998,10 @@
             {"libelle": "Agibot A2 (grand humanoïde d'accueil)", "valeur": "119 999 €"},
             {"libelle": "Location d'un humanoïde (Europe)", "valeur": "≈ 300 $ à ≈ 900 € par jour, opérateur sur devis"},
             {"libelle": "Robot portraitiste avec opérateur", "valeur": "1 295 € les 4 heures"},
-            {"libelle": "Bar robotisé (Moton)", "valeur": "sur devis"},
-            {"libelle": "Robot d'accueil et de service (Pudu KettyBot Pro)", "valeur": "≈ 14 000 $ ou ≈ 750 $ par mois"}
+            {"libelle": "Robot d'accueil et de service (Pudu KettyBot Pro)", "valeur": "≈ 14 000 $ ou ≈ 750 $ par mois"},
+            {"libelle": "Robot barman Makr Shakr Toni (prix de lancement, 2019)", "valeur": "99 000 €"},
+            {"libelle": "Robot barman compact chinois (Moton, RobotAnno)", "valeur": "sur devis"},
+            {"libelle": "Robot barman en location événementielle avec équipe", "valeur": "sur devis"}
           ],
           "conseils": [
             "Pour une première opération, le budget le plus raisonnable est celui d'une location événementielle avec opérateur, de l'ordre de quelques milliers d'euros, plus la création du personnage et du décor. Il permet de juger l'effet réel avant d'engager 20 000 à 50 000 euros dans un achat."
@@ -1990,6 +2053,67 @@
         }
       ],
       "sources": [
+        {
+          "titre": "SPF Santé publique – Vente d'alcool : interdiction via les distributeurs automatiques depuis le 1er juillet 2024",
+          "url": "https://www.health.belgium.be/fr/news/modifications-legislatives-concernant-la-vente-de-produits-de-tabac-et-de-boissons-alcoolisees"
+        },
+        {"titre": "Makr Shakr – Toni", "url": "https://www.makrshakr.com/toni"},
+        {"titre": "Makr Shakr – Toni Compatto", "url": "https://www.makrshakr.com/compatto"},
+        {"titre": "Makr Shakr – Toni Veloce", "url": "https://www.makrshakr.com/veloce"},
+        {
+          "titre": "designboom – Toni, robot barman de Makr Shakr (2019)",
+          "url": "https://www.designboom.com/technology/toni-robotic-bartender-toni-carlo-ratti-makr-shakr-03-14-2019/"
+        },
+        {
+          "titre": "Makr Shakr – Changi Airport (2022)",
+          "url": "https://www.makrshakr.com/media-room/makr-shakr-to-be-first-robotic-bartender-to-land-at-an-airport-in-singapore"
+        },
+        {"titre": "Globetrender – Robi, humanoïde barman de Makr Shakr (avril 2026)", "url": "https://globetrender.com/2026/04/26/makr-shakr/"},
+        {
+          "titre": "Nevada Business – Miracle Mile Shops, septembre 2026 (Tipsy Robot)",
+          "url": "https://nevadabusiness.com/2026/09/miracle-mile-shops-offers-mall-wide-25-off-deals-across-shopping-dining-and-entertainment-this-september/"
+        },
+        {"titre": "casino.org – Tipsy Robot au Venetian", "url": "https://www.casino.org/vitalvegas/new-tipsy-robot-bar-headed-to-venetian/"},
+        {
+          "titre": "BizTech – Robots barmans à Las Vegas (2018)",
+          "url": "https://biztechmagazine.com/article/2018/12/bar-tender-20-robots-sling-drinks-vegas-bar"
+        },
+        {
+          "titre": "Fox News – Controverse au Tipsy Robot (2023)",
+          "url": "https://www.foxnews.com/media/las-vegas-robot-bar-viral-tiktok-video-at-odds-over-automatic-tips-frustrating-lies"
+        },
+        {
+          "titre": "Royal Caribbean Blog – Ovation of the Seas après rénovation (avril 2026)",
+          "url": "https://www.royalcaribbeanblog.com/2026/04/18/ovation-of-the-seas-amplification-photos"
+        },
+        {
+          "titre": "Royal Caribbean Blog – Ce qu'Icon of the Seas n'a pas repris (2024)",
+          "url": "https://www.royalcaribbeanblog.com/2024/02/22/8-things-royal-caribbean-didnt-copy-other-cruise-ships-icon-of-the-seas"
+        },
+        {"titre": "RobotAnno – AI Robot Bartender", "url": "https://www.annorobots.com/ai-robot-bartender-vending-machine/"},
+        {"titre": "The Daily Pour – Cecilia.ai (2021)", "url": "https://thedailypour.com/article/robot-bartenders-cecilia-ai/"},
+        {
+          "titre": "The Robot Report – ADAM au Globe Life Field (2024)",
+          "url": "https://www.therobotreport.com/humanoid-bartender-robot-adam-debuts-at-texas-rangers-stadium/"
+        },
+        {
+          "titre": "Food On Demand – Robots de boissons dans les stades et aéroports (juillet 2026)",
+          "url": "https://foodondemand.com/07292026/beverage-robots-pour-into-stadiums-airports-and-venues/"
+        },
+        {
+          "titre": "Fox5 Vegas – Location du robot ADAM (2024)",
+          "url": "https://www.fox5vegas.com/2024/02/02/las-vegas-company-offers-high-tech-solution-staffing-shortages/"
+        },
+        {"titre": "Yanu – site officiel", "url": "https://yanu.ai/"},
+        {
+          "titre": "The Drinks Business – Barney, F&P Robotics (2021)",
+          "url": "https://www.thedrinksbusiness.com/2021/04/barney-the-swiss-robot-bartender-can-mix-dozens-of-cocktails-tell-jokes-and-sanitise-itself/"
+        },
+        {"titre": "Evotion – Location de robot bar", "url": "https://www.evotion.com/location-de-robots/robot-bar/"},
+        {
+          "titre": "COFE+ – Café robotisé de 7e génération (septembre 2026)",
+          "url": "https://www.generation-nt.com/communiques-presse/cofe-7th-generation-robotic-cafe-expands-to-75-countries-2081201"
+        },
         {"titre": "Agibot – boutique officielle, AGIBOT X2 (Neo, Ultra) : prix et caractéristiques", "url": "https://store.agibot.com/products/x2"},
         {"titre": "Unitree – G1 : caractéristiques, prix, avertissements", "url": "https://www.unitree.com/g1/"},
         {
@@ -2352,7 +2476,10 @@
         "La disponibilité d'une location Agibot avec opérateur en Belgique n'est pas documentée publiquement.",
         "La qualité du français des humanoïdes chinois (compréhension dans le bruit, délai de réponse) n'est pas mesurée par des sources indépendantes : à tester en démonstration.",
         "La présence de Unitree, Moton, Pudu ou Keenon au salon de Shanghai ou à la Foire de Canton n'est pas confirmée au début d'octobre.",
-        "Les tarifs de location européens cités proviennent d'un loueur et d'un prestataire d'animation ; ils varient selon la durée, le lieu et l'accompagnement."
+        "Les tarifs de location européens cités proviennent d'un loueur et d'un prestataire d'animation ; ils varient selon la durée, le lieu et l'accompagnement.",
+        "Robots barmans : plusieurs prix publics datent de 2019 à 2024 (Makr Shakr, Cecilia.ai, ADAM) ; les prix actuels sont sur devis.",
+        "L'assimilation d'un kiosque à cocktails autonome à un « distributeur automatique » interdit en Belgique est une interprétation, à faire confirmer par un juriste.",
+        "Le seul retour chiffré sur un robot barman (ADAM, Globe Life Field) provient du fabricant."
       ],
       "consulte": "6 octobre 2026"
     },
