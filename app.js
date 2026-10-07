@@ -796,6 +796,11 @@ function vueDossier() {
   }
   h += secs.map((sec, i) => {
     let c = '';
+    // Image d'illustration (facultative) : touchée, elle s'ouvre en grand
+    if (sec.image && sec.image.photo) {
+      c += '<figure class="dossier-image"><img src="' + esc(sec.image.photo) + '" alt="' + esc(sec.image.legende || '') + '" loading="lazy" decoding="async" data-agrandir="' + esc(sec.image.photo) + '">' +
+        '<figcaption>' + esc(sec.image.legende || '') + (sec.image.credit ? '<small>' + esc(sec.image.credit) + '</small>' : '') + '</figcaption></figure>';
+    }
     (sec.paragraphes || []).forEach((p) => { c += '<p class="paragraphe">' + t(p) + '</p>'; });
     if ((sec.chiffres || []).length) {
       c += '<table class="chiffres">' + sec.chiffres.map((x) => '<tr><td>' + t(x.libelle) + '</td><td>' + t(x.valeur) + '</td></tr>').join('') + '</table>';
@@ -1184,6 +1189,8 @@ document.addEventListener('click', (e) => {
     else ouvrirPlein(v.zh, '', '');
     return;
   }
+  const ag = e.target.closest('[data-agrandir]');
+  if (ag) { $('#visionneuse-img').src = ag.dataset.agrandir; $('#visionneuse').hidden = false; return; }
   const di = e.target.closest('[data-diapo]');
   if (di) { ouvrirDiapo(+di.dataset.diapo); return; }
   const ph = e.target.closest('[data-phrase]');

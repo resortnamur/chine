@@ -399,3 +399,9 @@ details.chapitre summary .jour-date { font-size: 18px; }
 .conseil p { margin: 6px 0; line-height: 1.5; }
 .conseil .liste { margin: 6px 0 2px; }
 .legende-conseil { border-left: 5px solid #1f6fb2; padding-left: 8px; }
+
+/* Dossiers : image d'illustration en tête de partie */
+.dossier-image { margin: 4px 0 14px; }
+.dossier-image img { width: 100%; height: auto; border-radius: 10px; display: block; cursor: zoom-in; background: var(--fond-2); }
+.dossier-image figcaption { font-size: 14px; color: var(--texte-2); margin-top: 6px; line-height: 1.4; }
+.dossier-image figcaption small { display: block; font-size: 11px; opacity: .75; margin-top: 2px; }

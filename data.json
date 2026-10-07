@@ -690,7 +690,12 @@
             {"libelle": "Superficie de la municipalité", "valeur": "6 340 km²"},
             {"libelle": "Nombre de districts", "valeur": "16 (depuis 2016)"},
             {"libelle": "Pudong : superficie / habitants", "valeur": "1 210 km² / 5,79 millions"}
-          ]
+          ],
+          "image": {
+            "photo": "photos/doc-shanghai-pudong.jpg",
+            "legende": "Pudong vu du Bund : la tour de la Perle de l'Orient et, à droite, la Shanghai Tower (632 m).",
+            "credit": "Photo : Ermell, CC0, Wikimedia Commons"
+          }
         },
         {
           "titre": "Démographie et société : une ville de migrants qui vieillit vite",
@@ -764,7 +769,12 @@
           "conseils": [
             "Pour l'exploitant, la leçon est ailleurs que dans le paiement lui-même : elle tient à cet écosystème.",
             "Ce qu'un exploitant de casinos, de salles et de bars peut regarder de près : la file d'attente supprimée (réservation et commande sur mobile, appel par SMS), le personnel réaffecté à l'animation plutôt qu'à la caisse, l'usage massif des écrans LED géants et des façades animées (Nanjing Road et Lujiazui en sont saturés), les collaborations temporaires avec des personnages ou des marques (« IP ») qui renouvellent un lieu sans travaux lourds, et la conception des espaces pour être photographiés et partagés sur Xiaohongshu (小红书), le réseau qui fait aujourd'hui la réputation d'un établissement. Il faut aussi garder un œil critique."
-          ]
+          ],
+          "image": {
+            "photo": "photos/doc-shanghai-nanjing.jpg",
+            "legende": "Nanjing Road, la grande rue commerçante piétonne, le soir.",
+            "credit": "Photo : Hermann Luyken, CC0, Wikimedia Commons"
+          }
         },
         {
           "titre": "Loisirs, divertissement et réglementation des jeux",
@@ -1361,7 +1371,12 @@
             {"libelle": "G2", "valeur": "sur roues, 24 h/24, ≈ 125 000 € (Europe)"},
             {"libelle": "D1 (chien robot)", "valeur": "9 500 à 81 600 € (Europe)"}
           ],
-          "conseils": ["À retenir : la série G est la moins spectaculaire mais la plus proche d'un vrai retour sur investissement."]
+          "conseils": ["À retenir : la série G est la moins spectaculaire mais la plus proche d'un vrai retour sur investissement."],
+          "image": {
+            "photo": "photos/doc-agibot-x2.jpg",
+            "legende": "L'Agibot X2, humanoïde compact destiné au divertissement et au commerce (Mobile World Congress 2026).",
+            "credit": "Photo : JJxFile, CC BY 4.0, Wikimedia Commons"
+          }
         },
         {
           "titre": "6. Comment fonctionne un robot humanoïde, en termes simples",
@@ -1719,7 +1734,12 @@
           "conseils": [
             "Pour Namur, le X2 se prête à un « ambassadeur robot du Resort » : une courte entrée en scène à des horaires annoncés, une salutation et une séquence de mouvements reconnaissable, une pose avec les visiteurs devant un décor portant clairement le nom du Resort, des interventions lors des soirées, séminaires ou accueils VIP, et quelques échanges amusants si la conversation en français passe réellement le test.",
             "Ce sont des usages à faire démontrer et chiffrer, pas des fonctions à considérer comme acquises. La visite du 13 octobre doit donc servir à obtenir une démonstration commerciale concrète, et un échange avec une personne capable de proposer une solution pour la Belgique : achat ou location, transport, mise en service, contenus et assistance."
-          ]
+          ],
+          "image": {
+            "photo": "photos/doc-agibot-x2.jpg",
+            "legende": "L'Agibot X2, humanoïde compact destiné au divertissement et au commerce (Mobile World Congress 2026).",
+            "credit": "Photo : JJxFile, CC BY 4.0, Wikimedia Commons"
+          }
         },
         {
           "titre": "À comparer : Unitree G1 et R1, pour le spectacle physique",
@@ -1738,7 +1758,12 @@
             "La bonne question à poser est très concrète : « Vendredi à 19 h, qui l'allume, et comment lance-t-on vingt minutes d'animation ? »",
             "Le R1 peut être une première marche peu coûteuse pour tester le concept, à condition de vérifier ce qu'il sait faire en français et sans programmation.",
             "Les points informatiques ci-dessus justifient de garder le robot sur un réseau séparé, sans lien avec les systèmes du casino."
-          ]
+          ],
+          "image": {
+            "photo": "photos/doc-unitree-g1.jpg",
+            "legende": "À gauche, l'Unitree G1 ; à droite, le chien robot Go2 d'Unitree (Japan Mobility Show 2025).",
+            "credit": "Photo : RuinDig/Yuki Uchida, CC BY 4.0, Wikimedia Commons"
+          }
         },
         {
           "titre": "Pour une rencontre mémorable : Ameca",
@@ -1893,7 +1918,12 @@
           "conseils": [
             "Ces robots se choisissent pour leur efficacité (room service de nuit, banquets, nettoyage des grands espaces), pas pour faire parler du Resort. Ils peuvent faire l'objet d'un projet séparé, d'abord en location.",
             "Un robot hybride comme le KettyBot Pro, qui circule le soir dans le hall avec le programme des spectacles à l'écran puis sert aux banquets, est la façon la plus simple de mêler les deux logiques."
-          ]
+          ],
+          "image": {
+            "photo": "photos/doc-pudu.jpg",
+            "legende": "Un robot de service Pudu en salle, dans un restaurant.",
+            "credit": "Photo : Marc Auledas-Noguera, CC BY-SA 4.0, Wikimedia Commons"
+          }
         },
         {
           "titre": "Budget : ordres de grandeur",
@@ -2535,7 +2565,12 @@
             "Chaussures plates conseillées.",
             "Le Musée de Macao est la meilleure introduction à l'histoire locale (prévoir une heure).",
             "Deux remarques pratiques pour un mercredi. La fermeture du lundi ne gêne pas la délégation, mais la Maison du Mandarin est à sortir du programme par prudence. Être place du Senado et rue de São Paulo entre 8 h 30 et 10 h 30 change complètement l'expérience."
-          ]
+          ],
+          "image": {
+            "photo": "photos/doc-macao-saint-paul.jpg",
+            "legende": "La façade de l'église Saint-Paul (début du XVIIe siècle), emblème du centre historique classé par l'UNESCO.",
+            "credit": "Photo : Dinkun Chen, CC BY-SA 4.0, Wikimedia Commons"
+          }
         },
         {
           "titre": "Taipa et Coloane : les villages derrière les casinos",
@@ -2901,7 +2936,12 @@
           "conseilsPoints": [
             "Parcours suggéré : Londoner et Venetian → passerelle → Galaxy Macau → Wynn Palace → MGM Cotai → City of Dreams, puis taxi vers le Grand Lisboa si temps disponible",
             "Prévoir 45 minutes par grand complexe : les distances intérieures sont considérables"
-          ]
+          ],
+          "image": {
+            "photo": "photos/doc-macao-cotai.jpg",
+            "legende": "Le Cotai la nuit : la tour rouge est celle du Conrad Macao, l'hôtel de la délégation.",
+            "credit": "Photo : Hoskoamingwia, CC BY-SA 4.0, Wikimedia Commons"
+          }
         },
         {
           "titre": "La technologie en salle : tables intelligentes, stadium, machines, paiements et surveillance",
@@ -3306,7 +3346,12 @@
             "Les horaires sont à confirmer dans l'application la veille. Mieux vaut manger à 11 h 30 ou après 13 h 30, ou prévoir des en-cas. Il faut configurer Alipay et WeChat Pay avant le départ et garder un peu d'espèces en yuans.",
             "Une carte SIM ou eSIM de données internationale (qui donne en général accès aux services occidentaux bloqués en Chine) est plus fiable que le wifi ou un VPN. Les applications à installer avant le départ sont l'application officielle de la foire (plan, catalogue, prise de rendez-vous), WeChat (indispensable pour échanger avec les fournisseurs, qui le préfèrent souvent au courriel), Alipay, une application de cartes chinoise (Amap ou Baidu Maps, Google Maps étant peu fiable) et un traducteur fonctionnant hors ligne.",
             "Pour une délégation de treize personnes, il est plus sûr de réserver à l'avance deux ou trois interprètes anglais-chinois, voire un interprète francophone, auprès d'une agence recommandée par la Chambre de commerce Belgique-Chine ou par le poste économique belge à Canton."
-          ]
+          ],
+          "image": {
+            "photo": "photos/doc-canton-fair.jpg",
+            "legende": "Le complexe de la Foire de Canton à Pazhou, vu du ciel (zone B).",
+            "credit": "Photo : Tim Wu, CC BY-SA 4.0, Wikimedia Commons"
+          }
         },
         {
           "titre": "Badge et inscription : la marche à suivre",
@@ -3651,7 +3696,12 @@
             {"libelle": "Hauteur de la tour de Canton", "valeur": "602 m (ouverte en 2010)"},
             {"libelle": "Superficie de l’île de Pazhou", "valeur": "≈ 15 km²"}
           ],
-          "conseils": ["Mieux vaut réserver ou traverser vers Tianhe."]
+          "conseils": ["Mieux vaut réserver ou traverser vers Tianhe."],
+          "image": {
+            "photo": "photos/doc-guangzhou-zhujiang.jpg",
+            "legende": "Le quartier d'affaires de Zhujiang New Town et la tour de Canton (600 m) au coucher du soleil.",
+            "credit": "Photo : William Alen, CC BY 3.0, Wikimedia Commons"
+          }
         },
         {
           "titre": "Langue, culture et table cantonaises",
@@ -3674,7 +3724,12 @@
           "conseils": [
             "Prévoir un interprète pour toute visite technique, et une application de traduction (le traducteur de WeChat ou Baidu fonctionnent sans VPN). Quelques mots de cantonais font toujours effet : « m̀h gōi » (merci pour un service), « dōjeh » (merci pour un cadeau).",
             "Si la délégation invite un fournisseur, un salon dans un grand hôtel de Tianhe ou une adresse cantonaise réputée sera perçu comme un signe de sérieux."
-          ]
+          ],
+          "image": {
+            "photo": "photos/doc-guangzhou-dimsum.jpg",
+            "legende": "Dim sum servis en paniers vapeur, l'emblème du yum cha cantonais.",
+            "credit": "Photo : afterdog, CC0, Wikimedia Commons"
+          }
         },
         {
           "titre": "La Greater Bay Area : onze villes, une économie de la taille de l’Italie",
@@ -4007,7 +4062,12 @@
             {"libelle": "WeChat/Weixin, utilisateurs mensuels (T1 2026)", "valeur": "1 432 millions (+2 % sur un an)"},
             {"libelle": "Plafond annuel d'un étranger non vérifié sur WeChat Pay (annonce 2024)", "valeur": "10 000 USD (50 000 USD après vérification)"}
           ],
-          "conseils": ["Concrètement, chaque membre de la délégation a intérêt à installer et tester Alipay et WeChat Pay avant le départ."]
+          "conseils": ["Concrètement, chaque membre de la délégation a intérêt à installer et tester Alipay et WeChat Pay avant le départ."],
+          "image": {
+            "photo": "photos/doc-paiement-qr.jpg",
+            "legende": "QR codes de paiement WeChat Pay et Alipay sur le comptoir d'un café.",
+            "credit": "Photo : Harald Groven, CC BY-SA 2.0, Wikimedia Commons"
+          }
         },
         {
           "titre": "Mini-programmes et parcours client : ce que ça change concrètement",

@@ -1,6 +1,6 @@
 /* Service worker : met tout le site en cache pour un usage hors ligne.
    Changer VERSION à chaque modification du code (pas nécessaire pour data.json). */
-const VERSION = 'v15';
+const VERSION = 'v16';
 const CACHE = 'chine-' + VERSION;
 // Photos du diaporama : cache à part, conservé d'une version à l'autre (≈ 5 Mo à ne télécharger qu'une fois)
 const CACHE_PHOTOS = 'photos-chine';
@@ -48,11 +48,13 @@ async function completer() {
   await photos();
 }
 
-// Liste des photos citées dans data.json (diaporama de présentation)
+// Liste des photos citées dans data.json (diaporama de présentation et images des dossiers)
 async function listePhotos() {
   const rep = await caches.match('data.json') || await fetch('data.json');
   const d = await rep.json();
-  return (((d.presentation || {}).diaporama || {}).diapos || []).map((x) => x.photo).filter(Boolean);
+  const diapos = (((d.presentation || {}).diaporama || {}).diapos || []).map((x) => x.photo);
+  const dossiers = (d.dossier || []).flatMap((c) => (c.sections || []).map((s) => (s.image || {}).photo));
+  return [...new Set(diapos.concat(dossiers).filter(Boolean))];
 }
 // Met en cache les photos manquantes ; une photo en échec n'empêche pas les autres
 let photosEnCours = null;
