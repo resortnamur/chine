@@ -1371,7 +1371,7 @@
         {
           "titre": "Fiche d'évaluation à remplir sur place",
           "paragraphes": [
-            "Une ligne par solution vue, notes de 1 à 5, avec la photo et la carte de visite rattachées. Dans l'appli : une note par solution dans l'onglet Notes, rattachée au salon, avec les photos jointes. Rubriques :"
+            "Une ligne par solution vue, notes de 1 à 5, avec la photo et la carte de visite rattachées. Dans l'appli : onglet Notes › « 📋 Fiche d'évaluation », une fiche par solution, les critères notés l'un après l'autre, photos jointes. Rubriques :"
           ],
           "points": [
             "Solution",

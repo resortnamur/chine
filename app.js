@@ -344,6 +344,93 @@ function heureNote(ts) {
   return hm(d, TZ_CN);
 }
 
+/* ---------- Fiche d'évaluation (grille du salon de la robotique) ----------
+   Une note peut porter une fiche : n.eval = { solution, fournisseur, cout, maturite, waouh, valeur, faisab, decision }.
+   Les notes 1 à 5 se donnent critère après critère ; la fiche en cours de saisie est gardée sous « eval-brouillon ». */
+const CHAMPS_EVAL = [['solution', 'Solution'], ['fournisseur', 'Fournisseur'], ['cout', 'Coût']];
+const CRITERES_EVAL = [
+  ['maturite', 'Maturité', 'Démonstration réelle ou simple vidéo ? Déjà déployé, où, depuis quand ?'],
+  ['waouh', 'Effet waouh', 'Impact visuel et attractivité pour le client.'],
+  ['valeur', 'Valeur business', 'Gain attendu : fréquentation, panier, économies, image.'],
+  ['faisab', 'Faisabilité en Belgique', 'Conformité UE, support local, intégration, accord du régulateur.']
+];
+const DECISIONS_EVAL = [['T', 'Tester sous 90 jours'], ['S', 'Suivre dans l\'année'], ['E', 'Écarter']];
+function modeNote() { return lire('notes-mode', 'note') === 'eval' ? 'eval' : 'note'; }
+function brouillonEval() {
+  try { const b = JSON.parse(lire('eval-brouillon', '{}')); return b && typeof b === 'object' ? b : {}; } catch (e) { return {}; }
+}
+function formEval(ev, cible) {
+  ev = ev || {};
+  let h = '<div class="eval-form" data-eval-form="' + esc(cible) + '">' +
+    CHAMPS_EVAL.map(([k, nom]) => '<label class="eval-champ">' + nom +
+      '<input type="text" data-eval-champ="' + k + '" value="' + esc(ev[k] || '') + '"></label>').join('');
+  CRITERES_EVAL.forEach(([k, nom, def], i) => {
+    const v = +ev[k] || 0;
+    h += '<div class="eval-critere' + (v ? ' fait' : '') + '" data-eval-critere="' + k + '">' +
+      '<div class="eval-crit-titre"><span class="eval-num">' + (i + 1) + '</span>' + nom +
+      '<span class="eval-val">' + (v ? v + '/5' : '') + '</span></div><div class="meta">' + def + '</div>' +
+      '<div class="eval-notes">' + [1, 2, 3, 4, 5].map((n) => '<button type="button" class="eval-bouton' + (n === v ? ' actif' : '') +
+        '" data-eval-noter="' + k + '" data-valeur="' + n + '" aria-pressed="' + (n === v) + '">' + n + '</button>').join('') + '</div></div>';
+  });
+  h += '<div class="eval-critere' + (ev.decision ? ' fait' : '') + '" data-eval-critere="decision">' +
+    '<div class="eval-crit-titre"><span class="eval-num">' + (CRITERES_EVAL.length + 1) + '</span>Décision</div>' +
+    '<div class="eval-notes eval-decisions">' + DECISIONS_EVAL.map(([k, nom]) => '<button type="button" class="eval-bouton' +
+      (ev.decision === k ? ' actif' : '') + '" data-eval-noter="decision" data-valeur="' + k + '" aria-pressed="' + (ev.decision === k) + '">' +
+      k + '<small>' + nom + '</small></button>').join('') + '</div></div>';
+  return h + '</div>';
+}
+function lireFormEval(form) {
+  const ev = {};
+  form.querySelectorAll('[data-eval-champ]').forEach((i) => { ev[i.dataset.evalChamp] = i.value.trim(); });
+  form.querySelectorAll('.eval-bouton.actif').forEach((b) => {
+    ev[b.dataset.evalNoter] = b.dataset.evalNoter === 'decision' ? b.dataset.valeur : +b.dataset.valeur;
+  });
+  return ev;
+}
+function sauverBrouillonEval() {
+  const form = document.querySelector('[data-eval-form="nouvelle"]');
+  if (!form) return;
+  const ev = lireFormEval(form);
+  const c = $('#eval-commentaire');
+  ev.txt = c ? c.value : '';
+  ecrire('eval-brouillon', JSON.stringify(ev));
+}
+// Note 1 à 5 (ou décision) : un second appui sur la même note l'efface ; sinon on passe au critère suivant
+function noterEval(b) {
+  const bloc = b.closest('.eval-critere');
+  const dejaActif = b.classList.contains('actif');
+  bloc.querySelectorAll('.eval-bouton').forEach((x) => { x.classList.remove('actif'); x.setAttribute('aria-pressed', 'false'); });
+  if (!dejaActif) { b.classList.add('actif'); b.setAttribute('aria-pressed', 'true'); }
+  bloc.classList.toggle('fait', !dejaActif);
+  const val = bloc.querySelector('.eval-val');
+  if (val) val.textContent = dejaActif ? '' : b.dataset.valeur + '/5';
+  if (b.closest('[data-eval-form="nouvelle"]')) sauverBrouillonEval();
+  if (dejaActif) return;
+  let suivant = bloc.nextElementSibling;
+  while (suivant && suivant.classList.contains('fait')) suivant = suivant.nextElementSibling;
+  if (suivant) suivant.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+function resumeEvalHtml(ev) {
+  const dec = DECISIONS_EVAL.find((d) => d[0] === ev.decision);
+  const sous = [ev.fournisseur, ev.cout].filter(Boolean).map(esc).join(' · ');
+  return '<div class="eval-entete"><span class="eval-titre-court">📋 Fiche</span><strong>' + esc(ev.solution || 'Solution sans nom') + '</strong>' +
+    (dec ? '<span class="eval-badge badge-' + dec[0] + '">' + dec[0] + ' · ' + esc(dec[1]) + '</span>' : '') + '</div>' +
+    (sous ? '<div class="meta">' + sous + '</div>' : '') +
+    '<div class="eval-scores">' + CRITERES_EVAL.map(([k, nom]) =>
+      '<span class="eval-score">' + nom + ' <b>' + (ev[k] ? ev[k] : '–') + '</b>/5</span>').join('') + '</div>';
+}
+function texteEval(ev) {
+  const dec = DECISIONS_EVAL.find((d) => d[0] === ev.decision);
+  return 'FICHE D\'ÉVALUATION — ' + (ev.solution || 'Solution sans nom') + '\n' +
+    '  Fournisseur : ' + (ev.fournisseur || '–') + ' · Coût : ' + (ev.cout || '–') + '\n' +
+    '  ' + CRITERES_EVAL.map(([k, nom]) => nom + ' ' + (ev[k] || '–') + '/5').join(' · ') + '\n' +
+    '  Décision : ' + (dec ? dec[0] + ' (' + dec[1].toLowerCase() + ')' : '–') + '\n';
+}
+// Texte d'une note pour la recherche
+function texteRecherche(n) {
+  return ((n.txt || '') + ' ' + (n.eval ? CHAMPS_EVAL.map(([k]) => n.eval[k] || '').join(' ') : '')).toLowerCase();
+}
+
 /* ---------- Photos des notes ----------
    Stockées sur le téléphone (IndexedDB « chine-photos »), réduites à 1600 px.
    Une note garde la liste de ses photos : note.photos = [id, …]. */
@@ -463,16 +550,30 @@ function voirPhoto(id) {
 function vueNotes() {
   const notes = lireNotes();
   const attente = photosEnAttente();
+  const mode = modeNote();
   let h = '<h2>Mes notes</h2>' +
-    '<div class="carte accent saisie-note">' +
-    '<textarea id="note-saisie" placeholder="Tapez ou dictez avec le 🎤 du clavier…">' + esc(lire('note-brouillon', '')) + '</textarea>' +
-    vignettesHtml(attente, true, 'nouvelle') + boutonsPhoto('nouvelle') +
-    '<label class="note-salon-label">Salon : <select id="note-salon">' + optionsSalons(salonParDefaut()) + '</select></label>' +
-    '<div class="boutons"><button class="btn principal" data-note-ajouter>＋ Ajouter la note</button></div></div>';
+    '<div class="filtres mode-note">' + [['note', '✎ Note libre'], ['eval', '📋 Fiche d\'évaluation']].map(([m, nom]) =>
+      '<button class="filtre' + (m === mode ? ' actif' : '') + '" data-note-mode="' + m + '">' + nom + '</button>').join('') + '</div>';
+  if (mode === 'eval') {
+    const b = brouillonEval();
+    h += '<div class="carte eval-carte saisie-note"><div class="eval-titre">📋 Fiche d\'évaluation</div>' +
+      '<p class="meta">Une fiche par solution vue. Notez chaque critère de 1 à 5, puis décidez. Joignez la photo du produit et de la carte de visite.</p>' +
+      formEval(b, 'nouvelle') +
+      '<label class="eval-champ">Commentaire<textarea id="eval-commentaire" placeholder="Contact, prix, remarques… (🎤 du clavier)">' + esc(b.txt || '') + '</textarea></label>' +
+      vignettesHtml(attente, true, 'nouvelle') + boutonsPhoto('nouvelle') +
+      '<label class="note-salon-label">Salon : <select id="note-salon">' + optionsSalons(salonParDefaut()) + '</select></label>' +
+      '<div class="boutons"><button class="btn principal" data-eval-ajouter>＋ Enregistrer la fiche</button></div></div>';
+  } else {
+    h += '<div class="carte accent saisie-note">' +
+      '<textarea id="note-saisie" placeholder="Tapez ou dictez avec le 🎤 du clavier…">' + esc(lire('note-brouillon', '')) + '</textarea>' +
+      vignettesHtml(attente, true, 'nouvelle') + boutonsPhoto('nouvelle') +
+      '<label class="note-salon-label">Salon : <select id="note-salon">' + optionsSalons(salonParDefaut()) + '</select></label>' +
+      '<div class="boutons"><button class="btn principal" data-note-ajouter>＋ Ajouter la note</button></div></div>';
+  }
 
   // Filtres
-  const compte = (f) => notes.filter((n) => f === 'toutes' || (n.salon || 'aucun') === f).length;
-  const filtres = [['toutes', 'Toutes']].concat((D.salons || []).map((s) => [s.id, nomSalon(s.id)]), [['aucun', 'Sans salon']]);
+  const compte = (f) => notes.filter((n) => correspondFiltre(n, f)).length;
+  const filtres = [['toutes', 'Toutes'], ['evals', '📋 Fiches']].concat((D.salons || []).map((s) => [s.id, nomSalon(s.id)]), [['aucun', 'Sans salon']]);
   if (!filtres.some((f) => f[0] === filtreNotes)) filtreNotes = 'toutes';
   h += '<div class="filtres">' + filtres.map(([id, nom]) =>
     '<button class="filtre' + (id === filtreNotes ? ' actif' : '') + '" data-notes-filtre="' + esc(id) + '">' +
@@ -489,11 +590,16 @@ function vueNotes() {
   return h;
 }
 
+function correspondFiltre(n, f) {
+  if (f === 'toutes') return true;
+  if (f === 'evals') return !!n.eval;
+  return (n.salon || 'aucun') === f;
+}
 function listeNotesHtml(notes) {
   const q = rechercheNotes.trim().toLowerCase();
   const visibles = notes.slice().reverse() // à heure égale, la plus récente en premier
-    .filter((n) => filtreNotes === 'toutes' || (n.salon || 'aucun') === filtreNotes)
-    .filter((n) => !q || n.txt.toLowerCase().includes(q))
+    .filter((n) => correspondFiltre(n, filtreNotes))
+    .filter((n) => !q || texteRecherche(n).includes(q))
     .sort((a, b) => b.t - a.t);
   if (!visibles.length) return '<p class="vide">' + (notes.length ? 'Aucune note ne correspond.' : 'Aucune note pour l\'instant.') + '</p>';
   let h = '', jourCourant = '';
@@ -505,15 +611,18 @@ function listeNotesHtml(notes) {
       jourCourant = jour;
     }
     if (n.id === noteEnEdition) {
-      h += '<div class="note edition"><textarea id="note-edition">' + esc(n.txt) + '</textarea>' +
+      h += '<div class="note edition' + (n.eval ? ' note-eval' : '') + '">' +
+        (n.eval ? '<div class="eval-titre">📋 Fiche d\'évaluation</div>' + formEval(n.eval, n.id) + '<label class="eval-champ">Commentaire' : '') +
+        '<textarea id="note-edition">' + esc(n.txt) + '</textarea>' + (n.eval ? '</label>' : '') +
         vignettesHtml(n.photos, true, n.id) + boutonsPhoto(n.id) +
         '<label class="note-salon-label">Salon : <select id="note-edition-salon">' + optionsSalons(n.salon) + '</select></label>' +
         '<div class="boutons"><button class="btn principal" data-note-enregistrer="' + esc(n.id) + '">Enregistrer</button>' +
         '<button class="btn" data-note-annuler>Fermer</button>' +
         '<button class="btn danger" data-note-supprimer="' + esc(n.id) + '">Supprimer la note</button></div></div>';
     } else {
-      h += '<div class="note"><button class="note-corps" data-note-modifier="' + esc(n.id) + '">' +
+      h += '<div class="note' + (n.eval ? ' note-eval' : '') + '"><button class="note-corps" data-note-modifier="' + esc(n.id) + '">' +
         '<div class="note-meta">' + heureNote(n.t) + (n.salon ? ' · ' + esc(nomSalon(n.salon)) : '') + '</div>' +
+        (n.eval ? resumeEvalHtml(n.eval) : '') +
         (n.txt ? '<div class="note-txt">' + esc(n.txt) + '</div>' : '') + '</button>' +
         vignettesHtml(n.photos, false) + '</div>';
     }
@@ -546,7 +655,8 @@ function texteExport() {
     if (!lot.length) return;
     txt += '\n=== ' + nom + ' ===\n';
     lot.forEach((n) => {
-      txt += '\n[' + dateCourte(new Date(n.t), TZ_CN) + ' ' + heureNote(n.t) + ']\n' + (n.txt || '(photo seule)') + '\n';
+      txt += '\n[' + dateCourte(new Date(n.t), TZ_CN) + ' ' + heureNote(n.t) + ']\n' + (n.eval ? texteEval(n.eval) : '') +
+        (n.txt ? n.txt + '\n' : n.eval ? '' : '(photo seule)\n');
       (n.photos || []).forEach((pid, k) => { txt += '  📷 ' + nomFichierPhoto(n, k) + '\n'; });
     });
   });
@@ -660,6 +770,25 @@ function clicNotes(e) {
     }
     return true;
   }
+  if ((b = el('[data-note-mode]'))) { ecrire('notes-mode', b.dataset.noteMode); route(true); return true; }
+  if ((b = el('[data-eval-noter]'))) { noterEval(b); return true; }
+  if ((b = el('[data-eval-ajouter]'))) {
+    const ev = lireFormEval($('[data-eval-form="nouvelle"]'));
+    if (!ev.solution) { avertir('Indiquez au moins le nom de la solution.'); $('[data-eval-champ="solution"]').focus(); return true; }
+    const notes = lireNotes();
+    notes.push({ id: nouvelId(), t: maintenant().getTime(), txt: $('#eval-commentaire').value.trim(), salon: $('#note-salon').value,
+      photos: photosEnAttente(), eval: ev });
+    if (ecrireNotes(notes)) {
+      ecrire('eval-brouillon', '{}');
+      ecrire('photos-attente', '[]');
+      if (navigator.storage && navigator.storage.persist) navigator.storage.persist().catch(() => {});
+      salonChoisi = { salon: $('#note-salon').value, jour: ymd(maintenant(), TZ_CN) };
+      route(true);
+      avertir('Fiche enregistrée ✓');
+      window.scrollTo(0, 0);
+    }
+    return true;
+  }
   if ((b = el('[data-notes-filtre]'))) { filtreNotes = b.dataset.notesFiltre; route(true); return true; }
   if ((b = el('[data-note-modifier]'))) { noteEnEdition = b.dataset.noteModifier; majListeNotes(); const z = $('#note-edition'); if (z) z.focus(); return true; }
   if ((b = el('[data-note-annuler]'))) { noteEnEdition = null; majListeNotes(); return true; }
@@ -667,7 +796,9 @@ function clicNotes(e) {
     const notes = lireNotes();
     const n = notes.find((x) => x.id === b.dataset.noteEnregistrer);
     const txt = $('#note-edition').value.trim();
-    if (n && (txt || (n.photos || []).length)) { n.txt = txt; n.salon = $('#note-edition-salon').value; }
+    const form = n && n.eval ? $('[data-eval-form="' + n.id + '"]') : null;
+    if (form) n.eval = lireFormEval(form);
+    if (n && (txt || (n.photos || []).length || n.eval)) { n.txt = txt; n.salon = $('#note-edition-salon').value; }
     if (ecrireNotes(notes)) { noteEnEdition = null; route(true); }
     return true;
   }
@@ -1205,6 +1336,7 @@ document.addEventListener('click', (e) => {
 });
 document.addEventListener('input', (e) => {
   if (e.target.id === 'note-saisie') ecrire('note-brouillon', e.target.value);
+  if (e.target.id === 'eval-commentaire' || e.target.closest('[data-eval-form="nouvelle"]')) sauverBrouillonEval();
   if (e.target.id === 'phrases-recherche') { recherchePhrases = e.target.value; majResultatsPhrases(); }
   if (e.target.id === 'notes-recherche') { rechercheNotes = e.target.value; majListeNotes(); }
   if (e.target.id === 'eur' || e.target.id === 'cny') {
