@@ -26,7 +26,7 @@ Marqueurs affichés en jaune : `[À COMPLÉTER]`, `[à vérifier]`.
 - Vérifier qu'aucune requête ne part vers un autre domaine.
 
 ## Écrans
-Aujourd'hui · Programme · Salons · Notes (photos, export .zip) · Adresses (« Montrer au chauffeur », 🔊) · Plus : Contacts, Phrases (145, par catégories), Pratique, Convertisseur, Nous présenter (diaporama « Notre groupe en images » : 67 diapositives — 45 photos du groupe (dont Circus Sport et Odd's Sportsbar), 11 photos de villes, 2 cartes —, légendes ZH + EN + FR, plein écran, glisser ; puis le texte FR/EN/ZH), Dossier des lieux (10 chapitres, dont « Un robot pour le Resort », orienté animation).
+Aujourd'hui · Programme · Salons · Notes (photos, export .zip) · Adresses (« Montrer au chauffeur », 🔊) · Plus : Contacts, Phrases (145, par catégories), Pratique, Convertisseur, Nous présenter (diaporama « Notre groupe en images » : 67 diapositives — 45 photos du groupe (dont Circus Sport et Odd's Sportsbar), 11 photos de villes, 2 cartes —, légendes ZH + EN + FR, plein écran, glisser ; puis le texte FR/EN/ZH), Dossier des lieux (11 chapitres, dont « Un robot pour le Resort », orienté animation, et « Préparer le salon de la robotique », repris du document de préparation Word de l'utilisateur).
 
 ## Photos du diaporama
 - Dossier `photos/` (JPEG 1280 px, qualité 70, ≈ 5 Mo au total). Sources : `Desktop\Divers\IMAGES\Photos CCRN` (Namur) et sites officiels du groupe (circuscasinoresort.com, casinodespa.be, circus-casino-places.be, circus-sport-places.be, odds.be, circuscasino.fr, casinodavos.ch), téléchargées avec l'accord de l'utilisateur le 05/10/2026. Jamais d'image générée par IA.

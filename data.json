@@ -68,7 +68,7 @@
           "note": "Ouverture à 10:30 le 12/10 (9:30 du 13 au 15/10). Badge à retirer au comptoir d'inscription (ouvert jusqu'à 17:00) avec la lettre de préinscription, le passeport et une carte de visite."
         }
       ],
-      "dossier": ["shanghai-salon", "shanghai-ville", "robot-achat"]
+      "dossier": ["shanghai-salon", "salon-preparation", "shanghai-ville", "robot-achat"]
     },
     {
       "date": "2026-10-13",
@@ -96,7 +96,7 @@
         {"heure": "", "titre": "Check-in au Conrad Macao (dans The Londoner, Cotai)", "lieu": "hotel-macao"},
         {"heure": "", "titre": "Soirée casino sur le Cotai", "lieu": "cotai", "note": "Photos interdites en salle, passeport exigé à l'entrée."}
       ],
-      "dossier": ["shanghai-salon", "agibot", "macao-jeu", "macao-ville", "robot-achat"]
+      "dossier": ["shanghai-salon", "salon-preparation", "agibot", "macao-jeu", "macao-ville", "robot-achat"]
     },
     {
       "date": "2026-10-14",
@@ -1276,6 +1276,123 @@
         {"titre": "Système de préinscription des visiteurs CIIF 2026", "url": "https://www.ciif-expo.cn/"}
       ],
       "consulte": "08/10/2026"
+    },
+    {
+      "id": "salon-preparation",
+      "titre": "Préparer le salon de la robotique : méthode et grille",
+      "icone": "📋",
+      "resume": "Objectif du salon : revenir avec des idées concrètes, chiffrées et réalistes pour les casinos, les salles de jeux et les futurs Circus Play. Sur place, tout paraît spectaculaire : ce qui compte, c'est ce qui fonctionne ou pourra fonctionner dans un établissement belge, sur la durée. Ce chapitre donne la méthode de notation, les questions à poser à chaque exposant, les thèmes à observer, les missions possibles des robots, le projet de trottinettes à quatre roues de Couvin, les points sensibles et la fiche d'évaluation à remplir sur place.",
+      "sections": [
+        {
+          "titre": "Objectif et méthode de notation",
+          "paragraphes": ["Chaque solution vue est notée sur trois axes, de 1 à 5 :"],
+          "points": [
+            "Effet waouh : l'impact visuel et l'attractivité pour le client.",
+            "Valeur business : le gain attendu (fréquentation, panier, économies, image).",
+            "Faisabilité en Belgique : conformité UE, support local, intégration, accord du régulateur."
+          ]
+        },
+        {
+          "titre": "Sept questions à poser à chaque exposant",
+          "points": [
+            "Maturité. Démonstration réelle ou simple vidéo ? Où est-ce déjà déployé, depuis quand ?",
+            "Coût complet. Achat, location ou abonnement, maintenance, pièces d'usure. Existe-t-il une formule d'essai de 1 à 3 mois ?",
+            "Environnement casino. Bruit, foule dense, lumières, moquette, allées étroites. Beaucoup de robots sont pensés pour des halls vides.",
+            "Intégration. Ouverture aux API, compatibilité avec la fidélité, la caisse et la supervision.",
+            "Support en Europe. Distributeur ou SAV local, délai de dépannage, mises à jour logicielles.",
+            "Conformité UE. Marquage CE, RGPD, règlement européen sur l'IA. Un produit non conforme est inutilisable chez nous.",
+            "Autonomie et sécurité. Durée de batterie, comportement en cas de choc ou de contact avec un client."
+          ]
+        },
+        {
+          "titre": "Grille d'attention par thème",
+          "points": [
+            "Accueil et entrée (casinos, salles) : distinguer l'expérience (avatar multilingue, robot d'accueil, guidage) de la sécurité (portique biométrique, analyse des émotions).",
+            "Caisses et flux financiers (casinos surtout) : gain de temps et de sécurité — bras de comptage, coffre mobile, détection de faux billets. Seuil de volume à partir duquel l'investissement est rentable.",
+            "Food & Beverage (tous) : effet spectacle et rentabilité réelle. Robots de nettoyage de nuit : cas d'usage le plus mûr. Robot barman, pizzaiolo, etc. : valeur d'animation même à faible débit.",
+            "Sécurité et jeu responsable (tous) : la logique de détection (quelles données, quelle explicabilité) plus que la technologie. Jumeau numérique : lien direct avec la carte d'implantation et la géolocalisation.",
+            "Expérience de jeu et fidélisation (tous) : écrans holographiques et dispositifs d'animation du floor. Fidélité centralisée par application. Bracelet biométrique : séduisant mais juridiquement très sensible."
+          ]
+        },
+        {
+          "titre": "Missions possibles des robots chez nous",
+          "paragraphes": [
+            "Aucun casino belge n'a de robot : c'est un avantage de précurseur, à condition de rester dans l'animation et le service, jamais dans le jeu lui-même."
+          ],
+          "points": [
+            "Accueil fun au lobby (priorité haute) : salutation, présentation de la soirée, guidage vers le bar, le restaurant ou la salle.",
+            "Danse à l'entrée (priorité haute) : point d'attraction pour les ouvertures, soirées à thème et événements.",
+            "DJ interactif (priorité haute) : le client choisit son morceau via l'application ou une borne ; le robot le lance avec une chorégraphie. Droits musicaux à vérifier en amont.",
+            "Félicitations jackpot (priorité haute, sous réserve) : annonce, danse, photo souvenir. Usage le plus évocateur, à encadrer (voir « Points sensibles à faire valider »).",
+            "Animateur de soirées (priorité haute) : tirages, jeux concours, quiz, anniversaires, soirées événement sportif Circus Play.",
+            "Photo et contenu (priorité moyenne) : photos avec les clients, contenu pour nos réseaux et pour l'équipe marketing.",
+            "Service en salle (priorité moyenne) : boissons et snacks sur les grands espaces ; guidage vers toilettes, sortie ou événement.",
+            "Nettoyage de nuit (priorité haute dans les salles de jeux) : sols, vitres, désinfection UV en autonomie complète. Solution la plus mûre.",
+            "Veille après fermeture (priorité moyenne) : le robot signale les anomalies, sans caméra supplémentaire."
+          ],
+          "conseils": [
+            "Façon de procéder : location courte (un week-end d'événement ou un mois) sur un seul site pilote, avec des indicateurs définis à l'avance : fréquentation, durée de présence, photos partagées, retours des clients et du personnel."
+          ]
+        },
+        {
+          "titre": "Projet Couvin : trottinettes à quatre roues",
+          "paragraphes": [
+            "Activité touristique pour groupes (entreprises, familles, amis) adossée à la salle de jeux de Couvin, pour découvrir la région dans un format inédit et créer un trafic nouveau.",
+            "À regarder au salon :"
+          ],
+          "points": [
+            "Le modèle : stabilité, vitesse maximale, autonomie réelle en côte et sur chemin, poids, tenue à la pluie et aux terrains irréguliers.",
+            "La gestion de flotte : géolocalisation, limitation et blocage de vitesse à distance, recharge de plusieurs unités, suivi des batteries.",
+            "Les opérateurs existants : assurance, formation du client, taille des groupes, encadrement.",
+            "Le modèle économique : achat, location longue durée, ou partenariat avec un opérateur déjà équipé."
+          ],
+          "conseils": ["À valider avant tout engagement :"],
+          "conseilsPoints": [
+            "Statut légal : classification du véhicule en Belgique (engin de déplacement, cyclomoteur, autre), âge minimum, permis, casque, vitesse maximale.",
+            "Circulation : voies publiques, chemins agricoles, forêts — accès réglementé en Wallonie. Contacter le DNF et la commune.",
+            "Assurance : responsabilité civile de l'activité et couverture des participants.",
+            "Séparation avec le jeu : l'activité ne doit pas promouvoir le jeu (publicité encadrée), et aucun mineur ne peut être associé à une offre croisée avec la salle. Validation : Legal.",
+            "Partenaires locaux : office du tourisme, parc naturel, communes, producteurs pour des étapes — légitimité et attractivité.",
+            "Saisonnalité : forte dépendance à la météo ; prévoir un repli à la salle et un forfait avec restauration."
+          ]
+        },
+        {
+          "titre": "Points sensibles à faire valider",
+          "points": [
+            "Reconnaissance faciale, démarche, veines de la main : données biométriques, catégorie particulière au sens du RGPD, base légale très restrictive. Validation : Legal, Commission des jeux de hasard.",
+            "Analyse des émotions : le règlement européen sur l'IA interdit cet usage dans certains contextes et le classe à haut risque ailleurs. Validation : Legal.",
+            "Détection du jeu compulsif par IA : intérêt fort en jeu responsable, mais profilage et données sensibles ; cadre imposé par le régulateur. Validation : Legal, régulateur.",
+            "Bracelet biométrique : données de santé, exposition juridique forte. Validation : Legal, RH.",
+            "Robots dans les zones de jeu : contrôle d'accès, âge minimum, incitation au jeu, publicité. Validation : Legal, régulateur.",
+            "Robots et personnel : impact sur l'emploi, perception, dialogue social. Validation : RH."
+          ],
+          "conseils": ["Position de départ : retenir à court terme l'animation, le service, le nettoyage (à confirmer) et la modélisation (jumeau numérique)."]
+        },
+        {
+          "titre": "Fiche d'évaluation à remplir sur place",
+          "paragraphes": [
+            "Une ligne par solution vue, notes de 1 à 5, avec la photo et la carte de visite rattachées. Dans l'appli : une note par solution dans l'onglet Notes, rattachée au salon, avec les photos jointes. Rubriques :"
+          ],
+          "points": [
+            "Solution",
+            "Fournisseur",
+            "Coût",
+            "Maturité (1 à 5)",
+            "Waouh (1 à 5)",
+            "Valeur (1 à 5)",
+            "Faisabilité en Belgique (1 à 5)",
+            "Décision : T = tester sous 90 jours · S = suivre dans l'année · E = écarter"
+          ]
+        },
+        {
+          "titre": "Livrables au retour",
+          "points": [
+            "Une fiche par solution : photo, fournisseur, coût, maturité, notation, contact.",
+            "Un classement en trois catégories : à tester sous 90 jours, à suivre dans l'année, à écarter.",
+            "Des idées prêtes à lancer : robot d'animation en pilote sur un site, étude de faisabilité des trottinettes à Couvin."
+          ]
+        }
+      ]
     },
     {
       "id": "agibot",
