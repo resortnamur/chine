@@ -347,7 +347,9 @@ function heureNote(ts) {
 /* ---------- Fiche d'évaluation (grille du salon de la robotique) ----------
    Une note peut porter une fiche : n.eval = { solution, fournisseur, cout, maturite, waouh, valeur, faisab, decision }.
    Les notes 1 à 5 se donnent critère après critère ; la fiche en cours de saisie est gardée sous « eval-brouillon ». */
-const CHAMPS_EVAL = [['solution', 'Solution'], ['fournisseur', 'Fournisseur'], ['cout', 'Coût']];
+const CHAMPS_EVAL = [['solution', 'Solution'], ['theme', 'Thème'], ['fournisseur', 'Fournisseur'], ['cout', 'Coût']];
+const THEMES_EVAL = ['Accueil et entrée', 'Caisses et flux financiers', 'Food & Beverage', 'Sécurité et jeu responsable',
+  'Expérience de jeu et fidélisation', 'Animation et événements', 'Hôtel', 'Couvin (trottinettes)', 'Autre'];
 const CRITERES_EVAL = [
   ['maturite', 'Maturité', 'Démonstration réelle ou simple vidéo ? Déjà déployé, où, depuis quand ?'],
   ['waouh', 'Effet waouh', 'Impact visuel et attractivité pour le client.'],
@@ -362,8 +364,10 @@ function brouillonEval() {
 function formEval(ev, cible) {
   ev = ev || {};
   let h = '<div class="eval-form" data-eval-form="' + esc(cible) + '">' +
-    CHAMPS_EVAL.map(([k, nom]) => '<label class="eval-champ">' + nom +
-      '<input type="text" data-eval-champ="' + k + '" value="' + esc(ev[k] || '') + '"></label>').join('');
+    CHAMPS_EVAL.map(([k, nom]) => '<label class="eval-champ">' + nom + (k === 'theme'
+      ? '<select data-eval-champ="theme"><option value="">—</option>' + THEMES_EVAL.map((x) =>
+        '<option' + (x === ev.theme ? ' selected' : '') + '>' + esc(x) + '</option>').join('') + '</select>'
+      : '<input type="text" data-eval-champ="' + k + '" value="' + esc(ev[k] || '') + '">') + '</label>').join('');
   CRITERES_EVAL.forEach(([k, nom, def], i) => {
     const v = +ev[k] || 0;
     h += '<div class="eval-critere' + (v ? ' fait' : '') + '" data-eval-critere="' + k + '">' +
@@ -412,7 +416,7 @@ function noterEval(b) {
 }
 function resumeEvalHtml(ev) {
   const dec = DECISIONS_EVAL.find((d) => d[0] === ev.decision);
-  const sous = [ev.fournisseur, ev.cout].filter(Boolean).map(esc).join(' · ');
+  const sous = [ev.theme, ev.fournisseur, ev.cout].filter(Boolean).map(esc).join(' · ');
   return '<div class="eval-entete"><span class="eval-titre-court">📋 Fiche</span><strong>' + esc(ev.solution || 'Solution sans nom') + '</strong>' +
     (dec ? '<span class="eval-badge badge-' + dec[0] + '">' + dec[0] + ' · ' + esc(dec[1]) + '</span>' : '') + '</div>' +
     (sous ? '<div class="meta">' + sous + '</div>' : '') +
@@ -422,6 +426,7 @@ function resumeEvalHtml(ev) {
 function texteEval(ev) {
   const dec = DECISIONS_EVAL.find((d) => d[0] === ev.decision);
   return 'FICHE D\'ÉVALUATION — ' + (ev.solution || 'Solution sans nom') + '\n' +
+    '  Thème : ' + (ev.theme || '–') + '\n' +
     '  Fournisseur : ' + (ev.fournisseur || '–') + ' · Coût : ' + (ev.cout || '–') + '\n' +
     '  ' + CRITERES_EVAL.map(([k, nom]) => nom + ' ' + (ev[k] || '–') + '/5').join(' · ') + '\n' +
     '  Décision : ' + (dec ? dec[0] + ' (' + dec[1].toLowerCase() + ')' : '–') + '\n';
@@ -585,6 +590,7 @@ function vueNotes() {
   h += '<div class="section-titre">Exporter : ' + notes.length + ' note' + (notes.length > 1 ? 's' : '') +
     ', ' + nbPhotos + ' photo' + (nbPhotos > 1 ? 's' : '') + '</div>' +
     '<div class="boutons"><button class="btn principal" data-notes-zip>⬇ Tout télécharger (.zip : texte + photos)</button>' +
+    (notes.some((n) => n.eval) ? '<button class="btn" data-fiches-xlsx>📋 Fiches d\'évaluation (Excel)</button>' : '') +
     '<button class="btn" data-notes-partager>Partager le texte (mail, WhatsApp…)</button></div>' +
     '<p class="meta">Les notes et les photos restent sur ce téléphone uniquement : exportez-les chaque soir.</p>';
   return h;
@@ -674,7 +680,7 @@ function crc32(u8) {
   for (let i = 0; i < u8.length; i++) c = TABLE_CRC[(c ^ u8[i]) & 0xFF] ^ (c >>> 8);
   return (c ^ 0xFFFFFFFF) >>> 0;
 }
-function creerZip(fichiers) {
+function creerZip(fichiers, type) {
   const enc = new TextEncoder();
   const morceaux = [], central = [];
   let decalage = 0, tailleCentral = 0;
@@ -700,11 +706,13 @@ function creerZip(fichiers) {
   const fin = new DataView(new ArrayBuffer(22));
   fin.setUint32(0, 0x06054b50, true); fin.setUint16(8, fichiers.length, true); fin.setUint16(10, fichiers.length, true);
   fin.setUint32(12, tailleCentral, true); fin.setUint32(16, decalage, true);
-  return new Blob(morceaux.concat(central, [fin.buffer]), { type: 'application/zip' });
+  return new Blob(morceaux.concat(central, [fin.buffer]), { type: type || 'application/zip' });
 }
 async function zipExport() {
   const notes = lireNotes();
   const fichiers = [{ nom: 'notes.txt', donnees: new TextEncoder().encode(texteExport()) }];
+  if (notes.some((n) => n.eval)) fichiers.push({ nom: 'fiches-evaluation.xlsx', donnees: new Uint8Array(await xlsxFiches().arrayBuffer()) });
+  const debutPhotos = fichiers.length;
   let manquantes = 0;
   for (const n of notes) {
     for (let k = 0; k < (n.photos || []).length; k++) {
@@ -713,7 +721,59 @@ async function zipExport() {
       else manquantes++;
     }
   }
-  return { zip: creerZip(fichiers), nb: fichiers.length - 1, manquantes: manquantes };
+  return { zip: creerZip(fichiers), nb: fichiers.length - debutPhotos, manquantes: manquantes };
+}
+// Fiches d'évaluation au format Excel (.xlsx écrit à la main : une feuille, ligne d'en-tête en gras et figée, filtres)
+function xlsxFiches() {
+  const notes = lireNotes().filter((n) => n.eval).sort((a, b) => a.t - b.t);
+  const x = (v) => String(v).replace(/[\x00-\x08\x0B\x0C\x0E-\x1F]/g, '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  const col = (i) => String.fromCharCode(65 + i);
+  const cellule = (v, i, r, gras) => {
+    const ref = col(i) + r;
+    if (typeof v === 'number') return '<c r="' + ref + '"><v>' + v + '</v></c>';
+    if (v === '' || v == null) return '';
+    return '<c r="' + ref + '" t="inlineStr"' + (gras ? ' s="1"' : '') + '><is><t xml:space="preserve">' + x(v) + '</t></is></c>';
+  };
+  const entetes = ['Date', 'Heure (Chine)', 'Salon', 'Thème', 'Solution', 'Fournisseur', 'Coût', 'Maturité', 'Waouh', 'Valeur', 'Faisabilité BE', 'Décision', 'Commentaire', 'Photos'];
+  const largeurs = [12, 9, 30, 24, 28, 20, 18, 9, 8, 8, 12, 22, 50, 40];
+  const lignes = [entetes].concat(notes.map((n) => {
+    const ev = n.eval, dec = DECISIONS_EVAL.find((d) => d[0] === ev.decision);
+    return [dateCourte(new Date(n.t), TZ_CN), heureNote(n.t), n.salon ? nomSalon(n.salon) : '', ev.theme || '', ev.solution || '', ev.fournisseur || '', ev.cout || '']
+      .concat(CRITERES_EVAL.map(([k]) => +ev[k] || ''), [dec ? dec[0] + ' – ' + dec[1] : '', n.txt || '', (n.photos || []).map((p, k) => nomFichierPhoto(n, k)).join(', ')]);
+  }));
+  const fin = col(entetes.length - 1);
+  const xml = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>';
+  const feuille = xml + '<worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">' +
+    '<sheetViews><sheetView workbookViewId="0"><pane ySplit="1" topLeftCell="A2" activePane="bottomLeft" state="frozen"/></sheetView></sheetViews>' +
+    '<cols>' + largeurs.map((l, i) => '<col min="' + (i + 1) + '" max="' + (i + 1) + '" width="' + l + '" customWidth="1"/>').join('') + '</cols>' +
+    '<sheetData>' + lignes.map((l, r) => '<row r="' + (r + 1) + '">' + l.map((v, i) => cellule(v, i, r + 1, r === 0)).join('') + '</row>').join('') + '</sheetData>' +
+    '<autoFilter ref="A1:' + fin + lignes.length + '"/></worksheet>';
+  const fichiers = [
+    ['[Content_Types].xml', xml + '<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">' +
+      '<Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/>' +
+      '<Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/>' +
+      '<Override PartName="/xl/worksheets/sheet1.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/>' +
+      '<Override PartName="/xl/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml"/></Types>'],
+    ['_rels/.rels', xml + '<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">' +
+      '<Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="xl/workbook.xml"/></Relationships>'],
+    ['xl/workbook.xml', xml + '<workbook xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships">' +
+      '<sheets><sheet name="Fiches" sheetId="1" r:id="rId1"/></sheets>' +
+      '<definedNames><definedName name="_xlnm._FilterDatabase" localSheetId="0" hidden="1">Fiches!$A$1:$' + fin + '$' + lignes.length + '</definedName></definedNames></workbook>'],
+    ['xl/_rels/workbook.xml.rels', xml + '<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">' +
+      '<Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet1.xml"/>' +
+      '<Relationship Id="rId2" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/></Relationships>'],
+    ['xl/styles.xml', xml + '<styleSheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">' +
+      '<fonts count="2"><font><sz val="11"/><name val="Calibri"/></font><font><b/><sz val="11"/><name val="Calibri"/></font></fonts>' +
+      '<fills count="2"><fill><patternFill patternType="none"/></fill><fill><patternFill patternType="gray125"/></fill></fills>' +
+      '<borders count="1"><border><left/><right/><top/><bottom/><diagonal/></border></borders>' +
+      '<cellStyleXfs count="1"><xf numFmtId="0" fontId="0" fillId="0" borderId="0"/></cellStyleXfs>' +
+      '<cellXfs count="2"><xf numFmtId="0" fontId="0" fillId="0" borderId="0" xfId="0"/><xf numFmtId="0" fontId="1" fillId="0" borderId="0" xfId="0" applyFont="1"/></cellXfs>' +
+      '<cellStyles count="1"><cellStyle name="Normal" xfId="0" builtinId="0"/></cellStyles></styleSheet>'],
+    ['xl/worksheets/sheet1.xml', feuille]
+  ];
+  const enc = new TextEncoder();
+  return creerZip(fichiers.map(([nom, txt]) => ({ nom: nom, donnees: enc.encode(txt) })),
+    'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
 }
 function telecharger(blob, nom) {
   const url = URL.createObjectURL(blob);
@@ -817,6 +877,11 @@ function clicNotes(e) {
     const txt = texteExport();
     if (navigator.share) navigator.share({ title: 'Mes notes — Chine 2026', text: txt }).catch(() => {});
     else if (navigator.clipboard) navigator.clipboard.writeText(txt).then(() => avertir('Notes copiées : collez-les dans un mail ou une note.')).catch(() => {});
+    return true;
+  }
+  if ((b = el('[data-fiches-xlsx]'))) {
+    telecharger(xlsxFiches(), 'fiches-evaluation-' + ymd(maintenant(), TZ_CN) + '.xlsx');
+    avertir('Fichier Excel téléchargé ✓');
     return true;
   }
   if ((b = el('[data-notes-zip]'))) {

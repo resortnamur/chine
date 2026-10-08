@@ -413,7 +413,7 @@ details.chapitre summary .jour-date { font-size: 18px; }
 .eval-titre { font-weight: 800; color: #1f6fb2; font-size: 19px; }
 .eval-champ { display: block; font-weight: 700; margin-top: 12px; }
 .eval-champ input, .eval-champ textarea { display: block; margin-top: 4px; font-weight: 400; }
-.eval-champ input {
+.eval-champ input, .eval-champ select {
   width: 100%; min-height: 48px; font: inherit; font-weight: 400; padding: 8px 12px;
   border: 2px solid var(--bord); border-radius: 12px; background: var(--fond); color: var(--texte);
 }
