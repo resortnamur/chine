@@ -60,12 +60,12 @@
       "hotel": "hotel-shanghai",
       "creneaux": [
         {
-          "heure": "09:00",
+          "heure": "10:30",
           "fin": "18:00",
-          "titre": "Salon de la robotique",
+          "titre": "Salon de la robotique — CIIF 2026 (China International Industry Fair)",
           "lieu": "salon-shanghai",
           "salon": "salon-1",
-          "note": "Horaires indicatifs. Probablement la CIIF au NECC (non confirmé)."
+          "note": "Ouverture à 10:30 le 12/10 (9:30 du 13 au 15/10). Badge à retirer au comptoir d'inscription (ouvert jusqu'à 17:00) avec la lettre de préinscription, le passeport et une carte de visite."
         }
       ],
       "dossier": ["shanghai-salon", "shanghai-ville", "robot-achat"]
@@ -199,11 +199,16 @@
   "salons": [
     {
       "id": "salon-1",
-      "nom": "Salon de la robotique, Shanghai (probablement la CIIF)",
-      "dates": "Lundi 12 octobre ; mardi 13 au choix avec Agibot",
-      "horaires": "9 h – 18 h le 12/10, 9 h – 12 h 30 le 13/10 (indicatif)",
+      "nom": "Salon de la robotique — CIIF 2026 (中国国际工业博览会), Shanghai",
+      "dates": "Lundi 12 octobre ; mardi 13 au choix avec Agibot (salon ouvert du 12 au 16 octobre)",
+      "horaires": "10 h 30 – 18 h le 12/10 ; 9 h 30 – 18 h du 13 au 15/10 ; 9 h 30 – 16 h le 16/10",
       "lieu": "salon-shanghai",
-      "objectifs": ["Outils d'automatisation et intégration de l'IA", "Expérience client", "Écrans et affichage, hôtellerie, sécurité"],
+      "objectifs": [
+        "Outils d'automatisation et intégration de l'IA",
+        "Expérience client",
+        "Écrans et affichage, hôtellerie, sécurité",
+        "Badge à retirer au comptoir d'inscription : lettre de préinscription, passeport et carte de visite"
+      ],
       "exposants": [],
       "dossier": "shanghai-salon"
     },
@@ -282,7 +287,7 @@
     {
       "id": "salon-shanghai",
       "categorie": "Salon",
-      "nom": "National Exhibition and Convention Center (NECC) — lieu probable du salon [à vérifier]",
+      "nom": "National Exhibition and Convention Center (NECC) — CIIF 2026",
       "nomEn": "National Exhibition and Convention Center (Shanghai)",
       "nomZh": "国家会展中心（上海）",
       "adresse": "333, Songze Avenue, Qingpu, Shanghai",
@@ -615,7 +620,7 @@
     "Carte d'arrivée électronique remplie (appli NIA 12367) et QR code en capture d'écran",
     "Visa ou exemption vérifiée",
     "Badge acheteur de la Foire de Canton enregistré en ligne (buyer.cantonfair.org.cn, gratuit), QR code enregistré sur le téléphone",
-    "Badge du salon de Shanghai (CIIF) : vérifier auprès des organisateurs s'il est prévu ; sinon préinscription gratuite sur ciif-expo.com, nom identique au passeport",
+    "Badge du salon de Shanghai (CIIF) : préinscription gratuite et individuelle sur www.ciif-expo.cn (nom identique au passeport), lettre de confirmation avec QR code imprimée ou enregistrée sur le téléphone",
     "Alipay installé, carte liée, identité validée",
     "WeChat installé et compte actif",
     "VPN installé et testé",
@@ -884,7 +889,7 @@
         "Population de Shanghai dans les années 1930 : les sources donnent entre 3 et 4 millions d'habitants selon l'année et le périmètre retenus.",
         "Chiffre d'affaires de l'IA en 2025 : deux chiffres officiels coexistent (> 637 milliards de yuans pour les entreprises de plus de 20 millions de CA, publié en avril 2026 ; > 550 milliards dans une estimation de janvier 2026), avec des périmètres différents.",
         "Poids du delta du Yangzi : « près d'un quart du PIB chinois » pour l'ensemble Shanghai-Jiangsu-Zhejiang-Anhui est une estimation non vérifiée par une source lue ; Wikipédia donne environ 17 % pour un périmètre plus restreint (2024).",
-        "Localisation précise de l'usine Agibot visitée (Lingang/Fengxian selon les sources publiques) et du salon : à confirmer avec le programme, ce qui conditionne les temps de trajet indiqués.",
+        "Localisation précise de l'usine Agibot visitée (Lingang/Fengxian selon les sources publiques) : à confirmer avec le programme, ce qui conditionne les temps de trajet depuis le salon (NECC).",
         "Fréquentation de Shanghai Disneyland en 2025 non encore publiée au moment des recherches ; le chiffre de 14,7 millions porte sur 2024.",
         "Nombre de cafés (« près de 10 000 ») et fécondité (≈ 0,7) : ordres de grandeur issus de sources secondaires.",
         "Horaires du Maglev, des éclairages du Bund et tarifs de taxi : données 2026 de guides pratiques, susceptibles de changer.",
@@ -1018,14 +1023,14 @@
       "id": "shanghai-salon",
       "titre": "Le salon de Shanghai (12-13 octobre)",
       "icone": "🏭",
-      "resume": "L'organisateur du voyage n'a pas encore nommé le salon des 12 et 13 octobre, mais un seul grand événement technologique correspond à ces dates à Shanghai : la 26e Foire internationale de l'industrie de Chine (CIIF, 中国国际工业博览会), du 12 au 16 octobre 2026 au National Exhibition and Convention Center (NECC, 国家会展中心(上海)), dans le district de Qingpu. C'est la plus ancienne foire industrielle d'État du pays (créée en 1999) : en 2025, elle a réuni 3 011 exposants de 27 pays et régions et 186 290 visiteurs professionnels sur environ 300 000 m². Il s'agit d'un salon d'usines plutôt que d'un salon hôtelier : la majorité des halls montrent des machines-outils, de l'automatisation, de l'énergie et des matériaux. Ce chapitre décrit la foire, son site et sa logistique, propose un parcours d'un jour et demi qui prépare la visite d'Agibot le 13 après-midi, et liste les autres événements de Shanghai ces jours-là au cas où le salon visé serait un autre.",
+      "resume": "Le salon des 12 et 13 octobre est la 26e Foire internationale de l'industrie de Chine (CIIF, 中国国际工业博览会), du 12 au 16 octobre 2026 au National Exhibition and Convention Center (NECC, 国家会展中心(上海)), dans le district de Qingpu. C'est la plus ancienne foire industrielle d'État du pays (créée en 1999) : en 2025, elle a réuni 3 011 exposants de 27 pays et régions et 186 290 visiteurs professionnels sur environ 300 000 m². Il s'agit d'un salon d'usines plutôt que d'un salon hôtelier : la majorité des halls montrent des machines-outils, de l'automatisation, de l'énergie et des matériaux. Ce chapitre décrit la foire, son site et sa logistique, propose un parcours d'un jour et demi qui prépare la visite d'Agibot le 13 après-midi, et liste les autres événements de Shanghai ces jours-là.",
       "resumeConseil": "Pour un exploitant de casinos, d'hôtels et de bars, l'intérêt se concentre sur le salon de la robotique (Robotics Show, halls 7.1H et 8.1H les années précédentes), avec sa zone de robots humanoïdes, sur les stands d'IA et d'informatique industrielle, et sur la vision artificielle.",
       "sections": [
         {
-          "titre": "Quel salon ? Ce qui est vérifié et ce qui ne l'est pas",
+          "titre": "Quel salon ? La CIIF 2026",
           "paragraphes": [
-            "Le programme indique « salon tech les 12 et 13 octobre », sans nom. Le calendrier des trois grands parcs d'exposition de Shanghai a été vérifié pour octobre 2026. Au NECC, le calendrier officiel du site (consulté le 4 octobre 2026) affiche la 26e CIIF du 12 au 16 octobre dans « plusieurs halls », ainsi qu'un salon du matériel dentaire (2026 中国国际口腔设备器材博览会) du 13 au 16 octobre dans le seul hall 2.2H. Au Shanghai New International Expo Centre (SNIEC, 上海新国际博览中心), à Pudong, deux salons ont lieu les mêmes jours : un salon de l'imprimerie (中国国际印刷技术及设备器材展, 12-16 octobre) et un salon des équipements pour boissons et brasseries (中国国际酒、饮料制造技术及设备展览会, 12-15 octobre). Aucun salon d'IA, de robotique de service, de retail tech ou d'hôtellerie n'y figure pour cette semaine.",
-            "Le recoupement est donc assez net : par son thème (automatisation, robotique, IA appliquée à l'industrie), par ses dates qui commencent exactement le 12 octobre et par la logique du voyage (visite d'une usine de robots humanoïdes le lendemain), la CIIF est le candidat de loin le plus probable. Une conférence ou un forum privé organisé en marge de la CIIF, ou un événement d'entreprise (journée client d'un fabricant), reste possible ; ce type d'événement n'apparaît pas dans les calendriers publics des sites.",
+            "Le programme indiquait « salon tech les 12 et 13 octobre », sans nom. Il s'agit de la CIIF 2026, dont la préinscription des visiteurs étrangers est ouverte et confirmée par l'organisateur. Le calendrier des trois grands parcs d'exposition de Shanghai a été vérifié pour octobre 2026. Au NECC, le calendrier officiel du site (consulté le 4 octobre 2026) affiche la 26e CIIF du 12 au 16 octobre dans « plusieurs halls », ainsi qu'un salon du matériel dentaire (2026 中国国际口腔设备器材博览会) du 13 au 16 octobre dans le seul hall 2.2H. Au Shanghai New International Expo Centre (SNIEC, 上海新国际博览中心), à Pudong, deux salons ont lieu les mêmes jours : un salon de l'imprimerie (中国国际印刷技术及设备器材展, 12-16 octobre) et un salon des équipements pour boissons et brasseries (中国国际酒、饮料制造技术及设备展览会, 12-15 octobre). Aucun salon d'IA, de robotique de service, de retail tech ou d'hôtellerie n'y figure pour cette semaine.",
+            "Ce choix est cohérent avec le reste du voyage : par son thème (automatisation, robotique, IA appliquée à l'industrie), par ses dates qui commencent exactement le 12 octobre et par la visite d'une usine de robots humanoïdes le lendemain, la CIIF est le seul grand salon de Shanghai qui corresponde. Des forums et conférences sont organisés en marge de la foire.",
             "Une précaution : plusieurs sites d'agents commerciaux chinois qui vendent des stands publient pour « 2026 » des chiffres qui sont en réalité ceux de 2018 (2 665 exposants, 181 346 visiteurs). Les chiffres retenus ici proviennent du communiqué international de l'organisateur diffusé début septembre 2026 et des comptes rendus de presse de la conférence de presse du 21 septembre 2026."
           ],
           "chiffres": [
@@ -1033,9 +1038,7 @@
             {"libelle": "Autres salons au NECC ces jours-là", "valeur": "Matériel dentaire, 13-16/10, hall 2.2H"},
             {"libelle": "Au SNIEC (Pudong)", "valeur": "Imprimerie 12-16/10 ; boissons et brasserie 12-15/10"}
           ],
-          "conseils": [
-            "Trois éléments restent à confirmer auprès de l'organisateur du voyage : le nom exact de l'événement, le fait que la délégation ait un badge déjà réservé (ou doive s'inscrire elle-même), et la répartition des deux journées, car la visite d'Agibot le 13 après-midi laisse en pratique une journée et demie de salon."
-          ]
+          "conseils": ["La visite d'Agibot le 13 après-midi laisse en pratique une journée et demie de salon : le lundi 12 à partir de 10 h 30 et la matinée du mardi 13."]
         },
         {
           "titre": "La CIIF : histoire, organisateurs et poids",
@@ -1145,10 +1148,10 @@
             {"libelle": "Humanoïdes à comparer", "valeur": "objectif 6 à 8 modèles"}
           ],
           "conseils": [
-            "Hypothèse de travail : journée complète le lundi 12 octobre, matinée du mardi 13, départ vers Agibot en début d'après-midi. Il faut prévoir ce temps de marche et ne pas chercher à tout voir. Le plan ci-dessous suppose que la robotique est restée dans les halls 7.1H et 8.1H ; à ajuster selon le plan 2026.",
-            "Lundi 12, matin (9h-12h30) : salon de la robotique, en commençant par la zone humanoïdes pendant que les stands sont encore calmes et que les démonstrateurs sont disponibles. Objectif : voir 6 à 8 humanoïdes différents (à pattes et à roues), relever à chaque fois le prix annoncé, l'autonomie de batterie, ce qui est télécommandé, et les références clients réelles. Puis les stands de robots de service (boissons, livraison) et de bras collaboratifs. Déjeuner au centre commercial central du NECC, entre les quatre ailes.",
-            "Lundi 12, après-midi (13h30-17h) : salons de l'IA et de l'informatique industrielle (AIMS, ICTS) et salon de l'innovation (STIS), en visant les stands de vision artificielle, d'assistants d'IA générative pour la maintenance et de plateformes de données. Si un forum sur l'IA ou la robotique est programmé ce jour-là (le programme des forums est publié sur l'application officielle), une heure de conférence avec traduction peut remplacer une partie de la marche. En fin de journée, réunion de délégation de 20 minutes pour décider des stands à revoir le lendemain.",
-            "Mardi 13, matin (9h-12h) : retours ciblés sur deux ou trois stands choisis la veille, pour des entretiens plus approfondis (prix, distributeurs européens, références), puis un passage rapide par le salon de l'énergie si la gestion énergétique des bâtiments intéresse. Départ du NECC vers 12h-12h30. Variante : diviser la délégation en deux groupes le 12 après-midi (robotique approfondie pour les uns, IA et énergie pour les autres) et mettre en commun le soir."
+            "Hypothèse de travail : le lundi 12 octobre de l'ouverture (10 h 30) à la fermeture, matinée du mardi 13, départ vers Agibot en début d'après-midi. Il faut prévoir ce temps de marche et ne pas chercher à tout voir. Le plan ci-dessous suppose que la robotique est restée dans les halls 7.1H et 8.1H ; à ajuster selon le plan 2026.",
+            "Lundi 12, fin de matinée (10h30-13h) : retrait des badges au comptoir d'inscription, puis salon de la robotique, en commençant par la zone humanoïdes pendant que les stands sont encore calmes et que les démonstrateurs sont disponibles. Objectif : voir 6 à 8 humanoïdes différents (à pattes et à roues), relever à chaque fois le prix annoncé, l'autonomie de batterie, ce qui est télécommandé, et les références clients réelles. Puis les stands de robots de service (boissons, livraison) et de bras collaboratifs. Déjeuner tardif au centre commercial central du NECC, entre les quatre ailes.",
+            "Lundi 12, après-midi (14h-18h) : salons de l'IA et de l'informatique industrielle (AIMS, ICTS) et salon de l'innovation (STIS), en visant les stands de vision artificielle, d'assistants d'IA générative pour la maintenance et de plateformes de données. Si un forum sur l'IA ou la robotique est programmé ce jour-là (le programme des forums est publié sur l'application officielle), une heure de conférence avec traduction peut remplacer une partie de la marche. En fin de journée, réunion de délégation de 20 minutes pour décider des stands à revoir le lendemain.",
+            "Mardi 13, matin (9h30-12h) : retours ciblés sur deux ou trois stands choisis la veille, pour des entretiens plus approfondis (prix, distributeurs européens, références), puis un passage rapide par le salon de l'énergie si la gestion énergétique des bâtiments intéresse. Départ du NECC vers 12h-12h30. Variante : diviser la délégation en deux groupes le 12 après-midi (robotique approfondie pour les uns, IA et énergie pour les autres) et mettre en commun le soir."
           ]
         },
         {
@@ -1176,19 +1179,21 @@
         {
           "titre": "Inscription, badge et horaires",
           "paragraphes": [
-            "La CIIF est réservée aux professionnels. L'organisateur a ouvert la préinscription des visiteurs professionnels sur le site officiel (ciif-expo.com) et via ses comptes WeChat ; l'inscription en ligne est gratuite et permet d'éviter l'achat d'un billet sur place, qui était payant les années précédentes (une source de 2025 évoque une réduction de 50 yuans pour les préinscrits). Le badge est électronique et nominatif : les visiteurs étrangers le lient à leur numéro de passeport, et l'entrée se fait en présentant le passeport ou un QR code au portique.",
-            "L'inscription individuelle en ligne prend une dizaine de minutes ; le formulaire demande la société, la fonction et les centres d'intérêt. Les cartes de visite restent l'outil d'échange standard sur les stands, avec le scan mutuel des QR codes WeChat.",
-            "Horaires : un site d'agent annonce 9h-18h pour 2026 ; les éditions précédentes ouvraient habituellement de 9h à 17h, avec une fermeture anticipée le dernier jour (sans incidence ici, le dernier jour étant le 16). Les contrôles de sécurité à l'entrée sont similaires à ceux d'un aéroport (sacs passés aux rayons X). Le site fonctionne largement en chinois ; l'anglais est parlé sur les stands des grands groupes et chez la plupart des exportateurs."
+            "La CIIF est réservée aux professionnels. L'organisateur, Shanghai Industry & Commerce Exhibition Co., associé à Hannover Milano Fairs Shanghai, propose une préinscription gratuite des visiteurs étrangers (« Overseas Visitor Pre-registration ») sur son système en ligne, www.ciif-expo.cn. Elle est individuelle et demande le nom, la société, le pays, la ville, le téléphone, l'adresse e-mail et le numéro de passeport. Elle produit une lettre de confirmation avec un numéro de préinscription et un QR code.",
+            "Sur place, la lettre de confirmation ne suffit pas pour entrer : le badge se retire au comptoir d'inscription en présentant cette lettre, une pièce d'identité (le passeport pour les étrangers) et une carte de visite. L'organisateur recommande de s'y présenter au moins une heure avant la fin des inscriptions du jour.",
+            "Horaires officiels 2026 : le lundi 12 octobre, ouverture de 10 h 30 à 18 h (inscriptions de 10 h 30 à 17 h) ; du 13 au 15 octobre, de 9 h 30 à 18 h (inscriptions de 9 h 30 à 17 h) ; le 16 octobre, de 9 h 30 à 16 h (inscriptions jusqu'à 15 h). Les contrôles de sécurité à l'entrée sont similaires à ceux d'un aéroport (sacs passés aux rayons X). Le site fonctionne largement en chinois ; l'anglais est parlé sur les stands des grands groupes et chez la plupart des exportateurs. Les cartes de visite restent l'outil d'échange standard sur les stands, avec le scan mutuel des QR codes WeChat."
           ],
           "chiffres": [
-            {"libelle": "Inscription", "valeur": "en ligne, nominative, liée au passeport"},
-            {"libelle": "Horaires (à confirmer)", "valeur": "9h-17h habituellement ; 9h-18h selon un agent"},
+            {"libelle": "Préinscription", "valeur": "www.ciif-expo.cn, gratuite, individuelle, liée au passeport"},
+            {"libelle": "Retrait du badge", "valeur": "lettre de confirmation + passeport + carte de visite"},
+            {"libelle": "Lundi 12/10", "valeur": "10 h 30 – 18 h (inscriptions jusqu'à 17 h)"},
+            {"libelle": "Du 13 au 15/10", "valeur": "9 h 30 – 18 h (inscriptions jusqu'à 17 h)"},
+            {"libelle": "Vendredi 16/10", "valeur": "9 h 30 – 16 h (inscriptions jusqu'à 15 h)"},
             {"libelle": "Contact organisateur", "valeur": "ciif@shanghaiexpogroup.com, +86 21 2206 8388"}
           ],
           "conseils": [
-            "Concrètement, chaque membre de la délégation doit s'inscrire individuellement avec son passeport, et avoir celui-ci sur lui le jour de la visite.",
-            "Si l'organisateur du voyage a déjà réservé des badges (formule de délégation ou de groupe d'acheteurs étrangers), il faut obtenir les QR codes avant le 11 octobre et vérifier que l'orthographe des noms correspond exactement au passeport. Prévoir des cartes de visite, idéalement bilingues anglais-chinois.",
-            "Horaires à confirmer sur le badge ou le site officiel. Mieux vaut éviter les bagages volumineux. Un interprète est vivement recommandé pour les entretiens techniques avec les entreprises chinoises de taille moyenne."
+            "Chaque membre de la délégation doit avoir sa propre préinscription, faite avec l'orthographe exacte du passeport, et emporter le 12 la lettre de confirmation (imprimée ou sur le téléphone), son passeport et des cartes de visite, idéalement bilingues anglais-chinois.",
+            "Le passage au comptoir d'inscription prend du temps le premier jour : arriver dès l'ouverture, à 10 h 30. Mieux vaut éviter les bagages volumineux. Un interprète est vivement recommandé pour les entretiens techniques avec les entreprises chinoises de taille moyenne."
           ]
         },
         {
@@ -1213,7 +1218,7 @@
           ]
         },
         {
-          "titre": "Si ce n'est pas la CIIF : les autres sites d'exposition de Shanghai",
+          "titre": "Les autres sites d'exposition de Shanghai",
           "paragraphes": [
             "Shanghai dispose de trois grands sites d'exposition. Le NECC, décrit plus haut, à l'ouest près de Hongqiao. Le Shanghai New International Expo Centre (SNIEC, 上海新国际博览中心), à Pudong, sur Longyang Road, desservi par les lignes de métro 2 et 7 (station Longyang Road) et par le Maglev ; c'est le site historique de nombreux salons spécialisés. Le Shanghai World Expo Exhibition & Convention Center (上海世博展览馆), au bord du Huangpu sur l'ancien site de l'Exposition universelle de 2010, plus compact et souvent utilisé pour des salons de taille moyenne et des congrès. S'y ajoutent des centres plus petits, comme le Shanghai Exhibition Center (上海展览中心) dans le centre historique, et de nombreux hôtels qui accueillent des conférences privées.",
             "Pour la semaine du 12 octobre 2026, le calendrier officiel du SNIEC ne montre que deux salons : l'imprimerie et l'emballage (12-16 octobre) et les équipements de production de boissons et de brasseries (12-15 octobre). Le calendrier du World Expo Exhibition Center n'a pas pu être consulté, son site internet ne s'affichant pas correctement hors de Chine ; aucune source consultée ne mentionne d'événement d'IA, de robotique ou d'hôtellerie à Shanghai les 12 et 13 octobre.",
@@ -1226,16 +1231,13 @@
             {"libelle": "Prochain grand salon au NECC", "valeur": "CIIE, 5-10 novembre 2026"}
           ],
           "conseils": [
-            "Le salon des équipements de boissons et de brasseries pourrait, à la marge, intéresser la restauration (machines de distribution, technologies de boissons), mais il s'adresse aux industriels du secteur.",
-            "Ces rendez-vous auraient mieux correspondu aux intérêts de la délégation. Si l'organisateur du voyage confirme un autre événement, il est probable qu'il s'agisse d'un forum ou d'une conférence privée, éventuellement organisé en marge de la CIIF ; dans ce cas, une demi-journée à la CIIF reste recommandée, le site étant à proximité immédiate de l'aéroport de Hongqiao."
+            "Le salon des équipements de boissons et de brasseries pourrait, à la marge, intéresser la restauration (machines de distribution, technologies de boissons), mais il s'adresse aux industriels du secteur."
           ]
         }
       ],
       "incertitudes": [
-        "Le nom du salon n'est pas confirmé par l'organisateur du voyage ; la CIIF est une déduction fondée sur les dates, le thème et l'absence d'autre candidat dans les calendriers du NECC et du SNIEC. Le calendrier du World Expo Exhibition Center n'a pas pu être consulté.",
         "La répartition des halls pour 2026 n'a pas été trouvée : les halls 7.1H et 8.1H pour la robotique valent pour 2024-2025 et sont présumés reconduits.",
         "La liste officielle des exposants 2026 n'a pas été consultée ; les noms viennent de comptes rendus de la conférence de presse du 21/09/2026 (dont un site d'agent de stands) et des éditions 2025. La présence d'Agibot, Pudu, Keenon et Hikrobot n'est pas confirmée.",
-        "Horaires d'ouverture divergents selon les sources (9h-17h habituel, 9h-18h selon un agent) ; conditions et prix exacts du badge sur place non vérifiés.",
         "Le nombre de salons thématiques varie (dix selon le communiqué de septembre 2026, neuf selon d'autres sources), sans doute à cause de regroupements.",
         "Les chiffres de performance annoncés par Siemens et ABB sont des chiffres commerciaux non vérifiés de manière indépendante."
       ],
@@ -1270,9 +1272,10 @@
           "url": "https://www.tradefairdates.com/CIIF-China-International-Industry-Fair-M4269/Shanghai.html"
         },
         {"titre": "CIIF 2026 – ShowsBee", "url": "https://www.showsbee.com/fairs/94829-China-International-Industry-Fair-2026.html"},
-        {"titre": "Site officiel CIIF", "url": "https://www.ciif-expo.com/"}
+        {"titre": "Site officiel CIIF", "url": "https://www.ciif-expo.com/"},
+        {"titre": "Système de préinscription des visiteurs CIIF 2026", "url": "https://www.ciif-expo.cn/"}
       ],
-      "consulte": "04/10/2026"
+      "consulte": "08/10/2026"
     },
     {
       "id": "agibot",
