@@ -398,7 +398,7 @@
     {"groupe": "Contacts sur place", "nom": "Sue", "telephone": "+86 136 0281 7510"},
     {"groupe": "Équipe", "nom": "Nikkel Kebsi", "telephone": "+32 479 97 57 45"},
     {"groupe": "Équipe", "nom": "Yannik Bellefroid", "role": "Head of Retail, Legal & Public Affairs", "telephone": "+32 495 58 96 68"},
-    {"groupe": "Équipe", "nom": "Arnaud Roufosse", "telephone": "+32 470 44 27 22"},
+    {"groupe": "Équipe", "nom": "Arnaud Roufosse", "role": "Program and Marketing Manager", "telephone": "+32 470 44 27 22"},
     {
       "groupe": "Équipe",
       "nom": "Christophe Van Kerrebroeck",
