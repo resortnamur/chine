@@ -3103,6 +3103,30 @@
           ]
         },
         {
+          "titre": "Le baccara en deux minutes",
+          "paragraphes": [
+            "Le baccara joué à Macao est le « punto banco ». Deux mains s'affrontent : le Joueur (闲, xián) et la Banque (庄, zhuāng). Le client ne joue ni l'une ni l'autre : il parie sur celle qui gagnera, ou sur l'égalité (和, hé). Il ne prend aucune décision pendant le coup : le tirage des cartes suit des règles fixes, appliquées par le croupier. C'est un pur jeu de hasard, rapide et simple, ce qui explique en partie son succès.",
+            "Valeur des cartes : l'as vaut 1, les cartes de 2 à 9 leur valeur, le 10 et les figures 0. Le total d'une main est le chiffre des unités de la somme : 7 + 8 = 15 vaut 5. Le meilleur total est donc 9. On joue avec un sabot de huit jeux.",
+            "Déroulement : le croupier donne deux cartes au Joueur et deux à la Banque. Si l'une des mains fait 8 ou 9 (« naturel »), le coup s'arrête. Sinon, une troisième carte peut être tirée selon les règles ci-dessous, et la main la plus proche de 9 gagne.",
+            "Paiements : le pari sur le Joueur est payé à égalité (1 pour 1) ; le pari sur la Banque aussi, moins une commission de 5 % sur le gain, parce que la Banque gagne un peu plus souvent ; l'égalité est payée 8 pour 1, et en cas d'égalité les paris Joueur et Banque sont rendus. Beaucoup de tables de Macao sont « sans commission » : la Banque est payée à égalité, sauf si elle gagne avec 6, où elle n'est payée que la moitié. Des paris annexes existent (paires, etc.)."
+          ],
+          "points": [
+            "Joueur : tire une troisième carte avec un total de 0 à 5, reste avec 6 ou 7.",
+            "Banque, si le Joueur est resté à deux cartes : tire avec 0 à 5, reste avec 6 ou 7.",
+            "Banque, si le Joueur a tiré : avec 0, 1 ou 2, tire toujours ; avec 3, tire sauf si la troisième carte du Joueur est un 8 ; avec 4, tire si cette carte va de 2 à 7 ; avec 5, si elle va de 4 à 7 ; avec 6, si c'est un 6 ou un 7 ; avec 7, reste."
+          ],
+          "chiffres": [
+            {"libelle": "Probabilité de gain : Banque / Joueur / égalité", "valeur": "45,9 % / 44,6 % / 9,5 %"},
+            {"libelle": "Avantage de la maison : pari Banque (commission 5 %)", "valeur": "≈ 1,06 %"},
+            {"libelle": "Avantage de la maison : pari Joueur", "valeur": "≈ 1,24 %"},
+            {"libelle": "Avantage de la maison : égalité payée 8 pour 1", "valeur": "≈ 14,4 %"},
+            {"libelle": "Avantage de la maison : Banque « sans commission »", "valeur": "≈ 1,46 %"}
+          ],
+          "conseils": [
+            "Trois scènes typiques à observer en salle. Le « squeeze » (咪牌, mī pái) : aux tables de mises élevées, le joueur qui a misé le plus soulève lui-même ses cartes très lentement, par un coin, et la carte est ensuite jetée. Les tableaux de tendances (roadmaps) affichés à chaque table : les joueurs y cherchent des séries, alors que chaque coup est indépendant du précédent. Et le pari collectif : toute la table suit souvent le même côté, ce qui donne au jeu son ambiance bruyante."
+          ]
+        },
+        {
           "titre": "Le Cotai et la péninsule : vue d'ensemble",
           "paragraphes": [
             "Sur le Cotai, les complexes sont reliés par des passerelles et des navettes gratuites. Le Venetian, le Londoner, le Parisian et le Four Seasons forment un ensemble continu : on y observe le modèle « mégarésort » de Sands, avec des salles de plusieurs milliers de mètres carrés, des galeries commerciales intégrées et une segmentation très visible entre le mass général, les zones premium et les salons privés. Le Londoner, entièrement rénové, est le meilleur exemple du produit haut de gamme récent de Sands.",
