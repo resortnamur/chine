@@ -129,7 +129,7 @@
           "note": "Si possible, retirer le badge de la Foire de Canton dès ce soir (hôtels partenaires, aéroport)."
         }
       ],
-      "dossier": ["macao-ville", "guangzhou"]
+      "dossier": ["macao-jeu", "macao-ville", "guangzhou"]
     },
     {
       "date": "2026-10-15",
@@ -2781,25 +2781,21 @@
           ]
         },
         {
-          "titre": "Mardi soir et mercredi : itinéraires concrets",
+          "titre": "Mardi soir et mercredi : repères pratiques",
           "paragraphes": [
             "Mardi 13 octobre au soir, arrivée depuis Shanghai à l'aéroport de Macao, sur Taipa, à moins de dix minutes du Cotai.",
-            "Le passage de la frontière vers le continent, à la Porte du Cerco ou à Hengqin, peut prendre de 30 minutes à plus d'une heure en fin de journée, avant le trajet routier ou ferroviaire de 1 h 30 à 2 h environ vers Guangzhou.",
-            "Avant 10 h 30, le centre est calme ; après 14 h, il est pris d'assaut."
+            "Le séjour est consacré aux casinos : le parcours détaillé du mardi soir et du mercredi se trouve dans le chapitre « Macao, l'industrie du jeu vue par des professionnels ».",
+            "Le passage de la frontière vers le continent, à la Porte du Cerco ou à Hengqin, peut prendre de 30 minutes à plus d'une heure en fin de journée, avant le trajet routier ou ferroviaire de 1 h 30 à 2 h environ vers Guangzhou."
           ],
           "chiffres": [
             {"libelle": "Aéroport - Cotai", "valeur": "moins de 10 min en voiture"},
-            {"libelle": "Cotai - temple d'A-Ma ou place du Senado", "valeur": "15-20 min en taxi"},
-            {"libelle": "Itinéraire historique complet", "valeur": "environ 4 h, ~2,5 km à pied"},
-            {"libelle": "Variante courte", "valeur": "2 h, boucle de moins de 1,5 km"},
+            {"libelle": "Cotai - péninsule (Grand Lisboa)", "valeur": "20-30 min en taxi"},
+            {"libelle": "Grand Lisboa - place du Senado", "valeur": "une dizaine de minutes à pied"},
             {"libelle": "Passage de frontière vers le continent", "valeur": "30 min à plus d'1 h en fin de journée (estimation)"}
           ],
           "conseils": [
-            "La soirée se prête à une promenade d'un complexe à l'autre par passerelles et galeries climatisées : le Venetian et ses canaux intérieurs, le Londoner, le Parisian (tour Eiffel à demi-échelle), Galaxy Macau en face, City of Dreams, Studio City, et Wynn Palace avec ses fontaines. Œil professionnel : observer la surface donnée au commerce de luxe, à la restauration et aux spectacles par rapport aux salles de jeu, traduction concrète de la politique « non-jeu ».",
-            "Matinée du mercredi 14 (environ 4 heures, itinéraire « centre historique », du sud vers le nord). 8 h 30 : départ du Cotai en taxi (15-20 minutes) ou en métro léger jusqu'à la station Barra (terminus, 9 stations depuis Cotai West) ; 8 h 50 - 9 h 20 : temple d'A-Ma et caserne mauresque. 9 h 20 - 9 h 50 : montée tranquille par la rue da Barra et la place de Lilau, extérieur de la Maison du Mandarin et église Saint-Laurent. 9 h 50 - 10 h 20 : place Saint-Augustin (théâtre Dom Pedro V, bibliothèque Robert Ho Tung). 10 h 20 - 11 h 00 : place du Senado, Leal Senado, cathédrale, Saint-Dominique, pause pastel de nata. 11 h 00 - 11 h 30 : rue de São Paulo et ruines de Saint-Paul. 11 h 30 - 12 h 30 : forteresse du Monte et Musée de Macao. Déjeuner macanais ou portugais à proximité, puis retour en taxi au Cotai (15-20 minutes).",
-            "Variante courte (2 heures) : taxi direct jusqu'à la place du Senado, puis Saint-Dominique, ruines de Saint-Paul et forteresse du Monte, sans le musée. C'est l'essentiel visuel de Macao dans une boucle de moins de 1,5 km. Le hall du Grand Lisboa, tout proche, expose des antiquités chinoises qui illustrent bien le style Stanley Ho.",
-            "Journée complète (si la journée libre est réellement libre jusqu'au départ vers Guangzhou). Matin : itinéraire « centre historique » ci-dessus, de 8 h 30 à 12 h 30. 12 h 30 - 14 h 00 : déjeuner portugais ou macanais. 14 h 00 - 15 h 30 : taxi vers Coloane, village, chapelle Saint-François-Xavier, Lord Stow's ; option plage de Hac Sa. 15 h 30 - 16 h 30 : village de Taipa, rue do Cunha et Casas-Museu (attention, le musée ferme habituellement le lundi seulement). Retour à l'hôtel au Cotai vers 17 h pour les bagages. Prévoir une marge confortable pour le départ.",
-            "Pour un groupe de treize : prévoir trois ou quatre taxis ou un minibus réservé, et réserver le déjeuner, car les bonnes tables portugaises du centre sont petites."
+            "Option centre historique, environ une heure, le mercredi matin pendant la visite de la péninsule : depuis le Grand Lisboa, place du Senado et Leal Senado, église Saint-Dominique, rue de São Paulo et ruines de Saint-Paul, puis retour vers les casinos. Avant 10 h 30, le centre est calme ; après 14 h, il est pris d'assaut.",
+            "Pour un groupe de treize : prévoir trois ou quatre taxis ou un minibus réservé."
           ]
         },
         {
@@ -2957,7 +2953,7 @@
       "id": "macao-jeu",
       "titre": "Macao, l'industrie du jeu vue par des professionnels",
       "icone": "🎰",
-      "resume": "Macao reste le premier marché de casinos terrestres au monde : 247,4 milliards de patacas (MOP) de produit brut des jeux (GGR) en 2025, soit environ 30,6 milliards de dollars US, plus de trois fois le Strip de Las Vegas. Mais ce n'est plus le Macao de 2013 : les junkets ont été démantelés, la loi 16/2022 a réduit le nombre de tables à 6 000 et imposé aux six concessionnaires 108,7 milliards MOP d'investissements hors jeu, et les casinos satellites ont fermé fin 2025. Le marché est désormais tiré par le « premium mass », des joueurs fortunés servis directement par les opérateurs, sur des tables quasi intégralement équipées de systèmes RFID et de vision. Depuis juin 2026, la dynamique s'essouffle : quatre mois de baisse sur un an, septembre à 18,06 milliards MOP (-1,2 %), des prévisions 2026 révisées vers +2 à +5 %, et une guerre de réinvestissement client qui écrase les marges. Ce chapitre donne les chiffres, décrit les six opérateurs et les salles, et détaille la technologie en salle. Il propose une grille d'observation pour la soirée du 13 octobre, avec les points transposables ou non au cadre belge et français de Gaming1.",
+      "resume": "Macao reste le premier marché de casinos terrestres au monde : 247,4 milliards de patacas (MOP) de produit brut des jeux (GGR) en 2025, soit environ 30,6 milliards de dollars US, plus de trois fois le Strip de Las Vegas. Mais ce n'est plus le Macao de 2013 : les junkets ont été démantelés, la loi 16/2022 a réduit le nombre de tables à 6 000 et imposé aux six concessionnaires 108,7 milliards MOP d'investissements hors jeu, et les casinos satellites ont fermé fin 2025. Le marché est désormais tiré par le « premium mass », des joueurs fortunés servis directement par les opérateurs, sur des tables quasi intégralement équipées de systèmes RFID et de vision. Depuis juin 2026, la dynamique s'essouffle : quatre mois de baisse sur un an, septembre à 18,06 milliards MOP (-1,2 %), des prévisions 2026 révisées vers +2 à +5 %, et une guerre de réinvestissement client qui écrase les marges. Ce chapitre donne les chiffres, décrit les six opérateurs et les salles, et détaille la technologie en salle. Il propose une grille d'observation pour la soirée du 13 octobre, avec les points transposables ou non au cadre belge et français de Gaming1. Il comprend aussi un guide complexe par complexe, ce qu'on peut voir à Macao en matière de robots et d'animation, et un parcours pour le mardi soir et le mercredi.",
       "sections": [
         {
           "titre": "Le marché en chiffres : du pic de 2013 à l'essoufflement de 2026",
@@ -3107,7 +3103,7 @@
           ]
         },
         {
-          "titre": "Les propriétés à visiter un soir et ce qu'il faut y regarder",
+          "titre": "Le Cotai et la péninsule : vue d'ensemble",
           "paragraphes": [
             "Sur le Cotai, les complexes sont reliés par des passerelles et des navettes gratuites. Le Venetian, le Londoner, le Parisian et le Four Seasons forment un ensemble continu : on y observe le modèle « mégarésort » de Sands, avec des salles de plusieurs milliers de mètres carrés, des galeries commerciales intégrées et une segmentation très visible entre le mass général, les zones premium et les salons privés. Le Londoner, entièrement rénové, est le meilleur exemple du produit haut de gamme récent de Sands.",
             "De l'autre côté de l'avenue, le Galaxy Macau permet de comparer une approche plus asiatique : décoration dorée, restaurants cantonais et japonais étoilés, et salons Horizon Plus passés de 6 à 10 pour accueillir le premium. Plus au sud, le Wynn Palace est la référence du luxe : jardin, téléphérique au-dessus du lac, salle de jeu plus petite, limites de mise plus élevées, personnel nombreux. Le City of Dreams et le Studio City montrent le positionnement divertissement de Melco, et le Grand Lisboa Palace la tentative de SJM de se repositionner sur le Cotai.",
@@ -3125,15 +3121,167 @@
             "Si le temps le permet, la péninsule offre un contraste utile. La comparaison entre le Grand Lisboa et le Wynn Palace résume à elle seule les deux Macao.",
             "Dans chaque salle, un professionnel regardera d'abord les limites de mise affichées sur les tables. Il faut aussi observer le ratio tables/machines, quasi inverse de celui de l'Europe, la place des tables électroniques en stadium, la signalétique des programmes de fidélité (bornes, cartes, comptoirs d'inscription) et l'intégration de la restauration au plancher de jeu, avec des noodle bars et congee ouverts 24 h sur 24."
           ],
-          "conseilsPoints": [
-            "Parcours suggéré : Londoner et Venetian → passerelle → Galaxy Macau → Wynn Palace → MGM Cotai → City of Dreams, puis taxi vers le Grand Lisboa si temps disponible",
-            "Prévoir 45 minutes par grand complexe : les distances intérieures sont considérables"
-          ],
+          "conseilsPoints": ["Fiches détaillées complexe par complexe et parcours du mardi soir et du mercredi : parties suivantes."],
           "image": {
             "photo": "photos/doc-macao-cotai.jpg",
             "legende": "Le Cotai la nuit : la tour rouge est celle du Conrad Macao, l'hôtel de la délégation.",
             "credit": "Photo : Hoskoamingwia, CC BY-SA 4.0, Wikimedia Commons"
           }
+        },
+        {
+          "titre": "Le Londoner, notre point de départ : le plus grand complexe de Sands",
+          "paragraphes": [
+            "Le Conrad Macao, où loge la délégation, est l'une des quatre tours du Londoner, l'ancien Sands Cotai Central entièrement transformé sur le thème de Londres ; la transformation s'est achevée au deuxième trimestre 2026. Avec 4 426 clés — St. Regis et Londoner Court (768 suites), Conrad (659 chambres), Londoner Hotel (594 suites, dont 14 suites dessinées avec David Beckham) et Londoner Grand, l'ancien Sheraton (2 405 chambres) —, c'est le plus grand complexe de Sands China à Macao.",
+            "La salle de jeu couvre environ 37 000 m², zones de service comprises, avec environ 500 tables et 1 285 machines à la fin de 2025. S'y ajoutent une arène de 6 000 places, un théâtre de 1 701 places, 172 boutiques et 51 points de restauration.",
+            "Le décor est une attraction à part entière : tour Elizabeth (Big Ben), bus londonien de 1966, lions de Landseer, colonne Nelson et atrium « Crystal Palace ». Deux animations gratuites sont programmées. La relève de la garde, avec gardes écossais, trompettes et une « Reine », a lieu dans le Crystal Palace à 19 h 30 et 21 h 30 du mardi au jeudi (aussi à 16 h du vendredi au dimanche, relâche le lundi). Le « Londoner Light and Sound Spectacular » est projeté sur la façade toutes les heures de 19 h 30 à 23 h 30."
+          ],
+          "chiffres": [
+            {"libelle": "Clés (quatre tours)", "valeur": "4 426, dont 659 au Conrad"},
+            {"libelle": "Tables / machines (fin 2025)", "valeur": "≈ 500 / 1 285"},
+            {"libelle": "Relève de la garde (mardi)", "valeur": "19 h 30 et 21 h 30"},
+            {"libelle": "Spectacle de façade", "valeur": "toutes les heures, 19 h 30 – 23 h 30"}
+          ],
+          "conseils": [
+            "Le Londoner montre comment une thématique appliquée jusqu'au mobilier et aux animations devient un produit d'appel gratuit qui fait entrer le public. La relève de la garde est l'exemple même de l'animation récurrente à heure fixe, qui crée un rendez-vous : c'est le rôle qu'on pourrait donner, à notre échelle, à un robot d'animation au Resort."
+          ]
+        },
+        {
+          "titre": "Venetian, Parisian et Plaza : le reste du bloc Sands",
+          "paragraphes": [
+            "Ouvert en août 2007, le Venetian reste le plus grand plancher de jeu de Sands : environ 46 700 m², environ 659 tables et 1 137 machines, 2 905 suites. Il abrite une arène de 14 000 places, un théâtre de 1 800 places, le centre de congrès Cotai Expo et une galerie de 359 boutiques et 66 restaurants le long de canaux intérieurs. Les chambres sont en rénovation depuis mars 2026, avec ajout de salons de jeu premium, jusqu'au Nouvel An chinois 2028 ; aucune fermeture de salle n'est annoncée. Les gondoles du Grand Canal circulent de 11 h 30 à 19 h 30 (165 MOP en semaine). Le Cotai Expo accueille aussi teamLab SuperNature, une salle d'art immersif permanente de plus de 5 000 m² (payante).",
+            "Ouvert en septembre 2016, le Parisian compte 2 541 chambres, environ 25 300 m² de jeu, environ 255 tables et 1 008 machines. Sa tour Eiffel à mi-échelle s'illumine gratuitement toutes les 15 minutes de 18 h 15 à minuit ; la plateforme du 37e étage est ouverte de 12 h à 23 h (118 MOP). Fermée du 5 au 11 octobre pour un événement privé, elle est rouverte le 13.",
+            "Le Plaza (2008), avec le Four Seasons (360 chambres), ses Grand Suites (289 suites) et 19 « Paiza Mansions » réservées sur invitation, est le pôle premium de Sands : environ 106 tables pour seulement 13 machines, sur environ 10 000 m². Les trois complexes communiquent par l'intérieur, et le Londoner leur fait face de l'autre côté de la rue. Une tenue « smart casual » est attendue."
+          ],
+          "chiffres": [
+            {"libelle": "Venetian : tables / machines", "valeur": "≈ 659 / 1 137"},
+            {"libelle": "Parisian : tables / machines", "valeur": "≈ 255 / 1 008"},
+            {"libelle": "Plaza : tables / machines", "valeur": "≈ 106 / 13"},
+            {"libelle": "Tour Eiffel illuminée", "valeur": "toutes les 15 min, 18 h 15 – minuit"}
+          ],
+          "conseils": [
+            "Le contraste entre le Venetian (foule, jeu de masse, galerie commerciale) et le Plaza (presque sans machines) est la meilleure illustration de la segmentation : même opérateur, même pâté de maisons, deux produits opposés. À observer : comment on passe de l'un à l'autre, et ce qui signale l'entrée dans une zone premium (sol, lumière, bruit, personnel, contrôle)."
+          ]
+        },
+        {
+          "titre": "Galaxy Macau et Broadway : le spectacle dans le hall",
+          "paragraphes": [
+            "Galaxy Macau a ouvert en trois phases (2011, 2015 et fin 2023) et dépasse 1,1 million de m², avec environ 5 000 chambres réparties entre Banyan Tree, Okura, Galaxy Hotel, Ritz-Carlton, JW Marriott, Broadway, Raffles (environ 450 suites), Andaz (2023) et Capella (95 suites, inauguré le 10 février 2026). Le nombre de tables par propriété n'est pas publié.",
+            "L'animation phare est le « Diamond Show » : dans le Diamond Lobby, un diamant géant s'élève au milieu d'un spectacle d'eau et de lumière, toutes les 30 minutes, de 12 h à 22 h du lundi au jeudi (de 10 h à minuit le week-end et les jours fériés). Le Grand Resort Deck (75 000 m², rivière de 575 m, piscine à vagues, plage de 150 m) est réservé aux clients des hôtels. La Galaxy Arena (16 000 places) n'a pas de concert les 13 et 14 octobre.",
+            "Broadway Macau, relié par une passerelle couverte, se présente comme un complexe familial de spectacle de rue et de restauration. Sa « Broadway Food Street », environ 300 mètres de restauration populaire tenue par de petites entreprises locales, est l'endroit le plus simple pour déjeuner vite sur le Cotai.",
+            "La phase 4 (environ 600 000 m², cinq hôtels de grand luxe, un théâtre de 5 000 places) est en chantier ; son ouverture est attendue en 2027 ou 2028. Galaxy fait circuler des navettes gratuites vers StarWorld, sur la péninsule, et vers la Porte du Cerco. En coulisses, le Galaxy Hotel utilise depuis mars 2024 une flotte de robots logistiques AutoXing qui transportent des charges jusqu'à 200 kg."
+          ],
+          "chiffres": [
+            {"libelle": "Diamond Show (en semaine)", "valeur": "toutes les 30 min, 12 h – 22 h"},
+            {"libelle": "Chambres", "valeur": "≈ 5 000 (neuf marques)"},
+            {"libelle": "Galaxy Arena", "valeur": "16 000 places"}
+          ],
+          "conseils": [
+            "Le Diamond Show est l'exemple type de l'animation de hall qui fait venir les gens à heure fixe et les fait passer devant la salle. C'est la première étape logique du mercredi après-midi, avec déjeuner à la Broadway Food Street."
+          ]
+        },
+        {
+          "titre": "Wynn Palace : le haut de gamme",
+          "paragraphes": [
+            "Ouvert en août 2016, le Wynn Palace compte 1 706 chambres, environ 43 500 m² de casino et d'annexes, 305 tables et 693 machines (fin 2025). C'est la locomotive de Wynn à Macao : 653 millions de dollars de chiffre d'affaires au deuxième trimestre 2026, en hausse de 21 %. En février 2026, son Chairman's Club, l'espace de jeu premium, a triplé de surface pour atteindre environ 9 300 m², avec restauration, salon cigares et bar. Une tour de 432 suites, « The Enclave », doit être lancée fin 2026.",
+            "Le « Performance Lake » est une fontaine musicale gratuite devant l'entrée : toutes les 30 minutes de 12 h à 18 h, puis toutes les 20 minutes jusqu'à minuit. Le SkyCab, télécabine au-dessus du lac, fonctionne de 16 h à 22 h en semaine (dernier accès 21 h 40). La collection d'art du hall, dont « Tulips » de Jeff Koons, et les compositions florales géantes font partie de l'expérience."
+          ],
+          "chiffres": [
+            {"libelle": "Tables / machines (fin 2025)", "valeur": "305 / 693"},
+            {"libelle": "Chairman's Club (février 2026)", "valeur": "≈ 9 300 m², surface triplée"},
+            {"libelle": "Fontaines, le soir", "valeur": "toutes les 20 min jusqu'à minuit"}
+          ],
+          "conseils": [
+            "Le Wynn Palace incarne le haut de gamme : salle plus petite, limites de mise plus hautes, personnel nombreux, décor floral. Le mardi soir, les fontaines restent visibles jusqu'à minuit même si le SkyCab est fermé à l'arrivée de la délégation."
+          ]
+        },
+        {
+          "titre": "MGM Cotai : l'écran comme attraction",
+          "paragraphes": [
+            "Ouvert en février 2018, MGM Cotai compte 1 418 chambres, environ 24 500 m² de jeu, 405 tables et 1 001 machines. Son atrium, « The Spectacle », sous une verrière, est présenté comme la plus grande surface d'écrans LED intérieurs permanents : des contenus d'art numérique y défilent en continu, des dauphins argentés télécommandés y flottent devant le fond d'images, et un spectacle vivant y est donné plusieurs fois par jour (13 h, 15 h, 16 h 30 et 18 h [à vérifier]).",
+            "Le théâtre modulable de 2 000 places accueille depuis décembre 2024 « Macau 2049 », spectacle résident de Zhang Yimou (80 minutes, de 288 à 888 MOP), dont les jours de relâche en octobre 2026 ne sont pas confirmés."
+          ],
+          "chiffres": [
+            {"libelle": "Tables / machines (fin 2025)", "valeur": "405 / 1 001"},
+            {"libelle": "Spectacle de l'atrium", "valeur": "13 h, 15 h, 16 h 30, 18 h [à vérifier]"}
+          ],
+          "conseils": [
+            "Pour un casino qui réfléchit à ses écrans, MGM Cotai est la visite la plus utile : un mur d'images qui sert à la fois de décor, de signalétique et d'attraction. À voir le mercredi après-midi, si possible à l'heure d'une représentation."
+          ]
+        },
+        {
+          "titre": "City of Dreams et Studio City : le divertissement selon Melco",
+          "paragraphes": [
+            "Ouvert en 2009, City of Dreams réunit le Morpheus (783 clés), tour de Zaha Hadid à l'exosquelette percé de vides, le Nüwa et le Grand Hyatt, avec environ 439 tables et 635 machines en moyenne en 2025 et 41 restaurants, dont le Jade Dragon (trois étoiles Michelin). Melco y reconvertit d'anciens salons VIP en jeu de masse et a ouvert deux nouvelles zones de tables près des entrées (octobre 2025 et juillet 2026). Le nouvel hôtel REM (environ 150 suites) ouvre par étapes ; son inauguration officielle est annoncée pour octobre 2026, sans date précise.",
+            "House of Dancing Water, le spectacle aquatique de City of Dreams (environ 2 000 places), a repris en mai 2025 après cinq ans d'arrêt : billets de 698 à 1 598 MOP, séances à 16 h 30 et 19 h 30 [à vérifier].",
+            "Studio City (2015), tourné vers le jeu de masse, compte environ 253 tables et 775 machines, 2 493 clés, une arène de 5 000 places, des parcs aquatiques intérieur et extérieur et un cinéma. Sa façade est traversée par la Golden Reel, grande roue en forme de 8 culminant à 130 mètres (14 h – 20 h, 100 MOP). Au Nouvel An lunaire 2026, Melco y avait installé un hippodrome mécanique, un robot calligraphe et une attraction de réalité virtuelle robotisée ; leur présence en octobre n'est pas confirmée."
+          ],
+          "chiffres": [
+            {"libelle": "City of Dreams : tables / machines (moy. 2025)", "valeur": "≈ 439 / 635"},
+            {"libelle": "Studio City : tables / machines (moy. 2025)", "valeur": "≈ 253 / 775"},
+            {"libelle": "Golden Reel", "valeur": "130 m, 14 h – 20 h, 100 MOP"}
+          ],
+          "conseils": [
+            "Le Morpheus se regarde depuis l'extérieur et depuis son atrium : c'est la référence architecturale du Cotai. Studio City montre une salle de masse adossée à une offre de loisirs familiale ; la Golden Reel est la seule attraction en hauteur ouverte l'après-midi."
+          ]
+        },
+        {
+          "titre": "La péninsule : Lisboa, Grand Lisboa, Wynn Macau, MGM Macau",
+          "paragraphes": [
+            "Sur la péninsule, à 20-30 minutes de taxi du Cotai (65 à 100 MOP, en espèces), quatre grands casinos sont à moins de dix minutes à pied les uns des autres. C'est le Macao d'avant le Cotai : plus dense, plus bruyant, plus local.",
+            "Le Grand Lisboa (SJM, 2007), tour dorée en forme de fleur de lotus, est le symbole de la ville. Son hall expose le « Star of Stanley Ho », diamant de 218 carats, et des antiquités chinoises ; le Robuchon au Dôme, au sommet, a trois étoiles Michelin. L'hôtel affichait 98 % d'occupation au premier semestre 2026. Le Lisboa Square, ouvert en avril 2026, a ajouté cinq restaurants à dominante asiatique, et SJM prévoit de réunir le Grand Lisboa et l'Hotel Lisboa voisin en un seul complexe d'ici 2027.",
+            "L'Hotel Lisboa, le casino historique de Stanley Ho, a ouvert en deux temps (novembre 2025, puis 10 août 2026) une nouvelle salle de plus de 7 500 m², le « Crystal Palace », destinée à reprendre la clientèle des casinos satellites, tous fermés fin 2025. On y voit le jeu de masse local dans sa forme la plus dense.",
+            "Le Wynn Macau (2006 ; 1 014 chambres, 253 tables, 911 machines) a lui aussi son Performance Lake (le mercredi, toutes les 30 minutes de 12 h à 22 h) et une rotonde où alternent un « Arbre de la prospérité » doré et un « Dragon de la fortune » qui sort du sol. Le MGM Macau (2007 ; 345 tables, 1 044 machines) est construit autour de la Grande Praça, place intérieure sous verrière inspirée de l'architecture portugaise, et abrite le Poly MGM Museum. Tout proche, le StarWorld (Galaxy) est en rénovation jusqu'au début de 2027."
+          ],
+          "chiffres": [
+            {"libelle": "Taxi Cotai → péninsule", "valeur": "20-30 min, 65-100 MOP"},
+            {"libelle": "Crystal Palace (Hotel Lisboa)", "valeur": "plus de 7 500 m², phase 2 ouverte le 10/08/2026"},
+            {"libelle": "Wynn Macau : tables / machines", "valeur": "253 / 911"},
+            {"libelle": "MGM Macau : tables / machines", "valeur": "345 / 1 044"}
+          ],
+          "conseils": [
+            "La péninsule se visite à pied en deux heures et demie : le Lisboa et le Grand Lisboa d'abord, là où l'ambiance est la plus éloignée de nos établissements, puis le Wynn Macau à partir de 12 h pour les fontaines et la rotonde, et le MGM Macau pour finir. La place du Senado, cœur du centre historique, est à une dizaine de minutes à pied du Grand Lisboa."
+          ]
+        },
+        {
+          "titre": "Robots et animation : ce qu'on verra à Macao, et ce qu'on n'y verra pas",
+          "paragraphes": [
+            "Malgré son image technologique, aucun des six concessionnaires de Macao n'a annoncé de robot d'accueil, de service ou d'animation dans ses salles ou ses halls entre 2024 et 2026. Les robots y travaillent en coulisses : flotte logistique au Galaxy Hotel, intelligence artificielle anti-gaspillage dans les cuisines de Wynn et de Melco.",
+            "La seule animation robotisée ouverte au public est « AI Wonderland », au deuxième niveau du Grand Lisboa Palace (SJM, sur le Cotai) : une salle de découverte de l'intelligence artificielle pensée pour les familles, avec un robot joueur d'échecs chinois, de la musique et de l'art générés par IA, de la réalité virtuelle, un simulateur de drone, des robots conversationnels et un spectacle de danse synchronisée d'un groupe de robots. Elle est ouverte de 11 h à 20 h (100 MOP pour une heure) ; les modèles de robots ne sont pas précisés.",
+            "L'animation des casinos de Macao passe surtout par le spectacle architectural et numérique, gratuit et à heure fixe : relève de la garde du Londoner, Diamond Show de Galaxy, fontaines de Wynn, écrans de MGM Cotai, tour Eiffel du Parisian. Aucune mise en scène des gros gains (mascotte, musique, annonce) n'a été trouvée : le marché, dominé par le baccara, cultive plutôt la discrétion.",
+            "Côté fournisseurs, Winning Asia Technology, fournisseur de jeux basé à Macao, a investi en juin 2026 dans Aimo Robotics (Hong Kong), qui conçoit des robots de patrouille capables aussi d'afficher de la publicité et de répondre comme un concierge ; aucun client n'est nommé. Un robot distributeur de cartes de LT Game avait été annoncé il y a plusieurs années, sans exploitation actuelle confirmée.",
+            "La référence la plus proche d'un robot d'animation dans un resort de jeu se trouve en Malaisie : Genting Malaysia a signé en avril 2026 avec Agibot pour des humanoïdes d'accueil et de spectacle, et prépare « Wukong Never Fades », un spectacle de plus de 40 robots (avant-première le 29 août 2026, première publique prévue en février 2027). À Zhuhai, de l'autre côté de la frontière, le parc Chimelong Spaceship fait circuler environ 300 robots Agibot.",
+            "Un fait divers rappelle la sensibilité du public : en mars 2026, un humanoïde utilisé pour une opération promotionnelle dans une rue de Macao a effrayé une passante de 70 ans, hospitalisée ensuite, et la police est intervenue.",
+            "Aucun salon technologique ou de jeu n'a lieu pendant le séjour : G2E Asia et BEYOND Expo, où exposaient des fabricants d'humanoïdes, se sont tenus en mai 2026 ; la foire MIF ouvre le 21 octobre et le MGS Entertainment Show a habituellement lieu en novembre."
+          ],
+          "chiffres": [
+            {"libelle": "AI Wonderland (Grand Lisboa Palace)", "valeur": "11 h – 20 h, 100 MOP / heure"},
+            {"libelle": "Genting Malaysia × Agibot", "valeur": "accord du 17/04/2026"},
+            {"libelle": "Robots Agibot à Chimelong (Zhuhai)", "valeur": "≈ 300"},
+            {"libelle": "G2E Asia 2026", "valeur": "12-14 mai (terminé)"}
+          ],
+          "conseils": [
+            "Pour la recherche d'un robot pour le Resort, AI Wonderland est la seule occasion de voir à Macao un spectacle de robots devant du public : à placer le mercredi après-midi, en taxi depuis Galaxy ou MGM Cotai.",
+            "Qu'aucun casino de Macao n'utilise de robot d'animation en salle confirme qu'il s'agirait d'un positionnement de précurseur. L'incident de mars 2026 rappelle l'intérêt d'un opérateur aux côtés du robot, comme le recommande le chapitre « Un robot pour le Resort »."
+          ]
+        },
+        {
+          "titre": "Parcours du mardi soir et du mercredi",
+          "paragraphes": [
+            "Le vol de Shanghai décolle entre 17 h et 19 h ; avec le passage de la frontière et l'arrivée au Conrad, la soirée commence vraisemblablement entre 21 h et 22 h. À cette heure restent visibles la façade du Londoner (toutes les heures jusqu'à 23 h 30), la relève de la garde de 21 h 30, la tour Eiffel du Parisian (toutes les 15 minutes jusqu'à minuit) et les fontaines du Wynn Palace (toutes les 20 minutes jusqu'à minuit) ; le SkyCab ferme à 22 h.",
+            "Le mercredi, le Diamond Show de Galaxy et les fontaines des deux Wynn ne commencent qu'à 12 h. Le transfert vers Guangzhou part à 18 h, après le check-out du matin. D'où l'ordre proposé : la péninsule le matin, le Cotai l'après-midi."
+          ],
+          "conseilsPoints": [
+            "Mardi, vers 21 h 30 : relève de la garde au Crystal Palace du Londoner si l'arrivée le permet, sinon spectacle de façade à 22 h 30.",
+            "Mardi, 22 h – minuit : salle du Londoner, passage par l'intérieur vers le Venetian (plancher de jeu, canaux), puis le Plaza pour le contraste premium ; sortie devant la tour Eiffel du Parisian. Variante : Wynn Palace pour les fontaines et la salle.",
+            "Mercredi, 9 h 30 : check-out, bagages laissés au Conrad [à vérifier à la réception], taxi vers la péninsule.",
+            "Mercredi, 10 h – 12 h 30 : Hotel Lisboa (Crystal Palace), Grand Lisboa (hall, diamant), Wynn Macau (fontaines et rotonde dès 12 h), MGM Macau (Grande Praça). Option : place du Senado, à dix minutes à pied, pour un aperçu du centre historique.",
+            "Mercredi, 13 h : retour au Cotai (taxi ou navette StarWorld → Galaxy), Diamond Show et déjeuner à la Broadway Food Street.",
+            "Mercredi, 14 h 30 – 17 h : MGM Cotai (atrium Spectacle, représentation de 15 h ou 16 h 30), puis au choix AI Wonderland au Grand Lisboa Palace (robots), ou City of Dreams, Morpheus et Studio City (Golden Reel).",
+            "Mercredi, 17 h 30 : retour au Londoner pour le transfert de 18 h."
+          ],
+          "conseils": [
+            "Prévoir des patacas ou des dollars de Hong Kong en espèces pour les taxis ; à treize, compter trois ou quatre taxis et fixer un point de rendez-vous à chaque étape. Les navettes gratuites des casinos relient le Cotai à la péninsule, mais selon leurs propres horaires."
+          ]
         },
         {
           "titre": "La technologie en salle : tables intelligentes, stadium, machines, paiements et surveillance",
@@ -3262,7 +3410,13 @@
         "Les limites de mise indiquées sont indicatives et varient selon l'heure et la zone ; à vérifier sur place.",
         "Le GGR du Strip de Las Vegas et le PBJ des casinos français sont donnés en ordre de grandeur, sans vérification sur les dernières publications officielles.",
         "Les parts de marché du T2 2026 (Sands 24 %, Galaxy 21 %, MGM 17 %, Melco 15 %, Wynn 14 %, SJM 10 %) viennent d'une synthèse d'analystes ; MGM publie 16,4 %.",
-        "La date d'ouverture de la phase 4 de Galaxy (2027) et celle du Wynn Al Marjan (septembre 2027) peuvent glisser."
+        "La date d'ouverture de la phase 4 de Galaxy (2027) et celle du Wynn Al Marjan (septembre 2027) peuvent glisser.",
+        "Horaires des animations (relève de la garde, Diamond Show, fontaines, atrium de MGM Cotai, House of Dancing Water, Macau 2049, Golden Reel) relevés sur les sites des opérateurs ou de revendeurs ; certains ne sont pas datés et peuvent changer.",
+        "Temps de marche entre complexes et tarifs de taxi : estimations de guides et d'agrégateurs.",
+        "Nombre de tables de Galaxy Macau, StarWorld, Grand Lisboa et Grand Lisboa Palace : non publié. Les chiffres de Melco sont des moyennes 2025.",
+        "Absence de robots visibles chez les six concessionnaires : constat fondé sur l'absence de communiqué ou d'article, pas sur une visite.",
+        "AI Wonderland : date d'ouverture et fabricants des robots non trouvés. Installations du Nouvel An lunaire à Studio City : présence en octobre non vérifiée.",
+        "Date exacte de l'inauguration de l'hôtel REM (City of Dreams) en octobre 2026 : non trouvée."
       ],
       "sources": [
         {
@@ -3364,9 +3518,90 @@
           "url": "https://news.worldcasinodirectory.com/macau-sets-2026-casino-ggr-forecast-at-mop236-billion-in-new-budget-120670"
         },
         {"titre": "Commission des jeux de hasard – Licences", "url": "https://www.gamingcommission.be/fr/operateurs/licences"},
-        {"titre": "Wikipédia – Casino en France", "url": "https://fr.wikipedia.org/wiki/Casino_en_France"}
+        {"titre": "Wikipédia – Casino en France", "url": "https://fr.wikipedia.org/wiki/Casino_en_France"},
+        {
+          "titre": "Sands China, rapport annuel 2025",
+          "url": "https://s28.q4cdn.com/640198178/files/doc_downloads/sands-china-information/2026/03/SCL-2025-Annual-Report.pdf"
+        },
+        {
+          "titre": "CDC Gaming – rénovation du Venetian jusqu'en 2028 (23/07/2026)",
+          "url": "https://cdcgaming.com/brief/sands-china-targeting-completion-of-room-and-suite-renovations-at-venetian-macao-by-chinese-new-year-2028/"
+        },
+        {"titre": "The Londoner Macao – attractions", "url": "https://www.londonermacao.com/macau-attractions.html"},
+        {"titre": "The Venetian Macao – gondoles", "url": "https://www.venetianmacao.com/hotel/amenities/gondola-rides.html"},
+        {"titre": "The Parisian Macao – tour Eiffel", "url": "https://www.parisianmacao.com/amenities/eiffel-tower.html"},
+        {
+          "titre": "Galaxy Entertainment – résultats intermédiaires 2026 (12/08/2026)",
+          "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0812/2026081200173.pdf"
+        },
+        {"titre": "Galaxy Macau – Diamond Show", "url": "https://www.galaxymacau.com/entertainment/galaxy-macau-diamond-show/"},
+        {"titre": "Galaxy Entertainment – fiche Galaxy Macau", "url": "https://www.galaxyentertainment.com/en/properties/gm"},
+        {
+          "titre": "GGRAsia – phase 4 de Galaxy Macau",
+          "url": "https://www.ggrasia.com/galaxy-macau-phase-4-to-open-in-2028-targeted-at-high-value-patrons-report"
+        },
+        {
+          "titre": "AutoXing – robots logistiques au Galaxy Hotel (03/2024)",
+          "url": "https://en.autoxing.com/news/autoxing-technology-application-of-intelligent-delivery-robots-in-enterprise-logistics-management-in-macau"
+        },
+        {
+          "titre": "Wynn Macau Ltd – résultats annuels 2025 (20/03/2026)",
+          "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0320/2026032001458.pdf"
+        },
+        {
+          "titre": "Wynn Palace – Performance Lake",
+          "url": "https://wnpv001ew.wynnresortsmacau.com/en/wynn-palace/experiences/entertainment/performance-lake-wp"
+        },
+        {"titre": "Wynn Palace – SkyCab", "url": "https://www.wynnresortsmacau.com/en/wynn-palace/experiences/entertainment/sky-cab"},
+        {
+          "titre": "Wynn Macau – Performance Lake",
+          "url": "https://wnpv001ew.wynnresortsmacau.com/en/wynn-macau/experiences/entertainment/performance-lake-wm"
+        },
+        {
+          "titre": "Inside Asian Gaming – Chairman's Club du Wynn Palace (13/02/2026)",
+          "url": "https://asgam.com/2026/02/13/wynn-receives-approval-to-open-expanded-chairmans-club-premium-gaming-space-at-wynn-palace-in-time-for-cny/"
+        },
+        {"titre": "MGM China – rapport annuel 2025 (30/03/2026)", "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0330/2026033000784.pdf"},
+        {"titre": "MGM Cotai – divertissements", "url": "https://www.mgm.mo/en/cotai/entertainment"},
+        {"titre": "Macau 2049 – site officiel", "url": "https://macau2049.mgm.mo/en"},
+        {
+          "titre": "Melco Resorts – rapport 20-F 2025 (13/03/2026)",
+          "url": "https://www.sec.gov/Archives/edgar/data/1381640/000119312526105023/d55680d20f.htm"
+        },
+        {
+          "titre": "Inside Asian Gaming – inauguration de l'hôtel REM en octobre (14/08/2026)",
+          "url": "https://asgam.com/2026/08/14/melco-to-hold-grand-opening-of-revamped-hotel-rem-at-city-of-dreams-macau-in-october-as-dividend-resumption-put-on-hold/"
+        },
+        {"titre": "City of Dreams – House of Dancing Water", "url": "https://cityofdreamsmacau.com/en/house-of-dancing-water"},
+        {"titre": "Studio City – Golden Reel", "url": "https://www.studiocity-macau.com/en/entertainment/golden-reel"},
+        {"titre": "UDN – installations du Nouvel An lunaire à Studio City (21/02/2026)", "url": "https://udn.com/news/story/7270/9336948"},
+        {
+          "titre": "SJM Holdings – résultats intermédiaires 2026 (25/08/2026)",
+          "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0825/2026082500352.pdf"
+        },
+        {
+          "titre": "GGRAsia – Crystal Palace, phase 2 (Hotel Lisboa)",
+          "url": "https://www.ggrasia.com/crystal-palace-phase-2-revamped-hotel-lisboa-rooms-launching-in-summer-sjm-boss-daisy-ho"
+        },
+        {"titre": "Grand Lisboa – à propos", "url": "https://www.grandlisboa.com/en/about-us"},
+        {"titre": "Grand Lisboa Palace – AI Wonderland", "url": "https://www.grandlisboapalace.com/en/experience/ai-wonderland"},
+        {
+          "titre": "GGRAsia – Winning Asia Technology et la robotique (06/2026)",
+          "url": "https://www.ggrasia.com/winning-asia-technology-taps-ai-robotics-for-casino-property-management"
+        },
+        {
+          "titre": "Resorts World Genting – accord avec Agibot (17/04/2026)",
+          "url": "https://rwgenting.com/content/dam/approved/rw-genting/web/images/press-releases/2026/20260417-GENMXAGIBOT-EN.pdf"
+        },
+        {"titre": "Agibot – spectacle de robots à Resorts World Genting (03/09/2026)", "url": "https://agibot.com/article/231/detail/94.html"},
+        {
+          "titre": "Interesting Engineering – incident d'un humanoïde à Macao (03/2026)",
+          "url": "https://interestingengineering.com/ai-robotics/macau-humanoid-arrested-for-scaring-old-woman"
+        },
+        {"titre": "Gouvernement de Macao – 31e MIF du 21 au 24 octobre 2026", "url": "https://www.gcs.gov.mo/news/detail/en/N26GUC5zxy"},
+        {"titre": "Trvlogue – navettes et taxis à Macao (2026)", "url": "https://www.trvlogue.com/en/macau-free-shuttle-guide"}
       ],
-      "consulte": "04/10/2026"
+      "consulte": "04/10/2026 et 09/10/2026"
     },
     {
       "id": "canton-fair",
