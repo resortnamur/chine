@@ -79,13 +79,14 @@
         {"heure": "", "titre": "🎂 Ne pas oublier : c'est l'anniversaire de Bernard ! 😄"},
         {"heure": "", "titre": "Check-out du Jing An Shangri-La (le matin, avant de partir)", "lieu": "hotel-shanghai"},
         {"heure": "", "titre": "Au choix : visite d'Agibot ou retour au salon de la robotique", "lieu": "agibot", "salon": "salon-3"},
-        {"heure": "", "titre": "Retour à l'hôtel 3 h avant le vol du groupe", "lieu": "hotel-shanghai", "note": "Vol vers Macao entre 17:00 et 19:00."},
-        {"heure": "", "titre": "Transfert vers l'aéroport de Pudong, avec les bagages", "lieu": "aeroport-pvg"},
+        {"heure": "", "titre": "Retour à l'hôtel 3 h avant le vol du groupe", "lieu": "hotel-shanghai", "note": "Rendez-vous à 13:45 au lobby, avec les bagages."},
+        {"heure": "13:45", "titre": "Transfert vers l'aéroport de Pudong (terminal 1), avec les bagages", "lieu": "aeroport-pvg", "note": "Départ du lobby de l'hôtel."},
         {
-          "heure": "",
-          "titre": "Vol Shanghai → Macao — China Eastern MU 9991 (décollage entre 17:00 et 19:00)",
+          "heure": "17:40",
+          "fin": "20:25",
+          "titre": "Vol Shanghai → Macao — China Eastern MU 9991 (décollage 17:40)",
           "lieu": "aeroport-mfm",
-          "transport": "MU 9991, Pudong → Macao International (MFM), environ 2 h 40.",
+          "transport": "MU 9991, Pudong terminal 1 → Macao International (MFM), 2 h 45, arrivée à 20:25.",
           "note": "Passeport sur soi : Macao est une frontière."
         },
         {
@@ -231,7 +232,7 @@
       "id": "salon-3",
       "nom": "Visite d'Agibot (智元机器人) — robots humanoïdes",
       "dates": "Mardi 13 octobre, au choix avec le salon de la robotique",
-      "horaires": "Avant le retour à l'hôtel, 3 h avant le vol pour Macao (17:00-19:00) [à vérifier]",
+      "horaires": "Le matin, avant le rendez-vous de 13:45 à l'hôtel (vol pour Macao à 17:40)",
       "lieu": "agibot",
       "objectifs": ["Découvrir l'état de l'art des robots humanoïdes", "Imaginer des usages en accueil et en service client"],
       "exposants": [],
@@ -3291,7 +3292,7 @@
         {
           "titre": "Parcours du mardi soir et du mercredi",
           "paragraphes": [
-            "Le vol de Shanghai décolle entre 17 h et 19 h ; avec le passage de la frontière et l'arrivée au Conrad, la soirée commence vraisemblablement entre 21 h et 22 h. À cette heure restent visibles la façade du Londoner (toutes les heures jusqu'à 23 h 30), la relève de la garde de 21 h 30, la tour Eiffel du Parisian (toutes les 15 minutes jusqu'à minuit) et les fontaines du Wynn Palace (toutes les 20 minutes jusqu'à minuit) ; le SkyCab ferme à 22 h.",
+            "Le vol de Shanghai décolle à 17 h 40 et atterrit à Macao à 20 h 25 ; avec le passage de la frontière et l'arrivée au Conrad, la soirée commence vraisemblablement vers 21 h 30. À cette heure restent visibles la façade du Londoner (toutes les heures jusqu'à 23 h 30), la relève de la garde de 21 h 30, la tour Eiffel du Parisian (toutes les 15 minutes jusqu'à minuit) et les fontaines du Wynn Palace (toutes les 20 minutes jusqu'à minuit) ; le SkyCab ferme à 22 h.",
             "Le mercredi, le Diamond Show de Galaxy et les fontaines des deux Wynn ne commencent qu'à 12 h. Le transfert vers Guangzhou part à 18 h, après le check-out du matin. D'où l'ordre proposé : la péninsule le matin, le Cotai l'après-midi."
           ],
           "conseilsPoints": [
